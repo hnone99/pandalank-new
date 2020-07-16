@@ -1,0 +1,15 @@
+#footer{
+
+}
+.btn-top{
+    position: fixed;right: -50px;bottom: 24px;z-index: 10;transition: all .25s .2s ease-in-out;
+    a{display: block;width: 48px;height: 48px;background: url('../images/btn-top.svg') no-repeat 50% 50%;}
+}
+html.is-scrolled{
+    .btn-top{right: 24px;}
+}
+
+@include media-breakpoint-down(md) {
+    #footer{
+    }
+}

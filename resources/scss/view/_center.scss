@@ -1,0 +1,9 @@
+#center{
+}
+
+@include media-breakpoint-down(md) {
+    #center{
+        display: block;
+        max-width:312px;margin: 0 auto;
+    }
+}

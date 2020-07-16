@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="prefix__icon_48_top" width="48" height="48" data-name="icon/48/top" viewBox="0 0 48 48">
+    <defs>
+        <style>
+            .prefix__cls-3{stroke:none}
+        </style>
+    </defs>
+    <g id="prefix__그룹_156" data-name="그룹 156" transform="rotate(90 531.5 -203.5)">
+        <g id="prefix__사각형_129" fill="#fff" stroke="#989da0" data-name="사각형 129">
+            <path d="M0 0H48V48H0z" class="prefix__cls-3" transform="translate(735 280)"/>
+            <path fill="none" d="M0.5 0.5H47.5V47.5H0.5z" transform="translate(735 280)"/>
+        </g>
+        <g id="prefix__icon_pre" data-name="icon/pre" transform="translate(753 294.428)">
+            <g id="prefix__Path" fill="#fff" stroke-miterlimit="10">
+                <path d="M9.304 17.5c-.032 0-.092-.007-.142-.054L.552 9.024C.508 8.982.5 8.937.5 8.907c0-.027.008-.067.04-.104l.053-.04.019-.016.018-.017L9.15.557C9.203.507 9.266.5 9.3.5c.039 0 .076.01.108.027l.051.041c.033.037.04.075.04.102 0 .03-.009.072-.05.113L1.34 8.559l-.373.357.37.36 8.11 7.935c.043.042.052.087.052.117 0 .03-.01.075-.053.117-.05.048-.11.055-.143.055z" class="prefix__cls-3"/>
+                <path fill="#989da0" d="M9.304 18c-.177 0-.354-.065-.49-.194L.203 9.38c-.271-.265-.269-.69.005-.952l.077-.06L8.805.196C8.941.066 9.12 0 9.3 0c.14 0 .278.04.397.119l.097.077c.273.262.273.686 0 .947L1.687 8.92l8.111 7.934c.271.265.269.69-.005.952-.135.13-.312.194-.489.194z"/>
+            </g>
+        </g>
+    </g>
+</svg>
