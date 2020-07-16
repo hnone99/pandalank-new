@@ -103,9 +103,44 @@
     position: absolute;
     top: 0;
     left: 0;
-    cursor: default
+    z-index: 1001;
+    cursor: default;
+    width: 312px;
+    height: 350px;
+    border: 0 !important;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px 0 #dee8ef;
+    background-color: #ffffff;
+    padding: 8px 1rem !important;
+
+}
+.ui-menu.ui-autocomplete .ui-menu-item-wrapper{
+    font-size: 14px;
+    padding: 8px 0;
 }
 
+.ui-menu.ui-autocomplete .ui-state-active,
+.ui-menu.ui-autocomplete .ui-state-active:hover{
+    color: #34d52e;
+    background: #fff;
+}
+.ui-menu.ui-autocomplete .ui-menu-item + .ui-menu-item{
+    border-top: 1px solid #edf0f7;
+}
+.ui-menu.ui-autocomplete .ui-state-focus,
+.ui-menu.ui-autocomplete .ui-state-active{
+    margin: 0;
+}
+@media (min-width: 992px){
+    .ui-autocomplete {
+        width: 239px;
+    }
+}
+@media (max-width: 991.98px){
+    .ui-autocomplete {
+
+    }
+}
 .ui-menu {
     list-style: none;
     padding: 0;
@@ -1128,8 +1163,8 @@ a.ui-button:focus {
 a.ui-button:active,
 .ui-button:active,
 .ui-button.ui-state-active:hover {
-    color: #682dd2;
-    background: #eeedfb;
+    color: #34d52e;
+    background: #e4fae7;
     border-radius: 4px;
 }
 

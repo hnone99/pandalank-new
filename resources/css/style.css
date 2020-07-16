@@ -562,6 +562,14 @@ html.is-scrolled .btn-top {
   left: 50%;
 }
 
+.tab-content > div {
+  display: none;
+}
+
+.tab-content > div.active {
+  display: block;
+}
+
 @media (max-width: 1599.98px) {
   .tab ul {
     max-width: 256px;
@@ -978,6 +986,7 @@ html.is-scrolled .btn-top {
   top: 0;
   z-index: 1;
   opacity: 0;
+  visibility: hidden;
   -webkit-transition: all .15s;
   transition: all .15s;
 }
@@ -990,6 +999,7 @@ html.is-scrolled .btn-top {
 
 .pop-over.hover {
   opacity: 1;
+  visibility: visible;
 }
 
 @media (max-width: 991.98px) {

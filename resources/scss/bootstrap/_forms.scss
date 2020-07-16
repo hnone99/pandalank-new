@@ -59,6 +59,11 @@
     color: $text-muted;
   }
 }
+.form-control-panda{
+  height: 56px;border: 0;border-bottom: 1px solid $primary;caret-color: $primary;font-size: 18px;letter-spacing: -0.9px;padding-left: 0;padding-right: 0;line-height: 20px;padding-top: 15px;
+  &:focus{outline: none;box-shadow: none;}
+}
+
 @include media-breakpoint-down(md) {
   .form-control {
     font-size: 0.8125rem;

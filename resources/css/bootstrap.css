@@ -3350,6 +3350,25 @@ mt-1 : { margin-top : 1px; }
   color: #bbb;
 }
 
+.form-control-panda {
+  height: 56px;
+  border: 0;
+  border-bottom: 1px solid #34D52E;
+  caret-color: #34D52E;
+  font-size: 18px;
+  letter-spacing: -0.9px;
+  padding-left: 0;
+  padding-right: 0;
+  line-height: 20px;
+  padding-top: 15px;
+}
+
+.form-control-panda:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
 @media (max-width: 991.98px) {
   .form-control {
     font-size: 0.8125rem;

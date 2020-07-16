@@ -161,9 +161,6 @@
         },
         active: function(){
             $('.tab a').on('click',function(e){
-                e.preventDefault();
-                $(this).parent('li').siblings().removeClass('active');
-                $(this).parent('li').addClass('active');
                 $(this).closest('.tab').attr('data-position',$(this).parent('li').index() + 1);
             });
         }

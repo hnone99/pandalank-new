@@ -41,10 +41,10 @@
                     <nav class="swiper-container">
                         <ul class="swiper-wrapper">
                             <li class="swiper-slide"><a href=""><span>홈</span></a></li>
-                            <li class="swiper-slide active"><a href=""><span>상품 찾기</span></a></li>
+                            <li class="swiper-slide active"><a href="../product/product.html"><span>상품 찾기</span></a></li>
                             <li class="swiper-slide"><a href=""><span>경쟁력 분석</span></a></li>
                             <li class="swiper-slide"><a href=""><span>AI 판매 예측</span></a></li>
-                            <li class="swiper-slide"><a href=""><span>사장님들의 방</span></a></li>
+                            <li class="swiper-slide"><a href="../ceo/ceo.html"><span>사장님들의 방</span></a></li>
                             <li class="swiper-slide"><a href=""><span>공지</span></a></li>
                         </ul>
                     </nav>
@@ -72,71 +72,80 @@
                 </div>
                 <div class="tab-area">
                     <div class="tab" data-position="1"> <!-- 활성화 된 탭의 index 표기 -->
-                        <ul>
-                            <li class="active"><a href=""><span>카테고리로 찾기</span></a></li>
-                            <li><a href=""><span>상품으로 찾기</span></a></li>
+                        <ul role="tablist">
+                            <li class="active"><a href="#t1" role="tab" data-toggle="pill" aria-selected="true"><span>카테고리로 찾기</span></a></li>
+                            <li><a href="#t2" role="tab" data-toggle="pill" aria-selected="false"><span>상품으로 찾기</span></a></li>
                         </ul>
                     </div>
                 </div>
-                <div class="dropdown-area">
-                    <div class="dropdown" id="select1">
-                        <a href="javascript:;" class="dropdown-value">1차 카테고리 선택</a>
-                        <div class="dropdown-box">
-                            <div class="dropdown-list">
-                                <div><a href="javascript:;">여가/생활편의</a></div>
-                                <div><a href="javascript:;">디지털/가전</a></div>
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane fade active show" id="t1">
+                        <div class="dropdown-area">
+                            <div class="dropdown" id="select1">
+                                <a href="javascript:;" class="dropdown-value">1차 카테고리 선택</a>
+                                <div class="dropdown-box">
+                                    <div class="dropdown-list">
+                                        <div><a href="javascript:;">여가/생활편의</a></div>
+                                        <div><a href="javascript:;">디지털/가전</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dropdown">
+                                <a href="javascript:;" class="dropdown-value">2차 카테고리 선택</a>
+                                <div class="dropdown-box">
+                                    <div class="dropdown-list">
+                                        <div><a href="javascript:;">여가/생활편의</a></div>
+                                        <div><a href="javascript:;">디지털/가전</a></div>
+                                        <div><a href="javascript:;">여가/생활편의</a></div>
+                                        <div><a href="javascript:;">디지털/가전</a></div>
+                                        <div><a href="javascript:;">여가/생활편의</a></div>
+                                        <div><a href="javascript:;">디지털/가전</a></div>
+                                        <div><a href="javascript:;">여가/생활편의</a></div>
+                                        <div><a href="javascript:;">디지털/가전</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dropdown">
+                                <a href="javascript:;" class="dropdown-value">3차 카테고리 선택</a>
+                                <div class="dropdown-box">
+                                    <div class="dropdown-list">
+                                        <div><a href="javascript:;">여가/생활편의</a></div>
+                                        <div><a href="javascript:;">디지털/가전</a></div>
+                                        <div><a href="javascript:;">여가/생활편의</a></div>
+                                        <div><a href="javascript:;">디지털/가전</a></div>
+                                        <div><a href="javascript:;">여가/생활편의</a></div>
+                                        <div><a href="javascript:;">디지털/가전</a></div>
+                                        <div><a href="javascript:;">여가/생활편의</a></div>
+                                        <div><a href="javascript:;">디지털/가전</a></div>
+                                        <div><a href="javascript:;">디지털/가전</a></div>
+                                        <div><a href="javascript:;">여가/생활편의</a></div>
+                                        <div><a href="javascript:;">디지털/가전</a></div>
+                                        <div><a href="javascript:;">디지털/가전</a></div>
+                                        <div><a href="javascript:;">여가/생활편의</a></div>
+                                        <div><a href="javascript:;">디지털/가전</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dropdown">
+                                <a href="javascript:;" class="dropdown-value">4차 카테고리 선택</a>
+                                <div class="dropdown-box">
+                                    <div class="dropdown-list">
+                                        <div><a href="javascript:;">여가/생활편의</a></div>
+                                        <div><a href="javascript:;">디지털/가전</a></div>
+                                        <div><a href="javascript:;">여가/생활편의</a></div>
+                                        <div><a href="javascript:;">디지털/가전</a></div>
+                                        <div><a href="javascript:;">여가/생활편의</a></div>
+                                        <div><a href="javascript:;">디지털/가전</a></div>
+                                        <div><a href="javascript:;">여가/생활편의</a></div>
+                                        <div><a href="javascript:;">디지털/가전</a></div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="dropdown">
-                        <a href="javascript:;" class="dropdown-value">2차 카테고리 선택</a>
-                        <div class="dropdown-box">
-                            <div class="dropdown-list">
-                                <div><a href="javascript:;">여가/생활편의</a></div>
-                                <div><a href="javascript:;">디지털/가전</a></div>
-                                <div><a href="javascript:;">여가/생활편의</a></div>
-                                <div><a href="javascript:;">디지털/가전</a></div>
-                                <div><a href="javascript:;">여가/생활편의</a></div>
-                                <div><a href="javascript:;">디지털/가전</a></div>
-                                <div><a href="javascript:;">여가/생활편의</a></div>
-                                <div><a href="javascript:;">디지털/가전</a></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="dropdown">
-                        <a href="javascript:;" class="dropdown-value">3차 카테고리 선택</a>
-                        <div class="dropdown-box">
-                            <div class="dropdown-list">
-                                <div><a href="javascript:;">여가/생활편의</a></div>
-                                <div><a href="javascript:;">디지털/가전</a></div>
-                                <div><a href="javascript:;">여가/생활편의</a></div>
-                                <div><a href="javascript:;">디지털/가전</a></div>
-                                <div><a href="javascript:;">여가/생활편의</a></div>
-                                <div><a href="javascript:;">디지털/가전</a></div>
-                                <div><a href="javascript:;">여가/생활편의</a></div>
-                                <div><a href="javascript:;">디지털/가전</a></div>
-                                <div><a href="javascript:;">디지털/가전</a></div>
-                                <div><a href="javascript:;">여가/생활편의</a></div>
-                                <div><a href="javascript:;">디지털/가전</a></div>
-                                <div><a href="javascript:;">디지털/가전</a></div>
-                                <div><a href="javascript:;">여가/생활편의</a></div>
-                                <div><a href="javascript:;">디지털/가전</a></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="dropdown">
-                        <a href="javascript:;" class="dropdown-value">4차 카테고리 선택</a>
-                        <div class="dropdown-box">
-                            <div class="dropdown-list">
-                                <div><a href="javascript:;">여가/생활편의</a></div>
-                                <div><a href="javascript:;">디지털/가전</a></div>
-                                <div><a href="javascript:;">여가/생활편의</a></div>
-                                <div><a href="javascript:;">디지털/가전</a></div>
-                                <div><a href="javascript:;">여가/생활편의</a></div>
-                                <div><a href="javascript:;">디지털/가전</a></div>
-                                <div><a href="javascript:;">여가/생활편의</a></div>
-                                <div><a href="javascript:;">디지털/가전</a></div>
-                            </div>
+                    <div role="tabpanel" class="tab-pane fade" id="t2">
+                        <div class="input-area">
+                            <input type="text" class="form-control form-control-panda" placeholder="상품종류를 입력하세요" id="keyword">
                         </div>
                     </div>
                 </div>
@@ -619,10 +628,70 @@
         </div>
     </div>
 
+    <!-- modal : 비밀번호 입력 -->
+    <div class="modal modal-alert" tabindex="-1" role="dialog" data-backdrop="static" id="modal-password"> <!-- alert 스타일은 .modal-alert 추가 -->
+        <div class="modal-dialog modal-dialog-centered modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p class="alert-message">비밀번호를 입력하세요</p>
+                    <div class="input-box">
+                        <input type="password" class="form-control form-control-lg">
+                        <button type="submit" class="btn btn-submit">확인</button>
+                    </div>
+                    <div class="input-box">
+                        <input type="password" class="form-control form-control-lg is-invalid"> <!-- 유효성체크 (.is-invalid 추가) -->
+                        <button type="submit" class="btn btn-submit" id="btn-ok">확인</button>
+                    </div>
+                    <span class="text-error">! 비밀번호가 일치하지 않습니다</span> <!-- 유효성체크 (토글) -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal : 삭제 확인 -->
+    <div class="modal modal-alert" tabindex="-1" role="dialog" data-backdrop="static" id="modal-confirm"> <!-- alert 스타일은 .modal-alert 추가 -->
+        <div class="modal-dialog modal-dialog-centered modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="only-text">
+                        <p class="alert-message">글을 삭제하시겠습니까?</p>
+                        <p class="alert-message-sub">서브 메시지 가이드입니다. <br>짧고 간결하게 씁니다</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-submit" data-dismiss="modal">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script>
         $(document).ready(function(){
             //페이지 로드시  focus 주기
             $('#select1 .dropdown-value').focus();
+
+            //키워드 자동완성
+            var availableTags = [
+                "여가/생활편의 > 자기계발/취미 레슨 > 3차 카테고리 > 4차 카테고리",
+                "디지털/가전 > 카메라/캠코더용품 > 카메라/캠코더 관련용품 > 카메라/캠코더용마이크 ",
+                "1차 카테고리 > 2차 카테고리 > 3차 카테고리 > 4차 카테고리",
+                "식품 > 반찬 > 쌀 > 백미",
+                "1차 카테고리 > 2차 카테고리 > 3차 카테고리 > 4차 카테고리",
+                "패션잡화 > 여성가방 > 토드백",
+            ];
+            $("#keyword").autocomplete({
+                source: availableTags
+            });
 
             var datatable = $('#datatable').DataTable({
                 'responsive': true,
@@ -648,6 +717,14 @@
                     $(this).find('strong').text('MORE +');
                     $(this).removeClass('active');
                 }
+            });
+
+            //비밀번호 입력 확인 버튼 클릭시
+            $('#btn-ok').on('click',function(e){
+                console.log(111);
+                e.preventDefault();
+                $('#modal-password').modal('hide');
+                $('#modal-confirm').modal('show');
             });
         });
     </script>
