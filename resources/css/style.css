@@ -1416,4 +1416,32 @@ html.is-scrolled .btn-top {
   display: block;
   margin-top: 5px;
 }
+
+.input-area-mobile {
+  position: relative;
+  z-index: 1;
+  background: #fff;
+}
+
+.keyword-autocomplete-wrap {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding-top: 112px;
+  padding-bottom: 24px;
+  overflow-x: hidden;
+}
+
+.keyword-autocomplete-wrap #keyword-autocomplete-area {
+  overflow-x: hidden;
+  height: 100%;
+}
+
+.keyword-autocomplete-wrap #keyword-autocomplete-area .ui-autocomplete {
+  position: static !important;
+  width: 100% !important;
+  padding: 12px 24px 0 !important;
+}
 /*# sourceMappingURL=style.css.map */

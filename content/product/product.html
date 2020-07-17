@@ -72,9 +72,9 @@
                 </div>
                 <div class="tab-area">
                     <div class="tab" data-position="1"> <!-- 활성화 된 탭의 index 표기 -->
-                        <ul role="tablist">
-                            <li class="active"><a href="#t1" role="tab" data-toggle="pill" aria-selected="true"><span>카테고리로 찾기</span></a></li>
-                            <li><a href="#t2" role="tab" data-toggle="pill" aria-selected="false"><span>상품으로 찾기</span></a></li>
+                        <ul role="tablist" class="nav">
+                            <li class="active"><a href="#t1" role="tab" data-toggle="tab" aria-selected="true"><span>카테고리로 찾기</span></a></li>
+                            <li><a href="#t2" role="tab" data-toggle="tab" aria-selected="false"><span>상품으로 찾기</span></a></li>
                         </ul>
                     </div>
                 </div>
@@ -594,6 +594,27 @@
         </div>
     </div>
 
+    <!-- modal : 모바일용 상품으로 찾기 layer -->
+    <div class="modal modal-full" tabindex="-1" role="dialog" id="modal-keyword-form">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="input-area-mobile">
+                        <input type="text" class="form-control form-control-panda" placeholder="상품종류를 입력하세요" id="keyword-mobile">
+                    </div>
+                </div>
+                <div class="keyword-autocomplete-wrap">
+                    <div id="keyword-autocomplete-area"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- modal : 모바일용 툴팁 키워드란? -->
     <div class="modal" tabindex="-1" role="dialog" id="modal-keyword">
         <div class="modal-dialog modal-dialog-centered modal-sm">
@@ -677,8 +698,31 @@
 
     <script>
         $(document).ready(function(){
-            //페이지 로드시  focus 주기
+            //페이지 로드시 첫번째 셀렉트에 focus 주기
             $('#select1 .dropdown-value').focus();
+
+            //탭 변경시 첫번째 폼요소에 focus 추가
+            $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+                if($(e.target).text() === '카테고리로 찾기'){
+                    if(!$('#select1 .dropdown-value').hasClass('filled')){
+                        $('#select1 .dropdown-value').focus();
+                    }
+                }else if($(e.target).text() === '상품으로 찾기'){
+                    if (window.matchMedia('(min-width:992px)').matches) {
+                        $('#keyword').focus();
+                    }
+                }
+            });
+
+            //모바일에서 상품으로 찾기 입력시 modal show
+            $('#keyword').on('focus',function(){
+                if (!window.matchMedia('(min-width:992px)').matches) {
+                    $('#modal-keyword-form').modal('show');
+                }
+            });
+            $('#modal-keyword-form').on('shown.bs.modal', function (e) {
+                $('#keyword-mobile').focus();
+            })
 
             //키워드 자동완성
             var availableTags = [
@@ -688,9 +732,84 @@
                 "식품 > 반찬 > 쌀 > 백미",
                 "1차 카테고리 > 2차 카테고리 > 3차 카테고리 > 4차 카테고리",
                 "패션잡화 > 여성가방 > 토드백",
+                "여가/생활편의 > 자기계발/취미 레슨 > 3차 카테고리 > 4차 카테고리",
+                "디지털/가전 > 카메라/캠코더용품 > 카메라/캠코더 관련용품 > 카메라/캠코더용마이크 ",
+                "1차 카테고리 > 2차 카테고리 > 3차 카테고리 > 4차 카테고리",
+                "식품 > 반찬 > 쌀 > 백미",
+                "1차 카테고리 > 2차 카테고리 > 3차 카테고리 > 4차 카테고리",
+                "패션잡화 > 여성가방 > 토드백",
+                "여가/생활편의 > 자기계발/취미 레슨 > 3차 카테고리 > 4차 카테고리",
+                "디지털/가전 > 카메라/캠코더용품 > 카메라/캠코더 관련용품 > 카메라/캠코더용마이크 ",
+                "1차 카테고리 > 2차 카테고리 > 3차 카테고리 > 4차 카테고리",
+                "식품 > 반찬 > 쌀 > 백미",
+                "1차 카테고리 > 2차 카테고리 > 3차 카테고리 > 4차 카테고리",
+                "패션잡화 > 여성가방 > 토드백",
+                "여가/생활편의 > 자기계발/취미 레슨 > 3차 카테고리 > 4차 카테고리",
+                "디지털/가전 > 카메라/캠코더용품 > 카메라/캠코더 관련용품 > 카메라/캠코더용마이크 ",
+                "1차 카테고리 > 2차 카테고리 > 3차 카테고리 > 4차 카테고리",
+                "식품 > 반찬 > 쌀 > 백미",
+                "1차 카테고리 > 2차 카테고리 > 3차 카테고리 > 4차 카테고리",
+                "패션잡화 > 여성가방 > 토드백",
+                "여가/생활편의 > 자기계발/취미 레슨 > 3차 카테고리 > 4차 카테고리",
+                "디지털/가전 > 카메라/캠코더용품 > 카메라/캠코더 관련용품 > 카메라/캠코더용마이크 ",
+                "1차 카테고리 > 2차 카테고리 > 3차 카테고리 > 4차 카테고리",
+                "식품 > 반찬 > 쌀 > 백미",
+                "1차 카테고리 > 2차 카테고리 > 3차 카테고리 > 4차 카테고리",
+                "패션잡화 > 여성가방 > 토드백",
+                "여가/생활편의 > 자기계발/취미 레슨 > 3차 카테고리 > 4차 카테고리",
+                "디지털/가전 > 카메라/캠코더용품 > 카메라/캠코더 관련용품 > 카메라/캠코더용마이크 ",
+                "1차 카테고리 > 2차 카테고리 > 3차 카테고리 > 4차 카테고리",
+                "식품 > 반찬 > 쌀 > 백미",
+                "1차 카테고리 > 2차 카테고리 > 3차 카테고리 > 4차 카테고리",
+                "패션잡화 > 여성가방 > 토드백",
+                "여가/생활편의 > 자기계발/취미 레슨 > 3차 카테고리 > 4차 카테고리",
+                "디지털/가전 > 카메라/캠코더용품 > 카메라/캠코더 관련용품 > 카메라/캠코더용마이크 ",
+                "1차 카테고리 > 2차 카테고리 > 3차 카테고리 > 4차 카테고리",
+                "식품 > 반찬 > 쌀 > 백미",
+                "1차 카테고리 > 2차 카테고리 > 3차 카테고리 > 4차 카테고리",
+                "패션잡화 > 여성가방 > 토드백",
+                "여가/생활편의 > 자기계발/취미 레슨 > 3차 카테고리 > 4차 카테고리",
+                "디지털/가전 > 카메라/캠코더용품 > 카메라/캠코더 관련용품 > 카메라/캠코더용마이크 ",
+                "1차 카테고리 > 2차 카테고리 > 3차 카테고리 > 4차 카테고리",
+                "식품 > 반찬 > 쌀 > 백미",
+                "1차 카테고리 > 2차 카테고리 > 3차 카테고리 > 4차 카테고리",
+                "패션잡화 > 여성가방 > 토드백",
+                "여가/생활편의 > 자기계발/취미 레슨 > 3차 카테고리 > 4차 카테고리",
+                "디지털/가전 > 카메라/캠코더용품 > 카메라/캠코더 관련용품 > 카메라/캠코더용마이크 ",
+                "1차 카테고리 > 2차 카테고리 > 3차 카테고리 > 4차 카테고리",
+                "식품 > 반찬 > 쌀 > 백미",
+                "1차 카테고리 > 2차 카테고리 > 3차 카테고리 > 4차 카테고리",
+                "패션잡화 > 여성가방 > 토드백",
+                "여가/생활편의 > 자기계발/취미 레슨 > 3차 카테고리 > 4차 카테고리",
+                "디지털/가전 > 카메라/캠코더용품 > 카메라/캠코더 관련용품 > 카메라/캠코더용마이크 ",
+                "1차 카테고리 > 2차 카테고리 > 3차 카테고리 > 4차 카테고리",
+                "식품 > 반찬 > 쌀 > 백미",
+                "1차 카테고리 > 2차 카테고리 > 3차 카테고리 > 4차 카테고리",
+                "패션잡화 > 여성가방 > 토드백",
+                "여가/생활편의 > 자기계발/취미 레슨 > 3차 카테고리 > 4차 카테고리",
+                "디지털/가전 > 카메라/캠코더용품 > 카메라/캠코더 관련용품 > 카메라/캠코더용마이크 ",
+                "1차 카테고리 > 2차 카테고리 > 3차 카테고리 > 4차 카테고리",
+                "식품 > 반찬 > 쌀 > 백미",
+                "1차 카테고리 > 2차 카테고리 > 3차 카테고리 > 4차 카테고리",
+                "패션잡화 > 여성가방 > 토드백",
+                "여가/생활편의 > 자기계발/취미 레슨 > 3차 카테고리 > 4차 카테고리",
+                "디지털/가전 > 카메라/캠코더용품 > 카메라/캠코더 관련용품 > 카메라/캠코더용마이크 ",
+                "1차 카테고리 > 2차 카테고리 > 3차 카테고리 > 4차 카테고리",
+                "식품 > 반찬 > 쌀 > 백미",
+                "1차 카테고리 > 2차 카테고리 > 3차 카테고리 > 4차 카테고리",
+                "패션잡화 > 여성가방 > 토드백",
             ];
             $("#keyword").autocomplete({
                 source: availableTags
+            });
+            $("#keyword-mobile").autocomplete({
+                source: availableTags,
+                appendTo: '#keyword-autocomplete-area',
+                select: function( event, ui ) { //아이템 클릭시 modla hide
+                    $('#keyword').val( ui.item.value);
+                    $('#modal-keyword-form').modal('hide');
+                    return false;
+                }
             });
 
             var datatable = $('#datatable').DataTable({
