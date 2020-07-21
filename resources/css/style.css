@@ -1547,7 +1547,7 @@ html.is-scrolled .btn-top {
   text-align: center;
   font-family: 'NanumSquare';
   font-size: 20px;
-  margin-top: 35px;
+  margin-top: 36px;
   line-height: 1.5;
 }
 
@@ -1567,6 +1567,9 @@ html.is-scrolled .btn-top {
   .analysis {
     border-top: 2px solid #000;
     padding-top: 12px;
+  }
+  .analysis .chart-text {
+    font-size: 18px;
   }
   .btn-analysis {
     position: fixed;

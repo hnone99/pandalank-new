@@ -386,13 +386,16 @@
         .th-icon-info{margin-top: -3px;margin-left: 8px;}
     }
     .chart{text-align: center;}
-    .chart-text{text-align: center;font-family: 'NanumSquare';font-size: 20px;margin-top: 35px;line-height: 1.5;}
+    .chart-text{text-align: center;font-family: 'NanumSquare';font-size: 20px;margin-top: 36px;line-height: 1.5;}
     .chart-text-sm{text-align: center;font-family: 'NanumSquare';font-size: 16px;margin-top: 10px;line-height: 1.5;}
 }
 .btn-analysis{margin-top: 30px;}
 
 @include media-breakpoint-down(md) {
-    .analysis{border-top: 2px solid #000;padding-top: 12px;}
+    .analysis{
+        border-top: 2px solid #000;padding-top: 12px;
+        .chart-text{font-size: 18px;}
+    }
     .btn-analysis{position: fixed;width: 100%;bottom: 0;left: 0;z-index: 1;transform: skew(0);}
 }
 
