@@ -82,28 +82,14 @@
             }
         },
         gnb : function(){
-            const breakpoint = window.matchMedia( '(min-width:768px)' );
-
-            let gnbSwiper;
-
-            const breakpointChecker = function() {
-                if ( breakpoint.matches === true ) {
-                    if ( gnbSwiper !== undefined ) gnbSwiper.destroy( true, true );
-                    return;
-                } else if ( breakpoint.matches === false ) {
-                    return enableSwiper();
-                }
-            };
-            const enableSwiper = function() {
-                gnbSwiper = new Swiper('.gnb nav', {
-                    slidesPerView: 'auto',
-                    freeMode: true,
-                    slidesOffsetBefore: 12,
-                    slidesOffsetAfter: 12
-                });
-            };
-            breakpoint.addListener(breakpointChecker);
-            breakpointChecker();
+            var activeIdx = $('#gnb-mobile').find('.active').index();
+            var gnbMobileSwiper = new Swiper('#gnb-mobile nav', {
+                slidesPerView: 'auto',
+                freeMode: true,
+                //slidesOffsetBefore: 12,
+                slidesOffsetAfter: 12,
+                initialSlide: activeIdx
+            });
         },
         side : function(){
             $('.btn-menu').on('click',function(e){

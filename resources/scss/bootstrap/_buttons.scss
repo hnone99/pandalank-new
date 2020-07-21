@@ -121,6 +121,7 @@ fieldset:disabled a.btn {
 .btn-sm {
   @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-line-height-sm, $btn-border-radius-sm);
   letter-spacing: -0.04em;
+  transform: skew(-0.001deg);
 }
 
 .btn-xs {
@@ -159,6 +160,7 @@ input[type="button"] {
   .btn-lg{
   }
   .btn-md {
+
   }
   .btn-sm{
   }
@@ -201,4 +203,12 @@ input[type="button"] {
   &:hover{
     color: $primary;
   }
+}
+
+.btn-primary.disabled,
+.btn-primary:disabled{
+  opacity: 1;
+  background: $dark;
+  border-color: $dark;
+  color: $gray;
 }

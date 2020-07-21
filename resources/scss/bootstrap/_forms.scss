@@ -60,9 +60,28 @@
   }
 }
 .form-control-panda{
-  height: 56px;border: 0;border-bottom: 1px solid $primary;caret-color: $primary;font-size: 18px;letter-spacing: -0.9px;padding-left: 0;padding-right: 0;line-height: 20px;padding-top: 15px;
-  &:focus{outline: none;box-shadow: none;}
+  height: 56px;border: 0;border-bottom: 1px solid $border-color;caret-color: $primary;font-size: 18px;letter-spacing: -0.9px;padding-left: 0;padding-right: 0;line-height: 20px;padding-top: 15px;font-family: 'NanumSquare';
+  &:focus{outline: none;box-shadow: none;border-bottom: 1px solid $primary;}
 }
+label + .form-control-panda{
+  height: 48px;padding-top: 13px;
+}
+.form-control-fake{
+  min-height: 48px;border: 0;border-bottom: 1px solid $border-color;caret-color: $primary;font-size: 18px;letter-spacing: -0.9px;padding: 9px 0;line-height: 20px;font-family: 'NanumSquare';display: flex;align-items: center;flex-wrap:wrap;
+  &.focus,
+  &:focus{outline: none;box-shadow: none;border-bottom: 1px solid $primary;}
+  .row{width: 100%;margin: -3px;}
+  [class^=col]{padding: 3px;}
+  .item{
+    border-radius: 6px;background: $light;position: relative;color: #666;font-size: 14px;padding: 0 22px 0 10px;line-height: 30px;max-width:160px;text-overflow:ellipsis;overflow: hidden;white-space: nowrap;
+    .close{
+      width: 16px;height: 16px;background: url('../images/icon-close.svg') no-repeat 50% 50%;background-size: 8px auto;position: absolute;right: 4px;top:50%;margin-top: -8px;opacity: 1;
+    }
+    & + .item{margin-left: 6px;}
+  }
+  input[type=text]{border: 0;outline: none;line-height: 1;height: 100%;display: block;width:60px;max-width:100%;padding: 0;font-family: 'NanumSquare';font-size: 18px;letter-spacing: -0.9px;}
+}
+
 
 @include media-breakpoint-down(md) {
   .form-control {
@@ -206,21 +225,22 @@ textarea.form-control {
 // horizontal forms, use the predefined grid classes.
 
 .form-group {
-  margin-bottom: $form-group-margin-bottom;
+  //margin-bottom: $form-group-margin-bottom;
 
   > label{
     display: block;
-    width: 100%;
-    background-color: #f4f5f8;
-    height: $input-height;
-    padding: $input-padding-y $input-padding-x;
-    font-weight: 700;
-    line-height: $btn-line-height;
+    //line-height: $btn-line-height;
+    line-height: 1;
+    font-family: 'NanumSquare';
     color: $dark;
-    margin-bottom: $label-margin-bottom;
+    //margin-bottom: $label-margin-bottom;
     &.bg-light-danger{background: #feeeed;}
-    &.required::before{content: '*';color: $red;margin-right: 3px;}
+    &.required::before{content: '*';color: $primary;margin-right: 1px;}
   }
+
+  & + .form-group{margin-top: 25px;}
+
+  .text-area{height: 20px;margin-top: 5px;}
 }
 
 .form-text {
@@ -394,4 +414,11 @@ textarea.form-control {
 }
 .form-control:-ms-input-placeholder {
   color: #bbb;
+}
+
+.form-control-wrapper{
+  position: relative;
+  .btn-submit{
+    position: absolute;right: 0;top: 50%;transform: translateY(-50%);
+  }
 }

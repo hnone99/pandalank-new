@@ -11,6 +11,7 @@
 }
 
 .breadcrumb-item {
+  transform: skew(-0.001deg);
   // The separator between breadcrumbs (by default, a forward-slash: "/")
   + .breadcrumb-item {
     padding-left: $breadcrumb-item-padding;

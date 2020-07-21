@@ -445,9 +445,9 @@ $btn-padding-x-sm:            1rem !default;
 $btn-font-size-sm:            0.875rem !default;
 $btn-line-height-sm:          $btn-line-height !default;
 
-$btn-padding-y-lg:            15px !default;
-$btn-padding-x-lg:            32px!default;
-$btn-font-size-lg:            1.25rem !default;
+$btn-padding-y-lg:            18.5px !default;
+$btn-padding-x-lg:            76px!default;
+$btn-font-size-lg:            1.125rem !default;
 $btn-line-height-lg:          $btn-line-height !default;
 
 $btn-border-width:            $input-btn-border-width !default;
@@ -465,7 +465,7 @@ $btn-block-spacing-y:         .5rem !default;
 
 // Allows for customizing button radius independently from global border radius
 $btn-border-radius:           0 !default;
-$btn-border-radius-lg:        2rem !default;
+$btn-border-radius-lg:        $btn-border-radius !default;
 $btn-border-radius-sm:        $btn-border-radius !default;
 $btn-border-radius-xs:        $btn-border-radius !default;
 

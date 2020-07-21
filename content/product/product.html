@@ -37,23 +37,35 @@
                 <div class="logo">
                     <h1><a href=""><span class="sr-only">PANDA RANK LOGO</span></a></h1>
                 </div>
-                <div class="gnb">
+                <div class="gnb" id="gnb-mobile">
                     <nav class="swiper-container">
                         <ul class="swiper-wrapper">
                             <li class="swiper-slide"><a href=""><span>홈</span></a></li>
                             <li class="swiper-slide active"><a href="../product/product.html"><span>상품 찾기</span></a></li>
-                            <li class="swiper-slide"><a href=""><span>경쟁력 분석</span></a></li>
+                            <li class="swiper-slide"><a href="../analysis/analysis.html"><span>경쟁력 분석</span></a></li>
                             <li class="swiper-slide"><a href=""><span>AI 판매 예측</span></a></li>
                             <li class="swiper-slide"><a href="../ceo/ceo.html"><span>사장님들의 방</span></a></li>
                             <li class="swiper-slide"><a href=""><span>공지</span></a></li>
                         </ul>
                     </nav>
                 </div>
-                <div class="util-wrap">
+                <div class="side-group">
+                    <div class="gnb">
+                        <nav>
+                            <ul>
+                                <li><a href=""><span>홈</span></a></li>
+                                <li class="active"><a href="../product/product.html"><span>상품 찾기</span></a></li>
+                                <li><a href="../analysis/analysis.html"><span>경쟁력 분석</span></a></li>
+                                <li><a href=""><span>AI 판매 예측</span></a></li>
+                                <li><a href="../ceo/ceo.html"><span>사장님들의 방</span></a></li>
+                                <li><a href=""><span>공지</span></a></li>
+                            </ul>
+                        </nav>
+                    </div>
                     <div class="util">
                         <ul>
-                            <li><a href=""><span>마이페이지</span></a></li>
-                            <li><a href=""><span>로그인/회원가입</span></a></li>
+                            <li><a href="" class="mypage"><i class="profile"><img src="../../resources/images/@profile.png" alt="판다랭크"></i><span>판다랭크</span></a></li>
+                            <li><a href="#join" class="btn-join"><span>로그인/회원가입</span></a></li>
                         </ul>
                     </div>
                 </div>
@@ -539,7 +551,7 @@
                                                 <div class="col-auto">
                                                     <div class="board-control">
                                                         <a href="javacript:;" class="text-gray">수정</a>
-                                                        <a href="javacript:;" class="text-gray ml-2">삭제</a>
+                                                        <a href="javacript:;" class="text-gray ml-2" data-toggle="modal" data-target="#modal-password">삭제</a>
                                                     </div>
                                                 </div>
                                             </div>
