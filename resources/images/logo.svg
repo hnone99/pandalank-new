@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="144" height="24" viewBox="0 0 144 24">
+    <g id="그룹_390" data-name="그룹 390" transform="translate(-24 -18)">
+        <g id="그룹_10" data-name="그룹 10" transform="translate(24 19.999)">
+            <text id="PANDA" fill="#fff" font-family="Gotham-Bold, Gotham" font-size="21px" font-weight="700" letter-spacing="-0.05em" opacity="0.996" transform="translate(0 18.001)">
+                <tspan x="0" y="0">PANDA</tspan>
+            </text>
+            <rect id="사각형_41" width="66" height="24" fill="#fff" data-name="사각형 41" rx="3" transform="translate(78 -1.999)"/>
+            <text id="RANK" font-family="Gotham-Bold, Gotham" font-size="20px" font-weight="700" letter-spacing="-0.05em" opacity="0.996" transform="translate(82 17)">
+                <tspan x="0" y="0">RANK</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

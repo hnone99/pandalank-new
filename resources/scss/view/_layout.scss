@@ -67,13 +67,6 @@ body{
     border-top: 1px solid $border-color;padding-top: 30px;
 }
 #content{max-width: 960px;margin: 0 auto;padding-bottom: 100px;}
-#right-block{
-    width: 100%;height: 100vh;position: fixed;right: -100%;top: 0;z-index: 1111;
-}
-#right{height: 100%;}
-html.open-right #right-block{
-    right: 0;
-}
 
 @include media-breakpoint-up(lg) {
     body{
@@ -110,13 +103,6 @@ html.open-right #right-block{
         #center-block + #container-block{
             margin-left: 200px;
         }
-    }
-
-    #right-block{
-        width: 600px;right: -600px;
-    }
-    html.open-right #right-block{
-        right: 0;
     }
 }
 

@@ -87,23 +87,6 @@ body {
   padding-bottom: 100px;
 }
 
-#right-block {
-  width: 100%;
-  height: 100vh;
-  position: fixed;
-  right: -100%;
-  top: 0;
-  z-index: 1111;
-}
-
-#right {
-  height: 100%;
-}
-
-html.open-right #right-block {
-  right: 0;
-}
-
 @media (min-width: 992px) {
   body {
     min-width: 1280px;
@@ -162,13 +145,6 @@ html.open-right #right-block {
   }
   html.is-collapsed #center-block + #container-block {
     margin-left: 200px;
-  }
-  #right-block {
-    width: 600px;
-    right: -600px;
-  }
-  html.open-right #right-block {
-    right: 0;
   }
 }
 
@@ -1498,15 +1474,188 @@ html.is-scrolled .btn-top {
   padding: 12px 24px 0 !important;
 }
 
-.join {
-  width: 100%;
+body.body-half {
+  background: #fbf9fa;
+}
+
+#half-block {
   height: 100%;
-  background: #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#half-block .logo {
+  position: fixed;
+  left: 60px;
+  top: 50px;
+}
+
+#half-block .logo a {
+  display: inline-block;
+  width: 141px;
+  height: 21px;
+  background: url(../images/logo.svg) no-repeat 50% 50%;
+  background-size: contain;
+}
+
+.join {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 800px;
+          flex: 1 1 800px;
+  max-width: 800px;
+  height: 800px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  margin-left: 50%;
+  padding: 24px;
+  margin-right: 24px;
 }
 
 .join .join-body {
-  background: #fff;
-  border-radius: 90px 0 0 0;
+  height: 100%;
+}
+
+.join .join-container {
+  height: 100%;
+  max-width: 312px;
+  margin-left: auto;
+  margin-right: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.join .img {
+  width: 200px;
+  height: 200px;
+  background: url("../images/img-panda.png") 50% 50% no-repeat;
+  background-size: contain;
+  margin-bottom: 40px;
+}
+
+.join .join-btns {
+  text-align: center;
+}
+
+.join .join-btns a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 256px;
+  height: 56px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 28px;
+  -webkit-box-shadow: 0 10px 30px 0 #dee8ef;
+          box-shadow: 0 10px 30px 0 #dee8ef;
+  background-color: #ffffff;
+  margin: 0 auto;
+}
+
+.join .join-btns a + a {
+  margin-top: 20px;
+}
+
+.join .join-btns span {
+  font-size: 16px;
+  letter-spacing: -0.8px;
+  font-weight: 700;
+  padding-top: 2px;
+}
+
+.join .join-btns i {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  margin-left: 42px;
+  margin-right: 12px;
+}
+
+.join .join-btns i.naver {
+  background: url("../images/icon-naver.png") no-repeat 50% 50%;
+  background-size: contain;
+}
+
+.join .join-btns i.google {
+  background: url("../images/icon-google.png") no-repeat 50% 50%;
+  background-size: contain;
+}
+
+.join .already {
+  text-align: center;
+  font-size: 14px;
+  color: #989da0;
+  margin-top: 40px;
+}
+
+@media (max-width: 991.98px) {
+  #half-block {
+    display: block;
+  }
+  #half-block .half-header {
+    width: 100%;
+    height: 56px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #half-block .logo {
+    position: static;
+  }
+  #half-block .logo a {
+    width: 112px;
+    height: 19px;
+    background: url("../images/logo.svg") no-repeat 50% 50%;
+    background-size: contain;
+  }
+  #half-block .btn-back {
+    width: 12px;
+    height: 23px;
+    position: absolute;
+    left: 24px;
+    top: 17px;
+    background: url("../images/icon-prev-white.svg") no-repeat 50% 50%;
+    background-size: contain;
+  }
+  .join {
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+    background: #000;
+    height: 100%;
+    max-width: 100%;
+    padding-top: 140px;
+  }
+  .join .join-body {
+    background: #ffffff;
+    border-radius: 50px 0 0 0;
+  }
 }
 
 .analysis .grade {
