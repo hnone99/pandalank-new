@@ -10,7 +10,7 @@
 .custom-control {
   position: relative;
   display: block;
-  min-height: 2rem;
+  //min-height: 2rem;
   padding-left: $custom-control-gutter + $custom-control-indicator-size;
   padding-top: .25rem;
 }
@@ -42,25 +42,25 @@
   &:checked ~ .custom-control-label::before {
     color: $custom-control-indicator-checked-color;
     border-color: $custom-control-indicator-checked-border-color;
-    background: #fff;
+    background: $black;
     //@include gradient-bg($custom-control-indicator-checked-bg);
     //@include box-shadow($custom-control-indicator-checked-box-shadow);
   }
   &:checked ~ .custom-control-label::after{
-    background-size: 20px auto;
+    background-size: 11px auto;
   }
 
   &:focus ~ .custom-control-label::before {
     // the mixin is not used here to make sure there is feedback
-    @if $enable-shadows {
+    /* @if $enable-shadows {
       box-shadow: $input-box-shadow, $input-focus-box-shadow;
     } @else {
       box-shadow: $custom-control-indicator-focus-box-shadow;
-    }
+    } */
   }
 
   &:focus:not(:checked) ~ .custom-control-label::before {
-    border-color: $custom-control-indicator-focus-border-color;
+    //border-color: $custom-control-indicator-focus-border-color;
   }
 
   &:not(:disabled):active ~ .custom-control-label::before {
@@ -92,6 +92,7 @@
 .custom-control-label {
   position: relative;
   margin-bottom: 0;
+  font-size: 0.875rem;
   color: $custom-control-label-color;
   vertical-align: top;
   cursor: $custom-control-cursor;
@@ -99,7 +100,8 @@
   // Background-color and (when enabled) gradient
   &::before {
     position: absolute;
-    top: ($font-size-base * $line-height-base - $custom-control-indicator-size) / 2;
+    //top: ($font-size-base * $line-height-base - $custom-control-indicator-size) / 2;
+    top:-0.1rem;
     left: -($custom-control-gutter + $custom-control-indicator-size);
     display: block;
     width: $custom-control-indicator-size;
@@ -114,42 +116,14 @@
   // Foreground (icon)
   &::after {
     position: absolute;
-    top: ($font-size-base * $line-height-base - $custom-control-indicator-size) / 2;
+    //top: ($font-size-base * $line-height-base - $custom-control-indicator-size) / 2;
+    top:-0.1rem;
     left: -($custom-control-gutter + $custom-control-indicator-size);
     display: block;
     width: $custom-control-indicator-size;
     height: $custom-control-indicator-size;
     content: "";
     background: no-repeat 50% / #{$custom-control-indicator-bg-size};
-  }
-}
-@include media-breakpoint-down(md) {
-  .custom-control {
-    min-height: 1.25rem;
-    padding-left: 1.75rem;
-    padding-top: 0;
-  }
-  .custom-control-input{
-    width: 1.5rem;
-    height: 1.5rem;
-  }
-  .custom-control-label {
-    &::before {
-      top: 0;
-      left: -1.75rem;
-      width: 1.25rem;
-      height: 1.25rem;
-    }
-
-    // Foreground (icon)
-    &::after {
-      position: absolute;
-      top: 0;
-      left: -1.75rem;
-      width: 1.25rem;
-      height: 1.25rem;
-      background-size: 14px auto !important;
-    }
   }
 }
 

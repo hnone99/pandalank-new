@@ -1446,6 +1446,13 @@ html.is-scrolled .btn-top {
   border-color: #e96b69;
 }
 
+.text-valid {
+  font-size: 13px;
+  color: #34D52E;
+  display: block;
+  margin-top: 5px;
+}
+
 .input-area-mobile {
   position: relative;
   z-index: 1;
@@ -1541,6 +1548,10 @@ body.body-half {
           align-items: center;
 }
 
+.join .join-container > * {
+  width: 100%;
+}
+
 .join .img {
   width: 200px;
   height: 200px;
@@ -1605,6 +1616,30 @@ body.body-half {
   margin-top: 40px;
 }
 
+.join .join-submit .btn {
+  border-radius: 5px;
+  -webkit-box-shadow: 0 10px 30px 0 rgba(52, 213, 46, 0.3);
+          box-shadow: 0 10px 30px 0 rgba(52, 213, 46, 0.3);
+}
+
+.join .join-submit .btn:disabled {
+  -webkit-box-shadow: 0 10px 30px 0 #d2dae0;
+          box-shadow: 0 10px 30px 0 #d2dae0;
+}
+
+.join .agree-check {
+  margin-top: 110px;
+  margin-bottom: 26px;
+}
+
+.join .agree-check .item + .item {
+  margin-top: 8px;
+}
+
+.join.join-form {
+  background: #fff;
+}
+
 @media (max-width: 991.98px) {
   #half-block {
     display: block;
@@ -1615,6 +1650,7 @@ body.body-half {
     position: fixed;
     left: 0;
     top: 0;
+    z-index: 99;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1624,9 +1660,11 @@ body.body-half {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    background: #fff;
   }
   #half-block .logo {
     position: static;
+    display: none;
   }
   #half-block .logo a {
     width: 112px;
@@ -1640,22 +1678,53 @@ body.body-half {
     position: absolute;
     left: 24px;
     top: 17px;
-    background: url("../images/icon-prev-white.svg") no-repeat 50% 50%;
+    background: url("../images/icon-prev.svg") no-repeat 50% 50%;
     background-size: contain;
   }
   .join {
     margin: 0;
     padding: 0;
     border-radius: 0;
-    background: #000;
     height: 100%;
     max-width: 100%;
-    padding-top: 140px;
+    padding-top: 56px;
   }
   .join .join-body {
     background: #ffffff;
     border-radius: 50px 0 0 0;
   }
+  .join .join-submit {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  }
+  .join .join-submit .btn {
+    border-radius: 0;
+  }
+  .join .agree-check {
+    position: fixed;
+    left: 24px;
+    bottom: 70px;
+  }
+}
+
+body.body-join-index #half-block .half-header {
+  background: transparent;
+}
+
+body.body-join-index #half-block .logo {
+  display: block;
+}
+
+body.body-join-index #half-block .btn-back {
+  background: url("../images/icon-prev-white.svg") no-repeat 50% 50%;
+  background-size: contain;
+}
+
+body.body-join-index .join {
+  background: #000;
+  padding-top: 140px;
 }
 
 .analysis .grade {

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-Compatible" content="IE=edge">
+    <title>PANDA RANK</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="icon" href="../../resources/images/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="../../resources/images/favicon-128.png" sizes="128x128">
+    <link rel="stylesheet" href="../../resources/css/bootstrap.css">
+    <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/OverlayScrollbars/css/OverlayScrollbars.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/datatables/css/dataTables.bootstrap4.css">
+    <link rel="stylesheet" href="../../resources/css/style.css">
+    <!-- jquery -->
+    <script src="../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- jquery ui -->
+    <script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- bootstrap -->
+    <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- DataTables -->
+    <script src="../../resources/plugins/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="../../resources/plugins/datatables/js/dataTables.bootstrap4.js"></script>
+    <!-- Swiper -->
+    <script src="../../resources/plugins/swiper/js/swiper.min.js"></script>
+    <!-- ui 관련 -->
+    <script src="../../resources/js/ui.js"></script>
+</head>
+
+<body class="body-half body-join-form">
+    <div id="half-block">
+        <div class="half-header">
+            <div class="logo">
+                <h1><a href="../dashboard/dashboard.html"><span class="sr-only">PANDA RANK LOGO</span></a></h1>
+            </div>
+            <a href="javascript:;" role="button" onclick="history.back()" class="btn-back d-lg-none"><span class="sr-only">뒤로</span></a>
+        </div>
+        <div class="join">
+            <div class="join-body">
+                <div class="join-container">
+                    <div class="form-group">
+                        <label for="form1">닉네임 (최대 6자)</label>
+                        <div class="form-control-wrapper">
+                            <input type="text" class="form-control form-control-panda is-invalid" id="form1"> <!-- 유효성체크 (.is-invalid 추가) -->
+                            <button type="button" class="btn btn-submit">검사</button>
+                        </div>
+                        <div class="text-area">
+                            <span class="text-error">! 최대 20글자까지만 입력할 수 있습니다</span> <!-- 유효성체크 (토글) -->
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="form2">휴대폰 번호 (숫자만 입력)</label>
+                        <div class="form-control-wrapper">
+                            <input type="tel" class="form-control form-control-panda" id="form2">
+                            <button type="button" class="btn btn-submit">인증</button>
+                        </div>
+                        <!-- 인증번호 -->
+                        <div>
+                            <div class="form-control-wrapper mt-1">
+                                <input type="tel" class="form-control form-control-panda" id="form3" placeholder="인증번호를 입력하세요"> <!-- 유효성체크 (.is-invalid 추가) -->
+                                <button type="button" class="btn btn-submit">확인</button>
+                            </div>
+                            <div class="text-area text-right">
+                                <span class="text-gray">3:00</span>
+                            </div>
+                            <div class="text-area">
+                                <span class="text-valid">인증되었습니다</span> <!-- 유효성체크 (토글) -->
+                            </div>
+                        </div>
+                        <!-- //인증번호 -->
+                    </div>
+                    <div class="agree-check">
+                        <div class="item">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="chk1">
+                                <label class="custom-control-label" for="chk1">이용약관 및 개인정보 처리 방침 동의</label>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="chk2">
+                                <label class="custom-control-label" for="chk2">마케팅 수신 동의</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="join-submit">
+                        <button type="button" class="btn btn-lg btn-block btn-primary" disabled>가입하기</button> <!-- 활성화 : disabled = false -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+
+        });
+    </script>
+</body>
+</html>
