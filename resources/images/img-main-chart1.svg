@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="470" height="265" viewBox="0 0 470 265">
+    <defs>
+        <filter id="사각형_344" width="160.299" height="206" x="4.209" y="79" filterUnits="userSpaceOnUse">
+            <feOffset dy="10"/>
+            <feGaussianBlur result="blur" stdDeviation="15"/>
+            <feFlood flood-color="#e2e7f4"/>
+            <feComposite in2="blur" operator="in"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+        <filter id="사각형_344-2" width="160.299" height="206" x="304.487" y="-21" filterUnits="userSpaceOnUse">
+            <feOffset dy="10"/>
+            <feGaussianBlur result="blur-2" stdDeviation="15"/>
+            <feFlood flood-color="#e2e7f4"/>
+            <feComposite in2="blur-2" operator="in"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+        <linearGradient id="linear-gradient" x2="1" y1=".5" y2=".5" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#2ce326"/>
+            <stop offset="1" stop-color="#3fe5e5"/>
+        </linearGradient>
+        <clipPath id="clip-path">
+            <path id="사각형_346" d="M0 0H470V265H0z" class="cls-1" data-name="사각형 346" transform="translate(617 356)"/>
+        </clipPath>
+        <style>
+            .cls-1{fill:#fff}.cls-4,.cls-5,.cls-8{fill:none}.cls-4,.cls-5{stroke-width:7px}.cls-4{stroke:#edf0f7;stroke-miterlimit:10}.cls-5{stroke:#34d52e}.cls-6{fill:#989da0;font-size:15px;font-family:NanumSquareEB,NanumSquare}.cls-7{stroke:none}
+        </style>
+    </defs>
+    <g id="마스크_그룹_5" clip-path="url(#clip-path)" data-name="마스크 그룹 5" transform="translate(-617 -356)">
+        <path id="패스_42" fill="url(#linear-gradient)" d="M882.275 746.8a88.022 88.022 0 0 1-14.249-1.336l.916-5.924c22.659 3.749 28.568-1.085 35.608-9.5 6.25-7.467 9.684-17.43 12.932-27.841 7.541-24.167 13-48.517 18.87-77.644.511-2.537.988-5.256 1.492-8.134 3.28-18.725 7.362-42.028 26.958-49.074 10.964-3.937 20.846 2.583 27.824 18.375 4.668 10.564 7.761 21.811 10.752 32.687 2.683 9.754 5.457 19.841 9.334 29.229 1.64 3.969 6.628 16.05 13.205 18.32a7.344 7.344 0 0 0 6.409-.972c3.449-2.057 6.248-5.371 9.212-8.88 3.689-4.368 7.5-8.884 12.969-11.379a12.608 12.608 0 0 1 10.789-.088c12.1 5.407 19.971 28.466 25.182 43.725 1.181 3.464 2.2 6.455 2.944 8.168 2.706 6.268 8.34 19.311 16.3 22.009 6.846 2.316 12.9-6.783 17.406-14.973 4.687-8.521 8.263-17.966 11.721-27.1 4.354-11.5 8.857-23.4 15.7-33.939l4.814 3.344c-6.488 10-10.873 21.581-15.113 32.782-3.534 9.332-7.187 18.983-12.081 27.88-3.6 6.539-12.021 21.853-24.254 17.707-10.4-3.524-16.507-17.666-19.789-25.263-.835-1.934-1.842-4.882-3.118-8.617-4.277-12.528-12.24-35.847-22.012-40.216a7.091 7.091 0 0 0-6.146.07c-4.287 1.957-7.521 5.785-10.944 9.839-3.146 3.722-6.4 7.573-10.68 10.129a12.828 12.828 0 0 1-11.142 1.465c-8.115-2.8-13.421-13.7-16.7-21.654-4.022-9.738-6.846-20.01-9.578-29.944-2.933-10.661-5.964-21.685-10.449-31.835-7.128-16.134-15.162-17.172-20.644-15.2-16.4 5.895-20.144 27.287-23.155 44.476-.511 2.918-.994 5.674-1.521 8.288-5.114 25.366-10.958 52.4-19.029 78.264-3.44 11.022-7.1 21.605-14.067 29.925-6.162 7.356-12.121 12.831-26.666 12.831z" data-name="패스 42" transform="translate(-165.662 -181.229)"/>
+        <path id="패스_40" d="M739.933 585.115c27.163 1.972 36.687 35.753 63.156 39.859" class="cls-4" data-name="패스 40" transform="translate(-123.41 -76.996)"/>
+        <path id="패스_41" d="M1324.5 507.5s16.884 77 68.742 98" class="cls-4" data-name="패스 41" transform="translate(-305.237 -48.5)"/>
+        <g id="그룹_441" data-name="그룹 441" transform="translate(666.209 470)">
+            <g filter="url(#사각형_344)" transform="translate(-49.21 -114)">
+                <rect id="사각형_344-3" width="70.299" height="116" class="cls-1" data-name="사각형 344" rx="35.15" transform="translate(49.21 114)"/>
+            </g>
+            <g id="타원_22" class="cls-5" data-name="타원 22" transform="translate(24.103 75)">
+                <ellipse cx="11.549" cy="11.5" class="cls-7" rx="11.549" ry="11.5"/>
+                <ellipse cx="11.549" cy="11.5" class="cls-8" rx="8.049" ry="8"/>
+            </g>
+            <text id="유입" class="cls-6" transform="translate(22.094 45)">
+                <tspan x="0" y="0">유입</tspan>
+            </text>
+        </g>
+        <g id="그룹_442" data-name="그룹 442" transform="translate(966.487 370)">
+            <g filter="url(#사각형_344-2)" transform="translate(-349.49 -14)">
+                <rect id="사각형_344-4" width="70.299" height="116" class="cls-1" data-name="사각형 344" rx="35.15" transform="translate(349.49 14)"/>
+            </g>
+            <g id="타원_22-2" class="cls-5" data-name="타원 22" transform="translate(24.103 75)">
+                <ellipse cx="11.549" cy="11.5" class="cls-7" rx="11.549" ry="11.5"/>
+                <ellipse cx="11.549" cy="11.5" class="cls-8" rx="8.049" ry="8"/>
+            </g>
+            <text id="전환" class="cls-6" transform="translate(22.094 45)">
+                <tspan x="0" y="0">전환</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

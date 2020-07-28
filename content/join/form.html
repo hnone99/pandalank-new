@@ -36,7 +36,7 @@
             <div class="logo">
                 <h1><a href="../dashboard/dashboard.html"><span class="sr-only">PANDA RANK LOGO</span></a></h1>
             </div>
-            <a href="javascript:;" role="button" onclick="history.back()" class="btn-back d-lg-none"><span class="sr-only">뒤로</span></a>
+            <a href="javascript:;" role="button" class="btn-back d-lg-none" data-toggle="modal" data-target="#modal-confirm"><span class="sr-only">뒤로</span></a>
         </div>
         <div class="join">
             <div class="join-body">
@@ -74,10 +74,11 @@
                     </div>
                     <div class="agree-check">
                         <div class="item">
-                            <div class="custom-control custom-checkbox">
+                            <div class="custom-control custom-checkbox custom-control-inline">
                                 <input type="checkbox" class="custom-control-input" id="chk1">
                                 <label class="custom-control-label" for="chk1">이용약관 및 개인정보 처리 방침 동의</label>
                             </div>
+                            <a href="privacy.html" target="_blank">보기</a>
                         </div>
                         <div class="item">
                             <div class="custom-control custom-checkbox">
@@ -94,9 +95,32 @@
         </div>
     </div>
 
+    <!-- modal : 회원가입 중단 확인 -->
+    <div class="modal modal-alert" tabindex="-1" role="dialog" data-backdrop="static" id="modal-confirm"> <!-- alert 스타일은 .modal-alert 추가 -->
+        <div class="modal-dialog modal-dialog-centered modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="only-text">
+                        <p class="alert-message">회원가입을 그만두시겠어요?</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-submit" data-dismiss="modal" id="btn-join-cancel">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script>
         $(document).ready(function(){
-
+            $('#btn-join-cancel').on('click',function(e){
+                history.back();
+            });
         });
     </script>
 </body>

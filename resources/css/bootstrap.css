@@ -6,33 +6,27 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /* Nanum Square */
-/*
 @font-face {
-      font-family: 'NanumSquare';
-      font-weight: 400;
-      src: url(../fonts/NanumSquare/NanumSquareR.eot);
-      src: url(../fonts/NanumSquare/NanumSquareR.eot?#iefix) format('embedded-opentype'),
-            url(../fonts/NanumSquare/NanumSquareR.woff) format('woff'),
-            url(../fonts/NanumSquare/NanumSquareR.ttf) format('truetype');
+  font-family: 'NanumSquare';
+  font-weight: 400;
+  src: url(../fonts/NanumSquare/NanumSquareR.eot);
+  src: url(../fonts/NanumSquare/NanumSquareR.eot?#iefix) format("embedded-opentype"), url(../fonts/NanumSquare/NanumSquareR.woff) format("woff"), url(../fonts/NanumSquare/NanumSquareR.ttf) format("truetype");
 }
 
 @font-face {
-      font-family: 'NanumSquare';
-      font-weight: 700;
-      src: url(../fonts/NanumSquare/NanumSquareB.eot);
-      src: url(../fonts/NanumSquare/NanumSquareB.eot?#iefix) format('embedded-opentype'),
-            url(../fonts/NanumSquare/NanumSquareB.woff) format('woff'),
-            url(../fonts/NanumSquare/NanumSquareB.ttf) format('truetype');
+  font-family: 'NanumSquare';
+  font-weight: 700;
+  src: url(../fonts/NanumSquare/NanumSquareB.eot);
+  src: url(../fonts/NanumSquare/NanumSquareB.eot?#iefix) format("embedded-opentype"), url(../fonts/NanumSquare/NanumSquareB.woff) format("woff"), url(../fonts/NanumSquare/NanumSquareB.ttf) format("truetype");
 }
 
 @font-face {
-      font-family: 'NanumSquare';
-      font-weight: 800;
-      src: url(../fonts/NanumSquare/NanumSquareEB.eot);
-      src: url(../fonts/NanumSquare/NanumSquareEB.eot?#iefix) format('embedded-opentype'),
-            url(../fonts/NanumSquare/NanumSquareEB.woff) format('woff'),
-            url(../fonts/NanumSquare/NanumSquareEB.ttf) format('truetype');
-} */
+  font-family: 'NanumSquare';
+  font-weight: 800;
+  src: url(../fonts/NanumSquare/NanumSquareEB.eot);
+  src: url(../fonts/NanumSquare/NanumSquareEB.eot?#iefix) format("embedded-opentype"), url(../fonts/NanumSquare/NanumSquareEB.woff) format("woff"), url(../fonts/NanumSquare/NanumSquareEB.ttf) format("truetype");
+}
+
 /* noto sans */
 @font-face {
   font-family: 'Noto Sans KR';
@@ -4033,7 +4027,7 @@ textarea.form-control {
 
 .btn {
   display: inline-block;
-  font-weight: 700;
+  font-weight: 500;
   color: #000;
   text-align: center;
   vertical-align: middle;
@@ -8028,7 +8022,7 @@ a.close.disabled {
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   z-index: 1;
-  font-size: 28px;
+  font-size: 22px;
 }
 
 .modal-title {
@@ -8100,7 +8094,7 @@ a.close.disabled {
 
 .modal-alert .alert-message {
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 500;
   letter-spacing: -0.9px;
   text-align: center;
 }

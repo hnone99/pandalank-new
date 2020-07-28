@@ -252,6 +252,12 @@
                     $($(this).attr('data-target-mobile')).modal('show');
                 }
             });
+
+            //TOP 버튼
+            $('.btn-top').on('click', function(e) {
+                e.preventDefault();
+                $('html, body').animate({scrollTop: 0}, 300);
+            });
         }
     };
 

@@ -86,6 +86,57 @@
                 </div>
             </div>
         </section>
+        <section>
+            <a href="javacript:;" class="text-gray ml-2" data-toggle="modal" data-target="#modal-password">삭제</a>
+            <a href="javacript:;" class="text-gray ml-2" data-toggle="modal" data-target="#modal-confirm">삭제 확인</a>
+        </section>
+    </div>
+
+    <!-- modal : 비밀번호 입력 -->
+    <div class="modal modal-alert" tabindex="-1" role="dialog" data-backdrop="static" id="modal-password"> <!-- alert 스타일은 .modal-alert 추가 -->
+        <div class="modal-dialog modal-dialog-centered modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p class="alert-message">비밀번호를 입력하세요</p>
+                    <div class="input-box">
+                        <input type="password" class="form-control form-control-lg">
+                        <button type="submit" class="btn btn-submit">확인</button>
+                    </div>
+                    <div class="input-box">
+                        <input type="password" class="form-control form-control-lg is-invalid"> <!-- 유효성체크 (.is-invalid 추가) -->
+                        <button type="submit" class="btn btn-submit" id="btn-ok">확인</button>
+                    </div>
+                    <span class="text-error">! 비밀번호가 일치하지 않습니다</span> <!-- 유효성체크 (토글) -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal : 삭제 확인 -->
+    <div class="modal modal-alert" tabindex="-1" role="dialog" data-backdrop="static" id="modal-confirm"> <!-- alert 스타일은 .modal-alert 추가 -->
+        <div class="modal-dialog modal-dialog-centered modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="only-text">
+                        <p class="alert-message">글을 삭제하시겠습니까?</p>
+                        <p class="alert-message-sub">서브 메시지 가이드입니다. <br>짧고 간결하게 씁니다</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-submit" data-dismiss="modal">확인</button>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script>
