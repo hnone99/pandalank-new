@@ -1770,10 +1770,6 @@ body.body-half {
   .join .join-body {
     background: #ffffff;
     border-radius: 50px 0 0 0;
-    padding-top: 1rem;
-  }
-  .join .join-container {
-    display: block;
   }
   .join .join-submit {
     position: fixed;
@@ -1802,6 +1798,12 @@ body.body-half {
   body.body-join-index .join {
     background: #000;
     padding-top: 140px;
+  }
+  body.body-join-form .join-body {
+    padding-top: 1rem;
+  }
+  body.body-join-form .join-container {
+    display: block;
   }
 }
 
@@ -2122,6 +2124,9 @@ body.body-half {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 @media (max-width: 991.98px) {

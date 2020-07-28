@@ -430,9 +430,8 @@ body.body-half{background: #fbf9fa;}
     .join{
         margin: 0;padding: 0;border-radius: 0;height: 100%;max-width: 100%;padding-top: 56px;
         .join-body{
-            background: #ffffff;border-radius: 50px 0 0 0;padding-top: 1rem;
+            background: #ffffff;border-radius: 50px 0 0 0;
         }
-        .join-container{display: block;}
         .join-submit{
             position: fixed;left: 0;bottom: 0;width: 100%;
             .btn{border-radius: 0;}
@@ -450,6 +449,10 @@ body.body-half{background: #fbf9fa;}
         .join{
             background: #000;padding-top: 140px;
         }
+    }
+    body.body-join-form{
+        .join-body{padding-top: 1rem;}
+        .join-container{display: block;}
     }
 }
 
