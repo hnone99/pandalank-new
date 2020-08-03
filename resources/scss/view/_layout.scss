@@ -95,9 +95,9 @@ body{
         width: 320px;padding: 50px 40px;left: 200px;background: #fff;
         bottom: 0;height: 100vh;position: fixed;top: 0;z-index: 1000;border-right: 1px solid #d2dae0;
         .btn-collapse{
-            position: absolute;right: -48px;top: 174px;
+            position: absolute;right: -42px;top: 178px;
             a{
-                display: block;width: 48px;height: 48px;background: url('../images/btn-collapse.svg') no-repeat 50% 50%;background-size: contain;
+                display: block;width: 42px;height: 42px;background: url('../images/btn-collapse.svg') no-repeat 50% 50%;background-size: contain;border-radius: 0 5px 5px 0;
             }
         }
     }
@@ -114,6 +114,11 @@ body{
     html.is-collapsed{
         #center-block{
             transform: translateX(-100%);
+            .btn-collapse{
+                a{
+                    background-image: url('../images/btn-collapse-active.svg');
+                }
+            }
         }
         #center-block + #container-block{
             margin-left: 200px;
@@ -121,7 +126,7 @@ body{
     }
 }
 
-@include media-breakpoint-up(xxl) {
+/* @include media-breakpoint-up(xxl) {
     #side-block{
         width: 280px;padding: 50px 60px;
     }
@@ -143,7 +148,7 @@ body{
             margin-left: 280px;
         }
     }
-}
+} */
 
 
 @include media-breakpoint-down(md) {

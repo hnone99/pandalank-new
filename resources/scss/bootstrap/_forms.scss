@@ -60,14 +60,14 @@
   }
 }
 .form-control-panda{
-  height: 56px;border: 0;border-bottom: 1px solid $border-color;caret-color: $primary;font-size: 18px;letter-spacing: -0.9px;padding-left: 0;padding-right: 0;line-height: 20px;padding-top: 15px;font-family: 'Noto Sans KR';
+  height: 56px;border: 0;border-bottom: 1px solid $border-color;caret-color: $primary;font-size: 16px;letter-spacing: -0.9px;padding-left: 0;padding-right: 0;line-height: 20px;padding-top: 15px;font-family: 'Noto Sans KR';
   &:focus{outline: none;box-shadow: none;border-bottom: 1px solid $primary;}
 }
 label + .form-control-panda{
   height: 48px;padding-top: 13px;
 }
 .form-control-fake{
-  min-height: 48px;border: 0;border-bottom: 1px solid $border-color;caret-color: $primary;font-size: 18px;letter-spacing: -0.9px;padding: 9px 0;line-height: 20px;font-family: 'Noto Sans KR';display: flex;align-items: center;flex-wrap:wrap;
+  min-height: 48px;border: 0;border-bottom: 1px solid $border-color;caret-color: $primary;font-size: 16px;letter-spacing: -0.9px;padding: 9px 0;line-height: 20px;font-family: 'Noto Sans KR';display: flex;align-items: center;flex-wrap:wrap;
   &.focus,
   &:focus{outline: none;box-shadow: none;border-bottom: 1px solid $primary;}
   .row{width: 100%;margin: -3px;}
@@ -79,7 +79,7 @@ label + .form-control-panda{
     }
     & + .item{margin-left: 6px;}
   }
-  input[type=text]{border: 0;outline: none;line-height: 1;height: 100%;display: block;width:60px;max-width:100%;padding: 0;font-family: 'Noto Sans KR';font-size: 18px;letter-spacing: -0.9px;}
+  input[type=text]{border: 0;outline: none;line-height: 1;height: 100%;display: block;width:60px;max-width:100%;padding: 0;font-family: 'Noto Sans KR';font-size: 16px;letter-spacing: -0.9px;}
 }
 
 @include media-breakpoint-down(md) {
@@ -89,7 +89,7 @@ label + .form-control-panda{
     padding-right: .5rem;
   }
   .form-control-panda{
-    font-size: 18px;background: transparent;padding-left: 0;padding-right: 0;
+    background: transparent;padding-left: 0;padding-right: 0;
     &:focus{background: transparent;}
   }
 }

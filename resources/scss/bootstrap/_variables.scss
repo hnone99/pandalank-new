@@ -297,7 +297,7 @@ $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberati
 $font-family-base:            $font-family-sans-serif !default;
 // stylelint-enable value-keyword-case
 
-$font-size-base:              0.9375rem !default; // Assumes the browser default, typically `16px`
+$font-size-base:              0.8125rem !default; // Assumes the browser default, typically `16px`
 $font-size-lg:                $font-size-base * 1.25 !default;
 $font-size-sm:                $font-size-base * .875 !default;
 
@@ -830,7 +830,7 @@ $pagination-hover-color:            $link-hover-color !default;
 $pagination-hover-bg:               $gray-200 !default;
 $pagination-hover-border-color:     $gray-300 !default;
 
-$pagination-active-color:           #fff !default;
+$pagination-active-color:           $primary !default;
 $pagination-active-bg:              #111 !default;
 $pagination-active-border-color:    $pagination-active-bg !default;
 
