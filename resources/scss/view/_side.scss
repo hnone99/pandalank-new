@@ -50,11 +50,14 @@
 @include media-breakpoint-down(md) {
     #side{
         padding: 0;
-        .logo{height: 56px;display: flex;align-items: center;justify-content: center;}
+        .logo{
+            height: 56px;display: flex;align-items: center;justify-content: center;
+            a {background-image: url('../images/logo-m.svg');}
+        }
         .util{
             > ul > li{
                 > a{
-                    color: $black;background-image: url('../images/logo-m.svg');
+                    color: $black;
                 }
             }
         }

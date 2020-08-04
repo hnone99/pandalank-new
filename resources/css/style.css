@@ -358,9 +358,11 @@ body {
         -ms-flex-pack: center;
             justify-content: center;
   }
+  #side .logo a {
+    background-image: url("../images/logo-m.svg");
+  }
   #side .util > ul > li > a {
     color: #000;
-    background-image: url("../images/logo-m.svg");
   }
   .side-group {
     -webkit-box-shadow: 0 10px 30px 0 #dee8ef;
