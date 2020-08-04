@@ -84,7 +84,6 @@ label + .form-control-panda{
 
 @include media-breakpoint-down(md) {
   .form-control {
-    font-size: 0.8125rem;
     padding-left: .5rem;
     padding-right: .5rem;
   }

@@ -7,7 +7,7 @@
     }
 }
 #side{
-    .logo a{display: block;width: 141px;height: 21px;background: url('../images/logo.svg') no-repeat 50% 50%;background-size: contain;vertical-align: top;}
+    .logo a{display: block;width: 112px;height: 19px;background: url('../images/logo.svg') no-repeat 50% 50%;background-size: contain;vertical-align: top;}
     .util{
         margin-top: 75px;
         > ul > li{
@@ -47,11 +47,6 @@
     }
 }
 #gnb-mobile{position: absolute;left: -99999px;margin-top: 0;}
-@include media-breakpoint-down(xl) {
-    #side{
-        .logo a{width: 110px;}
-    }
-}
 @include media-breakpoint-down(md) {
     #side{
         padding: 0;
@@ -59,7 +54,7 @@
         .util{
             > ul > li{
                 > a{
-                    color: $black;
+                    color: $black;background-image: url('../images/logo-m.svg');
                 }
             }
         }

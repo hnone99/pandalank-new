@@ -78,7 +78,7 @@ body {
 
 #center-block + #container-block {
   border-top: 1px solid #d2dae0;
-  padding-top: 30px;
+  padding-top: 50px;
 }
 
 #content {
@@ -167,9 +167,23 @@ body {
     display: block;
     width: 42px;
     height: 42px;
-    background: url("../images/btn-collapse.svg") no-repeat 50% 50%;
-    background-size: contain;
     border-radius: 0 5px 5px 0;
+    background: #000;
+    position: relative;
+  }
+  #center-block .btn-collapse a::before {
+    content: '';
+    display: block;
+    background: url("../images/icon-pre.svg") no-repeat 50% 50%;
+    background-size: contain;
+    width: 10px;
+    height: 18px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -9px 0 0 -5px;
+    -webkit-transition: all .2s .1s;
+    transition: all .2s .1s;
   }
   #container-block {
     padding: 50px 87px;
@@ -189,8 +203,9 @@ body {
     -webkit-transform: translateX(-100%);
             transform: translateX(-100%);
   }
-  html.is-collapsed #center-block .btn-collapse a {
-    background-image: url("../images/btn-collapse-active.svg");
+  html.is-collapsed #center-block .btn-collapse a::before {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
   }
   html.is-collapsed #center-block + #container-block {
     margin-left: 200px;
@@ -239,8 +254,8 @@ body {
 
 #side .logo a {
   display: block;
-  width: 141px;
-  height: 21px;
+  width: 112px;
+  height: 19px;
   background: url("../images/logo.svg") no-repeat 50% 50%;
   background-size: contain;
   vertical-align: top;
@@ -327,12 +342,6 @@ body {
   margin-top: 0;
 }
 
-@media (max-width: 1599.98px) {
-  #side .logo a {
-    width: 110px;
-  }
-}
-
 @media (max-width: 991.98px) {
   #side {
     padding: 0;
@@ -351,6 +360,7 @@ body {
   }
   #side .util > ul > li > a {
     color: #000;
+    background-image: url("../images/logo-m.svg");
   }
   .side-group {
     -webkit-box-shadow: 0 10px 30px 0 #dee8ef;
@@ -999,6 +1009,15 @@ html.is-scrolled .btn-top {
   }
 }
 
+.icon-ellipsis {
+  display: inline-block;
+  vertical-align: middle;
+  width: 3px;
+  height: 20px;
+  background: url("../images/ellipsis-v-solid.svg") no-repeat 50% 50%;
+  background-size: contain;
+}
+
 .icon-prev {
   display: inline-block;
   vertical-align: middle;
@@ -1151,6 +1170,14 @@ html.is-scrolled .btn-top {
   margin-top: 20px;
 }
 
+.dataTables_wrapper {
+  border-top: 2px solid #000;
+}
+
+.dataTables_wrapper .table {
+  border-top: 0;
+}
+
 .dataTables_length,
 .dataTables_paginate {
   display: none;
@@ -1198,7 +1225,9 @@ html.is-scrolled .btn-top {
   border-bottom: 1px solid #d2dae0;
 }
 
-.board .board-item-simple {
+.board .board-item-simple > a {
+  display: block;
+  padding-right: 56px;
   height: 48px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1211,10 +1240,9 @@ html.is-scrolled .btn-top {
           justify-content: space-between;
   position: relative;
   font-size: 14px;
-  padding-right: 56px;
 }
 
-.board .board-item-simple::before {
+.board .board-item-simple > a::before {
   content: '';
   display: block;
   width: 13px;
@@ -1227,6 +1255,12 @@ html.is-scrolled .btn-top {
   margin-top: -3.5px;
   -webkit-transition: all .2s .1s;
   transition: all .2s .1s;
+}
+
+.board .board-item-simple > a:hover {
+  text-decoration: underline;
+  color: inherit;
+  text-decoration: none;
 }
 
 .board .board-item-simple .cate {
@@ -1249,11 +1283,6 @@ html.is-scrolled .btn-top {
 
 .board .board-item-simple .subject .badge {
   margin-right: 3px;
-}
-
-.board .board-item-simple .subject a:hover {
-  text-decoration: underline;
-  color: inherit;
 }
 
 .board .board-item-simple .writer {
@@ -1291,7 +1320,7 @@ html.is-scrolled .btn-top {
   font-size: 14px;
 }
 
-.board li.active .board-item-simple::before {
+.board li.active .board-item-simple > a::before {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
 }
@@ -1301,7 +1330,7 @@ html.is-scrolled .btn-top {
 }
 
 @media (max-width: 1279.98px) {
-  .board .board-item-simple {
+  .board .board-item-simple > a {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     -webkit-box-pack: start;
@@ -1310,11 +1339,11 @@ html.is-scrolled .btn-top {
     height: auto;
     padding-bottom: 10px;
   }
-  .board .board-item-simple::before {
+  .board .board-item-simple > a::before {
     top: 24px;
     right: 0;
   }
-  .board .board-item-simple > div {
+  .board .board-item-simple > a > div {
     width: auto !important;
     margin-right: 12px;
   }
@@ -1361,13 +1390,7 @@ html.is-scrolled .btn-top {
   .board {
     font-size: 14px;
   }
-  .btn-write {
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-    left: 0;
-    z-index: 1;
-  }
+  /* .btn-write{position: fixed;width: 100%;bottom: 0;left: 0;z-index: 1;} */
 }
 
 .comment .comment-textarea .box {

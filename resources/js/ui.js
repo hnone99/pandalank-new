@@ -179,11 +179,17 @@
                 }
             });
             $('.dropdown-list > div').on('click', function(e) {
-                $(this).closest('.dropdown').find('.dropdown-value').text($(this).text());
+                if(!$(this).closest('.dropdown').hasClass('ellipsis')){
+                    $(this).closest('.dropdown').find('.dropdown-value').text($(this).text());
+                }
+
                 if($(this).text() !== $(this).closest('.dropdown').attr('data-default')){
                     $(this).closest('.dropdown').find('.dropdown-value').addClass('filled');
                     $(this).siblings().removeClass('text-primary');
-                    $(this).addClass('text-primary');
+                    if(!$(this).find("a").hasClass('change-num')){
+                        $(this).addClass('text-primary');
+                    }
+
                 }else{
                     $(this).closest('.dropdown').find('.dropdown-value').removeClass('filled');
                 }
@@ -229,7 +235,7 @@
             });
 
             //게시판 형식 list/view 토글
-            $('.board-list .subject a').on('click',function(e){
+            $('.board-item-simple a').on('click',function(e){
                 e.preventDefault();
                 $(this).closest('li').toggleClass('active');
             });

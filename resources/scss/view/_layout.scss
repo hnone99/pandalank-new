@@ -64,7 +64,7 @@ body{
     transition: all .3s ease-in-out;
 }
 #center-block + #container-block{
-    border-top: 1px solid $border-color;padding-top: 30px;
+    border-top: 1px solid $border-color;padding-top: 50px;
 }
 #content{max-width: 960px;margin: 0 auto;padding-bottom: 100px;}
 
@@ -97,7 +97,8 @@ body{
         .btn-collapse{
             position: absolute;right: -42px;top: 178px;
             a{
-                display: block;width: 42px;height: 42px;background: url('../images/btn-collapse.svg') no-repeat 50% 50%;background-size: contain;border-radius: 0 5px 5px 0;
+                display: block;width: 42px;height: 42px;border-radius: 0 5px 5px 0;background: #000;position: relative;
+                &::before{content: '';display: block;background: url('../images/icon-pre.svg') no-repeat 50% 50%;background-size: contain;width: 10px;height: 18px;position: absolute;left: 50%;top: 50%;margin: -9px 0 0 -5px;transition: all .2s .1s;}
             }
         }
     }
@@ -116,7 +117,7 @@ body{
             transform: translateX(-100%);
             .btn-collapse{
                 a{
-                    background-image: url('../images/btn-collapse-active.svg');
+                    &::before{transform: rotate(180deg);}
                 }
             }
         }

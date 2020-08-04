@@ -190,7 +190,7 @@
                             <div class="text-gray">2020년 6월 15일 3시 기준</div>
                             <!-- 모바일용 메뉴 더보기 -->
                             <div class="dropdown ellipsis d-lg-none">
-                                <a href="javascript:;" class="dropdown-value"><i class="fas fa-ellipsis-v"></i><span class="sr-only">모바일 메뉴 더보기</span></a>
+                                <a href="javascript:;" class="dropdown-value"><i class="icon-ellipsis"></i><span class="sr-only">모바일 메뉴 더보기</span></a>
                                 <div class="dropdown-box">
                                     <div class="dropdown-list">
                                         <div><a href="javascript:;">숫자로 보기</a></div>
@@ -418,14 +418,16 @@
                                 <ul>
                                     <li class="board-item">
                                         <div class="board-item-simple">
-                                            <div class="cate">팬티</div>
-                                            <div class="subject">
-                                                <span class="badge badge-primary">BEST</span>
-                                                <a href="javascript:;">오늘 장사는 폭망한 듯</a>
-                                            </div>
-                                            <div class="writer">L3. 닉넴최대여섯</div>
-                                            <div class="date">20.03.24</div>
-                                            <div class="hit">314</div>
+                                            <a href="javascript:;">
+                                                <div class="cate">팬티</div>
+                                                <div class="subject">
+                                                    <span class="badge badge-primary">BEST</span>
+                                                    <span>오늘 장사는 폭망한 듯</span>
+                                                </div>
+                                                <div class="writer">L3. 닉넴최대여섯</div>
+                                                <div class="date">20.03.24</div>
+                                                <div class="hit">314</div>
+                                            </a>
                                         </div>
                                         <div class="board-item-detail">
                                             <div class="board-content">
@@ -514,13 +516,15 @@
                                     </li>
                                     <li class="board-item">
                                         <div class="board-item-simple">
-                                            <div class="cate">러닝팬티세트</div>
-                                            <div class="subject">
-                                                <a href="javascript:;">오늘 장사는 폭망한 듯오늘 장사는 폭망한 듯 오늘 장사는 폭망한 듯 오늘 장사는 폭망한 듯 오늘 장사는 폭망한 듯 오늘 장사는 폭망한 듯</a>
-                                            </div>
-                                            <div class="writer">L5. 판다</div>
-                                            <div class="date">18:21</div>
-                                            <div class="hit">2천</div>
+                                            <a href="javascript:;">
+                                                <div class="cate">러닝팬티세트</div>
+                                                <div class="subject">
+                                                    <span>오늘 장사는 폭망한 듯오늘 장사는 폭망한 듯 오늘 장사는 폭망한 듯 오늘 장사는 폭망한 듯 오늘 장사는 폭망한 듯 오늘 장사는 폭망한 듯</span>
+                                                </div>
+                                                <div class="writer">L5. 판다</div>
+                                                <div class="date">18:21</div>
+                                                <div class="hit">2천</div>
+                                            </a>
                                         </div>
                                         <div class="board-item-detail">
                                             <div class="board-content">
@@ -834,7 +838,6 @@
                 'pageLength': 10, //페이징 기준 개수
                 'details': false,
                 'ordering': true,
-                'scrollX':true,
                 'order': [[1, 'desc']], //최초 sort
                 'columnDefs': [ // sort 아이콘 hide 타겟 지정
                     { 'orderable': false, 'targets': [0] }

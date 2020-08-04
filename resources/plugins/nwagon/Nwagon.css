@@ -96,7 +96,8 @@ ul.accessibility {font-size: 1px;height: 1px; line-height: 1px; overflow: hidden
 .Nwagon_radar .labels text{fill:#989da0;font-size:15px;cursor:pointer;-webkit-transform: skew(-0.001deg);transform: skew(-0.001deg);}
 .Nwagon_radar .labels text:hover{fill:#34D52E}
 .Nwagon_radar .xAxis text{fill:#000;font-size:9px;display: none;-webkit-transform: skew(-0.001deg);transform: skew(-0.001deg);}
-.Nwagon_radar .foreground polyline.polygon{fill: url(#header-shape-gradient) #34D52E;}
+.Nwagon_radar .foreground polyline.polygon{opacity:0.4; fill: url(#header-shape-gradient) #34D52E;}
+
 #header-shape-gradient {
 	--color-stop: #f12c06;
 	--color-bot: #faed34;
