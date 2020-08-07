@@ -21,7 +21,7 @@ body.body-dashboard {
 @include media-breakpoint-down(md) {
     body.body-dashboard{
         #container-block{
-            background-position: 42% -40px;
+            background-image: url('../images/bg-main-m.png');background-size: contain;
         }
         .title-area{
             display: block;padding-top: 25px;

@@ -76,3 +76,22 @@
             url(../fonts/Gotham/Gotham-Bold.woff) format('woff'),
             url(../fonts/Gotham/Gotham-Bold.ttf) format('truetype');
 }
+
+/* Lato */
+@font-face {
+      font-family: 'Lato';
+      font-weight: 400;
+      src: url(../fonts/Lato/Lato-Regular.eot);
+      src: url(../fonts/Lato/Lato-Regular.eot?#iefix) format('embedded-opentype'),
+            url(../fonts/Lato/Lato-Regular.woff) format('woff'),
+            url(../fonts/Lato/Lato-Regular.ttf) format('truetype');
+}
+
+@font-face {
+      font-family: 'Lato';
+      font-weight: 700;
+      src: url(../fonts/Lato/Lato-Bold.eot);
+      src: url(../fonts/Lato/Lato-Bold.eot?#iefix) format('embedded-opentype'),
+            url(../fonts/Lato/Lato-Bold.woff) format('woff'),
+            url(../fonts/Lato/Lato-Bold.ttf) format('truetype');
+}

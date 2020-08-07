@@ -179,7 +179,7 @@
                                 <img src="../../resources/images/@300x100.png" alt="banner image">
                             </div>
                         </div>
-                        <div class="location-area">
+                        <div class="location-area has-line"> <!-- 바로 다음에 나오는 테이블이 이미 라인을 가지고 있어서 .has-line 추가하여 라인 중복 방지 -->
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="#">패션잡화</a></li>
@@ -201,12 +201,14 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="table-top d-none d-lg-block">
+                        <div class="table-top d-none d-lg-block has-line"> <!-- 바로 다음에 나오는 테이블이 이미 라인을 가지고 있어서 .has-line 추가하여 라인 중복 방지 -->
                             <div class="row justify-content-end">
                                 <div class="col-auto">
-                                    <button type="button" class="btn btn-sm btn-outline-default">숫자로 보기</button>
-                                    <button type="button" class="btn btn-sm btn-outline-default">엑셀 다운로드</button>
-                                    <button type="button" class="btn btn-sm btn-outline-default">공유하기</button>
+                                    <div class="d-flex justify-content-end">
+                                        <button type="button" class="btn btn-sm btn-outline-default">숫자로 보기</button>
+                                        <button type="button" class="btn btn-sm btn-outline-default">엑셀 다운로드</button>
+                                        <button type="button" class="btn btn-sm btn-outline-default">공유하기</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>

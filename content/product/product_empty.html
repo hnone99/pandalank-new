@@ -41,8 +41,8 @@
                     <nav class="swiper-container">
                         <ul class="swiper-wrapper">
                             <li class="swiper-slide"><a href="../dashboard/dashboard.html"><span>홈</span></a></li>
-                            <li class="swiper-slide"><a href="../product/product.html"><span>상품 찾기</span></a></li>
-                            <li class="swiper-slide active"><a href="../analysis/analysis.html"><span>경쟁력 분석</span></a></li>
+                            <li class="swiper-slide active"><a href="../product/product.html"><span>상품 찾기</span></a></li>
+                            <li class="swiper-slide"><a href="../analysis/analysis.html"><span>경쟁력 분석</span></a></li>
                             <li class="swiper-slide"><a href="../ai/ai.html"><span>AI 판매 예측</span></a></li>
                             <li class="swiper-slide"><a href="../mymall/mymall.html"><span>내 쇼핑몰 분석</span></a></li>
                             <li class="swiper-slide"><a href="../ceo/ceo.html"><span>사장님들의 방</span></a></li>
@@ -55,8 +55,8 @@
                         <nav>
                             <ul>
                                 <li><a href="../dashboard/dashboard.html"><span>홈</span></a></li>
-                                <li><a href="../product/product.html"><span>상품 찾기</span></a></li>
-                                <li class="active"><a href="../analysis/analysis.html"><span>경쟁력 분석</span></a></li>
+                                <li class="active"><a href="../product/product.html"><span>상품 찾기</span></a></li>
+                                <li><a href="../analysis/analysis.html"><span>경쟁력 분석</span></a></li>
                                 <li><a href="../ai/ai.html"><span>AI 판매 예측</span></a></li>
                                 <li><a href="../mymall/mymall.html"><span>내 쇼핑몰 분석</span></a></li>
                                 <li><a href="../ceo/ceo.html"><span>사장님들의 방</span></a></li>
@@ -80,73 +80,86 @@
             <div id="center">
                 <div class="title-area">
                     <h2>
-                        <strong>PRODUCT COMPETITIVE</strong>
-                        <span>경쟁력 분석</span>
+                        <strong>PRODUCT FINDING</strong>
+                        <span>상품 찾기</span>
                     </h2>
                 </div>
                 <div class="tab-area">
                     <div class="tab" data-position="1"> <!-- 활성화 된 탭의 index 표기 -->
                         <ul role="tablist" class="nav">
-                            <li class="active"><a href="#t1" role="tab" data-toggle="tab" aria-selected="true"><span>판매할 상품</span></a></li>
-                            <li><a href="#t2" role="tab" data-toggle="tab" aria-selected="false"><span>기존 상품</span></a></li>
+                            <li class="active"><a href="#t1" role="tab" data-toggle="tab" aria-selected="true"><span>카테고리로 찾기</span></a></li>
+                            <li><a href="#t2" role="tab" data-toggle="tab" aria-selected="false"><span>상품으로 찾기</span></a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="tab-content">
                     <div role="tabpanel" class="tab-pane fade active show" id="t1">
-                        <!-- pc용 -->
-                        <div class="input-area d-none d-lg-block">
-                            <div class="form-group">
-                                <label for="form1" class="required">상품명 (키워드 포함)</label>
-                                <input type="text" class="form-control form-control-panda is-invalid" id="form1"> <!-- 유효성체크 (.is-invalid 추가) -->
-                                <div class="text-area">
-                                    <span class="text-error">! 최대 20글자까지만 입력할 수 있습니다</span> <!-- 유효성체크 (토글) -->
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="form2" class="required">희망 판매 가격</label>
-                                <input type="tel" class="form-control form-control-panda is-invalid" id="form2"> <!-- 유효성체크 (.is-invalid 추가) -->
-                                <div class="text-area">
-                                    <span class="text-error">! 필수항목입니다</span> <!-- 유효성체크 (토글) -->
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="form3">상품 옵션 (최대 3개)</label>
-                                <div class="form-control-fake">
-                                    <div class="row">
-                                        <div class="col-auto">
-                                            <div class="item">500ml<a href="javascript:;" class="close"><span class="sr-only">삭제</span></a></div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <div class="item">흰 색<a href="javascript:;" class="close"><span class="sr-only">삭제</span></a></div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <input type="text" id="form3">
-                                        </div>
+                        <div class="dropdown-area">
+                            <div class="dropdown" id="select1">
+                                <a href="javascript:;" class="dropdown-value">1차 카테고리 선택</a>
+                                <div class="dropdown-box">
+                                    <div class="dropdown-list">
+                                        <div><a href="javascript:;">여가/생활편의</a></div>
+                                        <div><a href="javascript:;">디지털/가전</a></div>
                                     </div>
                                 </div>
-                                <div class="text-area"></div>
                             </div>
-                            <div class="form-group">
-                                <label for="form4">원가 (입력시 예상 수익금 제시)</label>
-                                <input type="tel" class="form-control form-control-panda" id="form4">
-                                <div class="text-area"></div>
+                            <div class="dropdown">
+                                <a href="javascript:;" class="dropdown-value">2차 카테고리 선택</a>
+                                <div class="dropdown-box">
+                                    <div class="dropdown-list">
+                                        <div><a href="javascript:;">여가/생활편의</a></div>
+                                        <div><a href="javascript:;">디지털/가전</a></div>
+                                        <div><a href="javascript:;">여가/생활편의</a></div>
+                                        <div><a href="javascript:;">디지털/가전</a></div>
+                                        <div><a href="javascript:;">여가/생활편의</a></div>
+                                        <div><a href="javascript:;">디지털/가전</a></div>
+                                        <div><a href="javascript:;">여가/생활편의</a></div>
+                                        <div><a href="javascript:;">디지털/가전</a></div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="btn-analysis">
-                                <button type="button" class="btn btn-lg btn-block btn-primary" disabled>분석하기</button>
+                            <div class="dropdown">
+                                <a href="javascript:;" class="dropdown-value">3차 카테고리 선택</a>
+                                <div class="dropdown-box">
+                                    <div class="dropdown-list">
+                                        <div><a href="javascript:;">여가/생활편의</a></div>
+                                        <div><a href="javascript:;">디지털/가전</a></div>
+                                        <div><a href="javascript:;">여가/생활편의</a></div>
+                                        <div><a href="javascript:;">디지털/가전</a></div>
+                                        <div><a href="javascript:;">여가/생활편의</a></div>
+                                        <div><a href="javascript:;">디지털/가전</a></div>
+                                        <div><a href="javascript:;">여가/생활편의</a></div>
+                                        <div><a href="javascript:;">디지털/가전</a></div>
+                                        <div><a href="javascript:;">디지털/가전</a></div>
+                                        <div><a href="javascript:;">여가/생활편의</a></div>
+                                        <div><a href="javascript:;">디지털/가전</a></div>
+                                        <div><a href="javascript:;">디지털/가전</a></div>
+                                        <div><a href="javascript:;">여가/생활편의</a></div>
+                                        <div><a href="javascript:;">디지털/가전</a></div>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <!-- 모바일용 -->
-                        <div class="input-area d-lg-none">
-                            <input type="text" class="form-control form-control-panda active" placeholder="탭해서 상품을 입력하세요" id="fake-form">
+                            <div class="dropdown">
+                                <a href="javascript:;" class="dropdown-value">4차 카테고리 선택</a>
+                                <div class="dropdown-box">
+                                    <div class="dropdown-list">
+                                        <div><a href="javascript:;">여가/생활편의</a></div>
+                                        <div><a href="javascript:;">디지털/가전</a></div>
+                                        <div><a href="javascript:;">여가/생활편의</a></div>
+                                        <div><a href="javascript:;">디지털/가전</a></div>
+                                        <div><a href="javascript:;">여가/생활편의</a></div>
+                                        <div><a href="javascript:;">디지털/가전</a></div>
+                                        <div><a href="javascript:;">여가/생활편의</a></div>
+                                        <div><a href="javascript:;">디지털/가전</a></div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div role="tabpanel" class="tab-pane fade" id="t2">
                         <div class="input-area">
-                            <div class="form-control-wrapper">
-                                <input type="text" class="form-control form-control-panda" placeholder="상품 URL 붙여넣기" id="form5">
-                                <button type="button" class="btn btn-submit">엔터</button>
-                            </div>
+                            <input type="text" class="form-control form-control-panda" placeholder="상품종류를 입력하세요" id="keyword">
                         </div>
                     </div>
                 </div>
@@ -166,10 +179,12 @@
                                 <img src="../../resources/images/@300x100.png" alt="banner image">
                             </div>
                         </div>
-                        <div class="location-area">
+                        <div class="location-area has-line">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
-                                    <li class="breadcrumb-item active" aria-current="page">국민 머그컵 검색 결과</li>
+                                    <li class="breadcrumb-item"><a href="#">패션잡화</a></li>
+                                    <li class="breadcrumb-item"><a href="#">여성가방</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">토드백</li>
                                 </ol>
                             </nav>
                             <div class="text-gray">2020년 6월 15일 3시 기준</div>
@@ -178,9 +193,10 @@
                                 <a href="javascript:;" class="dropdown-value"><i class="icon-ellipsis"></i><span class="sr-only">모바일 메뉴 더보기</span></a>
                                 <div class="dropdown-box">
                                     <div class="dropdown-list">
-                                        <div><a href="javascript:;">예상 매출액 계산</a></div>
-                                        <div><a href="javascript:;">상세 리포트</a></div>
-                                        <div><a href="javascript:;">공유하기</a></div>
+                                        <div><a href="javascript:;">숫자로 보기</a></div>
+                                        <div><a href="javascript:;">검색량 /상품량으로 보기</a></div>
+                                        <div><a href="javascript:;">엑셀 다운로드</a></div>
+                                        <div><a href="javascript:;">SNS 공유하기</a></div>
                                     </div>
                                 </div>
                             </div>
@@ -189,58 +205,17 @@
                             <div class="row justify-content-end">
                                 <div class="col-auto">
                                     <div class="d-flex justify-content-end">
-                                        <button type="button" class="btn btn-sm btn-outline-default">예상 매출액 계산</button>
-                                        <button type="button" class="btn btn-sm btn-outline-default">상세 리포트</button>
+                                        <button type="button" class="btn btn-sm btn-outline-default">숫자로 보기</button>
+                                        <button type="button" class="btn btn-sm btn-outline-default">엑셀 다운로드</button>
                                         <button type="button" class="btn btn-sm btn-outline-default">공유하기</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="analysis">
-                            <div class="grade">
-                                <strong class="text-primary">BEST</strong>
-                                <strong>SOSO</strong>
-                                <strong class="text-danger">BAD</strong>
-                                <a href="#pop-over-keyword" class="th-icon-info" data-toggle="pop-over" data-target-mobile="#modal-keyword">
-                                    <i class="icon-info"><span class="sr-only">물음표 아이콘</span></i>
-                                    <!-- 툴팁 PC용 키워드란? -->
-                                    <div class="pop-over" id="pop-over-keyword">
-                                        <div class="pop-over-head">
-                                            상품 경쟁력 등급
-                                        </div>
-                                        <div class="pop-over-body">
-                                            상품의 경쟁력을 6가지 기준으로 점수화해서 WORST/BAD/SOSO/GOOD/BEST 5 단계로 분류합니다. <br><br>
-
-                                            <span class="text-primary">가 격</span> 경쟁제품 대비 가격경쟁력 <br>
-                                            <span class="text-primary">반복성</span> 구매사이클이 짧고 반복적인 상품 <br>
-                                            <span class="text-primary">필수성</span> 사치품이 아닌 의식주에 가까운 상품 <br>
-                                            <span class="text-primary">허욕성</span> 의식주가 아닌 사치품에 가까운 상품 <br>
-                                            <span class="text-primary">경쟁도</span> 경쟁제품의 수가 적은 상품 <br>
-                                            <span class="text-primary">시장성</span> 쇼핑검색량이 많은 상품 <br><br>
-
-                                            *등급은 상대적일 뿐 절대적 지표가 아닙니다.
-                                        </div>
-                                    </div>
-                                    <!-- //툴팁 PC용 키워드란? -->
-                                </a>
-                                <p>어머 이건 꼭 팔아야해!</p>
-                            </div>
-                            <div class="chart">
-                                <div id="chart-radar"></div>
-                            </div>
-                            <div class="progress-panda">
-                                <div class="progress-panda-bar" data-percent="75">
-                                    <span class="progress-panda-label">75%</span>
-                                </div>
-                            </div>
-                            <div class="chart-text">
-                                마이크의 경쟁력은 <strong class="text-primary">상위 70%</strong>로 예상되며, <br class="d-block d-md-none">예상 수익 금액은 판매당 <strong class="text-danger">5,000원</strong>입니다. <br>
-                                판매가 <strong class="text-primary">1,320원 인상</strong>시 <br class="d-block d-md-none">상위 10%로 상승 예상됩니다.
-                            </div>
-                            <div class="chart-text-sm">
-                                단 1,260원을 인하하면 수익은 <br class="d-block d-md-none">판매당 <strong class="text-primary">4,850원</strong>으로 전환될 수 있습니다.
-                            </div>
+                        <div class="data-empty">
+                            <span class="img"></span>
+                            <p>안타깝지만 검색 결과가 없네요. <br>키워드나 url을 변경하여 다시 검색해 보세요. </p>
                         </div>
 
                         <div class="banner-area">
@@ -458,8 +433,8 @@
         </div>
     </div>
 
-    <!-- modal : 모바일용 판매할 상품 layer -->
-    <div class="modal modal-full" tabindex="-1" role="dialog" id="modal-sell-form">
+    <!-- modal : 모바일용 상품으로 찾기 layer -->
+    <div class="modal modal-full" tabindex="-1" role="dialog" id="modal-keyword-form">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
@@ -469,73 +444,41 @@
                 </div>
                 <div class="modal-body">
                     <div class="input-area-mobile">
-                        <div class="form-group">
-                            <label for="m-form1" class="required">상품명 (키워드 포함)</label>
-                            <input type="text" class="form-control form-control-panda is-invalid" id="m-form1"> <!-- 유효성체크 (.is-invalid 추가) -->
-                            <div class="text-area">
-                                <span class="text-error">! 최대 20글자까지만 입력할 수 있습니다</span> <!-- 유효성체크 (토글) -->
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="m-form2" class="required">희망 판매 가격</label>
-                            <input type="tel" class="form-control form-control-panda is-invalid" id="m-form2"> <!-- 유효성체크 (.is-invalid 추가) -->
-                            <div class="text-area">
-                                <span class="text-error">! 필수항목입니다</span> <!-- 유효성체크 (토글) -->
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="m-form3">상품 옵션 (최대 3개)</label>
-                            <div class="form-control-fake">
-                                <div class="row">
-                                    <div class="col-auto">
-                                        <div class="item">500ml<a href="javascript:;" class="close"><span class="sr-only">삭제</span></a></div>
-                                    </div>
-                                    <div class="col-auto">
-                                        <div class="item">흰 색<a href="javascript:;" class="close"><span class="sr-only">삭제</span></a></div>
-                                    </div>
-                                    <div class="col-auto">
-                                        <input type="text" id="m-form3">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="text-area"></div>
-                        </div>
-                        <div class="form-group">
-                            <label for="m-form4">원가 (입력시 예상 수익금 제시)</label>
-                            <input type="tel" class="form-control form-control-panda" id="m-form4">
-                            <div class="text-area"></div>
-                        </div>
-                        <div class="btn-analysis">
-                            <button type="button" class="btn btn-lg btn-block btn-primary" disabled>분석하기</button>
-                        </div>
+                        <input type="text" class="form-control form-control-panda" placeholder="상품종류를 입력하세요" id="keyword-mobile">
                     </div>
+                </div>
+                <div class="keyword-autocomplete-wrap">
+                    <div id="keyword-autocomplete-area"></div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- modal : 모바일용 툴팁 상품 경쟁력 등급 -->
+    <!-- modal : 모바일용 툴팁 키워드란? -->
     <div class="modal" tabindex="-1" role="dialog" id="modal-keyword">
         <div class="modal-dialog modal-dialog-centered modal-sm">
             <div class="modal-content">
                 <div class="modal-header">
-                    <div class="modal-title">상품 경쟁력 등급</div>
+                    <div class="modal-title">상품 찾기의 기본, 키워드란?</div>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
                     <div>
-                        상품의 경쟁력을 6가지 기준으로 점수화해서 WORST/BAD/SOSO/GOOD/BEST 5 단계로 분류합니다. <br><br>
+                        상품 상세 페이지의 제목에 해당하며 키워드 발굴 및 경쟁을 통해 검색 상위노출을 기대합니다. 키워드에는 3가지 대표 지수가 있습니다.<br><br>
 
-                        <span class="text-primary">가 격</span> 경쟁제품 대비 가격경쟁력 <br>
-                        <span class="text-primary">반복성</span> 구매사이클이 짧고 반복적인 상품 <br>
-                        <span class="text-primary">필수성</span> 사치품이 아닌 의식주에 가까운 상품 <br>
-                        <span class="text-primary">허욕성</span> 의식주가 아닌 사치품에 가까운 상품 <br>
-                        <span class="text-primary">경쟁도</span> 경쟁제품의 수가 적은 상품 <br>
-                        <span class="text-primary">시장성</span> 쇼핑검색량이 많은 상품 <br><br>
+                        <span class="text-primary">경쟁률</span><br>
+                        대형포털들의 일별 제품량 대비 검색량<br>
+                        <span class="text-primary">쇼핑전환율</span><br>
+                        주별 쇼핑탭 진입 대비 검색량<br>
+                        <span class="text-primary">광고비</span><br>
+                        키워드별 평균 광고입찰비용<br><br>
 
-                        *등급은 상대적일 뿐 절대적 지표가 아닙니다.
+                        판다랭크만의 데이터 분석 기술을 사용하여 키워드의 3가지 대표 지수를 최적/좋음/보통/나쁨/최악으로 분류합니다. 최적일수록 키워드의 경쟁력이 좋습니다.
+                        <br><br>
+
+                        *지수는 상대적일 뿐 절대적 지표가 아닙니다.
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -564,9 +507,7 @@
                         <input type="password" class="form-control form-control-lg is-invalid"> <!-- 유효성체크 (.is-invalid 추가) -->
                         <button type="submit" class="btn btn-submit" id="btn-ok">확인</button>
                     </div>
-                    <div class="text-area">
-                        <span class="text-error">! 필수항목입니다</span> <!-- 유효성체크 (토글) -->
-                    </div>
+                    <span class="text-error">! 비밀번호가 일치하지 않습니다</span> <!-- 유효성체크 (토글) -->
                 </div>
             </div>
         </div>
@@ -594,45 +535,146 @@
         </div>
     </div>
 
-    <link rel="stylesheet" href="../../resources/plugins/nwagon/Nwagon.css" type="text/css">
-    <script src="../../resources/plugins/nwagon/Nwagon.js"></script>
     <script>
         $(document).ready(function(){
             //페이지 로드시 첫번째 셀렉트에 focus 주기
-            $('#form1').focus();
+            $('#select1 .dropdown-value').focus();
 
             //탭 변경시 첫번째 폼요소에 focus 추가
             $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
-                if($(e.target).text() === '판매할 상품'){
-                    if(!$('#form1').hasClass('filled')){
-                        $('#form1').focus();
+                if($(e.target).text() === '카테고리로 찾기'){
+                    if(!$('#select1 .dropdown-value').hasClass('filled')){
+                        $('#select1 .dropdown-value').focus();
                     }
-                }else if($(e.target).text() === '기존 상품'){
+                }else if($(e.target).text() === '상품으로 찾기'){
                     if (window.matchMedia('(min-width:992px)').matches) {
-                        $('#form5').focus();
+                        $('#keyword').focus();
                     }
                 }
             });
 
             //모바일에서 상품으로 찾기 입력시 modal show
-            $('#fake-form').on('focus',function(){
+            $('#keyword').on('focus',function(){
                 if (!window.matchMedia('(min-width:992px)').matches) {
-                    $('#modal-sell-form').modal('show');
+                    $('#modal-keyword-form').modal('show');
                 }
             });
-            $('#modal-sell-form').on('shown.bs.modal', function (e) {
-                $('#m-form1').focus();
+            $('#modal-keyword-form').on('shown.bs.modal', function (e) {
+                $('#keyword-mobile').focus();
+            })
+
+            //키워드 자동완성
+            var availableTags = [
+                "여가/생활편의 > 자기계발/취미 레슨 > 3차 카테고리 > 4차 카테고리",
+                "디지털/가전 > 카메라/캠코더용품 > 카메라/캠코더 관련용품 > 카메라/캠코더용마이크 ",
+                "1차 카테고리 > 2차 카테고리 > 3차 카테고리 > 4차 카테고리",
+                "식품 > 반찬 > 쌀 > 백미",
+                "1차 카테고리 > 2차 카테고리 > 3차 카테고리 > 4차 카테고리",
+                "패션잡화 > 여성가방 > 토드백",
+                "여가/생활편의 > 자기계발/취미 레슨 > 3차 카테고리 > 4차 카테고리",
+                "디지털/가전 > 카메라/캠코더용품 > 카메라/캠코더 관련용품 > 카메라/캠코더용마이크 ",
+                "1차 카테고리 > 2차 카테고리 > 3차 카테고리 > 4차 카테고리",
+                "식품 > 반찬 > 쌀 > 백미",
+                "1차 카테고리 > 2차 카테고리 > 3차 카테고리 > 4차 카테고리",
+                "패션잡화 > 여성가방 > 토드백",
+                "여가/생활편의 > 자기계발/취미 레슨 > 3차 카테고리 > 4차 카테고리",
+                "디지털/가전 > 카메라/캠코더용품 > 카메라/캠코더 관련용품 > 카메라/캠코더용마이크 ",
+                "1차 카테고리 > 2차 카테고리 > 3차 카테고리 > 4차 카테고리",
+                "식품 > 반찬 > 쌀 > 백미",
+                "1차 카테고리 > 2차 카테고리 > 3차 카테고리 > 4차 카테고리",
+                "패션잡화 > 여성가방 > 토드백",
+                "여가/생활편의 > 자기계발/취미 레슨 > 3차 카테고리 > 4차 카테고리",
+                "디지털/가전 > 카메라/캠코더용품 > 카메라/캠코더 관련용품 > 카메라/캠코더용마이크 ",
+                "1차 카테고리 > 2차 카테고리 > 3차 카테고리 > 4차 카테고리",
+                "식품 > 반찬 > 쌀 > 백미",
+                "1차 카테고리 > 2차 카테고리 > 3차 카테고리 > 4차 카테고리",
+                "패션잡화 > 여성가방 > 토드백",
+                "여가/생활편의 > 자기계발/취미 레슨 > 3차 카테고리 > 4차 카테고리",
+                "디지털/가전 > 카메라/캠코더용품 > 카메라/캠코더 관련용품 > 카메라/캠코더용마이크 ",
+                "1차 카테고리 > 2차 카테고리 > 3차 카테고리 > 4차 카테고리",
+                "식품 > 반찬 > 쌀 > 백미",
+                "1차 카테고리 > 2차 카테고리 > 3차 카테고리 > 4차 카테고리",
+                "패션잡화 > 여성가방 > 토드백",
+                "여가/생활편의 > 자기계발/취미 레슨 > 3차 카테고리 > 4차 카테고리",
+                "디지털/가전 > 카메라/캠코더용품 > 카메라/캠코더 관련용품 > 카메라/캠코더용마이크 ",
+                "1차 카테고리 > 2차 카테고리 > 3차 카테고리 > 4차 카테고리",
+                "식품 > 반찬 > 쌀 > 백미",
+                "1차 카테고리 > 2차 카테고리 > 3차 카테고리 > 4차 카테고리",
+                "패션잡화 > 여성가방 > 토드백",
+                "여가/생활편의 > 자기계발/취미 레슨 > 3차 카테고리 > 4차 카테고리",
+                "디지털/가전 > 카메라/캠코더용품 > 카메라/캠코더 관련용품 > 카메라/캠코더용마이크 ",
+                "1차 카테고리 > 2차 카테고리 > 3차 카테고리 > 4차 카테고리",
+                "식품 > 반찬 > 쌀 > 백미",
+                "1차 카테고리 > 2차 카테고리 > 3차 카테고리 > 4차 카테고리",
+                "패션잡화 > 여성가방 > 토드백",
+                "여가/생활편의 > 자기계발/취미 레슨 > 3차 카테고리 > 4차 카테고리",
+                "디지털/가전 > 카메라/캠코더용품 > 카메라/캠코더 관련용품 > 카메라/캠코더용마이크 ",
+                "1차 카테고리 > 2차 카테고리 > 3차 카테고리 > 4차 카테고리",
+                "식품 > 반찬 > 쌀 > 백미",
+                "1차 카테고리 > 2차 카테고리 > 3차 카테고리 > 4차 카테고리",
+                "패션잡화 > 여성가방 > 토드백",
+                "여가/생활편의 > 자기계발/취미 레슨 > 3차 카테고리 > 4차 카테고리",
+                "디지털/가전 > 카메라/캠코더용품 > 카메라/캠코더 관련용품 > 카메라/캠코더용마이크 ",
+                "1차 카테고리 > 2차 카테고리 > 3차 카테고리 > 4차 카테고리",
+                "식품 > 반찬 > 쌀 > 백미",
+                "1차 카테고리 > 2차 카테고리 > 3차 카테고리 > 4차 카테고리",
+                "패션잡화 > 여성가방 > 토드백",
+                "여가/생활편의 > 자기계발/취미 레슨 > 3차 카테고리 > 4차 카테고리",
+                "디지털/가전 > 카메라/캠코더용품 > 카메라/캠코더 관련용품 > 카메라/캠코더용마이크 ",
+                "1차 카테고리 > 2차 카테고리 > 3차 카테고리 > 4차 카테고리",
+                "식품 > 반찬 > 쌀 > 백미",
+                "1차 카테고리 > 2차 카테고리 > 3차 카테고리 > 4차 카테고리",
+                "패션잡화 > 여성가방 > 토드백",
+                "여가/생활편의 > 자기계발/취미 레슨 > 3차 카테고리 > 4차 카테고리",
+                "디지털/가전 > 카메라/캠코더용품 > 카메라/캠코더 관련용품 > 카메라/캠코더용마이크 ",
+                "1차 카테고리 > 2차 카테고리 > 3차 카테고리 > 4차 카테고리",
+                "식품 > 반찬 > 쌀 > 백미",
+                "1차 카테고리 > 2차 카테고리 > 3차 카테고리 > 4차 카테고리",
+                "패션잡화 > 여성가방 > 토드백",
+                "여가/생활편의 > 자기계발/취미 레슨 > 3차 카테고리 > 4차 카테고리",
+                "디지털/가전 > 카메라/캠코더용품 > 카메라/캠코더 관련용품 > 카메라/캠코더용마이크 ",
+                "1차 카테고리 > 2차 카테고리 > 3차 카테고리 > 4차 카테고리",
+                "식품 > 반찬 > 쌀 > 백미",
+                "1차 카테고리 > 2차 카테고리 > 3차 카테고리 > 4차 카테고리",
+                "패션잡화 > 여성가방 > 토드백",
+            ];
+            $("#keyword").autocomplete({
+                source: availableTags
+            });
+            $("#keyword-mobile").autocomplete({
+                source: availableTags,
+                appendTo: '#keyword-autocomplete-area',
+                select: function( event, ui ) { //아이템 클릭시 modla hide
+                    $('#keyword').val( ui.item.value);
+                    $('#modal-keyword-form').modal('hide');
+                    return false;
+                }
             });
 
-
-            //상품 옵션 input 너비 체크
-            $('.form-control-fake input[type=text]').on('input',function(){
-                $(this).css('width',$(this).val().length * 1.01 + "em");
+            var datatable = $('#datatable').DataTable({
+                'responsive': true,
+                'searching': false,
+                'info': false,
+                'paging': true,
+                'pageLength': 10, //페이징 기준 개수
+                'details': false,
+                'ordering': true,
+                'order': [[1, 'desc']], //최초 sort
+                'columnDefs': [ // sort 아이콘 hide 타겟 지정
+                    { 'orderable': false, 'targets': [0] }
+                ]
             });
-            //상품 옵션 삭제
-            $('.form-control-fake .close').on('click',function(e){
-                e.preventDefault();
-                $(this).closest('.col-auto').remove();
+            //MORE+
+            $('#btn-more-table').on('click',function(){
+                if(!$(this).hasClass('active')){
+                    datatable.page.len( -1 ).draw();
+                    $(this).find('strong').text('CLOSE');
+                    $(this).addClass('active');
+                }else{
+                    datatable.page.len( 10 ).draw();
+                    $(this).find('strong').text('MORE +');
+                    $(this).removeClass('active');
+                }
             });
 
             //비밀번호 입력 확인 버튼 클릭시
@@ -643,41 +685,6 @@
                 $('#modal-confirm').modal('show');
             });
         });
-
-        //차트
-        setTimeout(function(){
-            $('.progress-panda-bar').css('width',$('.progress-panda-bar').attr('data-percent') + '%')
-        },1500);
-        var options = {
-            'legend':{
-                names: [
-                    '가격',
-                    '시장성',
-                    '허욕성',
-                    '희소성',
-                    '필수성',
-                    '반복성',
-                ],
-                hrefs: [
-                    'http://nuli.navercorp.com//sharing/a11y#k1',
-                    'http://nuli.navercorp.com//sharing/a11y#k2',
-                    'http://nuli.navercorp.com//sharing/a11y#k3',
-                    'http://nuli.navercorp.com//sharing/a11y#k4',
-                    'http://nuli.navercorp.com//sharing/a11y#k5',
-                    'http://nuli.navercorp.com//sharing/a11y#k6',
-                ]
-            },
-            'dataset': {
-                title: '경쟁력 분석',
-                values: [[53,23,78,45,69,98]],
-                bgColor: '#ffffff',
-                fgColor: '#34d52e',
-            },
-            'chartDiv': 'chart-radar',
-            'chartType': 'radar',
-            'chartSize': { width: 312, height: 312 }
-        };
-        Nwagon.chart(options);
     </script>
 </body>
 </html>

@@ -88,7 +88,7 @@
                 freeMode: true,
                 //slidesOffsetBefore: 12,
                 slidesOffsetAfter: 12,
-                initialSlide: activeIdx
+                //initialSlide: activeIdx
             });
         },
         side : function(){

@@ -77,8 +77,8 @@ body{
             a{color: $gray;font-size: 14px;}
         }
     }
-    .info{font-size: 12px;color: $gray;line-height: 1.67;}
-    .copyright{font-size: 12px;color: $gray;line-height: 1.67;font-family: 'Gotham';}
+    .info{font-size: 12px;color: $gray;line-height: 1.67;font-family: 'Noto Sans KR';}
+    .copyright{font-size: 12px;color: $gray;line-height: 1.67;font-family: 'Lato';letter-spacing: 0;}
 }
 @include media-breakpoint-up(lg) {
     body{

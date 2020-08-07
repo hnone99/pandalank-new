@@ -7,7 +7,7 @@
     }
 }
 #side{
-    .logo a{display: block;width: 112px;height: 19px;background: url('../images/logo.svg') no-repeat 50% 50%;background-size: contain;vertical-align: top;}
+    .logo a{display: block;width: 112px;height: 19px;background: url('../images/logo_w.svg') no-repeat 50% 50%;background-size: contain;vertical-align: top;}
     .util{
         margin-top: 75px;
         > ul > li{
@@ -52,7 +52,7 @@
         padding: 0;
         .logo{
             height: 56px;display: flex;align-items: center;justify-content: center;
-            a {background-image: url('../images/logo-m.svg');}
+            a {background-image: url('../images/logo.svg');}
         }
         .util{
             > ul > li{
