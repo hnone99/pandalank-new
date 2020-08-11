@@ -232,6 +232,43 @@
                                 </div>
                                 <div class="desc">전환율이 전주보다 2% 하락했습니다. 쇼핑탭에서의 섬네일 이미지와 노출가격이 가장 큰 영향을 끼친다. 전 주 대비 유의미하게 떨어진다면 섬네일 이미지나 노출가격 그리고 쇼핑탭에 노출되는 마케팅문구 수정을 권고한다.</div>
                             </div>
+                            <div class="table-area">
+                                <div class="table-title">상품 순위</div>
+                                <table class="table table-hover responsive table-data" id="datatable">
+                                    <thead>
+                                        <tr>
+                                            <th class="text-left">상품명</th>
+                                            <th class="text-right">구매수</th>
+                                            <th class="text-right">전환율</th>
+                                            <th class="text-right">순위</th>
+                                            <th class="text-right">광고순위</th>
+                                            <th class="text-right">가격경쟁력</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="text-left">
+                                                <div class="text-truncate"><img src="../../resources/images/@product-thumb.jpg" alt="" class="product-thumb"> 상품명 상품명상품명 상품명 111111111 상품명 상품명</div>
+                                            </td>
+                                            <td class="text-right">55</td>
+                                            <td class="text-right">2.6%</td>
+                                            <td class="text-right">36(4p/8) <span class="ml-1 text-danger">11 <i class="icon-decrease"></i></span></td>
+                                            <td class="text-right">36(4p/8) <span class="ml-1 text-primary">11 <i class="icon-increase"></i></span></td>
+                                            <td class="text-right">상위 14%</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left">
+                                                <div class="text-truncate"><img src="../../resources/images/@product-thumb.jpg" alt="" class="product-thumb"> 222 222222 22222222222222222222222222</div>
+                                            </td>
+                                            <td class="text-right">55</td>
+                                            <td class="text-right">2.6%</td>
+                                            <td class="text-right">36(4p/8) <span class="ml-1 text-danger">11 <i class="icon-decrease"></i></span></td>
+                                            <td class="text-right">36(4p/8) <span class="ml-1 text-primary">11 <i class="icon-increase"></i></span></td>
+                                            <td class="text-right">상위 14%</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                         <!-- 컨텐츠 끝 -->
                     </div>
@@ -275,6 +312,21 @@
                 'isGuideLineNeeded' : true  //default set to false
             };
             Nwagon.chart(options);
+
+            //datatable
+            var datatable = $('#datatable').DataTable({
+                'searching': false,
+                'info': false,
+                'paging': false,
+                'details': false,
+                'ordering': false,
+                'fixedColumns': true,
+                "columnDefs": [
+                    { "width": "25%", "targets": 0 },
+                    { "width": "13%", "targets": 1 },
+                    { "width": "13%", "targets": 2 }
+                ]
+            });
         });
     </script>
 </body>

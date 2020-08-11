@@ -179,7 +179,7 @@
                                 <div class="dropdown-box">
                                     <div class="dropdown-list">
                                         <div><a href="javascript:;">예상 매출액 계산</a></div>
-                                        <div><a href="javascript:;">상세 리포트</a></div>
+                                        <div><a href="javascript:;" data-toggle="modal" data-target="#modal-report">상세 리포트</a></div>
                                         <div><a href="javascript:;">공유하기</a></div>
                                     </div>
                                 </div>
@@ -190,7 +190,7 @@
                                 <div class="col-auto">
                                     <div class="d-flex justify-content-end">
                                         <button type="button" class="btn btn-sm btn-outline-default">예상 매출액 계산</button>
-                                        <button type="button" class="btn btn-sm btn-outline-default">상세 리포트</button>
+                                        <button type="button" class="btn btn-sm btn-outline-default" data-toggle="modal" data-target="#modal-report">상세 리포트</button>
                                         <button type="button" class="btn btn-sm btn-outline-default">공유하기</button>
                                     </div>
                                 </div>
@@ -589,6 +589,190 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-submit" data-dismiss="modal">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal : 상세 리포트 -->
+    <div class="modal modal-full" tabindex="-1" role="dialog" id="modal-report">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-title"><span class="text-primary">국민머그컵</span> 상세 리포트</div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="report">
+                        <div class="summary">
+                            <div class="row info">
+                                <div class="col-6 col-md-3">
+                                    <span>적용된 카테고리</span>
+                                    <strong class="text-primary lang-kor">머그컵</strong>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <span>판매 활성화 제품</span>
+                                    <strong class="text-primary">628 <i>개</i></strong>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <span>키워드 매칭 경쟁제품</span>
+                                    <strong class="text-primary">239 <i>위</i></strong>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <span>내 제품 가격 순위</span>
+                                    <strong class="text-primary">47 <i>위</i></strong>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="summary-detail">
+                            <div class="row row-40">
+                                <div class="col-12 col-md-6">
+                                    <div class="tit">추천 판매 가격</div>
+                                    <div class="row info">
+                                        <div class="col-6">
+                                            <span>수익 20% 판매가 추천</span>
+                                            <strong class="text-primary">14,620 <i>원</i></strong>
+                                        </div> 
+                                        <div class="col-6">
+                                            <span>상위 20% 판매가 추천</span>
+                                            <strong class="text-primary">14,620 <i>원</i></strong>
+                                        </div>                                    
+                                    </div>
+                                    <table class="table table-hover table-data">
+                                        <colgroup>
+                                            <col style="width:50%">
+                                            <col style="width:50%">
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th class="text-left pl-0">상위 제품 평균가</th>
+                                                <th class="text-left">해당구간 <span class="d-none d-sm-inline">진입시</span> 예상 수익</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="text-left pl-0"><b>10%</b> 6,000원</td>
+                                                <td class="text-left"><span class="text-danger">-2,200</span>원</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-left pl-0"><b>10%</b> 6,000원</td>
+                                                <td class="text-left"><span class="text-primary">900</span>원</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-left pl-0"><b>10%</b> 6,000원</td>
+                                                <td class="text-left"><span class="text-danger">-2,200</span>원</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-left pl-0"><b>10%</b> 6,000원</td>
+                                                <td class="text-left"><span class="text-primary">900</span>원</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-left pl-0"><b>10%</b> 6,000원</td>
+                                                <td class="text-left"><span class="text-danger">-2,200</span>원</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-left pl-0"><b>10%</b> 6,000원</td>
+                                                <td class="text-left"><span class="text-primary">900</span>원</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-left pl-0"><b>10%</b> 6,000원</td>
+                                                <td class="text-left"><span class="text-danger">-2,200</span>원</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-left pl-0"><b>10%</b> 6,000원</td>
+                                                <td class="text-left"><span class="text-primary">900</span>원</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-left pl-0"><b>10%</b> 6,000원</td>
+                                                <td class="text-left"><span class="text-danger">-2,200</span>원</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-left pl-0"><b>10%</b> 6,000원</td>
+                                                <td class="text-left"><span class="text-primary">900</span>원</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="tit">추천 키워드</div>
+                                    <div class="row info">
+                                        <div class="col-6">
+                                            <span>키워드 총 월 검색량</span>
+                                            <strong class="text-primary">214,620 <i>회</i></strong>
+                                        </div>
+                                        <div class="col-6">
+                                            <span>이 카테고리 평균 광고비</span>
+                                            <strong class="text-primary">2,620 <i>원</i></strong>
+                                        </div>
+                                    </div>
+                                    <table class="table table-hover table-fixed table-data">
+                                        <colgroup>
+                                            <col style="width:50%">
+                                            <col style="width:50%">
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th class="text-left pl-0">경쟁력 높은 연관키워드</th>
+                                                <th class="text-left">검색량 / 클릭당 광고비</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="text-left pl-0"><div class="text-truncate">안락의자안락의자안락의자안락의자안락의자안락의자</div></td>  <!-- 줄임말 처리 O -->
+                                                <td class="text-left">167,280 / 160원</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-left pl-0">무중력의자무중력의자무중력의자무중력의자</td> <!-- 줄임말 처리 X -->
+                                                <td class="text-left">12,280 / 160원</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-left pl-0">안락의자</td>
+                                                <td class="text-left">167,280 / 160원</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-left pl-0">무중력의자</td>
+                                                <td class="text-left">12,280 / 160원</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-left pl-0">안락의자</td>
+                                                <td class="text-left">167,280 / 160원</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-left pl-0">무중력의자</td>
+                                                <td class="text-left">12,280 / 160원</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-left pl-0">안락의자</td>
+                                                <td class="text-left">167,280 / 160원</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-left pl-0">무중력의자</td>
+                                                <td class="text-left">12,280 / 160원</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-left pl-0">안락의자</td>
+                                                <td class="text-left">167,280 / 160원</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-left pl-0">무중력의자</td>
+                                                <td class="text-left">12,280 / 160원</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-left pl-0">안락의자</td>
+                                                <td class="text-left">167,280 / 160원</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-left pl-0">무중력의자</td>
+                                                <td class="text-left">12,280 / 160원</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

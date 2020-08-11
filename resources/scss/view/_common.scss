@@ -368,7 +368,6 @@
 .alert-message-sub{margin-top: 12px;line-height: 1.6;text-align: center;}
 .only-text{height: 128px;display: flex;flex-direction: column;align-items: center;justify-content: center;}
 
-
 .text-error{font-size: 13px;color: $danger;display: block;margin-top: 5px;}
 .text-error ~ .form-control{border-color: $danger;}
 
@@ -490,7 +489,6 @@ body.body-half{background: #fbf9fa url('../images/bg-join.png') no-repeat 0 100%
 
 @include media-breakpoint-down(md) {
     .analysis{
-        border-top: 2px solid #000;padding-top: 12px;
         .chart-text{font-size: 18px;}
     }
     .btn-analysis{position: fixed;width: 100%;bottom: 0;left: 0;z-index: 1;transform: skew(0);}
@@ -593,6 +591,26 @@ body.body-half{background: #fbf9fa url('../images/bg-join.png') no-repeat 0 100%
         .btn{background: #fff;border: 1px solid #d2dae0;color: $gray;}
         .btn:not(:disabled):not(.disabled).active{background: #edf0f7;}
     }
+    .table-area{margin-top: 30px;}
+    .table .text-truncate{max-width:260px;}
+}
+
+.product-thumb{width: 32px;height:32px;vertical-align: middle;margin-right: 10px;}
+
+.table-title{font-size: 16px;font-weight: 700;margin-bottom: 13px;}
+
+.icon-increase{width: 0;height: 0;border-style: solid;border-width: 0 4px 6px 4px;border-color: transparent transparent $primary transparent;display:inline-block;vertical-align: middle;transform: translateY(-2px)}
+.icon-decrease{width: 0;height: 0;border-style: solid;border-width: 6px 4px 0 4px;border-color: $danger transparent transparent transparent;display:inline-block;vertical-align: middle;transform: translateY(-2px)}
+
+@include media-breakpoint-down(md) {
+    body.body-mymall{
+        #center-block{position: relative;padding-top: 116px;background: #fff;}
+        .banner-api{top: 0;left: 0;bottom: auto;}
+        #center-block + #container-block{border-top: 0;padding-top: 0;}
+    }
+    .mymall{
+        .table .text-truncate{max-width:140px;}
+    }
 }
 
 .result-table{
@@ -602,8 +620,8 @@ body.body-half{background: #fbf9fa url('../images/bg-join.png') no-repeat 0 100%
         [class^=col]{padding: 15px 20px 13px;}
     }
     .box{
-        height: 80px;border-radius: 5px;box-shadow: 0 10px 30px 0 #dee8ef;background-color: #ffffff;font-weight: 700;
-        .row{align-items: center;padding: 19px 0;height: 100%;}
+        height: 64px;border-radius: 5px;box-shadow: 0 10px 30px 0 #dee8ef;background-color: #ffffff;font-weight: 700;
+        .row{align-items: center;padding: 10px 0;height: 100%;}
 
         span{font-size: 15px;padding-left: 20px;font-weight: 700;letter-spacing: -0.75px;}
         strong{font-size: 20px;font-weight: 700;letter-spacing: -1px;display: block;line-height: 1.1;}
@@ -612,19 +630,11 @@ body.body-half{background: #fbf9fa url('../images/bg-join.png') no-repeat 0 100%
     .desc{padding: 18px 20px 30px;line-height: 1.71;letter-spacing: -0.7px;font-size: 14px;}
 }
 
-@include media-breakpoint-down(md) {
-    body.body-mymall{
-        #center-block{position: relative;padding-top: 116px;background: #fff;}
-        .banner-api{top: 0;left: 0;bottom: auto;}
-        #center-block + #container-block{border-top: 0;padding-top: 0;}
-    }
-}
-
 @include media-breakpoint-down(sm) {
     .result-table{
         padding-top: 45px;
         .box{
-            height: 214px;
+            height: 178px;
             .row{
                 position: relative;padding: 0;
                 &::before{content: '';height: 1px;background: $default;position: absolute;left: 30px;top: 50%;right: 30px;}
@@ -679,6 +689,37 @@ body.body-error{
                     bottom: -25px;
                 }
             }
+        }
+    }
+}
+
+.summary{
+    padding: 20px 0;border-bottom: 1px solid $default;
+    .info{
+        span{font-size: 14px;display: block;}
+        strong{font-size: 18px;font-weight: 700;display: block;}
+        i{font-size: 13px;color: #000;font-weight: 400;}
+        .lang-kor{font-size: 16px;}
+    }
+}
+.summary-detail{
+    .tit{font-size: 16px;font-weight: 700;margin-bottom: 8px;margin-top: 25px;}
+    .info{
+        margin-bottom: 15px;
+        span{font-size: 14px;display: block;font-family: 'Noto Sans KR';}
+        strong{font-size: 18px;font-weight: 700;display: block;}
+        i{font-size: 13px;color: #000;font-weight: 400;}
+    }
+    .table th,
+    .table td{padding-left: 15px;letter-spacing: -0.7px;}
+    .table thead th{font-size: 14px;}
+    .table b{margin-right: 2px;font-weight: 700;}
+}
+@include media-breakpoint-down(md) {
+    .summary{
+        padding: 20px 0 2px;border-bottom: 1px solid $default;
+        .info{
+            .col-6{padding-bottom: 18px;}
         }
     }
 }
