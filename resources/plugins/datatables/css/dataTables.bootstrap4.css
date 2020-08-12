@@ -90,7 +90,7 @@ table.dataTable thead>tr>th.sorting,
 table.dataTable thead>tr>td.sorting_asc,
 table.dataTable thead>tr>td.sorting_desc,
 table.dataTable thead>tr>td.sorting {
-    padding-right: 30px;
+    padding-right: 1.5rem;
 }
 
 table.dataTable thead>tr>th:active,
@@ -127,7 +127,7 @@ table.dataTable thead .sorting_asc:before,
 table.dataTable thead .sorting_desc:before,
 table.dataTable thead .sorting_asc_disabled:before,
 table.dataTable thead .sorting_desc_disabled:before {
-    right: 1rem;
+    right: .5rem;
     content: "";
     width: 0;
     height: 0;
@@ -143,7 +143,7 @@ table.dataTable thead .sorting_asc:after,
 table.dataTable thead .sorting_desc:after,
 table.dataTable thead .sorting_asc_disabled:after,
 table.dataTable thead .sorting_desc_disabled:after {
-    right: 1rem;
+    right: .5rem;
     content: "";
     width: 0;
     height: 0;

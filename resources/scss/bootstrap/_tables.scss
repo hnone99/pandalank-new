@@ -219,4 +219,5 @@
 .table-data{
   th:first-child{border-right: 1px solid #000;}
   td:first-child{border-right: 1px solid #000;}
+  tbody td.text-right{padding-right: 1.5rem;}
 }

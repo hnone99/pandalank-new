@@ -3334,6 +3334,10 @@ mt-1 : { margin-top : 1px; }
   border-right: 1px solid #000;
 }
 
+.table-data tbody td.text-right {
+  padding-right: 1.5rem;
+}
+
 .form-control {
   display: block;
   width: 100%;
