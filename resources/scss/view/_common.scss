@@ -279,7 +279,7 @@
         }
         .cate{width: 100px;font-weight: 500;color: $danger;}
         .subject{
-            font-size: 15px;font-weight: 500;flex: 1 1 0;padding-right: 20px;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;
+            font-size: 15px;font-weight: 400;flex: 1 1 0;padding-right: 20px;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;
             .badge{margin-right: 3px;}
         }
         .writer{width: 120px;color: $gray;}
@@ -301,6 +301,9 @@
         .board-item-detail{
             display: block;
         }
+    }
+    li.board-item-best{
+        .board-item-simple .subject{font-weight: 500;}
     }
 }
 @include media-breakpoint-down(lg) {
@@ -441,7 +444,7 @@ body.body-half{background: #fbf9fa url('../images/bg-join.png') no-repeat 0 100%
         }
         .logo{
             position: static;display: none;
-            a{width: 112px;height: 23px;background: url('../images/logo.svg') no-repeat 50% 50%;background-size: contain;}
+            a{width: 112px;height: 23px;background: url('../images/logo_w.svg') no-repeat 50% 50%;background-size: contain;}
         }
         .btn-back{width: 12px;height: 23px;position: absolute;left: 24px;top: 17px;background: url('../images/icon-prev.svg') no-repeat 50% 50%;background-size: contain;}
     }

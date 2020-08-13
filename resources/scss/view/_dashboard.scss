@@ -14,14 +14,14 @@
 }
 body.body-dashboard {
     #container-block{
-        background: url('../images/bg-main.png') no-repeat 50% 0;
+        background: url('../images/bg-main.png') no-repeat 50% 0;background-size: contain;
     }
 }
 
 @include media-breakpoint-down(md) {
     body.body-dashboard{
         #container-block{
-            background-image: url('../images/bg-main-m.png');background-size: contain;
+            background-image: url('../images/bg-main-m.png');
         }
         .title-area{
             display: block;padding-top: 25px;

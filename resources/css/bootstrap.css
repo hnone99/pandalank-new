@@ -3338,6 +3338,10 @@ mt-1 : { margin-top : 1px; }
   padding-right: 1.5rem;
 }
 
+.table-data.no-sort tbody td.text-right {
+  padding-right: .5rem;
+}
+
 .form-control {
   display: block;
   width: 100%;
@@ -4065,10 +4069,10 @@ textarea.form-control {
   background-color: transparent;
   border: 1px solid transparent;
   white-space: nowrap;
-  padding: 0.78125rem 1rem;
+  padding: 0.62rem 1.5rem;
   font-size: 0.9375rem;
   line-height: 1.4;
-  border-radius: 0;
+  border-radius: 5px;
   -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
@@ -4942,7 +4946,7 @@ fieldset:disabled a.btn {
   padding: 18.5px 76px;
   font-size: 1.125rem;
   line-height: 1.4;
-  border-radius: 0;
+  border-radius: 5px;
   min-width: 240px;
 }
 
@@ -4954,7 +4958,7 @@ fieldset:disabled a.btn {
   padding: 0.59375rem 1rem;
   font-size: 0.875rem;
   line-height: 1.4;
-  border-radius: 0;
+  border-radius: 5px;
   letter-spacing: -0.04em;
   -webkit-transform: skew(-0.001deg);
           transform: skew(-0.001deg);
@@ -4964,7 +4968,7 @@ fieldset:disabled a.btn {
   padding: 0.3125rem 14px;
   font-size: 0.8125rem;
   line-height: 1.4;
-  border-radius: 0;
+  border-radius: 5px;
   min-width: 88px;
   letter-spacing: -0.04em;
 }
@@ -5396,8 +5400,8 @@ input[type="button"].btn-block {
 }
 
 .dropdown-toggle-split {
-  padding-right: 0.75rem;
-  padding-left: 0.75rem;
+  padding-right: 1.125rem;
+  padding-left: 1.125rem;
 }
 
 .dropdown-toggle-split::after,

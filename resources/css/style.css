@@ -1288,7 +1288,7 @@ html.is-scrolled .btn-top {
 
 .board .board-item-simple .subject {
   font-size: 15px;
-  font-weight: 500;
+  font-weight: 400;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 0px;
           flex: 1 1 0;
@@ -1344,6 +1344,10 @@ html.is-scrolled .btn-top {
 
 .board li.active .board-item-detail {
   display: block;
+}
+
+.board li.board-item-best .board-item-simple .subject {
+  font-weight: 500;
 }
 
 @media (max-width: 1279.98px) {
@@ -1788,7 +1792,7 @@ body.body-half {
   #half-block .logo a {
     width: 112px;
     height: 23px;
-    background: url("../images/logo.svg") no-repeat 50% 50%;
+    background: url("../images/logo_w.svg") no-repeat 50% 50%;
     background-size: contain;
   }
   #half-block .btn-back {
@@ -2961,12 +2965,12 @@ body.body-about #container-block::before {
 
 body.body-dashboard #container-block {
   background: url("../images/bg-main.png") no-repeat 50% 0;
+  background-size: contain;
 }
 
 @media (max-width: 991.98px) {
   body.body-dashboard #container-block {
     background-image: url("../images/bg-main-m.png");
-    background-size: contain;
   }
   body.body-dashboard .title-area {
     display: block;
