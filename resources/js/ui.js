@@ -147,6 +147,8 @@
         },
         active: function(){
             $('.tab a').on('click',function(e){
+                $(this).closest('li').siblings().removeClass('active');
+                $(this).closest('li').addClass('active');
                 $(this).closest('.tab').attr('data-position',$(this).parent('li').index() + 1);
             });
         }

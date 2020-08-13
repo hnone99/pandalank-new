@@ -95,7 +95,7 @@ body{
         width: 320px;padding: 50px 40px;left: 200px;background: #fff;
         bottom: 0;height: 100vh;position: fixed;top: 0;z-index: 1000;border-right: 1px solid #d2dae0;
         .btn-collapse{
-            position: absolute;right: -42px;top: 178px;
+            position: absolute;right: -42px;top: 154px;
             a{
                 display: block;width: 42px;height: 42px;border-radius: 0 5px 5px 0;background: #000;position: relative;
                 &::before{content: '';display: block;background: url('../images/icon-pre.svg') no-repeat 50% 50%;background-size: contain;width: 10px;height: 18px;position: absolute;left: 50%;top: 50%;margin: -9px 0 0 -5px;transition: all .2s .1s;}

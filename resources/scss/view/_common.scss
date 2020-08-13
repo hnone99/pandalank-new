@@ -178,7 +178,7 @@
 }
 
 .top-area{
-    display: flex;justify-content: space-between;margin-bottom: 47px;
+    display: flex;justify-content: space-between;margin-bottom: 3px;
     .text{margin-right: 15px;}
     .banner{min-width: 300px;}
 }
@@ -518,7 +518,6 @@ body.body-half{background: #fbf9fa url('../images/bg-join.png') no-repeat 0 100%
         background-position: 35px 35px
     }
 }
-
 @keyframes progressActive {
     0% {
         background-position: 0 0
@@ -526,6 +525,31 @@ body.body-half{background: #fbf9fa url('../images/bg-join.png') no-repeat 0 100%
 
     100% {
         background-position: 35px 35px
+    }
+}
+
+.ai-donut{border-top: 1px solid $border-color;border-bottom: 1px solid $border-color;padding: 50px 0;margin-top: 36px;}
+.chart-donut-wrap{
+    position: relative;width: 300px;margin: 0 auto;
+    .name{position: absolute;left: 50%;top: 50%;transform: translate(-50%,-50%);font-size: 16px;}
+    .num-left{position: absolute;left: 0;top: 50%;transform: translate(0,-50%);font-family: 'Gotham';font-size: 20px;font-weight: 700;}
+    .num-right{position: absolute;right: 0;top: 50%;transform: translate(0,-50%);font-family: 'Gotham';font-size: 20px;font-weight: 700;color: $primary;}
+}
+.progress-wrap{display: flex;justify-content: center;padding-bottom: 30px;width: 280px;margin: 0 auto;}
+.progress-panda-vertical{
+    background: #edf0f7;border-radius: 16px; width: 16px;height: 160px;position: relative;
+    .progress-panda-bar{
+        position: absolute;left: 0;bottom: 0;height: 0;border-radius: 16px;width:100%;transition: height 1s cubic-bezier(0.1, 0.76, 0.33, 0.99);background: $primary;}
+    .progress-panda-title{
+        color: $gray;font-size: 15px;position: absolute;left: 50%;bottom: -30px;width: 40px;text-align: center;transform: translateX(-50%);white-space: nowrap;font-family: 'Noto Sans KR';
+    }
+    & + .progress-panda-vertical{margin-left: 27px;}
+}
+@include media-breakpoint-down(md) {
+    .ai-donut{padding: 40px 0;}
+    .ai-donut > .row .col-12 + .col-12{margin-top: 43px;}
+    .progress-panda-vertical{
+        width: 13px;height: 130px;
     }
 }
 
@@ -780,5 +804,17 @@ body.body-about{
                 margin-top: 24px;height: auto;
             }
         }
+    }
+}
+
+.ai{
+    .chart{text-align: center;}
+    .chart-text{text-align: center;font-family: 'Noto Sans KR';font-size: 20px;margin-top: 36px;line-height: 1.5;}
+    .chart-text-sm{text-align: center;font-family: 'Noto Sans KR';font-size: 16px;margin-top: 10px;line-height: 1.5;}
+}
+
+@include media-breakpoint-down(md) {
+    .ai{
+        .chart-text{font-size: 18px;}
     }
 }

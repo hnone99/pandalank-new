@@ -163,7 +163,7 @@ body {
   #center-block .btn-collapse {
     position: absolute;
     right: -42px;
-    top: 178px;
+    top: 154px;
   }
   #center-block .btn-collapse a {
     display: block;
@@ -997,7 +997,7 @@ html.is-scrolled .btn-top {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-bottom: 47px;
+  margin-bottom: 3px;
 }
 
 .top-area .text {
@@ -1980,6 +1980,114 @@ body.body-half {
   }
 }
 
+.ai-donut {
+  border-top: 1px solid #d2dae0;
+  border-bottom: 1px solid #d2dae0;
+  padding: 50px 0;
+  margin-top: 36px;
+}
+
+.chart-donut-wrap {
+  position: relative;
+  width: 300px;
+  margin: 0 auto;
+}
+
+.chart-donut-wrap .name {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 16px;
+}
+
+.chart-donut-wrap .num-left {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  font-family: 'Gotham';
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.chart-donut-wrap .num-right {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  font-family: 'Gotham';
+  font-size: 20px;
+  font-weight: 700;
+  color: #34D52E;
+}
+
+.progress-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-bottom: 30px;
+  width: 280px;
+  margin: 0 auto;
+}
+
+.progress-panda-vertical {
+  background: #edf0f7;
+  border-radius: 16px;
+  width: 16px;
+  height: 160px;
+  position: relative;
+}
+
+.progress-panda-vertical .progress-panda-bar {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 0;
+  border-radius: 16px;
+  width: 100%;
+  -webkit-transition: height 1s cubic-bezier(0.1, 0.76, 0.33, 0.99);
+  transition: height 1s cubic-bezier(0.1, 0.76, 0.33, 0.99);
+  background: #34D52E;
+}
+
+.progress-panda-vertical .progress-panda-title {
+  color: #989da0;
+  font-size: 15px;
+  position: absolute;
+  left: 50%;
+  bottom: -30px;
+  width: 40px;
+  text-align: center;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  white-space: nowrap;
+  font-family: 'Noto Sans KR';
+}
+
+.progress-panda-vertical + .progress-panda-vertical {
+  margin-left: 27px;
+}
+
+@media (max-width: 991.98px) {
+  .ai-donut {
+    padding: 40px 0;
+  }
+  .ai-donut > .row .col-12 + .col-12 {
+    margin-top: 43px;
+  }
+  .progress-panda-vertical {
+    width: 13px;
+    height: 130px;
+  }
+}
+
 #util-block .logo {
   position: fixed;
   left: 60px;
@@ -2757,6 +2865,32 @@ body.body-about #container-block::before {
   .about .service .info {
     margin-top: 24px;
     height: auto;
+  }
+}
+
+.ai .chart {
+  text-align: center;
+}
+
+.ai .chart-text {
+  text-align: center;
+  font-family: 'Noto Sans KR';
+  font-size: 20px;
+  margin-top: 36px;
+  line-height: 1.5;
+}
+
+.ai .chart-text-sm {
+  text-align: center;
+  font-family: 'Noto Sans KR';
+  font-size: 16px;
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
+@media (max-width: 991.98px) {
+  .ai .chart-text {
+    font-size: 18px;
   }
 }
 

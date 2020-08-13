@@ -87,7 +87,9 @@ ul.accessibility {font-size: 1px;height: 1px; line-height: 1px; overflow: hidden
 .core .core_text {fill:#444;font-size:15px;}
 
 /*pie and donut */
-.foreground .donuts .sector {stroke-width:1; stroke:#fff; cursor:pointer}
+.foreground .donuts .sector {stroke-width:0; stroke:#fff; cursor:pointer}
+.Nwagon_donut .foreground{transform: translateX(45px);}
+.Nwagon_donut .fields{display: none;}
 
 /* Radar Type */
 .Nwagon_radar .background .pie{fill:red;stroke-width: 3;}
