@@ -266,6 +266,13 @@
                 e.preventDefault();
                 $('html, body').animate({scrollTop: 0}, 300);
             });
+
+            //모바일 dim 클릭시 side 히든
+            $('.dim').on('click', function(e) {
+                if($('html').hasClass('open-side')){
+                    $('html').removeClass('open-side');
+                }
+            });
         }
     };
 
