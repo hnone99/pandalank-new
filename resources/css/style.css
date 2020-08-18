@@ -163,7 +163,7 @@ body {
   #center-block .btn-collapse {
     position: absolute;
     right: -42px;
-    top: 154px;
+    top: 160px;
   }
   #center-block .btn-collapse a {
     display: block;
@@ -748,7 +748,7 @@ html.is-scrolled .btn-top {
 }
 
 .tab-area {
-  margin-bottom: 36px;
+  margin-bottom: 41px;
 }
 
 .tab ul {
@@ -1157,7 +1157,7 @@ html.is-scrolled .btn-top {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-bottom: 3px;
+  margin-bottom: 9px;
 }
 
 .top-area .text {
