@@ -144,7 +144,7 @@
                     <div role="tabpanel" class="tab-pane fade" id="t2">
                         <div class="input-area">
                             <div class="form-control-wrapper">
-                                <input type="text" class="form-control form-control-panda" placeholder="상품 URL 붙여넣기" id="form5">
+                                <input type="text" class="form-control form-control-panda active" placeholder="상품 URL 붙여넣기" id="form5">
                                 <button type="button" class="btn btn-submit">엔터</button>
                             </div>
                         </div>
@@ -427,23 +427,9 @@
                             </div>
                         </div>
 
-                        <!-- pagination -->
-                        <nav class="pagination-wrap">
-                            <ul class="pagination">
-                                <li class="page-item mr-4 disabled">
-                                    <a class="page-link" href="#"><i class="icon-prev"><span class="sr-only">이전</span></i></a>
-                                </li>
-                                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                <li class="page-item"><a class="page-link" href="#">4</a></li>
-                                <li class="page-item"><a class="page-link" href="#">5</a></li>
-                                <li class="page-item ml-4">
-                                    <a class="page-link" href="#"><i class="icon-next"><span class="sr-only">다음</span></i></a>
-                                </li>
-                            </ul>
-                        </nav>
-                        <!-- //pagination -->
+                        <div class="list-more">
+                            <a href="javascript:;"><strong>MORE +</strong></a>
+                        </div>
 
                         <!-- 컨텐츠 끝 -->
                     </div>
@@ -772,6 +758,53 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="table-area">
+                            <div class="table-title">상품 순위</div>
+                            <table class="table table-hover responsive table-data no-sort" id="datatable">
+                                <thead>
+                                    <tr>
+                                        <th class="text-left">상품명</th>
+                                        <th class="text-right">구매수</th>
+                                        <th class="text-right">리뷰수</th>
+                                        <th class="text-right">판매가</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="text-left">
+                                            <div class="text-truncate"><img src="../../resources/images/@product-thumb.jpg" alt="" class="product-thumb"> 상품명 상품명상품명 상품명 111111111 상품명 상품명</div>
+                                        </td>
+                                        <td class="text-right">555</td>
+                                        <td class="text-right">4,250</td>
+                                        <td class="text-right">24,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left">
+                                            <div class="text-truncate"><img src="../../resources/images/@product-thumb.jpg" alt="" class="product-thumb"> 222 222222 22222222222222222222222222</div>
+                                        </td>
+                                        <td class="text-right">555</td>
+                                        <td class="text-right">4,250</td>
+                                        <td class="text-right">24,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left">
+                                            <div class="text-truncate"><img src="../../resources/images/@product-thumb.jpg" alt="" class="product-thumb"> 상품명 상품명상품명 상품명 111111111 상품명 상품명</div>
+                                        </td>
+                                        <td class="text-right">55</td>
+                                        <td class="text-right">4,250</td>
+                                        <td class="text-right">24,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left">
+                                            <div class="text-truncate"><img src="../../resources/images/@product-thumb.jpg" alt="" class="product-thumb"> 222 222222 22222222222222222222222222</div>
+                                        </td>
+                                        <td class="text-right">55</td>
+                                        <td class="text-right">4,250</td>
+                                        <td class="text-right">124,000</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -825,6 +858,19 @@
                 e.preventDefault();
                 $('#modal-password').modal('hide');
                 $('#modal-confirm').modal('show');
+            });
+
+            //datatable
+            var datatable = $('#datatable').DataTable({
+                'searching': false,
+                'info': false,
+                'paging': false,
+                'details': false,
+                'ordering': false,
+                'fixedColumns': true,
+                "columnDefs": [
+                    { "width": "50%", "targets": 0 }
+                ]
             });
         });
 

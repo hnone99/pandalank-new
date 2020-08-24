@@ -417,6 +417,7 @@ textarea.form-control {
 
 .form-control-wrapper{
   position: relative;
+  .form-control-panda{padding-right: 67px;}
   .btn-submit{
     position: absolute;right: 0;top: 50%;transform: translateY(-50%);
   }

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+    <defs>
+        <style>
+            .cls-2{fill:#8596a3}.cls-3{fill:#b4c1c7}
+        </style>
+    </defs>
+    <g id="그룹_506" data-name="그룹 506" transform="translate(-98.044 -341.63)">
+        <path id="사각형_560" fill="#fff" d="M0 0H16V16H0z" data-name="사각형 560" transform="translate(98.044 341.63)"/>
+        <path id="패스_67" d="M115.4 344.972h-3.329l-1.025 1.481 2.3 1.426 2.05-2.906" class="cls-2" data-name="패스 67" transform="translate(-4.333 -1.114)"/>
+        <path id="패스_68" d="M102.792 344.972h3.328l1.026 1.481-2.3 1.426-2.049-2.906" class="cls-2" data-name="패스 68" transform="translate(-1.583 -1.114)"/>
+        <circle id="타원_48" cx="1.5" cy="1.5" r="1.5" class="cls-3" data-name="타원 48" transform="translate(104.544 349.13)"/>
+        <g id="타원_49" data-name="타원 49" transform="translate(100.544 345.13)">
+            <circle id="타원_52" cx="5.5" cy="5.5" r="5.5" fill="none" data-name="타원 52"/>
+            <path id="패스_79" d="M107.294 357.88a5.5 5.5 0 1 1 5.5-5.5 5.506 5.506 0 0 1-5.5 5.5zm0-9a3.5 3.5 0 1 0 3.5 3.5 3.5 3.5 0 0 0-3.5-3.5z" class="cls-3" data-name="패스 79" transform="translate(-101.794 -346.88)"/>
+        </g>
+    </g>
+</svg>

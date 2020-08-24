@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+    <g id="그룹_514" data-name="그룹 514" transform="translate(-1242 -476)">
+        <path id="사각형_561" fill="#fff" d="M0 0H16V16H0z" data-name="사각형 561" transform="translate(1242 476)"/>
+        <rect id="사각형_638" width="14" height="14" fill="#c7cdd1" data-name="사각형 638" rx="3" transform="translate(1243 477)"/>
+        <text id="비" fill="#fff" font-family="NanumSquareB, NanumSquare" font-size="10px" letter-spacing="-0.05em" transform="translate(1245 487)">
+            <tspan x="0" y="0">비</tspan>
+        </text>
+    </g>
+</svg>
