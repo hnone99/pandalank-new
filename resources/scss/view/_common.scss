@@ -268,6 +268,14 @@
         margin-bottom: 10px;border-bottom: 2px solid #000;padding-bottom: 20px;
         &.has-line{border-bottom: 0;margin-bottom: 0;}
     }
+    html.over-category{
+        .location-area{
+            > nav{
+                position: fixed;left: 0;bottom: 0;z-index: 9;width: 100%;padding: 0 24px 24px 24px;
+                .breadcrumb{margin-right:0;font-size: 15px;background: #fff;box-shadow: 0 10px 30px 0 #dee8ef;width: 100%;padding: 17px 60px 17px 22px;border-radius: 64px;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;}
+            }
+        }
+    }
 }
 .table-top{
     margin-bottom: 10px;border-bottom: 2px solid #000;padding-bottom: 10px;
@@ -794,12 +802,18 @@ body.body-error{
     .table thead th{font-size: 14px;}
     .table b{margin-right: 2px;font-weight: 700;}
 }
+.report{
+    .table .text-truncate{max-width:350px;}
+}
 @include media-breakpoint-down(md) {
     .summary{
         padding: 20px 0 2px;border-bottom: 1px solid $default;
         .info{
             .col-6{padding-bottom: 18px;}
         }
+    }
+    .report{
+        .table .text-truncate{max-width:125px;}
     }
 }
 

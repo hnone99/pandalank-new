@@ -860,18 +860,23 @@
                 $('#modal-confirm').modal('show');
             });
 
-            //datatable
-            var datatable = $('#datatable').DataTable({
-                'searching': false,
-                'info': false,
-                'paging': false,
-                'details': false,
-                'ordering': false,
-                'fixedColumns': true,
-                "columnDefs": [
-                    { "width": "50%", "targets": 0 }
-                ]
+            $('#modal-report').on('shown.bs.modal', function (e) {
+                //datatable
+                var datatable = $('#datatable').DataTable({
+                    'searching': false,
+                    'info': false,
+                    'paging': false,
+                    'details': false,
+                    'ordering': false,
+                    'fixedColumns': true,
+                    "columnDefs": [
+                        { "width": "102px", "targets": 1 },
+                        { "width": "102px", "targets": 2 },
+                        { "width": "102px", "targets": 3 }
+                    ]
+                });
             });
+
         });
 
         //차트
