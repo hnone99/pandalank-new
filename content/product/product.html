@@ -251,7 +251,7 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td class="text-left"><span>타이틀1</span></td>
+                                    <td class="text-left"><span class="text-truncate max-width-product">타이틀1 타이틀1 타이틀1타이틀111111 11111ß</span></td>
                                     <td class="text-right"><span class="text-primary">최적</span></td>
                                     <td class="text-right"><span class="text-primary">최적</span></td>
                                     <td class="text-right"><span class="text-primary">좋음</span></td>
@@ -259,7 +259,7 @@
                                     <td class="text-right"><span>32,034</span></td>
                                 </tr>
                                 <tr>
-                                    <td class="text-left"><span>타이틀</span></td>
+                                    <td class="text-left"><span class="text-truncate max-width-product">타이틀</span></td>
                                     <td class="text-right"><span class="text-primary">최적</span></td>
                                     <td class="text-right"><span class="text-primary">최적</span></td>
                                     <td class="text-right"><span class="text-gray">보통</span></td>
@@ -267,7 +267,7 @@
                                     <td class="text-right"><span>32,034</span></td>
                                 </tr>
                                 <tr>
-                                    <td class="text-left"><span>타이틀</span></td>
+                                    <td class="text-left"><span class="text-truncate max-width-product">타이틀</span></td>
                                     <td class="text-right"><span class="text-danger">나쁨</span></td>
                                     <td class="text-right"><span class="text-danger">나쁨</span></td>
                                     <td class="text-right"><span class="text-gray">보통</span></td>
@@ -275,7 +275,7 @@
                                     <td class="text-right"><span>32,034</span></td>
                                 </tr>
                                 <tr>
-                                    <td class="text-left"><span>타이틀</span></td>
+                                    <td class="text-left"><span class="text-truncate max-width-product">타이틀</span></td>
                                     <td class="text-right"><span class="text-primary">최적</span></td>
                                     <td class="text-right"><span class="text-primary">최적</span></td>
                                     <td class="text-right"><span class="text-primary">좋음</span></td>
@@ -283,7 +283,7 @@
                                     <td class="text-right"><span>32,034</span></td>
                                 </tr>
                                 <tr>
-                                    <td class="text-left"><span>타이틀</span></td>
+                                    <td class="text-left"><span class="text-truncate max-width-product">2222 22222 222222 2 2222222222222222 222222 22222 2222222 2222 22 2 2 2 2</span></td>
                                     <td class="text-right"><span class="text-primary">최적</span></td>
                                     <td class="text-right"><span class="text-primary">최적</span></td>
                                     <td class="text-right"><span class="text-gray">보통</span></td>
@@ -828,7 +828,8 @@
                 'ordering': true,
                 'order': [[1, 'desc']], //최초 sort
                 'columnDefs': [ // sort 아이콘 hide 타겟 지정
-                    { 'orderable': false, 'targets': [0] }
+                    { 'orderable': false, 'targets': [0] },
+                    { "width": "20%", "targets": [0] },
                 ]
             });
             //MORE+
@@ -851,7 +852,20 @@
                 $('#modal-password').modal('hide');
                 $('#modal-confirm').modal('show');
             });
+
+            fixedCategory();
         });
+        $(window).scroll(function () {
+			fixedCategory();
+		});
+        var fixedCategory = function(){
+            $('.location-area').css('height',$('.location-area').outerHeight());
+            if ($(window).scrollTop() > $('.location-area').offset().top + 100) {
+                $('html').addClass('fixed-category');
+            } else {
+                $('html').removeClass('fixed-category');
+            }
+        }
     </script>
 </body>
 </html>

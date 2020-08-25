@@ -268,11 +268,12 @@
         margin-bottom: 10px;border-bottom: 2px solid #000;padding-bottom: 20px;
         &.has-line{border-bottom: 0;margin-bottom: 0;}
     }
-    html.over-category{
+    html.fixed-category{
         .location-area{
             > nav{
                 position: fixed;left: 0;bottom: 0;z-index: 9;width: 100%;padding: 0 24px 24px 24px;
-                .breadcrumb{margin-right:0;font-size: 15px;background: #fff;box-shadow: 0 10px 30px 0 #dee8ef;width: 100%;padding: 17px 60px 17px 22px;border-radius: 64px;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;}
+                .breadcrumb{margin-right:0;font-size: 15px;background: #fff;box-shadow: 0 10px 30px 0 #dee8ef;width: 100%;padding: 17px 60px 17px 22px;border-radius: 64px;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;display: block;}
+                .breadcrumb-item{display: inline;}
             }
         }
     }
@@ -660,6 +661,15 @@ body.body-half{background: #fbf9fa url('../images/bg-join.png') no-repeat 0 100%
     }
     a:hover{color: #000;}
     a:hover::before{transform: translate(-10px, -10px);}
+}
+
+.text-truncate{
+    &.max-width-product{max-width:200px;}
+}
+@include media-breakpoint-down(md) {
+    .text-truncate{
+        &.max-width-product{max-width:90px;}
+    }
 }
 
 .mymall{
