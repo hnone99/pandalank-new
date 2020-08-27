@@ -207,6 +207,10 @@
 
     var UiFunction = {
         init : function(){
+
+            //tooltip
+            $('[data-toggle="tooltip"]').tooltip();
+
             //datepicker
             $('[data-event="datepicker"]').datepicker({
                 changeMonth: true,

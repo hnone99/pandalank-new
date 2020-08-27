@@ -24,6 +24,9 @@
     <!-- DataTables -->
     <script src="../../resources/plugins/datatables/js/jquery.dataTables.min.js"></script>
     <script src="../../resources/plugins/datatables/js/dataTables.bootstrap4.js"></script>
+    <script src="../../resources/plugins/datatables/js/dataTables.fixedColumns.min.js"></script>
+    <script src="../../resources/plugins/datatables/js/dataTables.fixedHeader.min.js"></script>
+
     <!-- Swiper -->
     <script src="../../resources/plugins/swiper/js/swiper.min.js"></script>
     <!-- ui 관련 -->
@@ -159,7 +162,7 @@
                     </div>
                     <div role="tabpanel" class="tab-pane fade" id="t2">
                         <div class="input-area">
-                            <input type="text" class="form-control form-control-panda" placeholder="상품종류를 입력하세요" id="keyword">
+                            <input type="text" class="form-control form-control-panda active" placeholder="상품종류를 입력하세요" id="keyword">
                         </div>
                     </div>
                 </div>
@@ -251,7 +254,8 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td class="text-left"><span class="text-truncate max-width-product">타이틀1 타이틀1 타이틀1타이틀111111 11111ß</span></td>
+                                    <!-- 마우스오버시 tooltip으로 full네임 보여줌 -->
+                                    <td class="text-left"><span class="text-truncate max-width-product" data-toggle="tooltip" data-placement="right" title="타이틀1 타이틀1 타이틀1타이틀111111 11111ß">타이틀1 타이틀1 타이틀1타이틀111111 11111ß</span></td>
                                     <td class="text-right"><span class="text-primary">최적</span></td>
                                     <td class="text-right"><span class="text-primary">최적</span></td>
                                     <td class="text-right"><span class="text-primary">좋음</span></td>
@@ -818,20 +822,42 @@
                 }
             });
 
-            var datatable = $('#datatable').DataTable({
-                'responsive': true,
-                'searching': false,
-                'info': false,
-                'paging': true,
-                'pageLength': 10, //페이징 기준 개수
-                'details': false,
-                'ordering': true,
-                'order': [[1, 'desc']], //최초 sort
-                'columnDefs': [ // sort 아이콘 hide 타겟 지정
-                    { 'orderable': false, 'targets': [0] },
-                    { "width": "20%", "targets": [0] },
-                ]
-            });
+            var breakpoint = window.matchMedia('(min-width:992px)').matches;
+            if(breakpoint){
+                //pc
+                var datatable = $('#datatable').DataTable({
+                    'responsive': true,
+                    'searching': false,
+                    'info': false,
+                    'paging': true,
+                    'pageLength': 10, //페이징 기준 개수
+                    'ordering': true,
+                    'order': [[1, 'desc']], //최초 sort
+                    'columnDefs': [ // sort 아이콘 hide 타겟 지정
+                        { 'orderable': false, 'targets': [0] },
+                        { "width": "20%", "targets": [0] },
+                    ],
+                });
+            }else{
+                //mobile
+                var datatable = $('#datatable').DataTable({
+                    'fixedHeader': {
+                        'header': true,
+                    },
+                    'responsive': true,
+                    'searching': false,
+                    'info': false,
+                    'paging': false,
+                    'details': false,
+                    'ordering': true,
+                    'order': [[1, 'desc']], //최초 sort
+                    'columnDefs': [ // sort 아이콘 hide 타겟 지정
+                        { 'orderable': false, 'targets': [0] },
+                        { "width": "20%", "targets": [0] },
+                    ],
+                });
+            }
+
             //MORE+
             $('#btn-more-table').on('click',function(){
                 if(!$(this).hasClass('active')){
@@ -847,7 +873,6 @@
 
             //비밀번호 입력 확인 버튼 클릭시
             $('#btn-ok').on('click',function(e){
-                console.log(111);
                 e.preventDefault();
                 $('#modal-password').modal('hide');
                 $('#modal-confirm').modal('show');

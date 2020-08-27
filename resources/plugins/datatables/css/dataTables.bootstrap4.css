@@ -483,3 +483,54 @@ div.dtr-modal div.dtr-modal-background {
         width: 95%
     }
 }
+
+table.DTFC_Cloned thead,
+table.DTFC_Cloned tfoot {
+    background-color: white
+}
+
+div.DTFC_Blocker {
+    background-color: white
+}
+
+div.DTFC_LeftBodyWrapper{
+    border-bottom: 1px solid #111;
+}
+
+div.DTFC_LeftWrapper table.dataTable,
+div.DTFC_RightWrapper table.dataTable {
+    margin-bottom: 0;
+    z-index: 2
+}
+
+div.DTFC_LeftWrapper table.dataTable.no-footer,
+div.DTFC_RightWrapper table.dataTable.no-footer {
+    border-bottom: none
+}
+
+.dataTables_wrapper.no-footer .dataTables_scrollBody{border-bottom: 1px solid #111;}
+
+
+table.dataTable.display tbody tr.DTFC_NoData {
+    background-color: transparent
+}
+
+table.fixedHeader-floating {
+    position: fixed !important;
+    background-color: white
+}
+
+table.fixedHeader-floating.no-footer {
+    border-bottom-width: 0
+}
+
+table.fixedHeader-locked {
+    position: absolute !important;
+    background-color: white
+}
+
+@media print {
+    table.fixedHeader-floating {
+        display: none
+    }
+}

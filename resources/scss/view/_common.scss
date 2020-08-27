@@ -539,7 +539,7 @@ body.body-half{background: #fbf9fa url('../images/bg-join.png') no-repeat 0 100%
         display: flex;flex-wrap:wrap;align-items: center;position: relative;z-index: 2;
         strong{font-size: 32px;font-weight: 700;vertical-align: middle;}
         p{font-size: 15px;color: $gray;width: 100%;}
-        .th-icon-info{margin-top: -3px;margin-left: 8px;}
+        .th-icon-info{margin-top: -2px;margin-left: 8px;}
     }
     .chart{text-align: center;}
     .chart-text{text-align: center;font-family: 'Noto Sans KR';font-size: 20px;margin-top: 36px;line-height: 1.5;}
@@ -813,7 +813,7 @@ body.body-error{
     .table b{margin-right: 2px;font-weight: 700;}
 }
 .report{
-    .table .text-truncate{max-width:350px;}
+    .table:not(.table-fixed) .text-truncate{max-width:350px;}
 }
 @include media-breakpoint-down(md) {
     .summary{
@@ -823,7 +823,7 @@ body.body-error{
         }
     }
     .report{
-        .table .text-truncate{max-width:125px;}
+        .table:not(.table-fixed) .text-truncate{max-width:125px;}
     }
 }
 
