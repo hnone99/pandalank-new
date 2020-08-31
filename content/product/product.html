@@ -878,11 +878,12 @@
                 $('#modal-confirm').modal('show');
             });
 
-            fixedCategory();
+            //fixedCategory();
         });
         $(window).scroll(function () {
-			fixedCategory();
+			//fixedCategory();
 		});
+        //상품카테고리 fixed
         var fixedCategory = function(){
             $('.location-area').css('height',$('.location-area').outerHeight());
             if ($(window).scrollTop() > $('.location-area').offset().top + 100) {

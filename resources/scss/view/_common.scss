@@ -904,3 +904,13 @@ body.body-about{
 .level-3{background-image: url('../images/member-level3.svg');}
 .level-4{background-image: url('../images/member-level4.svg');}
 .level-5{background-image: url('../images/member-level5.svg');}
+
+.btn-join-go{
+    width: 312px;height: 64px;background: $primary;font-size: 18px;font-weight: 700;line-height: 63px;letter-spacing: -0.9px;text-align: center;color: #ffffff;
+    border: 0;position: absolute;left: 50%;bottom: 40px;transform: translateX(-50%);border-radius: 5px;box-shadow: 0 10px 30px 0 rgba(52, 213, 46, 0.3);
+}
+@include media-breakpoint-down(md) {
+    .btn-join-go{
+        width: 280px;height: 64px;font-size: 15px;bottom: 16px;
+    }
+}

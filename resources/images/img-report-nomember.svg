@@ -1,0 +1,200 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+    <defs>
+        <linearGradient id="linear-gradient" x1=".5" x2=".5" y2="1" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+            <stop offset="1" stop-color="#fff"/>
+        </linearGradient>
+        <style>
+            .cls-16,.cls-8{fill:#34d52e}.cls-8{font-size:18px}.cls-10,.cls-4{font-family:NanumSquareEB,NanumSquare}.cls-10,.cls-11,.cls-12,.cls-14,.cls-16,.cls-4,.cls-6,.cls-8,.cls-9{letter-spacing:-.05em}.cls-15{fill:#000}.cls-4{font-size:16px}.cls-10,.cls-11,.cls-12,.cls-14,.cls-16,.cls-4,.cls-6,.cls-8,.cls-9{opacity:.996}.cls-5{fill:#d2dae0}.cls-10,.cls-11,.cls-12,.cls-14,.cls-16,.cls-6{font-size:14px}.cls-6,.cls-9{font-family:NanumSquareR,NanumSquare}.cls-11,.cls-8{font-weight:700;font-family:Lato-Bold,Lato}.cls-9{font-size:13px}.cls-12,.cls-14,.cls-16{font-family:Lato-Regular,Lato}.cls-13,.cls-15{font-family:AppleSDGothicNeo-Regular,Apple SD Gothic Neo}.cls-14{fill:#f35d5d}
+        </style>
+    </defs>
+    <g id="그룹_548" data-name="그룹 548" transform="translate(-560 -200)">
+        <rect id="사각형_74" width="800" height="600" fill="#fff" data-name="사각형 74" rx="10" transform="translate(560 200)"/>
+        <text id="인테리어예쁜의자_23_000원_상세_리포트" fill="#34d52e" data-name="인테리어예쁜의자 23,000원 상세 리포트" font-family="NanumSquareEB, NanumSquare" font-size="18px" letter-spacing="-0.05em" transform="translate(600 254)">
+            <tspan x="0" y="0">인테리어예쁜의자 23,000원</tspan><tspan y="0" fill="#000"> 상세 리포트</tspan>
+        </text>
+        <text id="추천_판매_가격" class="cls-4" data-name="추천 판매 가격" transform="translate(600 421)">
+            <tspan x="0" y="0">추천 판매 가격</tspan>
+        </text>
+        <path id="사각형_104" d="M0 0H340V1H0z" class="cls-5" data-name="사각형 104" transform="translate(600 594)"/>
+        <path id="사각형_104-2" d="M0 0H340V1H0z" class="cls-5" data-name="사각형 104" transform="translate(600 642)"/>
+        <path id="사각형_104-3" d="M0 0H340V1H0z" class="cls-5" data-name="사각형 104" transform="translate(600 690)"/>
+        <path id="사각형_104-4" d="M0 0H340V1H0z" class="cls-5" data-name="사각형 104" transform="translate(600 738)"/>
+        <path id="사각형_102" d="M0 0H340V2H0z" data-name="사각형 102" transform="translate(600 499)"/>
+        <path id="패스_7" d="M0 0h340v1H0z" data-name="패스 7" transform="translate(600 546)"/>
+        <text id="적용된_카테고리" class="cls-6" data-name="적용된 카테고리" transform="translate(600 323)">
+            <tspan x="0" y="0">적용된 카테고리</tspan>
+        </text>
+        <text id="인테리어" fill="#34d52e" font-family="NotoSansCJKkr-Bold, Noto Sans CJK KR" font-size="16px" font-weight="700" letter-spacing="-0.05em" opacity="0.996" transform="translate(600 346)">
+            <tspan x="0" y="0">인테리어</tspan>
+        </text>
+        <text id="판매_활성화_제품" class="cls-6" data-name="판매 활성화 제품" transform="translate(786 323)">
+            <tspan x="0" y="0">판매 활성화 제품</tspan>
+        </text>
+        <text id="_628" class="cls-8" data-name="628" transform="translate(786 347)">
+            <tspan x="0" y="0">628</tspan>
+        </text>
+        <text id="개" class="cls-9" transform="translate(816 346)">
+            <tspan x="0" y="0">개</tspan>
+        </text>
+        <text id="수익_20_판매가_추천" class="cls-6" data-name="수익 20% 판매가 추천" transform="translate(600 451)">
+            <tspan x="0" y="0">수익 20% 판매가 추천</tspan>
+        </text>
+        <text id="_14_620" class="cls-8" data-name="14,620" transform="translate(600 475)">
+            <tspan x="0" y="0">14,620</tspan>
+        </text>
+        <text id="원" class="cls-9" transform="translate(655 474)">
+            <tspan x="0" y="0">원</tspan>
+        </text>
+        <text id="추천_키워드" class="cls-4" data-name="추천 키워드" transform="translate(980 421)">
+            <tspan x="0" y="0">추천 키워드</tspan>
+        </text>
+        <path id="사각형_483" d="M0 0H340V1H0z" class="cls-5" data-name="사각형 483" transform="translate(980 594)"/>
+        <path id="사각형_484" d="M0 0H340V1H0z" class="cls-5" data-name="사각형 484" transform="translate(980 642)"/>
+        <path id="사각형_485" d="M0 0H340V1H0z" class="cls-5" data-name="사각형 485" transform="translate(980 690)"/>
+        <path id="사각형_486" d="M0 0H340V1H0z" class="cls-5" data-name="사각형 486" transform="translate(980 738)"/>
+        <path id="사각형_488" d="M0 0H340V2H0z" data-name="사각형 488" transform="translate(980 499)"/>
+        <path id="패스_59" d="M0 0h340v1H0z" data-name="패스 59" transform="translate(980 546)"/>
+        <text id="키워드_총_월_검색량" class="cls-6" data-name="키워드 총 월 검색량" transform="translate(980 451)">
+            <tspan x="0" y="0">키워드 총 월 검색량</tspan>
+        </text>
+        <text id="_263_839" class="cls-8" data-name="263,839" transform="translate(980 475)">
+            <tspan x="0" y="0">263,839</tspan>
+        </text>
+        <text id="회" class="cls-9" transform="translate(1043 474)">
+            <tspan x="0" y="0">회</tspan>
+        </text>
+        <text id="상위_20_판매가_추천" class="cls-6" data-name="상위 20% 판매가 추천" transform="translate(786 451)">
+            <tspan x="0" y="0">상위 20% 판매가 추천</tspan>
+        </text>
+        <text id="_11_900" class="cls-8" data-name="11,900" transform="translate(786 475)">
+            <tspan x="0" y="0">11,900</tspan>
+        </text>
+        <text id="원-2" class="cls-9" data-name="원" transform="translate(839 474)">
+            <tspan x="0" y="0">원</tspan>
+        </text>
+        <text id="키워드_매칭_경쟁제품" class="cls-6" data-name="키워드 매칭 경쟁제품" transform="translate(980 323)">
+            <tspan x="0" y="0">키워드 매칭 경쟁제품</tspan>
+        </text>
+        <text id="_239" class="cls-8" data-name="239" transform="translate(980 347)">
+            <tspan x="0" y="0">239</tspan>
+        </text>
+        <text id="위" class="cls-9" transform="translate(1010 346)">
+            <tspan x="0" y="0">위</tspan>
+        </text>
+        <text id="이_카테고리_평균_광고비" class="cls-6" data-name="이 카테고리 평균 광고비" transform="translate(1170 451)">
+            <tspan x="0" y="0">이 카테고리 평균 광고비</tspan>
+        </text>
+        <text id="_360" class="cls-8" data-name="360" transform="translate(1170 475)">
+            <tspan x="0" y="0">360</tspan>
+        </text>
+        <text id="원-3" class="cls-9" data-name="원" transform="translate(1200 474)">
+            <tspan x="0" y="0">원</tspan>
+        </text>
+        <path id="사각형_490" d="M0 0H720V2H0z" data-name="사각형 490" transform="translate(600 284)"/>
+        <path id="사각형_491" d="M0 0H720V1H0z" class="cls-5" data-name="사각형 491" transform="translate(600 376)"/>
+        <text id="최저가_순" class="cls-10" data-name="최저가 순" transform="translate(600 528)">
+            <tspan x="0" y="0">최저가 순</tspan>
+        </text>
+        <text id="_10_" class="cls-11" data-name="10%" transform="translate(626 575)">
+            <tspan x="-26.313" y="0">10%</tspan>
+        </text>
+        <text id="해당구간_진입시_예상_수익" class="cls-10" data-name="해당구간 진입시 예상 수익" transform="translate(786 528)">
+            <tspan x="0" y="0">해당구간 진입시 예상 수익</tspan>
+        </text>
+        <text id="_4_920원" class="cls-12" data-name="4,920원" transform="translate(630 575)">
+            <tspan x="0" y="0">4,920</tspan><tspan y="0" class="cls-13">원</tspan>
+        </text>
+        <text id="_-2_300원" class="cls-14" data-name="-2,300원" transform="translate(786 575)">
+            <tspan x="0" y="0">-2,300</tspan><tspan y="0" class="cls-15">원</tspan>
+        </text>
+        <text id="_20_" class="cls-11" data-name="20%" transform="translate(626 623)">
+            <tspan x="-26.313" y="0">20%</tspan>
+        </text>
+        <text id="_6_980원" class="cls-12" data-name="6,980원" transform="translate(630 623)">
+            <tspan x="0" y="0">6,980</tspan><tspan y="0" class="cls-13">원</tspan>
+        </text>
+        <text id="_-900원" class="cls-14" data-name="-900원" transform="translate(786 623)">
+            <tspan x="0" y="0">-900</tspan><tspan y="0" class="cls-15">원</tspan>
+        </text>
+        <text id="_30_" class="cls-11" data-name="30%" transform="translate(626 671)">
+            <tspan x="-26.313" y="0">30%</tspan>
+        </text>
+        <text id="_7_820원" class="cls-12" data-name="7,820원" transform="translate(630 671)">
+            <tspan x="0" y="0">7,820</tspan><tspan y="0" class="cls-13">원</tspan>
+        </text>
+        <text id="_200원" class="cls-16" data-name="200원" transform="translate(786 671)">
+            <tspan x="0" y="0">200</tspan><tspan y="0" class="cls-15">원</tspan>
+        </text>
+        <text id="_40_" class="cls-11" data-name="40%" transform="translate(627 719)">
+            <tspan x="-26.313" y="0">40%</tspan>
+        </text>
+        <text id="_8_920원" class="cls-12" data-name="8,920원" transform="translate(630 719)">
+            <tspan x="0" y="0">8,920</tspan><tspan y="0" class="cls-13">원</tspan>
+        </text>
+        <text id="_600원" class="cls-16" data-name="600원" transform="translate(786 719)">
+            <tspan x="0" y="0">600</tspan><tspan y="0" class="cls-15">원</tspan>
+        </text>
+        <path id="사각형_492" d="M0 0H1V301H0z" data-name="사각형 492" transform="translate(765 499)"/>
+        <text id="_50_" class="cls-11" data-name="50%" transform="translate(627 767)">
+            <tspan x="-26.313" y="0">50%</tspan>
+        </text>
+        <text id="_8_920원-2" class="cls-12" data-name="8,920원" transform="translate(630 767)">
+            <tspan x="0" y="0">8,920</tspan><tspan y="0" class="cls-13">원</tspan>
+        </text>
+        <text id="_800원" class="cls-16" data-name="800원" transform="translate(786 767)">
+            <tspan x="0" y="0">800</tspan><tspan y="0" class="cls-15">원</tspan>
+        </text>
+        <text id="경쟁력_높은_연관키워드" class="cls-10" data-name="경쟁력 높은 연관키워드" transform="translate(980 528)">
+            <tspan x="0" y="0">경쟁력 높은 연관키워드</tspan>
+        </text>
+        <text id="검색량_클릭당_광고비" class="cls-10" data-name="검색량 / 클릭당 광고비" transform="translate(1171 528)">
+            <tspan x="0" y="0">검색량 / 클릭당 광고비</tspan>
+        </text>
+        <text id="_167_280_160원" class="cls-12" data-name="167,280 / 160원" transform="translate(1171 575)">
+            <tspan x="0" y="0">167,280 / 160</tspan><tspan y="0" class="cls-13">원</tspan>
+        </text>
+        <text id="안락의자" class="cls-6" transform="translate(980 574)">
+            <tspan x="0" y="0">안락의자</tspan>
+        </text>
+        <path id="사각형_493" d="M0 0H1V301H0z" data-name="사각형 493" transform="translate(1150 499)"/>
+        <text id="_12_280_70원" class="cls-12" data-name="12,280 / 70원" transform="translate(1171 623)">
+            <tspan x="0" y="0">12,280 / 70</tspan><tspan y="0" class="cls-13">원</tspan>
+        </text>
+        <text id="무중력의자" class="cls-6" transform="translate(980 622)">
+            <tspan x="0" y="0">무중력의자</tspan>
+        </text>
+        <text id="_11_280_40원" class="cls-12" data-name="11,280 /40원" transform="translate(1171 671)">
+            <tspan x="0" y="0">11,280 /40</tspan><tspan y="0" class="cls-13">원</tspan>
+        </text>
+        <text id="사무실의자" class="cls-6" transform="translate(980 670)">
+            <tspan x="0" y="0">사무실의자</tspan>
+        </text>
+        <text id="_12_280_70원-2" class="cls-12" data-name="12,280 / 70원" transform="translate(1171 719)">
+            <tspan x="0" y="0">12,280 / 70</tspan><tspan y="0" class="cls-13">원</tspan>
+        </text>
+        <text id="데스크테리어" class="cls-6" transform="translate(980 718)">
+            <tspan x="0" y="0">데스크테리어</tspan>
+        </text>
+        <text id="_12_280_70원-3" class="cls-12" data-name="12,280 / 70원" transform="translate(1171 767)">
+            <tspan x="0" y="0">12,280 / 70</tspan><tspan y="0" class="cls-13">원</tspan>
+        </text>
+        <text id="예쁜의자" class="cls-6" transform="translate(980 766)">
+            <tspan x="0" y="0">예쁜의자</tspan>
+        </text>
+        <rect id="사각형_494" width="4" height="102" class="cls-5" data-name="사각형 494" rx="2" transform="translate(1356 282)"/>
+        <text id="내_제품_가격_순위" class="cls-6" data-name="내 제품 가격 순위" transform="translate(1170 323)">
+            <tspan x="0" y="0">내 제품 가격 순위</tspan>
+        </text>
+        <text id="_47" class="cls-8" data-name="47" transform="translate(1170 347)">
+            <tspan x="0" y="0">47</tspan>
+        </text>
+        <text id="위-2" class="cls-9" data-name="위" transform="translate(1191 346)">
+            <tspan x="0" y="0">위</tspan>
+        </text>
+        <rect id="사각형_666" width="800" height="515" fill="url(#linear-gradient)" data-name="사각형 666" opacity="0.997" rx="10" transform="translate(560 285)"/>
+        <text id="_5초만에_회원_가입하기" fill="#fff" data-name="5초만에 회원 가입하기" font-family="NanumSquareEB, NanumSquare" font-size="18px" letter-spacing="-0.05em" opacity="0.996" transform="translate(960.172 733)">
+            <tspan x="-78.84" y="0">5초만에 회원 가입하기</tspan>
+        </text>
+    </g>
+</svg>
