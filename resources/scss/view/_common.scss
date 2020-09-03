@@ -354,12 +354,12 @@
     .board{
         .board-item-simple{
             > a{
-                flex-wrap: wrap;justify-content: start;height: auto;padding-bottom: 10px;
+                flex-wrap: wrap;justify-content: start;height: auto;padding: 10px 25px 10px 0;
                 &::before{top: 24px;right: 0;}
                 > div{width: auto !important;margin-right: 12px;}
             }
             .cate{order:2}
-            .subject{order:1;width: 100% !important;flex: 1 1 100%;line-height: 48px;margin-right:0;}
+            .subject{order:1;width: 100% !important;flex: 1 1 100%;white-space: normal;padding-right: 0;margin-bottom: 10px}
             .writer{order:3}
             .date{order:4}
             .hit{order:5}
