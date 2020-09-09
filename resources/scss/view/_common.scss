@@ -66,6 +66,22 @@
     &[data-position="2"]{
         ul::before{left: 50%;}
     }
+    &.tab-text{
+        ul{
+            max-width: auto;background: transparent;
+            &::before{display: none;}
+            li{width: auto;margin-right: 16px;
+                a{
+                    color: #000;font-weight: 500;font-size: 16px;
+                    &::before{content: '';display: block;width: 100%;height: 4px;position: absolute;bottom: 0;left: 0;}
+                }
+                &.active a{
+                    color: $primary;
+                    &::before{background: $primary;}
+                }
+            }
+        }
+    }
 }
 .tab-content{
     > div{
@@ -301,7 +317,7 @@
 .board{
     .sort{
         .board-name{font-size: 16px;}
-        a{color: $gray;font-weight: 700;}
+        a{color: $gray;font-weight: 500;font-size: 16px;}
         a.active{color: $black;}
     }
     .board-top{
@@ -912,5 +928,20 @@ body.body-about{
 @include media-breakpoint-down(md) {
     .btn-join-go{
         width: 280px;height: 64px;font-size: 15px;bottom: 16px;
+    }
+}
+
+.mypage-top{
+    margin-bottom: 40px;
+    .box{
+        border-radius: 5px;box-shadow: 0 10px 30px 0 #dee8ef;background-color: #ffffff;padding: 40px;color: #000;font-size: 14px;margin-bottom: 35px;
+        dl{
+            font-weight: 400;
+            dt,
+            dd{display: inline;}
+            dt{font-weight: 400;}
+            dd + dt{margin-left: 10px;}
+            a{text-decoration: underline;color: $primary;}
+        }
     }
 }

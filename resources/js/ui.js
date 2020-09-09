@@ -277,6 +277,11 @@
                     $('html').removeClass('open-side');
                 }
             });
+
+            //검색 히스토리
+            $('.close-history, .btn-history, .btn-right-collapse').on('click',function(){
+                $('html').toggleClass('is-right-collapsed');
+            });
         }
     };
 

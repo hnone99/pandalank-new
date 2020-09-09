@@ -69,13 +69,19 @@
                     </div>
                     <div class="util">
                         <ul>
-                            <li><a href="" class="mypage"><i class="profile"><img src="../../resources/images/@profile.png" alt="판다랭크"></i><span>판다랭크</span></a></li>
+                            <li><a href="../mypage/mypage.html" class="mypage"><i class="profile"><img src="../../resources/images/@profile.png" alt="판다랭크"></i><span>판다랭크</span></a></li>
                             <li><a href="../join/index.html" class="btn-join"><span>로그인/회원가입</span></a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="hamburger">
                     <button type="button" class="btn-menu"><i class="icon-hamburger"></i><span class="sr-only">모바일 메뉴</span></button>
+                </div>
+                <div class="bell">
+                    <button type="button" class="btn-bell"><i class="icon-bell"></i><span class="sr-only">모바일 알림</span></button>
+                </div>
+                <div class="star">
+                    <button type="button" class="btn-history"><i class="icon-star"></i><span class="sr-only">모바일 히스토리</span></button>
                 </div>
             </div>
         </div>
@@ -602,6 +608,338 @@
                 <div class="dim"></div>
             </div>
         </div>
+        <div id="right-block">
+            <div id="right">
+                <div class="title-area">
+                    <h2>
+                        <strong>HISTORY</strong>
+                        <span>검색 히스토리</span>
+                    </h2>
+                </div>
+                <div class="tab-area">
+                    <div class="tab" data-position="1"> <!-- 활성화 된 탭의 index 표기 -->
+                        <ul role="tablist" class="nav">
+                            <li class="active"><a href="#right-t1" role="tab" data-toggle="tab" aria-selected="true"><span>촤근검색</span></a></li>
+                            <li><a href="#right-t2" role="tab" data-toggle="tab" aria-selected="false"><span>즐겨찾기</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane fade active show" id="right-t1">
+                        <div class="all-del">
+                            <a href="#modal-all-delete" data-toggle="modal" data-role="button">전체삭제</a>
+                        </div>
+                        <div class="history">
+                            <ul>
+                                <li>
+                                    <div class="favorite">
+                                        <input type="checkbox" id="f1">
+                                        <label for="f1"></label>
+                                    </div>
+                                    <a href="javascript:;">집돌이마이크 / 13500</a>
+                                    <button class="close"><span class="sr-only">삭제</span></button>
+                                </li>
+                                <li>
+                                    <div class="favorite">
+                                        <input type="checkbox" id="f2">
+                                        <label for="f2"></label>
+                                    </div>
+                                    <a href="javascript:;">디지털/가전 &gt; 카메라/캠코더용품 &gt; 카메라캠코더관련용품 &gt; 카메라/캠코더용마이크</a>
+                                    <button class="close"><span class="sr-only">삭제</span></button>
+                                </li>
+                                <li>
+                                    <div class="favorite">
+                                        <input type="checkbox" id="f3">
+                                        <label for="f3"></label>
+                                    </div>
+                                    <a href="javascript:;">여름철 별미 열무김치 2kg  / 12900</a>
+                                    <button class="close"><span class="sr-only">삭제</span></button>
+                                </li>
+                                <li>
+                                    <div class="favorite">
+                                        <input type="checkbox" id="f4">
+                                        <label for="f4"></label>
+                                    </div>
+                                    <a href="javascript:;">금치 전라도 열무김치 1kg 맛있는 김치주문별미 반찬 / 10,500</a>
+                                    <button class="close"><span class="sr-only">삭제</span></button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="right-t2">
+                        <div class="all-del">
+                            <a href="#modal-all-delete" data-toggle="modal" data-role="button">전체삭제</a>
+                        </div>
+                        <div class="history">
+                            <ul>
+                                <li>
+                                    <div class="favorite">
+                                        <input type="checkbox" id="f1">
+                                        <label for="f1"></label>
+                                    </div>
+                                    <a href="javascript:;">집돌이마이크 / 13500</a>
+                                    <button class="close"><span class="sr-only">삭제</span></button>
+                                </li>
+                                <li>
+                                    <div class="favorite">
+                                        <input type="checkbox" id="f2">
+                                        <label for="f2"></label>
+                                    </div>
+                                    <a href="javascript:;">디지털/가전 &gt; 카메라/캠코더용품 &gt; 카메라캠코더관련용품 &gt; 카메라/캠코더용마이크</a>
+                                    <button class="close"><span class="sr-only">삭제</span></button>
+                                </li>
+                                <li>
+                                    <div class="favorite">
+                                        <input type="checkbox" id="f3">
+                                        <label for="f3"></label>
+                                    </div>
+                                    <a href="javascript:;">여름철 별미 열무김치 2kg  / 12900</a>
+                                    <button class="close"><span class="sr-only">삭제</span></button>
+                                </li>
+                                <li>
+                                    <div class="favorite">
+                                        <input type="checkbox" id="f4">
+                                        <label for="f4"></label>
+                                    </div>
+                                    <a href="javascript:;">금치 전라도 열무김치 1kg 맛있는 김치주문별미 반찬 / 10,500</a>
+                                    <button class="close"><span class="sr-only">삭제</span></button>
+                                </li>
+                                <li>
+                                    <div class="favorite">
+                                        <input type="checkbox" id="f1">
+                                        <label for="f1"></label>
+                                    </div>
+                                    <a href="javascript:;">집돌이마이크 / 13500</a>
+                                    <button class="close"><span class="sr-only">삭제</span></button>
+                                </li>
+                                <li>
+                                    <div class="favorite">
+                                        <input type="checkbox" id="f2">
+                                        <label for="f2"></label>
+                                    </div>
+                                    <a href="javascript:;">디지털/가전 &gt; 카메라/캠코더용품 &gt; 카메라캠코더관련용품 &gt; 카메라/캠코더용마이크</a>
+                                    <button class="close"><span class="sr-only">삭제</span></button>
+                                </li>
+                                <li>
+                                    <div class="favorite">
+                                        <input type="checkbox" id="f3">
+                                        <label for="f3"></label>
+                                    </div>
+                                    <a href="javascript:;">여름철 별미 열무김치 2kg  / 12900</a>
+                                    <button class="close"><span class="sr-only">삭제</span></button>
+                                </li>
+                                <li>
+                                    <div class="favorite">
+                                        <input type="checkbox" id="f4">
+                                        <label for="f4"></label>
+                                    </div>
+                                    <a href="javascript:;">금치 전라도 열무김치 1kg 맛있는 김치주문별미 반찬 / 10,500</a>
+                                    <button class="close"><span class="sr-only">삭제</span></button>
+                                </li>
+                                <li>
+                                    <div class="favorite">
+                                        <input type="checkbox" id="f1">
+                                        <label for="f1"></label>
+                                    </div>
+                                    <a href="javascript:;">집돌이마이크 / 13500</a>
+                                    <button class="close"><span class="sr-only">삭제</span></button>
+                                </li>
+                                <li>
+                                    <div class="favorite">
+                                        <input type="checkbox" id="f2">
+                                        <label for="f2"></label>
+                                    </div>
+                                    <a href="javascript:;">디지털/가전 &gt; 카메라/캠코더용품 &gt; 카메라캠코더관련용품 &gt; 카메라/캠코더용마이크</a>
+                                    <button class="close"><span class="sr-only">삭제</span></button>
+                                </li>
+                                <li>
+                                    <div class="favorite">
+                                        <input type="checkbox" id="f3">
+                                        <label for="f3"></label>
+                                    </div>
+                                    <a href="javascript:;">여름철 별미 열무김치 2kg  / 12900</a>
+                                    <button class="close"><span class="sr-only">삭제</span></button>
+                                </li>
+                                <li>
+                                    <div class="favorite">
+                                        <input type="checkbox" id="f4">
+                                        <label for="f4"></label>
+                                    </div>
+                                    <a href="javascript:;">금치 전라도 열무김치 1kg 맛있는 김치주문별미 반찬 / 10,500</a>
+                                    <button class="close"><span class="sr-only">삭제</span></button>
+                                </li>
+                                <li>
+                                    <div class="favorite">
+                                        <input type="checkbox" id="f1">
+                                        <label for="f1"></label>
+                                    </div>
+                                    <a href="javascript:;">집돌이마이크 / 13500</a>
+                                    <button class="close"><span class="sr-only">삭제</span></button>
+                                </li>
+                                <li>
+                                    <div class="favorite">
+                                        <input type="checkbox" id="f2">
+                                        <label for="f2"></label>
+                                    </div>
+                                    <a href="javascript:;">디지털/가전 &gt; 카메라/캠코더용품 &gt; 카메라캠코더관련용품 &gt; 카메라/캠코더용마이크</a>
+                                    <button class="close"><span class="sr-only">삭제</span></button>
+                                </li>
+                                <li>
+                                    <div class="favorite">
+                                        <input type="checkbox" id="f3">
+                                        <label for="f3"></label>
+                                    </div>
+                                    <a href="javascript:;">여름철 별미 열무김치 2kg  / 12900</a>
+                                    <button class="close"><span class="sr-only">삭제</span></button>
+                                </li>
+                                <li>
+                                    <div class="favorite">
+                                        <input type="checkbox" id="f4">
+                                        <label for="f4"></label>
+                                    </div>
+                                    <a href="javascript:;">금치 전라도 열무김치 1kg 맛있는 김치주문별미 반찬 / 10,500</a>
+                                    <button class="close"><span class="sr-only">삭제</span></button>
+                                </li>
+                                <li>
+                                    <div class="favorite">
+                                        <input type="checkbox" id="f1">
+                                        <label for="f1"></label>
+                                    </div>
+                                    <a href="javascript:;">집돌이마이크 / 13500</a>
+                                    <button class="close"><span class="sr-only">삭제</span></button>
+                                </li>
+                                <li>
+                                    <div class="favorite">
+                                        <input type="checkbox" id="f2">
+                                        <label for="f2"></label>
+                                    </div>
+                                    <a href="javascript:;">디지털/가전 &gt; 카메라/캠코더용품 &gt; 카메라캠코더관련용품 &gt; 카메라/캠코더용마이크</a>
+                                    <button class="close"><span class="sr-only">삭제</span></button>
+                                </li>
+                                <li>
+                                    <div class="favorite">
+                                        <input type="checkbox" id="f3">
+                                        <label for="f3"></label>
+                                    </div>
+                                    <a href="javascript:;">여름철 별미 열무김치 2kg  / 12900</a>
+                                    <button class="close"><span class="sr-only">삭제</span></button>
+                                </li>
+                                <li>
+                                    <div class="favorite">
+                                        <input type="checkbox" id="f4">
+                                        <label for="f4"></label>
+                                    </div>
+                                    <a href="javascript:;">금치 전라도 열무김치 1kg 맛있는 김치주문별미 반찬 / 10,500</a>
+                                    <button class="close"><span class="sr-only">삭제</span></button>
+                                </li>
+                                <li>
+                                    <div class="favorite">
+                                        <input type="checkbox" id="f1">
+                                        <label for="f1"></label>
+                                    </div>
+                                    <a href="javascript:;">집돌이마이크 / 13500</a>
+                                    <button class="close"><span class="sr-only">삭제</span></button>
+                                </li>
+                                <li>
+                                    <div class="favorite">
+                                        <input type="checkbox" id="f2">
+                                        <label for="f2"></label>
+                                    </div>
+                                    <a href="javascript:;">디지털/가전 &gt; 카메라/캠코더용품 &gt; 카메라캠코더관련용품 &gt; 카메라/캠코더용마이크</a>
+                                    <button class="close"><span class="sr-only">삭제</span></button>
+                                </li>
+                                <li>
+                                    <div class="favorite">
+                                        <input type="checkbox" id="f3">
+                                        <label for="f3"></label>
+                                    </div>
+                                    <a href="javascript:;">여름철 별미 열무김치 2kg  / 12900</a>
+                                    <button class="close"><span class="sr-only">삭제</span></button>
+                                </li>
+                                <li>
+                                    <div class="favorite">
+                                        <input type="checkbox" id="f4">
+                                        <label for="f4"></label>
+                                    </div>
+                                    <a href="javascript:;">금치 전라도 열무김치 1kg 맛있는 김치주문별미 반찬 / 10,500</a>
+                                    <button class="close"><span class="sr-only">삭제</span></button>
+                                </li>
+                                <li>
+                                    <div class="favorite">
+                                        <input type="checkbox" id="f1">
+                                        <label for="f1"></label>
+                                    </div>
+                                    <a href="javascript:;">집돌이마이크 / 13500</a>
+                                    <button class="close"><span class="sr-only">삭제</span></button>
+                                </li>
+                                <li>
+                                    <div class="favorite">
+                                        <input type="checkbox" id="f2">
+                                        <label for="f2"></label>
+                                    </div>
+                                    <a href="javascript:;">디지털/가전 &gt; 카메라/캠코더용품 &gt; 카메라캠코더관련용품 &gt; 카메라/캠코더용마이크</a>
+                                    <button class="close"><span class="sr-only">삭제</span></button>
+                                </li>
+                                <li>
+                                    <div class="favorite">
+                                        <input type="checkbox" id="f3">
+                                        <label for="f3"></label>
+                                    </div>
+                                    <a href="javascript:;">여름철 별미 열무김치 2kg  / 12900</a>
+                                    <button class="close"><span class="sr-only">삭제</span></button>
+                                </li>
+                                <li>
+                                    <div class="favorite">
+                                        <input type="checkbox" id="f4">
+                                        <label for="f4"></label>
+                                    </div>
+                                    <a href="javascript:;">금치 전라도 열무김치 1kg 맛있는 김치주문별미 반찬 / 10,500</a>
+                                    <button class="close"><span class="sr-only">삭제</span></button>
+                                </li>
+                                <li>
+                                    <div class="favorite">
+                                        <input type="checkbox" id="f1">
+                                        <label for="f1"></label>
+                                    </div>
+                                    <a href="javascript:;">집돌이마이크 / 13500</a>
+                                    <button class="close"><span class="sr-only">삭제</span></button>
+                                </li>
+                                <li>
+                                    <div class="favorite">
+                                        <input type="checkbox" id="f2">
+                                        <label for="f2"></label>
+                                    </div>
+                                    <a href="javascript:;">디지털/가전 &gt; 카메라/캠코더용품 &gt; 카메라캠코더관련용품 &gt; 카메라/캠코더용마이크</a>
+                                    <button class="close"><span class="sr-only">삭제</span></button>
+                                </li>
+                                <li>
+                                    <div class="favorite">
+                                        <input type="checkbox" id="f3">
+                                        <label for="f3"></label>
+                                    </div>
+                                    <a href="javascript:;">여름철 별미 열무김치 2kg  / 12900</a>
+                                    <button class="close"><span class="sr-only">삭제</span></button>
+                                </li>
+                                <li>
+                                    <div class="favorite">
+                                        <input type="checkbox" id="f4">
+                                        <label for="f4"></label>
+                                    </div>
+                                    <a href="javascript:;">금치 전라도 열무김치 1kg 맛있는 김치주문별미 반찬 / 10,500</a>
+                                    <button class="close"><span class="sr-only">삭제</span></button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-right-collapse">
+                <a href="javascript:;"><span>검색히스토리</span></a>
+            </div>
+            <div class="d-md-none">
+                <button type="button" class="close-history"><span class="sr-only">히스토리 닫기</span></button>
+            </div>
+        </div>
     </div>
 
     <!-- modal : 모바일용 상품으로 찾기 layer -->
@@ -708,6 +1046,10 @@
 
     <script>
         $(document).ready(function(){
+            //페이지 로드시 검색어히스토리 max-height 세팅
+            var historyHeight = $(window).height() - $('#right .history').offset().top - 50;
+            $('#right .history').css('max-height',historyHeight);
+
             //페이지 로드시 첫번째 셀렉트에 focus 주기
             $('#select1 .dropdown-value').focus();
 

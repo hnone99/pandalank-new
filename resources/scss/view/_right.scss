@@ -1,0 +1,62 @@
+.btn-right-collapse{
+    position: absolute;
+    left: -42px;
+    top: 160px;
+    a{
+        display: block;width: 42px;height: 144px;border-radius: 5px 0 0 5px;background: $primary;color: #fff;position: relative;
+        span{display: block;transform: rotate(90deg) translate(50px, -30px);transform-origin: left top 0;width: 144px;font-size: 14px;}
+        &::before{content: '';display: block;background: url(../images/icon-prev-white.svg) no-repeat 50% 50%;background-size: contain;transition: all .2s .1s;width: 10px; height: 18px;position: absolute;left: 50%;top: 15px;margin-left: -5px;}
+    }
+}
+.close-history{
+    position: absolute;right: 12px;top: 8px;background: url(../images/btn-close.svg) no-repeat 50% 50%;background-size: contain;width: 40px;height: 40px;border: 0;
+}
+#right{
+    .all-del{
+        text-align: right;margin-bottom: 12px;
+        a{font-size: 12px;color:$gray;letter-spacing: -0.6px;text-decoration: underline;}
+    }
+    .history{
+        margin: 0 -32px;overflow-x: hidden;
+        ul{
+            li{
+                display: flex;padding: 12px 32px;position: relative;
+                .favorite{
+                    flex:0 0 auto;margin-right: 10px;
+                    input{position: absolute;left: -99999px;visibility: hidden;}
+                    label{width: 16px;height: 16px;background-repeat: no-repeat;background-position: center;background-size: contain;background-image: url(../images/32.svg);}
+                    input:checked + label{background-image: url(../images/34.svg);}
+                }
+                a{
+                    flex: 1 1 auto;font-size: 14px;color: $gray;padding-right: 23px;
+                    &:hover{color: #000;text-decoration: underline;}
+                }
+                .close{
+                    position: absolute;right: 32px;top:10px;background: url(../images/btn-close.svg) no-repeat 50% 50%;background-size: contain;width: 26px;height: 26px;opacity: 0;visibility: hidden;transform: translate(8px, -1px);
+                }
+                &:hover{background: #fff;
+                    .close{opacity: 0.4;visibility: visible;}
+                }
+            }
+        }
+    }
+}
+@include media-breakpoint-down(md) {
+    .btn-right-collapse{
+        opacity: 0;visibility: hidden;transition: all .2s .1s;
+    }
+    #right{
+        .history{
+            margin: 0 -24px;
+            ul{
+                li{
+                    padding: 12px 24px;
+                    .close{
+                        opacity: 0.4;visibility: visible;transform: translate(15px, -1px);
+                    }
+                    &:hover{background:transparent;}
+                }
+            }
+        }
+    }
+}
