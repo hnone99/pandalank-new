@@ -136,17 +136,21 @@
     }
 }
 
-.bell,
-.star{display: none;}
+.back{display: none;}
 @include media-breakpoint-down(md) {
-    .bell,
-    .star{
-        display: block;
+    .back{
+        display: block;position: absolute;top: 17px;left: 24px;z-index: 1004;
         button{outline:none;background: transparent;border: 0;padding: 0;}
+        .icon-back{display: block;width: 12px;height: 23px;background: url('../images/icon-prev-dark.svg') no-repeat 50% 50%;background-size: contain;}
     }
-    .icon-bell{display: block;width: 24px;height: 24px;background: url('../images/icon-alarm.svg') no-repeat 50% 50%;background-size: contain;}
-    .icon-star{display: block;width: 24px;height: 24px;background: url('../images/icon-star.svg') no-repeat 50% 50%;background-size: contain;}
+}
 
-    .bell{position: absolute;right: 64px;top: 17px;}
-    .star{position: absolute;right: 24px;top: 17px;}
+.right-menu{display: none;}
+@include media-breakpoint-down(md) {
+    .right-menu{
+        display: block;position: absolute;right: 24px;top: 17px;
+        button{outline:none;background: transparent;border: 0;padding: 0;}
+        .icon-bell{display: block;width: 24px;height: 24px;background: url('../images/icon-alarm.svg') no-repeat 50% 50%;background-size: contain;}
+        .icon-star{display: block;width: 24px;height: 24px;background: url('../images/icon-star.svg') no-repeat 50% 50%;background-size: contain;margin-left: 16px;}
+    }
 }

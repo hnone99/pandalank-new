@@ -282,6 +282,16 @@
             $('.close-history, .btn-history, .btn-right-collapse').on('click',function(){
                 $('html').toggleClass('is-right-collapsed');
             });
+
+            //알람센터
+            $('.btn-alarm').on('click',function(){
+                $('html').toggleClass('open-alarm');
+            });
+            $(document).click(function(e) {
+                if(!$('.alarm').has(e.target).length && !$('.btn-alarm').has(e.target).length){
+                    $('html').removeClass('open-alarm');
+                }
+            });
         }
     };
 

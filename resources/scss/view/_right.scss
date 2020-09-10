@@ -1,7 +1,5 @@
 .btn-right-collapse{
-    position: absolute;
-    left: -42px;
-    top: 160px;
+    position: absolute;left: -42px;top: 160px;
     a{
         display: block;width: 42px;height: 144px;border-radius: 5px 0 0 5px;background: $primary;color: #fff;position: relative;
         span{display: block;transform: rotate(90deg) translate(50px, -30px);transform-origin: left top 0;width: 144px;font-size: 14px;}
@@ -59,4 +57,51 @@
             }
         }
     }
+}
+
+.btn-alarm{
+    position: fixed;right: 0;top: 88px;
+    a{
+        display: block;width: 42px;height: 72px;border-radius: 5px 0 0 5px;box-shadow: -3px 0 12px 0 rgba(210, 218, 224, 0.7);
+        background-color: #ffffff;position: relative;
+        &::before{content: '';display: block;background: url(../images/icon-alarm.svg) no-repeat 50% 50%;background-size: contain;width: 24px; height: 24px;position: absolute;left: 50%;top: 50%;margin-left: -12px;margin-top: -12px;}
+    }
+    &.new{
+        a{
+            &::after{content: '';display: block;width: 4px;height: 4px;border-radius: 50%;background:$primary;position: absolute;left: 50%;top: 50%;margin-left: 7px;margin-top: -16px;}
+        }
+    }
+}
+.alarm{
+    position: fixed;right:52px;top: 88px;border-radius: 5px;box-shadow: 0 10px 30px 0 #dee8ef;background-color: #ffffff;width: 280px;opacity: 0;visibility: hidden;transition: all 0.25s;
+    ul{
+        max-height: 333px;overflow-x: hidden;padding: 8px 16px;
+        li{
+            display: flex;align-items: center;justify-content: space-between;position: relative;font-size: 12px;line-height: 2.67;
+            .type{
+                flex:0 0 auto;margin-right: 16px;font-weight: 700;
+            }
+            a{
+                flex: 1 1 auto;color: #000;max-width:186px;
+                &:hover{text-decoration: underline;}
+            }
+            .close{
+                flex: 0 0 20px;background: url(../images/btn-close.svg) no-repeat 50% 50%;background-size: contain;width: 20px;height: 20px;transform: translateX(2px);
+            }
+            .data-empty{
+                width: 100%;padding: 54px 0;height: 315px;
+                .img{width: 160px;height: 160px;background: url(../images/img-panda-search.png) no-repeat 50% 50%;background-size: contain;}
+                p{margin-top: 20px;line-height: 1;}
+            }
+        }
+    }
+    .go{
+        border-top: 1px solid #d2dae0;
+        a{display: block;line-height: 56px;text-align: center;font-weight: 700;font-size: 14px;color: #000;}
+    }
+
+    html.open-alarm &{opacity: 1;visibility: visible;}
+}
+@include media-breakpoint-down(md) {
+    #alarm-block{display: none;}
 }
