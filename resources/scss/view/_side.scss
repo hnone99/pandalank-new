@@ -149,7 +149,8 @@
 @include media-breakpoint-down(md) {
     .right-menu{
         display: block;position: absolute;right: 24px;top: 17px;
-        button{outline:none;background: transparent;border: 0;padding: 0;}
+        a,
+        button{display:inline-block;outline:none;background: transparent;border: 0;padding: 0;}
         .icon-bell{display: block;width: 24px;height: 24px;background: url('../images/icon-alarm.svg') no-repeat 50% 50%;background-size: contain;}
         .icon-star{display: block;width: 24px;height: 24px;background: url('../images/icon-star.svg') no-repeat 50% 50%;background-size: contain;margin-left: 16px;}
     }

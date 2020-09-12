@@ -562,7 +562,9 @@ html.is-right-collapsed .btn-right-collapse a::before {
     right: 24px;
     top: 17px;
   }
+  .right-menu a,
   .right-menu button {
+    display: inline-block;
     outline: none;
     background: transparent;
     border: 0;
