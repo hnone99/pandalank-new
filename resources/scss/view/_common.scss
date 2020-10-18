@@ -631,7 +631,10 @@ body.body-half{background: #fbf9fa url('../images/bg-join.png') no-repeat 0 100%
     .analysis{
         .chart-text{font-size: 18px;}
     }
-    .btn-analysis{position: fixed;width: 100%;bottom: 0;left: 0;z-index: 1;transform: skew(0);}
+    .btn-analysis{
+        position: fixed;width: 100%;bottom: 0;left: 0;z-index: 1;
+        .btn{border-radius: 0;}
+    }
 }
 
 .progress-panda{
@@ -1048,6 +1051,30 @@ body.body-about{
     .alarmcenter{
         .alarmcenter-tab{
             margin-top: 1rem;
+        }
+    }
+}
+
+.category-select{
+    margin: 26px -1.5rem -1.5rem;
+    ul{border-radius: 0 0 10px 10px;overflow: hidden;}
+    li{border-top: 1px solid $default;}
+    a{font-size: 13px;line-height: 1.85;letter-spacing: -0.65px;color: #000;display: block;padding: 1rem 1.5rem;@include text-truncate();}
+    a:hover{background-color: #f7f9fd;}
+}
+
+@include media-breakpoint-down(md) {
+    .modal-include-select{
+        .modal-content{
+            position: fixed;bottom: 0;left: 0;width: 100%;border-radius: 10px 10px 0 0;border: 0;
+        }
+        .modal-header{display: none;}
+        .alert-message{text-align: left;font-size: 18px;letter-spacing: -0.9px;line-height: 1.67;}
+        .category-select{
+            margin: 13px 0 0 0;
+            li{border-top: 0;}
+            a{padding-left: 0;padding-right: 0;line-height: 1.1;}
+            a:hover{background: inherit;}
         }
     }
 }

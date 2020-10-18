@@ -245,6 +245,8 @@
   }
 
   .modal-sm { max-width: $modal-sm; }
+
+  .modal-400 { max-width: 400px; }
 }
 
 @include media-breakpoint-up(lg) {

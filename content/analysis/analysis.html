@@ -137,7 +137,7 @@
                                 <div class="text-area"></div>
                             </div>
                             <div class="btn-analysis">
-                                <button type="button" class="btn btn-lg btn-block btn-primary" disabled>분석하기</button>
+                                <button type="button" class="btn btn-lg btn-block btn-primary" data-toggle="modal" data-target="#modal-category-select">분석하기</button>
                             </div>
                         </div>
                         <!-- 모바일용 -->
@@ -908,7 +908,7 @@
                             <div class="text-area"></div>
                         </div>
                         <div class="btn-analysis">
-                            <button type="button" class="btn btn-lg btn-block btn-primary" disabled>분석하기</button>
+                            <button type="button" class="btn btn-lg btn-block btn-primary" id="btn-analysis-mobile">분석하기</button>
                         </div>
                     </div>
                 </div>
@@ -1301,6 +1301,28 @@
         </div>
     </div>
 
+    <!-- modal : 카테고리 셀렉트 -->
+    <div class="modal modal-alert modal-include-select" tabindex="-1" role="dialog" id="modal-category-select"> <!-- alert 스타일은 .modal-alert 추가 -->
+        <div class="modal-dialog modal-dialog-centered modal-400">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p class="alert-message">제품군이 갈리는 키워드입니다. <br>어떤 카테고리를 찾으시나요?</p>
+                    <div class="category-select">
+                        <ul>
+                            <li><a href="javascript:;" data-dismiss="modal">카메라/캠코더용품>카메라/캠코더 관련용품>카메라/캠코더용마이크</a></li>
+                            <li><a href="javascript:;" data-dismiss="modal">2차 카테고리 > 3차 카테고리</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <link rel="stylesheet" href="../../resources/plugins/nwagon/Nwagon.css" type="text/css">
     <script src="../../resources/plugins/nwagon/Nwagon.js"></script>
     <script>
@@ -1365,6 +1387,11 @@
                         { "width": "102px", "targets": 3 }
                     ]
                 });
+            });
+
+            $('#btn-analysis-mobile').on('click', function (e) {
+                $(this).closest('.modal').modal('hide');
+                $('#modal-category-select').modal('show');
             });
 
         });

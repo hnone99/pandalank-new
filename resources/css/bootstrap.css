@@ -8024,7 +8024,7 @@ a.close.disabled {
 }
 
 .modal-backdrop.show {
-  opacity: 0.5;
+  opacity: 0.8;
 }
 
 .modal-header {
@@ -8147,6 +8147,9 @@ a.close.disabled {
   }
   .modal-sm {
     max-width: 312px;
+  }
+  .modal-400 {
+    max-width: 400px;
   }
 }
 
