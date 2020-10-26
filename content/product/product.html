@@ -27,6 +27,9 @@
     <script src="../../resources/plugins/datatables/js/dataTables.fixedColumns.min.js"></script>
     <script src="../../resources/plugins/datatables/js/dataTables.fixedHeader.min.js"></script>
 
+    <!-- chartjs -->
+    <script src="../../resources/plugins/chartjs/Chart.min.js"></script>
+
     <!-- Swiper -->
     <script src="../../resources/plugins/swiper/js/swiper.min.js"></script>
     <!-- ui 관련 -->
@@ -212,6 +215,7 @@
                             <div class="row justify-content-end">
                                 <div class="col-auto">
                                     <div class="d-flex justify-content-end">
+                                        <button type="button" class="btn btn-sm btn-outline-default" data-toggle="modal" data-target="#modal-keyword-report">키워드 리포트</button>
                                         <button type="button" class="btn btn-sm btn-outline-default">숫자로 보기</button>
                                         <button type="button" class="btn btn-sm btn-outline-default">엑셀 다운로드</button>
                                         <button type="button" class="btn btn-sm btn-outline-default">공유하기</button>
@@ -1122,6 +1126,119 @@
         </div>
     </div>
 
+    <!-- modal : 키워드 리포트 -->
+    <div class="modal modal-full" tabindex="-1" role="dialog" id="modal-keyword-report">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-title">
+                        <span class="text-primary">자전거 장갑</span> 키워드 리포트
+                        <button class="btn btn-primary btn-modal-title-aside"><i class="icon-search-white"></i> 검색</button>
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="report report-keyword">
+                        <div class="summary">
+                            <div class="row info">
+                                <div class="col-6 col-md-3">
+                                    <span>검색량</span>
+                                    <strong>240,138 <i>회</i></strong>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <span>상품량</span>
+                                    <strong>1,345,212 <i>개</i></strong>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <span>1페이지 판매량</span>
+                                    <strong>13,768 <i>개</i></strong>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <span>경쟁률</span>
+                                    <strong class="text-danger">24 <i>%</i></strong>
+                                </div>
+                            </div>
+                            <div class="row info">
+                                <div class="col-6 col-md-3">
+                                    <span>카테고리 경쟁도</span>
+                                    <strong class="text-primary">GOOD</strong>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <span>평균가</span>
+                                    <strong>89,000 <i>원</i></strong>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <span>광고비</span>
+                                    <strong>356 <i>원</i></strong>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <span>가격 대비 광고비</span>
+                                    <strong class="text-danger">6.7 <i>%</i></strong>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="summary-detail">
+                            <div class="row row-40">
+                                <div class="col-12 col-md-6">
+                                    <div class="tit">쇼핑탭 섹션 순위</div>
+                                    <div class="tit-data">
+                                        <strong class="text-primary">2 <i>위</i></strong>
+                                    </div>
+                                    <ul class="box-ranking">
+                                        <li>파워링크</li>
+                                        <li class="active">쇼핑탭</li>
+                                        <li>지식백과</li>
+                                        <li>카페</li>
+                                        <li>블로그</li>
+                                    </ul>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="tit">최근 한 달 검색 동향</div>
+                                    <div class="tit-data">
+                                        <strong class="text-primary">+0.49 <i>% (전 달 대비)</i></strong>
+                                    </div>
+                                    <div class="chart-frame">
+                                        <canvas id="canvas"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="tit">연관 검색어</div>
+                                    <div class="related-keyword">
+                                        <div class="item">
+                                            <span>겨울 자전거 장갑</span><strong>3,421 / 40,452</strong>
+                                        </div>
+                                        <div class="item">
+                                            <span>자전거 장갑 추천</span><strong>3,421 / 40,452</strong>
+                                        </div>
+                                        <div class="item">
+                                            <span>로드자전거장갑</span><strong>3,421 / 40,452</strong>
+                                        </div>
+                                        <div class="item">
+                                            <span>라이더 장갑</span>
+                                        </div>
+                                        <div class="item">
+                                            <span>겨울 자전거 장갑</span>
+                                        </div>
+                                        <div class="item">
+                                            <span>겨울 자전거 장갑</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer p-0">
+                    <button class="btn btn-lg btn-primary btn-block btn-keyword-anlysis">키워드 경쟁령 분석하기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script>
         $(document).ready(function(){
             //페이지 로드시 검색어히스토리 max-height 세팅
@@ -1312,6 +1429,54 @@
                 $('html').removeClass('fixed-category');
             }
         }
+
+        //chartjs
+        var config = {
+			type: 'line',
+			data: {
+				labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+				datasets: [{
+					label: 'My First dataset',
+					backgroundColor: '#fff',
+					borderColor: '#e96b69 ',
+					data: [100, 200, 400, 500, 600, 700, 500],
+					fill: false,
+				}],
+			},
+			options: {
+				responsive: true,
+				tooltips: {
+					mode: 'index',
+					intersect: false,
+				},
+				hover: {
+					mode: 'nearest',
+					intersect: true
+				},
+				scales: {
+					x: {
+						display: true,
+						scaleLabel: {
+							display: true,
+							labelString: 'Month'
+						}
+					},
+					y: {
+						display: true,
+						scaleLabel: {
+							display: true,
+							labelString: 'Value'
+						}
+					}
+				}
+			}
+		};
+
+		window.onload = function() {
+			var ctx = document.getElementById('canvas').getContext('2d');
+			window.myLine = new Chart(ctx, config);
+		};
+
     </script>
 </body>
 </html>
