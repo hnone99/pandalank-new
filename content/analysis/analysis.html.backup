@@ -177,144 +177,78 @@
                                 </ol>
                             </nav>
                             <div class="text-gray">2020년 6월 15일 3시 기준</div>
-                        </div>
-
-                        <div class="box">
-                            <div class="analysis">
-                                <div class="group">
-                                    <div class="grade">
-                                        <strong class="text-primary">BEST</strong>
-                                        <strong>SOSO</strong>
-                                        <strong class="text-danger">BAD</strong>
-                                        <a href="#pop-over-keyword" class="th-icon-info" data-toggle="pop-over" data-target-mobile="#modal-keyword">
-                                            <i class="icon-info"><span class="sr-only">물음표 아이콘</span></i>
-                                            <!-- 툴팁 PC용 키워드란? -->
-                                            <div class="pop-over" id="pop-over-keyword">
-                                                <div class="pop-over-head">
-                                                    상품 경쟁력 등급
-                                                </div>
-                                                <div class="pop-over-body">
-                                                    상품의 경쟁력을 6가지 기준으로 점수화해서 WORST/BAD/SOSO/GOOD/BEST 5 단계로 분류합니다. <br><br>
-
-                                                    <span class="text-primary">가 격</span> 경쟁제품 대비 가격경쟁력 <br>
-                                                    <span class="text-primary">반복성</span> 구매사이클이 짧고 반복적인 상품 <br>
-                                                    <span class="text-primary">필수성</span> 사치품이 아닌 의식주에 가까운 상품 <br>
-                                                    <span class="text-primary">허욕성</span> 의식주가 아닌 사치품에 가까운 상품 <br>
-                                                    <span class="text-primary">경쟁도</span> 경쟁제품의 수가 적은 상품 <br>
-                                                    <span class="text-primary">시장성</span> 쇼핑검색량이 많은 상품 <br><br>
-
-                                                    *등급은 상대적일 뿐 절대적 지표가 아닙니다.
-                                                </div>
-                                            </div>
-                                            <!-- //툴팁 PC용 키워드란? -->
-                                        </a>
-                                        <p>어머 이건 꼭 팔아야해!</p>
+                            <!-- 모바일용 메뉴 더보기 -->
+                            <div class="dropdown ellipsis d-lg-none">
+                                <a href="javascript:;" class="dropdown-value"><i class="icon-ellipsis"></i><span class="sr-only">모바일 메뉴 더보기</span></a>
+                                <div class="dropdown-box">
+                                    <div class="dropdown-list">
+                                        <div><a href="javascript:;">예상 매출액 계산</a></div>
+                                        <div><a href="javascript:;" data-toggle="modal" data-target="#modal-report">상세 리포트</a></div>
+                                        <div><a href="javascript:;">공유하기</a></div>
                                     </div>
-                                    <div class="chart">
-                                        <div id="chart-radar"></div>
-                                    </div>
-                                    <div class="description">
-                                        <h3>전체 평가</h3>
-                                        <p>광고비 효율이 좋은 상품입니다. <br>단, 자주 사용하지 않은 상품이라 반복 구매가 일어나기 어렵습니다.</p>
-                                    </div>
-                                    <div class="competitive">
-                                        <div class="progress-area">
-                                            <h3>가격 경쟁력</h3>
-                                            <div class="progress-panda">
-                                                <div class="progress-panda-bar" data-percent="75">
-                                                    <span class="progress-panda-label">75%</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <ul>
-                                            <li>
-                                                <p>최저가 순</p>
-                                                <div><i>상위</i> <strong class="text-danger">23</strong> <i>%</i></div>
-                                            </li>
-                                            <li>
-                                                <p>예상 수익</p>
-                                                <div><strong class="text-primary">6,200</strong> <i>원</i></div>
-                                            </li>
-                                            <li>
-                                                <p>최저가 순 30% 평균가</p>
-                                                <div><strong class="text-danger">8,900</strong> <i>원</i></div>
-                                            </li>
-                                            <li>
-                                                <p>상위 랭킹 순 30% 평균가</p>
-                                                <div><strong class="text-primary">34,200</strong> <i>원</i></div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="top-rank">
-                                    <h3>상위랭킹 상품</h3>
-                                    <div class="top-rank-swiper">
-                                        <div class="swiper-container">
-                                            <ul class="swiper-wrapper">
-                                                <li class="swiper-slide">
-                                                    <div class="item">
-                                                        <a href="">
-                                                            <div class="img"><img src="../../resources/images/@product-thumb.jpg" alt=""></div>
-                                                            <div class="price">17,900</div>
-                                                        </a>
-                                                    </div>
-                                                </li>
-                                                <li class="swiper-slide">
-                                                    <div class="item">
-                                                        <a href="">
-                                                            <div class="img"><img src="../../resources/images/@product-thumb.jpg" alt=""></div>
-                                                            <div class="price">17,900</div>
-                                                        </a>
-                                                    </div>
-                                                </li>
-                                                <li class="swiper-slide">
-                                                    <div class="item">
-                                                        <a href="">
-                                                            <div class="img"><img src="../../resources/images/@product-thumb.jpg" alt=""></div>
-                                                            <div class="price">17,900</div>
-                                                        </a>
-                                                    </div>
-                                                </li>
-                                                <li class="swiper-slide">
-                                                    <div class="item">
-                                                        <a href="">
-                                                            <div class="img"><img src="../../resources/images/@product-thumb.jpg" alt=""></div>
-                                                            <div class="price">17,900</div>
-                                                        </a>
-                                                    </div>
-                                                </li>
-                                                <li class="swiper-slide">
-                                                    <div class="item">
-                                                        <a href="">
-                                                            <div class="img"><img src="../../resources/images/@product-thumb.jpg" alt=""></div>
-                                                            <div class="price">17,900</div>
-                                                        </a>
-                                                    </div>
-                                                </li>
-                                                <li class="swiper-slide">
-                                                    <div class="item">
-                                                        <a href="">
-                                                            <div class="img"><img src="../../resources/images/@product-thumb.jpg" alt=""></div>
-                                                            <div class="price">17,900</div>
-                                                        </a>
-                                                    </div>
-                                                </li>
-                                                <li class="swiper-slide">
-                                                    <div class="item">
-                                                        <a href="">
-                                                            <div class="img"><img src="../../resources/images/@product-thumb.jpg" alt=""></div>
-                                                            <div class="price">17,900</div>
-                                                        </a>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="button">
-                                    <a href="#none" class="btn btn-lg btn-primary">더 잘 파는 비밀 상세 리포트 무료로 보기</a>
                                 </div>
                             </div>
+                        </div>
+                        <div class="table-top d-none d-lg-block">
+                            <div class="row justify-content-end">
+                                <div class="col-auto">
+                                    <div class="d-flex justify-content-end">
+                                        <button type="button" class="btn btn-sm btn-outline-default">예상 매출액 계산</button>
+                                        <button type="button" class="btn btn-sm btn-outline-default" data-toggle="modal" data-target="#modal-report-nomember">상세 리포트</button>
+                                        <button type="button" class="btn btn-sm btn-outline-default">공유하기</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="analysis">
+                            <div class="grade">
+                                <strong class="text-primary">BEST</strong>
+                                <strong>SOSO</strong>
+                                <strong class="text-danger">BAD</strong>
+                                <a href="#pop-over-keyword" class="th-icon-info" data-toggle="pop-over" data-target-mobile="#modal-keyword">
+                                    <i class="icon-info"><span class="sr-only">물음표 아이콘</span></i>
+                                    <!-- 툴팁 PC용 키워드란? -->
+                                    <div class="pop-over" id="pop-over-keyword">
+                                        <div class="pop-over-head">
+                                            상품 경쟁력 등급
+                                        </div>
+                                        <div class="pop-over-body">
+                                            상품의 경쟁력을 6가지 기준으로 점수화해서 WORST/BAD/SOSO/GOOD/BEST 5 단계로 분류합니다. <br><br>
+
+                                            <span class="text-primary">가 격</span> 경쟁제품 대비 가격경쟁력 <br>
+                                            <span class="text-primary">반복성</span> 구매사이클이 짧고 반복적인 상품 <br>
+                                            <span class="text-primary">필수성</span> 사치품이 아닌 의식주에 가까운 상품 <br>
+                                            <span class="text-primary">허욕성</span> 의식주가 아닌 사치품에 가까운 상품 <br>
+                                            <span class="text-primary">경쟁도</span> 경쟁제품의 수가 적은 상품 <br>
+                                            <span class="text-primary">시장성</span> 쇼핑검색량이 많은 상품 <br><br>
+
+                                            *등급은 상대적일 뿐 절대적 지표가 아닙니다.
+                                        </div>
+                                    </div>
+                                    <!-- //툴팁 PC용 키워드란? -->
+                                </a>
+                                <p>어머 이건 꼭 팔아야해!</p>
+                            </div>
+                            <div class="chart">
+                                <div id="chart-radar"></div>
+                            </div>
+                            <div class="progress-panda">
+                                <div class="progress-panda-bar" data-percent="75">
+                                    <span class="progress-panda-label">75%</span>
+                                </div>
+                            </div>
+                            <div class="chart-text">
+                                마이크의 경쟁력은 <strong class="text-primary">상위 70%</strong>로 예상되며, <br class="d-block d-md-none">예상 수익 금액은 판매당 <strong class="text-danger">5,000원</strong>입니다. <br>
+                                판매가 <strong class="text-primary">1,320원 인상</strong>시 <br class="d-block d-md-none">상위 10%로 상승 예상됩니다.
+                            </div>
+                            <div class="chart-text-sm">
+                                단 1,260원을 인하하면 수익은 <br class="d-block d-md-none">판매당 <strong class="text-primary">4,850원</strong>으로 전환될 수 있습니다.
+                            </div>
+                        </div>
+
+                        <div class="banner-area">
+                            <img src="../../resources/images/@300x100.png" alt="banner image">
                         </div>
 
                         <div class="board">

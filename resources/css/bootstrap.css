@@ -78,7 +78,7 @@ a:not([href]):hover { color: inherit; text-decoration: none; }
 
 pre, code, kbd, samp { font-family: "Lato", "Noto Sans KR", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; }
 
-pre { margin-top: 0; margin-bottom: 1rem; overflow: auto; }
+pre { margin-top: 0; margin-bottom: 1rem; overflow: auto; white-space: normal; }
 
 figure { margin: 0 0 1rem; }
 
@@ -624,9 +624,7 @@ i, em { font-style: normal; }
 
 .row-100 > [class^=col] { padding-left: 50px; padding-right: 50px; }
 
-/**
-  px값 List를 만들어주는 함수입니다.
-*/
+/** px값 List를 만들어주는 함수입니다. */
 /**
 값이 0일때는 0으로, 그 외에는 'px'을 붙여줍니다.
 ex) 0 => 0, 10 => 10px

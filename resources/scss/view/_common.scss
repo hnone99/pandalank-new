@@ -454,7 +454,7 @@
             }
         }
     }
-    
+
     /* .btn-write{position: fixed;width: 100%;bottom: 0;left: 0;z-index: 1;} */
 }
 
@@ -616,7 +616,12 @@ body.body-half{background: #fbf9fa url('../images/bg-join.png') no-repeat 0 100%
     }
 }
 
+.box{border-radius: 10px;box-shadow: 0 10px 30px 0 #dee8ef;background-color: #ffffff;}
+
 .analysis{
+    position: relative;padding: 40px;margin-top: 27px;margin-bottom: 80px;
+    .group{padding-right: 400px;}
+    h3{font-size: 15px;line-height: 1.6;letter-spacing: -0.75px;font-weight: 700;margin-bottom: 4px;}
     .grade{
         display: flex;flex-wrap:wrap;align-items: center;position: relative;z-index: 2;
         strong{font-size: 32px;font-weight: 700;vertical-align: middle;}
@@ -626,6 +631,39 @@ body.body-half{background: #fbf9fa url('../images/bg-join.png') no-repeat 0 100%
     .chart{text-align: center;}
     .chart-text{text-align: center;font-family: 'Noto Sans KR';font-size: 20px;margin-top: 36px;line-height: 1.5;}
     .chart-text-sm{text-align: center;font-family: 'Noto Sans KR';font-size: 16px;margin-top: 10px;line-height: 1.5;}
+    .description{
+        p{font-size: 14px;line-height: 1.71;letter-spacing: -0.7px;margin-bottom: 35px;}
+    }
+    .competitive{
+        width: 363px;border-radius: 10px;overflow: hidden;box-shadow: 0 10px 30px 0 #dee8ef;border: solid 1px #dce6ed;background-color: #ffffff;position: absolute;right: 40px;top: 56px;
+        .progress-area{padding: 24px;}
+        ul{background: #f7f9fd;border-top: 1px solid $default;padding: 24px;border-radius: 0 0 10px 10px;
+            > li{display: flex;justify-content: space-between;align-items: center;padding: 11px 0;
+                p{font-size: 14px;}
+                strong{font-weight: 700;font-family: 'Lato';font-size: 18px;}
+                i{font-size: 13px;}
+                & + li{border-top: 1px solid $default;}
+            }
+        }
+    }
+    .top-rank{
+        h3{margin-bottom: 8px;}
+    }
+    .top-rank-swiper{
+        margin-bottom: 30px;
+        ul{display: flex;margin-left: -12.5px;margin-right: -12.5px;}
+        li{padding-left: 12.5px;padding-right: 12.5px;}
+        .item{
+            width: 104px;
+            .img{border: 1px solid $default;border-radius: 5px;overflow: hidden;}
+            img{width: 100%;vertical-align: top;}
+            .price{margin-top: 5px;font-size: 14px;}
+        }
+        .swiper-slide{width: auto !important;height: auto !important;}
+    }
+    .button{margin: 0 -40px -40px;
+        .btn{display: block;width: 100%;border-radius: 0 0 10px 10px;}
+    }
 }
 .btn-analysis{margin-top: 30px;}
 
@@ -640,7 +678,7 @@ body.body-half{background: #fbf9fa url('../images/bg-join.png') no-repeat 0 100%
 }
 
 .progress-panda{
-    box-shadow: 0 10px 30px 0 #d2dae0;background: #fff;border-radius: 18px; width: 312px;height: 24px;border: solid 1px #dee8ef;margin: 0 auto;
+    box-shadow: 0 10px 30px 0 #d2dae0;background: #fff;border-radius: 18px; width: 312px;height: 24px;border: solid 1px #dee8ef;margin: 46px auto 16px auto;
     .progress-panda-bar{
         position: relative;height: 100%;border-radius: 18px;width:24px;transition: width 1.3s cubic-bezier(0.1, 0.76, 0.33, 0.99);
         background: rgb(44,227,38);
@@ -649,7 +687,7 @@ body.body-half{background: #fbf9fa url('../images/bg-join.png') no-repeat 0 100%
         background: linear-gradient(270deg, rgba(44,227,38,1) 0%, rgba(63,229,229,1) 100%);
         filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#2ce326",endColorstr="#3fe5e5",GradientType=1);
         .progress-panda-label{
-            display: block;color: $primary;position: absolute;top: -34px;right: -15px;font-size: 18px;font-weight: 500;
+            display: block;color: $primary;position: absolute;top: -29px;right: -15px;font-size: 18px;font-weight: 500;
         }
         &::before{content: '';width: 24px;height: 24px;border-radius: 50%;position: absolute;right:0;top:-1px;background: $primary;}
     }
@@ -1119,3 +1157,4 @@ body.body-about{
     i{transform: translateY(1px);}
 }
 .btn-keyword-anlysis{border-radius: 0;}
+
