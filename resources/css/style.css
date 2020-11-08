@@ -394,7 +394,7 @@ html.is-scrolled .btn-top { right: 24px; }
 
 .top-area { display: flex; justify-content: space-between; margin-bottom: 9px; }
 
-.top-area .text { margin-right: 15px; }
+.top-area .text { margin-right: 15px; word-break: keep-all; }
 
 .top-area .banner { min-width: 300px; }
 
@@ -947,7 +947,7 @@ body.body-half { background: #fbf9fa url("../images/bg-join.png") no-repeat 0 10
 
 .result-table .box i { font-size: 13px; letter-spacing: -0.65px; font-weight: 400; display: block; font-style: normal; }
 
-.result-table .desc { padding: 18px 20px 30px; line-height: 1.71; letter-spacing: -0.7px; font-size: 14px; }
+.result-table .desc { padding: 18px 20px 30px; line-height: 1.71; letter-spacing: -0.7px; font-size: 14px; word-break: keep-all; }
 
 @media (max-width: 767.98px) { .result-table { padding-top: 45px; }
   .result-table .box { height: 178px; }

@@ -243,7 +243,7 @@
 
 .top-area{
     display: flex;justify-content: space-between;margin-bottom: 9px;
-    .text{margin-right: 15px;}
+    .text{margin-right: 15px;word-break: keep-all;}
     .banner{min-width: 300px;}
 }
 @include media-breakpoint-down(md) {
@@ -903,7 +903,7 @@ body.body-half{background: #fbf9fa url('../images/bg-join.png') no-repeat 0 100%
         strong{font-size: 20px;font-weight: 700;letter-spacing: -1px;display: block;line-height: 1.1;}
         i{font-size: 13px;letter-spacing: -0.65px;font-weight: 400;display: block;font-style: normal;}
     }
-    .desc{padding: 18px 20px 30px;line-height: 1.71;letter-spacing: -0.7px;font-size: 14px;}
+    .desc{padding: 18px 20px 30px;line-height: 1.71;letter-spacing: -0.7px;font-size: 14px;word-break: keep-all;}
 }
 
 @include media-breakpoint-down(sm) {
