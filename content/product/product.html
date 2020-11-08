@@ -222,191 +222,194 @@
                                 </div>
                             </div>
                         </div>
-                        <table class="table table-hover responsive table-data" id="datatable">
-                            <thead>
-                                <tr>
-                                    <th class="text-left">
-                                        키워드
-                                        <a href="#pop-over-keyword" class="th-icon-info" data-toggle="pop-over" data-target-mobile="#modal-keyword">
-                                            <i class="icon-info"><span class="sr-only">물음표 아이콘</span></i>
-                                            <!-- 툴팁 PC용 키워드란? -->
-                                            <div class="pop-over" id="pop-over-keyword">
-                                                <div class="pop-over-head">
-                                                    상품 찾기의 기본, 키워드란?
+                        <div class="table-wrap">
+                            <table class="table table-hover responsive table-data" id="datatable">
+                                <thead>
+                                    <tr>
+                                        <th class="text-left">
+                                            키워드
+                                            <a href="#pop-over-keyword" class="th-icon-info" data-toggle="pop-over" data-target-mobile="#modal-keyword">
+                                                <i class="icon-info"><span class="sr-only">물음표 아이콘</span></i>
+                                                <!-- 툴팁 PC용 키워드란? -->
+                                                <div class="pop-over" id="pop-over-keyword">
+                                                    <div class="pop-over-head">
+                                                        상품 찾기의 기본, 키워드란?
+                                                    </div>
+                                                    <div class="pop-over-body">
+                                                        상품 상세 페이지의 제목에 해당하며 키워드 발굴 및 경쟁을 통해 검색 상위노출을 기대합니다. 키워드에는 3가지 대표 지수가 있습니다.<br><br>
+
+                                                        <span class="text-primary">경쟁률</span><br>
+                                                        대형포털들의 일별 제품량 대비 검색량<br>
+                                                        <span class="text-primary">쇼핑전환율</span><br>
+                                                        주별 쇼핑탭 진입 대비 검색량<br>
+                                                        <span class="text-primary">광고비</span><br>
+                                                        키워드별 평균 광고입찰비용<br><br>
+
+                                                        판다랭크만의 데이터 분석 기술을 사용하여 키워드의 3가지 대표 지수를 최적/좋음/보통/나쁨/최악으로 분류합니다. 최적일수록 키워드의 경쟁력이 좋습니다. <br><br>
+
+                                                        *지수는 상대적일 뿐 절대적 지표가 아닙니다.
+                                                    </div>
                                                 </div>
-                                                <div class="pop-over-body">
-                                                    상품 상세 페이지의 제목에 해당하며 키워드 발굴 및 경쟁을 통해 검색 상위노출을 기대합니다. 키워드에는 3가지 대표 지수가 있습니다.<br><br>
-
-                                                    <span class="text-primary">경쟁률</span><br>
-                                                    대형포털들의 일별 제품량 대비 검색량<br>
-                                                    <span class="text-primary">쇼핑전환율</span><br>
-                                                    주별 쇼핑탭 진입 대비 검색량<br>
-                                                    <span class="text-primary">광고비</span><br>
-                                                    키워드별 평균 광고입찰비용<br><br>
-
-                                                    판다랭크만의 데이터 분석 기술을 사용하여 키워드의 3가지 대표 지수를 최적/좋음/보통/나쁨/최악으로 분류합니다. 최적일수록 키워드의 경쟁력이 좋습니다. <br><br>
-
-                                                    *지수는 상대적일 뿐 절대적 지표가 아닙니다.
-                                                </div>
-                                            </div>
-                                            <!-- //툴팁 PC용 키워드란? -->
-                                        </a>
-                                    </th>
-                                    <th class="text-right">경쟁률</th>
-                                    <th class="text-right">쇼핑전환</th>
-                                    <th class="text-right">광고비</th>
-                                    <th class="text-right">검색량</th>
-                                    <th class="text-right">상품량</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <!-- 마우스오버시 tooltip으로 full네임 보여줌 -->
-                                    <td class="text-left"><span class="text-truncate max-width-product" data-toggle="tooltip" data-placement="right" title="타이틀1 타이틀1 타이틀1타이틀111111 11111ß">타이틀1 타이틀1 타이틀1타이틀111111 11111ß</span></td>
-                                    <td class="text-right"><span class="text-primary">최적</span></td>
-                                    <td class="text-right"><span class="text-primary">최적</span></td>
-                                    <td class="text-right"><span class="text-primary">좋음</span></td>
-                                    <td class="text-right"><span>32,034</span></td>
-                                    <td class="text-right"><span>32,034</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="text-left"><span class="text-truncate max-width-product"><a href="#modal-keyword-report" data-toggle="modal">타이틀</a></span></td>
-                                    <td class="text-right"><span class="text-primary">최적</span></td>
-                                    <td class="text-right"><span class="text-primary">최적</span></td>
-                                    <td class="text-right"><span class="text-gray">보통</span></td>
-                                    <td class="text-right"><span>32,034</span></td>
-                                    <td class="text-right"><span>32,034</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="text-left"><span class="text-truncate max-width-product">타이틀</span></td>
-                                    <td class="text-right"><span class="text-danger">나쁨</span></td>
-                                    <td class="text-right"><span class="text-danger">나쁨</span></td>
-                                    <td class="text-right"><span class="text-gray">보통</span></td>
-                                    <td class="text-right"><span>32,034</span></td>
-                                    <td class="text-right"><span>32,034</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="text-left"><span class="text-truncate max-width-product">타이틀</span></td>
-                                    <td class="text-right"><span class="text-primary">최적</span></td>
-                                    <td class="text-right"><span class="text-primary">최적</span></td>
-                                    <td class="text-right"><span class="text-primary">좋음</span></td>
-                                    <td class="text-right"><span>32,034</span></td>
-                                    <td class="text-right"><span>32,034</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="text-left"><span class="text-truncate max-width-product">2222 22222 222222 2 2222222222222222 222222 22222 2222222 2222 22 2 2 2 2</span></td>
-                                    <td class="text-right"><span class="text-primary">최적</span></td>
-                                    <td class="text-right"><span class="text-primary">최적</span></td>
-                                    <td class="text-right"><span class="text-gray">보통</span></td>
-                                    <td class="text-right"><span>32,034</span></td>
-                                    <td class="text-right"><span>32,034</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="text-left"><span>타이틀</span></td>
-                                    <td class="text-right"><span class="text-danger">나쁨</span></td>
-                                    <td class="text-right"><span class="text-danger">나쁨</span></td>
-                                    <td class="text-right"><span class="text-gray">보통</span></td>
-                                    <td class="text-right"><span>32,034</span></td>
-                                    <td class="text-right"><span>32,034</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="text-left"><span>타이틀</span></td>
-                                    <td class="text-right"><span class="text-primary">최적</span></td>
-                                    <td class="text-right"><span class="text-primary">최적</span></td>
-                                    <td class="text-right"><span class="text-primary">좋음</span></td>
-                                    <td class="text-right"><span>32,034</span></td>
-                                    <td class="text-right"><span>32,034</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="text-left"><span>타이틀</span></td>
-                                    <td class="text-right"><span class="text-primary">최적</span></td>
-                                    <td class="text-right"><span class="text-primary">최적</span></td>
-                                    <td class="text-right"><span class="text-gray">보통</span></td>
-                                    <td class="text-right"><span>32,034</span></td>
-                                    <td class="text-right"><span>32,034</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="text-left"><span>타이틀</span></td>
-                                    <td class="text-right"><span class="text-danger">나쁨</span></td>
-                                    <td class="text-right"><span class="text-danger">나쁨</span></td>
-                                    <td class="text-right"><span class="text-gray">보통</span></td>
-                                    <td class="text-right"><span>32,034</span></td>
-                                    <td class="text-right"><span>32,034</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="text-left"><span>타이틀</span></td>
-                                    <td class="text-right"><span class="text-primary">최적</span></td>
-                                    <td class="text-right"><span class="text-primary">최적</span></td>
-                                    <td class="text-right"><span class="text-primary">좋음</span></td>
-                                    <td class="text-right"><span>32,034</span></td>
-                                    <td class="text-right"><span>32,034</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="text-left"><span>타이틀</span></td>
-                                    <td class="text-right"><span class="text-primary">최적</span></td>
-                                    <td class="text-right"><span class="text-primary">최적</span></td>
-                                    <td class="text-right"><span class="text-gray">보통</span></td>
-                                    <td class="text-right"><span>32,034</span></td>
-                                    <td class="text-right"><span>32,034</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="text-left"><span>타이틀</span></td>
-                                    <td class="text-right"><span class="text-danger">나쁨</span></td>
-                                    <td class="text-right"><span class="text-danger">나쁨</span></td>
-                                    <td class="text-right"><span class="text-gray">보통</span></td>
-                                    <td class="text-right"><span>32,034</span></td>
-                                    <td class="text-right"><span>32,034</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="text-left"><span>타이틀</span></td>
-                                    <td class="text-right"><span class="text-primary">최적</span></td>
-                                    <td class="text-right"><span class="text-primary">최적</span></td>
-                                    <td class="text-right"><span class="text-primary">좋음</span></td>
-                                    <td class="text-right"><span>32,034</span></td>
-                                    <td class="text-right"><span>32,034</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="text-left"><span>타이틀</span></td>
-                                    <td class="text-right"><span class="text-primary">최적</span></td>
-                                    <td class="text-right"><span class="text-primary">최적</span></td>
-                                    <td class="text-right"><span class="text-gray">보통</span></td>
-                                    <td class="text-right"><span>32,034</span></td>
-                                    <td class="text-right"><span>32,034</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="text-left"><span>타이틀</span></td>
-                                    <td class="text-right"><span class="text-danger">나쁨</span></td>
-                                    <td class="text-right"><span class="text-danger">나쁨</span></td>
-                                    <td class="text-right"><span class="text-gray">보통</span></td>
-                                    <td class="text-right"><span>32,034</span></td>
-                                    <td class="text-right"><span>32,034</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="text-left"><span>타이틀</span></td>
-                                    <td class="text-right"><span class="text-primary">최적</span></td>
-                                    <td class="text-right"><span class="text-primary">최적</span></td>
-                                    <td class="text-right"><span class="text-primary">좋음</span></td>
-                                    <td class="text-right"><span>32,034</span></td>
-                                    <td class="text-right"><span>32,034</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="text-left"><span>타이틀</span></td>
-                                    <td class="text-right"><span class="text-primary">최적</span></td>
-                                    <td class="text-right"><span class="text-primary">최적</span></td>
-                                    <td class="text-right"><span class="text-gray">보통</span></td>
-                                    <td class="text-right"><span>32,034</span></td>
-                                    <td class="text-right"><span>32,034</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="text-left"><span>타이틀</span></td>
-                                    <td class="text-right"><span class="text-danger">나쁨</span></td>
-                                    <td class="text-right"><span class="text-danger">나쁨</span></td>
-                                    <td class="text-right"><span class="text-gray">보통</span></td>
-                                    <td class="text-right"><span>32,034</span></td>
-                                    <td class="text-right"><span>32,034</span></td>
-                                </tr>
-                            </tbody>
-                        </table>
+                                                <!-- //툴팁 PC용 키워드란? -->
+                                            </a>
+                                        </th>
+                                        <th class="text-right">경쟁률</th>
+                                        <th class="text-right">쇼핑전환</th>
+                                        <th class="text-right">광고비</th>
+                                        <th class="text-right">검색량</th>
+                                        <th class="text-right">상품량</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <!-- 마우스오버시 tooltip으로 full네임 보여줌 -->
+                                        <td class="text-left"><span class="text-truncate max-width-product" data-toggle="tooltip" data-placement="right" title="타이틀1 타이틀1 타이틀1타이틀111111 11111ß">타이틀1 타이틀1 타이틀1타이틀111111 11111ß</span></td>
+                                        <td class="text-right"><span class="text-primary">최적</span></td>
+                                        <td class="text-right"><span class="text-primary">최적</span></td>
+                                        <td class="text-right"><span class="text-primary">좋음</span></td>
+                                        <td class="text-right"><span>32,034</span></td>
+                                        <td class="text-right"><span>32,034</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left"><span class="text-truncate max-width-product"><a href="#modal-keyword-report" data-toggle="modal">타이틀</a></span></td>
+                                        <td class="text-right"><span class="text-primary">최적</span></td>
+                                        <td class="text-right"><span class="text-primary">최적</span></td>
+                                        <td class="text-right"><span class="text-gray">보통</span></td>
+                                        <td class="text-right"><span>32,034</span></td>
+                                        <td class="text-right"><span>32,034</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left"><span class="text-truncate max-width-product">타이틀</span></td>
+                                        <td class="text-right"><span class="text-danger">나쁨</span></td>
+                                        <td class="text-right"><span class="text-danger">나쁨</span></td>
+                                        <td class="text-right"><span class="text-gray">보통</span></td>
+                                        <td class="text-right"><span>32,034</span></td>
+                                        <td class="text-right"><span>32,034</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left"><span class="text-truncate max-width-product">타이틀</span></td>
+                                        <td class="text-right"><span class="text-primary">최적</span></td>
+                                        <td class="text-right"><span class="text-primary">최적</span></td>
+                                        <td class="text-right"><span class="text-primary">좋음</span></td>
+                                        <td class="text-right"><span>32,034</span></td>
+                                        <td class="text-right"><span>32,034</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left"><span class="text-truncate max-width-product">2222 22222 222222 2 2222222222222222 222222 22222 2222222 2222 22 2 2 2 2</span></td>
+                                        <td class="text-right"><span class="text-primary">최적</span></td>
+                                        <td class="text-right"><span class="text-primary">최적</span></td>
+                                        <td class="text-right"><span class="text-gray">보통</span></td>
+                                        <td class="text-right"><span>32,034</span></td>
+                                        <td class="text-right"><span>32,034</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left"><span>타이틀</span></td>
+                                        <td class="text-right"><span class="text-danger">나쁨</span></td>
+                                        <td class="text-right"><span class="text-danger">나쁨</span></td>
+                                        <td class="text-right"><span class="text-gray">보통</span></td>
+                                        <td class="text-right"><span>32,034</span></td>
+                                        <td class="text-right"><span>32,034</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left"><span>타이틀</span></td>
+                                        <td class="text-right"><span class="text-primary">최적</span></td>
+                                        <td class="text-right"><span class="text-primary">최적</span></td>
+                                        <td class="text-right"><span class="text-primary">좋음</span></td>
+                                        <td class="text-right"><span>32,034</span></td>
+                                        <td class="text-right"><span>32,034</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left"><span>타이틀</span></td>
+                                        <td class="text-right"><span class="text-primary">최적</span></td>
+                                        <td class="text-right"><span class="text-primary">최적</span></td>
+                                        <td class="text-right"><span class="text-gray">보통</span></td>
+                                        <td class="text-right"><span>32,034</span></td>
+                                        <td class="text-right"><span>32,034</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left"><span>타이틀</span></td>
+                                        <td class="text-right"><span class="text-danger">나쁨</span></td>
+                                        <td class="text-right"><span class="text-danger">나쁨</span></td>
+                                        <td class="text-right"><span class="text-gray">보통</span></td>
+                                        <td class="text-right"><span>32,034</span></td>
+                                        <td class="text-right"><span>32,034</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left"><span>타이틀</span></td>
+                                        <td class="text-right"><span class="text-primary">최적</span></td>
+                                        <td class="text-right"><span class="text-primary">최적</span></td>
+                                        <td class="text-right"><span class="text-primary">좋음</span></td>
+                                        <td class="text-right"><span>32,034</span></td>
+                                        <td class="text-right"><span>32,034</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left"><span>타이틀</span></td>
+                                        <td class="text-right"><span class="text-primary">최적</span></td>
+                                        <td class="text-right"><span class="text-primary">최적</span></td>
+                                        <td class="text-right"><span class="text-gray">보통</span></td>
+                                        <td class="text-right"><span>32,034</span></td>
+                                        <td class="text-right"><span>32,034</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left"><span>타이틀</span></td>
+                                        <td class="text-right"><span class="text-danger">나쁨</span></td>
+                                        <td class="text-right"><span class="text-danger">나쁨</span></td>
+                                        <td class="text-right"><span class="text-gray">보통</span></td>
+                                        <td class="text-right"><span>32,034</span></td>
+                                        <td class="text-right"><span>32,034</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left"><span>타이틀</span></td>
+                                        <td class="text-right"><span class="text-primary">최적</span></td>
+                                        <td class="text-right"><span class="text-primary">최적</span></td>
+                                        <td class="text-right"><span class="text-primary">좋음</span></td>
+                                        <td class="text-right"><span>32,034</span></td>
+                                        <td class="text-right"><span>32,034</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left"><span>타이틀</span></td>
+                                        <td class="text-right"><span class="text-primary">최적</span></td>
+                                        <td class="text-right"><span class="text-primary">최적</span></td>
+                                        <td class="text-right"><span class="text-gray">보통</span></td>
+                                        <td class="text-right"><span>32,034</span></td>
+                                        <td class="text-right"><span>32,034</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left"><span>타이틀</span></td>
+                                        <td class="text-right"><span class="text-danger">나쁨</span></td>
+                                        <td class="text-right"><span class="text-danger">나쁨</span></td>
+                                        <td class="text-right"><span class="text-gray">보통</span></td>
+                                        <td class="text-right"><span>32,034</span></td>
+                                        <td class="text-right"><span>32,034</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left"><span>타이틀</span></td>
+                                        <td class="text-right"><span class="text-primary">최적</span></td>
+                                        <td class="text-right"><span class="text-primary">최적</span></td>
+                                        <td class="text-right"><span class="text-primary">좋음</span></td>
+                                        <td class="text-right"><span>32,034</span></td>
+                                        <td class="text-right"><span>32,034</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left"><span>타이틀</span></td>
+                                        <td class="text-right"><span class="text-primary">최적</span></td>
+                                        <td class="text-right"><span class="text-primary">최적</span></td>
+                                        <td class="text-right"><span class="text-gray">보통</span></td>
+                                        <td class="text-right"><span>32,034</span></td>
+                                        <td class="text-right"><span>32,034</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left"><span>타이틀</span></td>
+                                        <td class="text-right"><span class="text-danger">나쁨</span></td>
+                                        <td class="text-right"><span class="text-danger">나쁨</span></td>
+                                        <td class="text-right"><span class="text-gray">보통</span></td>
+                                        <td class="text-right"><span>32,034</span></td>
+                                        <td class="text-right"><span>32,034</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="img-keyword"></div>
+                        </div>
                         <div class="list-more">
                             <a href="javascript:;" id="btn-more-table"><strong>MORE +</strong></a>
                         </div>

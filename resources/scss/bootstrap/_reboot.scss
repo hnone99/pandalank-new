@@ -233,7 +233,7 @@ pre {
   margin-bottom: 1rem;
   // Don't allow content to break outside
   overflow: auto;
-  white-space: normal;
+  white-space: pre-wrap;
 }
 
 

@@ -170,7 +170,7 @@
                                 <img src="../../resources/images/@300x100.png" alt="banner image">
                             </div>
                         </div>
-                        <div class="location-area">
+                        <div class="location-area location-area-analysis"> <!-- 모바일에서 라인 삭제로 인해 클래스 추가 -->
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item active" aria-current="page">국민 머그컵 검색 결과</li>
@@ -179,8 +179,8 @@
                             <div class="text-gray">2020년 6월 15일 3시 기준</div>
                         </div>
 
-                        <div class="box">
-                            <div class="analysis">
+                        <div class="analysis">
+                            <div class="inner">
                                 <div class="group">
                                     <div class="grade">
                                         <strong class="text-primary">BEST</strong>
@@ -196,11 +196,11 @@
                                                 <div class="pop-over-body">
                                                     상품의 경쟁력을 6가지 기준으로 점수화해서 WORST/BAD/SOSO/GOOD/BEST 5 단계로 분류합니다. <br><br>
 
-                                                    <span class="text-primary">가 격</span> 경쟁제품 대비 가격경쟁력 <br>
+                                                    <span class="text-primary">가 격</span> 경쟁상품 대비 가격경쟁력 <br>
                                                     <span class="text-primary">반복성</span> 구매사이클이 짧고 반복적인 상품 <br>
                                                     <span class="text-primary">필수성</span> 사치품이 아닌 의식주에 가까운 상품 <br>
                                                     <span class="text-primary">허욕성</span> 의식주가 아닌 사치품에 가까운 상품 <br>
-                                                    <span class="text-primary">경쟁도</span> 경쟁제품의 수가 적은 상품 <br>
+                                                    <span class="text-primary">경쟁도</span> 경쟁상품의 수가 적은 상품 <br>
                                                     <span class="text-primary">시장성</span> 쇼핑검색량이 많은 상품 <br><br>
 
                                                     *등급은 상대적일 뿐 절대적 지표가 아닙니다.
@@ -214,13 +214,13 @@
                                         <div id="chart-radar"></div>
                                     </div>
                                     <div class="description">
-                                        <h3>전체 평가</h3>
+                                        <h3 class="tit">전체 평가</h3>
                                         <p>광고비 효율이 좋은 상품입니다. <br>단, 자주 사용하지 않은 상품이라 반복 구매가 일어나기 어렵습니다.</p>
                                     </div>
                                     <div class="competitive">
                                         <div class="progress-area">
-                                            <h3>가격 경쟁력</h3>
-                                            <div class="progress-panda">
+                                            <h3 class="tit">가격 경쟁력</h3>
+                                            <div class="progress-panda progress-panda-danger"> <!-- 하위 50% 일때 .progress-panda-danger -->
                                                 <div class="progress-panda-bar" data-percent="75">
                                                     <span class="progress-panda-label">75%</span>
                                                 </div>
@@ -244,10 +244,11 @@
                                                 <div><strong class="text-primary">34,200</strong> <i>원</i></div>
                                             </li>
                                         </ul>
+                                        <div class="panda-img bad"></div> <!-- 클래스명으로 판다 이미지 변경 best/soso/good/bad/worst -->
                                     </div>
                                 </div>
                                 <div class="top-rank">
-                                    <h3>상위랭킹 상품</h3>
+                                    <h3 class="tit">상위랭킹 상품</h3>
                                     <div class="top-rank-swiper">
                                         <div class="swiper-container">
                                             <ul class="swiper-wrapper">
@@ -311,9 +312,295 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="button">
-                                    <a href="#none" class="btn btn-lg btn-primary">더 잘 파는 비밀 상세 리포트 무료로 보기</a>
+                            </div>
+                            <!-- s : 상세 리포트 -->
+                            <div class="inner is-no-member" style="display:none" id="detail-report"> <!-- 비회원/비로그인 .is-no-memger -->
+                                <div class="table-top">
+                                    <div class="row justify-content-between align-items-center">
+                                        <div class="col-auto">
+                                            <h3 class="sub-title"><span class="text-primary">국민머그컵 3,400원</span> 상세 리포트</h3>
+                                        </div>
+                                        <div class="col-auto d-none d-lg-block">
+                                            <button type="button" class="btn btn-sm btn-outline-default">엑셀 다운로드</button>
+                                        </div>
+                                    </div>
                                 </div>
+                                <div class="report">
+                                    <div class="summary">
+                                        <div class="row info">
+                                            <div class="col-6 col-md-3">
+                                                <span>적용된 카테고리</span>
+                                                <strong class="text-primary lang-kor">머그컵</strong>
+                                            </div>
+                                            <div class="col-6 col-md-3">
+                                                <span>판매 활성화 상품</span>
+                                                <strong class="text-primary">628 <i>개</i></strong>
+                                            </div>
+                                            <div class="col-6 col-md-3">
+                                                <span>키워드 매칭 경쟁상품</span>
+                                                <strong class="text-primary">239 <i>위</i></strong>
+                                            </div>
+                                            <div class="col-6 col-md-3">
+                                                <span>내 상품 가격 순위</span>
+                                                <strong class="text-primary">47 <i>위</i></strong>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="summary-detail">
+                                        <div class="row row-40">
+                                            <div class="col-12 col-md-6">
+                                                <div class="tit">추천 판매 가격</div>
+                                                <div class="row info">
+                                                    <div class="col-6">
+                                                        <span>수익 20% 판매가 추천</span>
+                                                        <strong class="text-primary">14,620 <i>원</i></strong>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <span>상위 20% 판매가 추천</span>
+                                                        <strong class="text-primary">14,620 <i>원</i></strong>
+                                                    </div>
+                                                </div>
+                                                <table class="table table-hover table-data mb-0">
+                                                    <colgroup>
+                                                        <col style="width:50%">
+                                                        <col style="width:50%">
+                                                    </colgroup>
+                                                    <thead>
+                                                        <tr>
+                                                            <th class="text-left pl-0">최저가 순</th>
+                                                            <th class="text-left">해당구간 <span class="d-none d-sm-inline">진입시</span> 예상 수익</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="text-left pl-0"><b>10%</b> 6,000원</td>
+                                                            <td class="text-left"><span class="text-danger">-2,200</span>원</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-left pl-0"><b>10%</b> 6,000원</td>
+                                                            <td class="text-left"><span class="text-primary">900</span>원</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-left pl-0"><b>10%</b> 6,000원</td>
+                                                            <td class="text-left"><span class="text-danger">-2,200</span>원</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-left pl-0"><b>10%</b> 6,000원</td>
+                                                            <td class="text-left"><span class="text-primary">900</span>원</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-left pl-0"><b>10%</b> 6,000원</td>
+                                                            <td class="text-left"><span class="text-danger">-2,200</span>원</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-left pl-0"><b>10%</b> 6,000원</td>
+                                                            <td class="text-left"><span class="text-primary">900</span>원</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-left pl-0"><b>10%</b> 6,000원</td>
+                                                            <td class="text-left"><span class="text-danger">-2,200</span>원</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-left pl-0"><b>10%</b> 6,000원</td>
+                                                            <td class="text-left"><span class="text-primary">900</span>원</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-left pl-0"><b>10%</b> 6,000원</td>
+                                                            <td class="text-left"><span class="text-danger">-2,200</span>원</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-left pl-0"><b>10%</b> 6,000원</td>
+                                                            <td class="text-left"><span class="text-primary">900</span>원</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <table class="table table-hover table-data">
+                                                    <colgroup>
+                                                        <col style="width:50%">
+                                                        <col style="width:50%">
+                                                    </colgroup>
+                                                    <thead>
+                                                        <tr>
+                                                            <th class="text-left pl-0">상위랭킹 순</th>
+                                                            <th class="text-left">해당구간 <span class="d-none d-sm-inline">진입시</span> 예상 수익</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="text-left pl-0"><b>10%</b> 6,000원</td>
+                                                            <td class="text-left"><span class="text-danger">-2,200</span>원</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-left pl-0"><b>10%</b> 6,000원</td>
+                                                            <td class="text-left"><span class="text-primary">900</span>원</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-left pl-0"><b>10%</b> 6,000원</td>
+                                                            <td class="text-left"><span class="text-danger">-2,200</span>원</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-left pl-0"><b>10%</b> 6,000원</td>
+                                                            <td class="text-left"><span class="text-primary">900</span>원</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-left pl-0"><b>10%</b> 6,000원</td>
+                                                            <td class="text-left"><span class="text-danger">-2,200</span>원</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-left pl-0"><b>10%</b> 6,000원</td>
+                                                            <td class="text-left"><span class="text-primary">900</span>원</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-left pl-0"><b>10%</b> 6,000원</td>
+                                                            <td class="text-left"><span class="text-danger">-2,200</span>원</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-left pl-0"><b>10%</b> 6,000원</td>
+                                                            <td class="text-left"><span class="text-primary">900</span>원</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-left pl-0"><b>10%</b> 6,000원</td>
+                                                            <td class="text-left"><span class="text-danger">-2,200</span>원</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-left pl-0"><b>10%</b> 6,000원</td>
+                                                            <td class="text-left"><span class="text-primary">900</span>원</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="col-12 col-md-6">
+                                                <div class="tit">추천 키워드</div>
+                                                <div class="row info">
+                                                    <div class="col-6">
+                                                        <span>키워드 총 월 검색량</span>
+                                                        <strong class="text-primary">214,620 <i>회</i></strong>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <span>이 카테고리 평균 광고비</span>
+                                                        <strong class="text-primary">2,620 <i>원</i></strong>
+                                                    </div>
+                                                </div>
+                                                <table class="table table-hover table-fixed table-data">
+                                                    <colgroup>
+                                                        <col style="width:50%">
+                                                        <col style="width:50%">
+                                                    </colgroup>
+                                                    <thead>
+                                                        <tr>
+                                                            <th class="text-left pl-0">경쟁력 높은 연관키워드</th>
+                                                            <th class="text-left">검색량 / 클릭당 광고비</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="text-left pl-0"><div class="text-truncate">안락의자안락의자안락의자안락의자안락의자안락의자</div></td>  <!-- 줄임말 처리 O -->
+                                                            <td class="text-left">167,280 / 160원</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-left pl-0">무중력의자무중력의자무중력의자무중력의자</td> <!-- 줄임말 처리 X -->
+                                                            <td class="text-left">12,280 / 160원</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-left pl-0">안락의자</td>
+                                                            <td class="text-left">167,280 / 160원</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-left pl-0">무중력의자</td>
+                                                            <td class="text-left">12,280 / 160원</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-left pl-0">안락의자</td>
+                                                            <td class="text-left">167,280 / 160원</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-left pl-0">무중력의자</td>
+                                                            <td class="text-left">12,280 / 160원</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-left pl-0">안락의자</td>
+                                                            <td class="text-left">167,280 / 160원</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-left pl-0">무중력의자</td>
+                                                            <td class="text-left">12,280 / 160원</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-left pl-0">안락의자</td>
+                                                            <td class="text-left">167,280 / 160원</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-left pl-0">무중력의자</td>
+                                                            <td class="text-left">12,280 / 160원</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-left pl-0">안락의자</td>
+                                                            <td class="text-left">167,280 / 160원</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-left pl-0">무중력의자</td>
+                                                            <td class="text-left">12,280 / 160원</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="table-area">
+                                        <div class="table-title">상품 순위</div>
+                                        <table class="table table-hover responsive table-data no-sort" id="datatable">
+                                            <thead>
+                                                <tr>
+                                                    <th class="text-left">상품명</th>
+                                                    <th class="text-right">구매수</th>
+                                                    <th class="text-right">리뷰수</th>
+                                                    <th class="text-right">판매가</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="text-left">
+                                                        <div class="text-truncate"><img src="../../resources/images/@product-thumb.jpg" alt="" class="product-thumb"> 상품명 상품명상품명 상품명 111111111 상품명 상품명</div>
+                                                    </td>
+                                                    <td class="text-right">555</td>
+                                                    <td class="text-right">4,250</td>
+                                                    <td class="text-right">24,000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-left">
+                                                        <div class="text-truncate"><img src="../../resources/images/@product-thumb.jpg" alt="" class="product-thumb"> 222 222222 22222222222222222222222222</div>
+                                                    </td>
+                                                    <td class="text-right">555</td>
+                                                    <td class="text-right">4,250</td>
+                                                    <td class="text-right">24,000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-left">
+                                                        <div class="text-truncate"><img src="../../resources/images/@product-thumb.jpg" alt="" class="product-thumb"> 상품명 상품명상품명 상품명 111111111 상품명 상품명</div>
+                                                    </td>
+                                                    <td class="text-right">55</td>
+                                                    <td class="text-right">4,250</td>
+                                                    <td class="text-right">24,000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-left">
+                                                        <div class="text-truncate"><img src="../../resources/images/@product-thumb.jpg" alt="" class="product-thumb"> 222 222222 22222222222222222222222222</div>
+                                                    </td>
+                                                    <td class="text-right">55</td>
+                                                    <td class="text-right">4,250</td>
+                                                    <td class="text-right">124,000</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="benefit-text">
+                                    추천 판매 가격 최저가 순 / 상위랭킹 순 <br>경쟁력 높은 연관 키워드 <br>상위 10개 경쟁 상품 분석
+                                </div>
+                            </div>
+                            <!-- e : 상세 리포트 -->
+                            <div class="button">
+                                <button type="button" class="btn btn-lg btn-primary" id="btn-report-toggler">더 잘 파는 비밀 상세 리포트 무료로 보기</button>
                             </div>
                         </div>
 
@@ -404,10 +691,9 @@
                                                                     <a href="javacript:;" class="text-gray ml-2" data-toggle="modal" data-target="#modal-password">삭제</a>
                                                                 </div>
                                                             </div>
-                                                            <div class="content">
-                                                                저도요… 100개나 샀는데 ㅠㅠ 수정 삭제 버튼은 회원이 쓴 글에만 나오는 버튼이에요.
-                                                                <br>망했네요.
-                                                            </div>
+                                                            <pre class="content">안녕하세요 판다랭크입니다. 해당숫자는 키워드 광고비용 평균가입니다.
+원 단위이며 클릭할 때 마다 비용이 발생합니다. 나쁨은 비용이 높을 수 있다는 상대적 지표입니다.
+                                                            </pre>
                                                         </li>
                                                         <li>
                                                             <div class="row justify-content-between">
@@ -419,10 +705,9 @@
                                                                     <a href="javacript:;" class="text-gray ml-2" data-toggle="modal" data-target="#modal-password">삭제</a>
                                                                 </div>
                                                             </div>
-                                                            <div class="content">
-                                                                저도요… 100개나 샀는데 ㅠㅠ 수정 삭제 버튼은 회원이 쓴 글에만 나오는 버튼이에요.
+                                                            <pre class="content">저도요… 100개나 샀는데 ㅠㅠ 수정 삭제 버튼은 회원이 쓴 글에만 나오는 버튼이에요.
                                                                 <br>망했네요.
-                                                            </div>
+                                                            </pre>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -996,11 +1281,11 @@
                     <div>
                         상품의 경쟁력을 6가지 기준으로 점수화해서 WORST/BAD/SOSO/GOOD/BEST 5 단계로 분류합니다. <br><br>
 
-                        <span class="text-primary">가 격</span> 경쟁제품 대비 가격경쟁력 <br>
+                        <span class="text-primary">가 격</span> 경쟁상품 대비 가격경쟁력 <br>
                         <span class="text-primary">반복성</span> 구매사이클이 짧고 반복적인 상품 <br>
                         <span class="text-primary">필수성</span> 사치품이 아닌 의식주에 가까운 상품 <br>
                         <span class="text-primary">허욕성</span> 의식주가 아닌 사치품에 가까운 상품 <br>
-                        <span class="text-primary">경쟁도</span> 경쟁제품의 수가 적은 상품 <br>
+                        <span class="text-primary">경쟁도</span> 경쟁상품의 수가 적은 상품 <br>
                         <span class="text-primary">시장성</span> 쇼핑검색량이 많은 상품 <br><br>
 
                         *등급은 상대적일 뿐 절대적 지표가 아닙니다.
@@ -1081,15 +1366,15 @@
                                     <strong class="text-primary lang-kor">머그컵</strong>
                                 </div>
                                 <div class="col-6 col-md-3">
-                                    <span>판매 활성화 제품</span>
+                                    <span>판매 활성화 상품</span>
                                     <strong class="text-primary">628 <i>개</i></strong>
                                 </div>
                                 <div class="col-6 col-md-3">
-                                    <span>키워드 매칭 경쟁제품</span>
+                                    <span>키워드 매칭 경쟁상품</span>
                                     <strong class="text-primary">239 <i>위</i></strong>
                                 </div>
                                 <div class="col-6 col-md-3">
-                                    <span>내 제품 가격 순위</span>
+                                    <span>내 상품 가격 순위</span>
                                     <strong class="text-primary">47 <i>위</i></strong>
                                 </div>
                             </div>
@@ -1463,7 +1748,57 @@
                 $('#modal-category-select').modal('show');
             });
 
+            //상위랭킹 상품 swiper
+            topRankSlider();
+
+            //상세 리포트 보기 toggle
+            $('#btn-report-toggler').on('click', function (e) {
+                if(!$('#detail-report').is(':visible')){
+                    $('#detail-report').show();
+                    if(!$('.inner').hasClass('is-no-member')){
+                        $('#btn-report-toggler').text('닫기');
+                    }else{
+                        $('#btn-report-toggler').text('5초만에 회원 가입하고 상세 리포트 보기');
+                    }
+                    $('html, body').stop().delay(150).animate({scrollTop: $('#detail-report').offset().top}, 250);
+                }else{
+                    if(!$('.inner').hasClass('is-no-member')){
+                        $('#detail-report').hide();
+                        $('#btn-report-toggler').text('더 잘 파는 비밀 상세 리포트 무료로 보기');
+                    }else{
+
+                    }
+                }
+            });
+
         });
+
+        function topRankSlider(){
+            const breakpoint = window.matchMedia( '(min-width:1279px)' );
+
+            let rankwiper;
+
+            const breakpointChecker = function() {
+                if ( breakpoint.matches === true ) {
+                    if ( rankwiper !== undefined ) rankwiper.destroy( true, true );
+                    return;
+                } else if ( breakpoint.matches === false ) {
+                    return enableSwiper();
+                }
+            };
+            const enableSwiper = function() {
+                rankwiper = new Swiper('.top-rank-swiper .swiper-container', {
+                    slidesPerView: 'auto',
+                    freeMode: true,
+                    slidesOffsetBefore: 2.5,
+                    slidesOffsetAfter: 2.5
+                });
+            };
+            breakpoint.addListener(breakpointChecker);
+            breakpointChecker();
+
+            console.log(breakpoint);
+        }
 
         //차트
         setTimeout(function(){
