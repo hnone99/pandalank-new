@@ -309,3 +309,18 @@
 
 })(jQuery);
 
+//썸네일 채우기
+function setDirection(element) {
+	if (element.naturalWidth / element.naturalHeight / element.parentNode.offsetWidth * element.parentNode.offsetHeight > 1) {
+		element.parentNode.parentNode.classList.remove('vertical');
+		element.parentNode.parentNode.classList.add('horizontal');
+		element.classList.remove('vertical');
+		element.classList.add('horizontal');
+	} else {
+		element.parentNode.parentNode.classList.remove('horizontal');
+		element.parentNode.parentNode.classList.add('vertical');
+		element.classList.remove('horizontal');
+		element.classList.add('vertical');
+	}
+}
+
