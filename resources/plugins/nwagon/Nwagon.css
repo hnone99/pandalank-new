@@ -92,6 +92,7 @@ ul.accessibility {font-size: 1px;height: 1px; line-height: 1px; overflow: hidden
 .Nwagon_donut .fields{display: none;}
 
 /* Radar Type */
+.Nwagon_radar{width: 100%;}
 .Nwagon_radar .background .pie{fill:red;stroke-width: 3;}
 .Nwagon_radar .background .pie polyline{stroke:#d2dae0;stroke-width:1.5;}
 .Nwagon_radar .foreground .pie polyline{fill:#000;stroke:#000;stroke-width:0.2;opacity:0.1}

@@ -65,7 +65,7 @@
         }
     }
     li{width: 50%;
-        a{color: $gray;height: 56px;line-height: 56px;display: block;width: 100%;text-align: center;font-size: 15px;position: relative;@include transition(all .2s ease-in-out);transition-delay: .05s;}
+        a{color: $gray;height: 56px;line-height: 55px;display: block;width: 100%;text-align: center;font-size: 15px;position: relative;@include transition(all .2s ease-in-out);transition-delay: .05s;}
         &.active a{color: $black;font-weight: 700;}
     }
     &[data-position="1"]{
@@ -668,13 +668,14 @@ body.body-half{background: #fbf9fa url('../images/bg-join.png') no-repeat 0 100%
     }
     .top-rank-swiper{
         position: relative;
-        ul{display: flex;margin-left: -12.5px;margin-right: -12.5px;}
+        ul{display: flex;}
         li{padding-left: 12.5px;padding-right: 12.5px;}
         .item{
             width: 104px;
             .thumb{border: 1px solid $default;border-radius: 5px;overflow: hidden;height: 104px;}
             .price{margin-top: 5px;font-size: 14px;}
         }
+        .swiper-container{margin: 0 -12.5px;}
         .swiper-slide{width: auto !important;height: auto !important;}
         .swiper-scrollbar-rank{width: 100%;height: 3px;position: absolute;left: 0;bottom: -15px;}
         .swiper-scrollbar-drag{background: $default;}
@@ -696,10 +697,11 @@ body.body-half{background: #fbf9fa url('../images/bg-join.png') no-repeat 0 100%
         .benefit-text{display: block;line-height: 2.5;letter-spacing: -0.8px;text-align: center;width: 100%;position: absolute;bottom: 45px;left: 0;z-index: 2;font-size: 16px;font-weight: 700;}
     }
 }
-.btn-analysis{margin-top: 30px;}
+.btn-analysis{margin-top: 30px;right: 30px;}
+
 @include media-breakpoint-down(xl) {
     .analysis{
-        .group{padding-right: 50%;}
+        .group{padding-right: 280px;}
         .competitive{width: 266px;}
     }
 }
@@ -1244,4 +1246,25 @@ body.body-about{
     .table-wrap{
         .img-keyword{display: none;}
     }
+}
+
+.search-filter{
+    padding-top: 50px;
+    .form-group + .form-group{margin-top: 1rem;}
+    .form-group label{width: 162px;font-size: 15px;font-weight: 700;}
+    .dash{display: inline-block;width: 30px;text-align: center;color: $gray;}
+}
+@include media-breakpoint-down(md) {
+    .search-filter{
+        padding-top: 24px;
+        .form-group label{width: auto;margin-bottom: 6px;}
+    }
+}
+
+.only-new-keyword{
+    text-align: center;margin: 36px 0 50px 0;
+}
+
+.text-paragraph{
+    color: $gray;line-height: 1.86;word-break: keep-all;
 }

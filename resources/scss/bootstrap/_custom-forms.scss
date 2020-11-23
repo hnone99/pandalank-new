@@ -101,7 +101,7 @@
   &::before {
     position: absolute;
     //top: ($font-size-base * $line-height-base - $custom-control-indicator-size) / 2;
-    top:-0.1rem;
+    top:-0.5px;
     left: -($custom-control-gutter + $custom-control-indicator-size);
     display: block;
     width: $custom-control-indicator-size;
@@ -117,7 +117,7 @@
   &::after {
     position: absolute;
     //top: ($font-size-base * $line-height-base - $custom-control-indicator-size) / 2;
-    top:-0.1rem;
+    top:-0.5px;
     left: -($custom-control-gutter + $custom-control-indicator-size);
     display: block;
     width: $custom-control-indicator-size;
@@ -135,6 +135,11 @@
 .custom-checkbox {
   .custom-control-label::before {
     @include border-radius($custom-checkbox-indicator-border-radius);
+  }
+  .custom-control-label::after {
+    background-image: escape-svg($custom-checkbox-indicator-icon);
+    background-position: center;
+    background-repeat: no-repeat;
   }
 
   .custom-control-input:checked ~ .custom-control-label {

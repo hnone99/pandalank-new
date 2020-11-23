@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="x-ua-Compatible" content="IE=edge">
-    <title>PANDA RANK</title>
+    <title>PANDARANK 가이드</title>
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
     <meta name="format-detection" content="telephone=no">
     <link rel="icon" href="../../resources/images/favicon-32.png" sizes="32x32">
@@ -29,8 +29,17 @@
     <!-- ui 관련 -->
     <script src="../../resources/js/ui.js"></script>
 </head>
-<body>
 
+<body>
+    <style>
+        h1{text-align: center;margin: 30px 0;}
+        .container{overflow: hidden;max-width: 100%;}
+        section{float: left;width: 50%;padding: 1rem;}
+        @media (max-width: 992px){
+            section{width: 100%;}
+        }
+    </style>
+    <h1>판다랭크 가이드</h1>
     <div class="container">
         <section>
             <div class="tab" data-position="1"> <!-- 활성화 된 탭의 index 표기 -->
@@ -45,17 +54,21 @@
                 <a href=""><strong>MORE +</strong></a>
             </div>
         </section>
-        <section>
-            <span class="badge badge-primary">BEST</span>
-        </section>
-        <section>
+
+        <section style="width:100%">
             <button type="button" class="btn btn-lg btn-primary" disabled>분석하기</button>
             <button type="button" class="btn btn-lg btn-primary">분석하기</button>
             <button type="button" class="btn btn-md btn-dark">ENTER</button>
             <button type="button" class="btn btn-sm btn-outline-black">엑셀다운로드</button>
             <button type="button" class="btn btn-sm btn-outline-gray">엑셀다운로드</button>
             <button type="button" class="btn btn-sm btn-outline-default">엑셀다운로드</button>
+            <button class="btn btn-primary btn-modal-title-aside"><i class="icon-search-white"></i> 검색</button>
         </section>
+
+        <section>
+            <span class="badge badge-primary">BEST</span>
+        </section>
+
         <section>
             <div class="breadcrumb">
                 <nav aria-label="breadcrumb">
@@ -67,6 +80,7 @@
                 </nav>
             </div>
         </section>
+
         <section>
             <div class="dropdown">
                 <div class="dropdown-value">1차 카테고리 선택</div>
@@ -85,6 +99,16 @@
                 <span class="text-error">! 필수항목입니다</span>
             </div>
         </section>
+
+        <section>
+            <div>
+                <input type="text" class="form-control" placeholder="form-control">
+            </div>
+            <div style="margin-top: 5px">
+                <input type="text" class="form-control form-control-lg" placeholder="form-control-lg">
+            </div>
+        </section>
+
         <section>
             <div class="form-control-wrapper">
                 <input type="text" class="form-control form-control-panda" placeholder="상품 URL 붙여넣기" id="form5">
@@ -100,14 +124,18 @@
                 </div>
             </div>
         </section>
+
         <section>
-            <div class="board-search">
-                <div class="input-box">
-                    <input type="password" class="form-control">
-                    <button type="submit" class="btn btn-submit">확인</button>
-                </div>
+            <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="chk2">
+                <label class="custom-control-label" for="chk2">마케팅 수신 동의</label>
+            </div>
+            <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="chk">
+                <label class="custom-control-label" for="chk">전 날 없었던 키워드만 보기</label>
             </div>
         </section>
+
         <section>
             <div class="summary">
                 <div class="row info">
@@ -130,9 +158,19 @@
                 </div>
             </div>
         </section>
+
         <section>
             <a href="javacript:;" class="text-gray ml-2" data-toggle="modal" data-target="#modal-password">삭제</a>
             <a href="javacript:;" class="text-gray ml-2" data-toggle="modal" data-target="#modal-confirm">삭제 확인</a>
+        </section>
+
+        <section>
+            <div class="board-search">
+                <div class="input-box">
+                    <input type="password" class="form-control">
+                    <button type="submit" class="btn btn-submit">확인</button>
+                </div>
+            </div>
         </section>
     </div>
 

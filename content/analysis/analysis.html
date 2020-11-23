@@ -1775,34 +1775,22 @@
         });
 
         function topRankSlider(){
-            const breakpoint = window.matchMedia( '(min-width:1279px)' );
-
-            let rankwiper;
-
-            const breakpointChecker = function() {
-                if ( breakpoint.matches === true ) {
-                    if ( rankwiper !== undefined ) rankwiper.destroy( true, true );
-                    return;
-                } else if ( breakpoint.matches === false ) {
-                    return enableSwiper();
-                }
-            };
-            const enableSwiper = function() {
-                rankwiper = new Swiper('.top-rank-swiper .swiper-container', {
-                    slidesPerView: 'auto',
-                    freeMode: true,
-                    slidesOffsetBefore: 2.5,
-                    slidesOffsetAfter: 2.5,
-                    scrollbar: {
-                        el: '.swiper-scrollbar-rank',
-                        hide: false,
+            rankwiper = new Swiper('.top-rank-swiper .swiper-container', {
+                slidesPerView: 'auto',
+                freeMode: true,
+                slidesOffsetBefore: 2.5,
+                slidesOffsetAfter: 2.5,
+                scrollbar: {
+                    el: '.swiper-scrollbar-rank',
+                    hide: false,
+                },
+                breakpoints: {
+                    992: {
+                        slidesOffsetBefore: 0,
+                        slidesOffsetAfter: 0,
                     },
-                });
-            };
-            breakpoint.addListener(breakpointChecker);
-            breakpointChecker();
-
-            console.log(breakpoint);
+                }
+            });
         }
 
         //차트

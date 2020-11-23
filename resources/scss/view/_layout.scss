@@ -29,7 +29,7 @@ body{
 }
 body{
     min-width:320px !important;
-    overflow-y: scroll;
+    overflow-y: scroll;-webkit-font-smoothing: antialiased;
 }
 ::-webkit-scrollbar{
 	width: 4px;
@@ -104,13 +104,14 @@ body{
         }
     }
     #container-block{
-        padding: 50px 87px;margin-left: 200px;min-width:759px;
+        padding: 50px 80px;margin-left: 200px;min-width:756px;
     }
     #center-block + #container-block{
         margin-left: 520px;border-top: 0;
     }
     #footer-block{
-        padding: 50px 87px;margin-left: 200px;min-width:759px;
+        padding: 50px 80px;margin-left: 200px;min-width:756px;
+        .footer{padding-left: 0;padding-right: 0;}
     }
 
     html.is-collapsed{

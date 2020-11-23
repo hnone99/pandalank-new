@@ -1701,11 +1701,13 @@ input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="butto
 
 .custom-control-label { position: relative; margin-bottom: 0; font-size: 0.875rem; color: #989da0; vertical-align: top; }
 
-.custom-control-label::before { position: absolute; top: -0.1rem; left: -1.75rem; display: block; width: 1.25rem; height: 1.25rem; pointer-events: none; content: ""; background-color: #fff; border: #989da0 solid 1px; }
+.custom-control-label::before { position: absolute; top: -0.5px; left: -1.75rem; display: block; width: 1.25rem; height: 1.25rem; pointer-events: none; content: ""; background-color: #fff; border: #989da0 solid 1px; }
 
-.custom-control-label::after { position: absolute; top: -0.1rem; left: -1.75rem; display: block; width: 1.25rem; height: 1.25rem; content: ""; background: no-repeat 50% / 50% 50%; }
+.custom-control-label::after { position: absolute; top: -0.5px; left: -1.75rem; display: block; width: 1.25rem; height: 1.25rem; content: ""; background: no-repeat 50% / 50% 50%; }
 
 .custom-checkbox .custom-control-label::before { border-radius: 50%; }
+
+.custom-checkbox .custom-control-label::after { background-image: url("../images/check-gray.svg"); background-position: center; background-repeat: no-repeat; }
 
 .custom-checkbox .custom-control-input:checked ~ .custom-control-label::after { background-image: url("../images/check.svg"); }
 
@@ -2440,7 +2442,7 @@ a.close.disabled { pointer-events: none; }
 
 .modal-title { margin-bottom: 0; line-height: 1.15; font-size: 18px; letter-spacing: -0.04em; font-weight: 700; }
 
-.modal-body { position: relative; flex: 1 1 auto; padding: 1.5rem; line-height: 1.6; letter-spacing: -0.9px; }
+.modal-body { position: relative; flex: 1 1 auto; padding: 1.5rem; letter-spacing: -0.9px; }
 
 .modal-footer { display: flex; align-items: center; justify-content: flex-end; padding: 1rem; border-top: 1px solid #edf0f7; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; }
 
@@ -2454,7 +2456,7 @@ a.close.disabled { pointer-events: none; }
 
 .modal-alert .modal-body { padding: 1.5rem; min-height: 120px; }
 
-.modal-alert .alert-message { font-size: 18px; font-weight: 500; letter-spacing: -0.9px; text-align: center; }
+.modal-alert .alert-message { font-size: 18px; font-weight: 500; letter-spacing: -0.9px; text-align: center; line-height: 1.6; }
 
 @media (min-width: 576px) { .modal-dialog { max-width: 470px; margin: 50px auto; }
   .modal-dialog-scrollable { max-height: calc(100% - 100px); }

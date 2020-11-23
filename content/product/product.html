@@ -61,12 +61,24 @@
                         <nav>
                             <ul>
                                 <li><a href="../dashboard/dashboard.html"><span>홈</span></a></li>
-                                <li class="active"><a href="../product/product.html"><span>상품 찾기</span></a></li>
-                                <li><a href="../analysis/analysis.html"><span>경쟁력 분석</span></a></li>
-                                <li><a href="../ai/ai.html"><span>AI 판매 예측</span></a></li>
-                                <li><a href="../mymall/mymall.html"><span>내 쇼핑몰 분석</span></a></li>
-                                <li><a href="../ceo/ceo.html"><span>사장님들의 방</span></a></li>
-                                <li><a href="../board/notice.html"><span>공지</span></a></li>
+                                <li><a href="../product/product.html"><span>키워드 찾기</span></a>
+                                    <ul>
+                                        <li><a href="">키워드 분석</a></li>
+                                        <li><a href="">키워드 큐레이션</a></li>
+                                    </ul>
+                                </li>
+                                <li class="active"><a href="../analysis/analysis.html"><span>상품 분석</span></a>
+                                    <ul>
+                                        <li><a href="">실시간 순위 확인</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="../ai/ai.html"><span>쇼핑몰 분석</span></a>
+                                    <ul>
+                                        <li><a href="">상품 순위 추적</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="../ceo/ceo.html"><span>사장님 게시판</span></a></li>
+                                <li><a href="#none"><span>서비스 구독</span></a></li>
                             </ul>
                         </nav>
                     </div>
@@ -74,6 +86,7 @@
                         <ul>
                             <li><a href="../mypage/mypage.html" class="mypage"><i class="profile"><img src="../../resources/images/@profile.png" alt="판다랭크"></i><span>판다랭크</span></a></li>
                             <li><a href="../join/index.html" class="btn-join"><span>로그인/회원가입</span></a></li>
+                            <li><a href="../board/notice.html"><span>고객센터</span></a></li>
                         </ul>
                     </div>
                 </div>
@@ -203,6 +216,7 @@
                                 <a href="javascript:;" class="dropdown-value"><i class="icon-ellipsis"></i><span class="sr-only">모바일 메뉴 더보기</span></a>
                                 <div class="dropdown-box">
                                     <div class="dropdown-list">
+                                        <div><a href="javascript:;" data-toggle="modal" data-target="#modal-search-filter">검색 필터</a></div>
                                         <div><a href="javascript:;">숫자로 보기</a></div>
                                         <div><a href="javascript:;">검색량 /상품량으로 보기</a></div>
                                         <div><a href="javascript:;">엑셀 다운로드</a></div>
@@ -215,6 +229,7 @@
                             <div class="row justify-content-end">
                                 <div class="col-auto">
                                     <div class="d-flex justify-content-end">
+                                        <button type="button" class="btn btn-sm btn-outline-default" data-toggle="modal" data-target="#modal-search-filter">검색 필터</button>
                                         <button type="button" class="btn btn-sm btn-outline-default">숫자로 보기</button>
                                         <button type="button" class="btn btn-sm btn-outline-default">엑셀 다운로드</button>
                                         <button type="button" class="btn btn-sm btn-outline-default">공유하기</button>
@@ -1252,6 +1267,65 @@
                 </div>
                 <div class="modal-footer p-0">
                     <button class="btn btn-lg btn-primary btn-block btn-keyword-anlysis">키워드 경쟁령 분석하기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal : 검색 필터 -->
+    <div class="modal modal-full" tabindex="-1" role="dialog" id="modal-search-filter">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-title">
+                        검색 필터
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="search-filter">
+                        <div class="form-group">
+                            <div class="row row-0 align-items-center">
+                                <div class="col-12 col-lg-auto"><label for="">검색어</label></div>
+                                <div class="col"><input type="text" class="form-control form-control-lg" placeholder="1000"></div>
+                                <div class="col-auto"><span class="dash">-</span></div>
+                                <div class="col"><input type="text" class="form-control form-control-lg" placeholder="5000"></div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row row-0 align-items-center">
+                                <div class="col-12 col-lg-auto"><label for="">상품량</label></div>
+                                <div class="col"><input type="text" class="form-control form-control-lg" placeholder="1000"></div>
+                                <div class="col-auto"><span class="dash">-</span></div>
+                                <div class="col"><input type="text" class="form-control form-control-lg" placeholder="5000"></div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row row-0 align-items-center">
+                                <div class="col-12 col-lg-auto"><label for="">평균가</label></div>
+                                <div class="col"><input type="text" class="form-control form-control-lg" placeholder="1000"></div>
+                                <div class="col-auto"><span class="dash">-</span></div>
+                                <div class="col"><input type="text" class="form-control form-control-lg" placeholder="5000"></div>
+                            </div>
+                        </div>
+                        <div class="only-new-keyword">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="chk">
+                                <label class="custom-control-label" for="chk">전 날 없었던 키워드만 보기</label>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="text-paragraph">
+                                신규몰이라면 검색량이 ㅇㅇㅇㅇ~ㅇㅇㅇㅇ 사이 키워드 추천합니다. ㅇㅇㅇㅇ~ㅇㅇㅇㅇ사이의 키워드를 조합해서 사용하세요. <br>
+                                전날 없었던 키워드는 검색량이 급상승한 키워드입니다. 한 발 빠르게 제품을 소싱해 보세요.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer p-0">
+                    <button class="btn btn-lg btn-primary btn-block btn-keyword-anlysis">검색 필터 적용하기</button>
                 </div>
             </div>
         </div>
