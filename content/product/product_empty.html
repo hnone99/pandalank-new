@@ -41,7 +41,7 @@
                     <nav class="swiper-container">
                         <ul class="swiper-wrapper">
                             <li class="swiper-slide"><a href="../dashboard/dashboard.html"><span>홈</span></a></li>
-                            <li class="swiper-slide active"><a href="../product/product.html"><span>상품 찾기</span></a></li>
+                            <li class="swiper-slide active"><a href="../product/product.html"><span>키워드 찾기</span></a></li>
                             <li class="swiper-slide"><a href="../analysis/analysis.html"><span>경쟁력 분석</span></a></li>
                             <li class="swiper-slide"><a href="../ai/ai.html"><span>AI 판매 예측</span></a></li>
                             <li class="swiper-slide"><a href="../mymall/mymall.html"><span>내 쇼핑몰 분석</span></a></li>
@@ -55,12 +55,24 @@
                         <nav>
                             <ul>
                                 <li><a href="../dashboard/dashboard.html"><span>홈</span></a></li>
-                                <li class="active"><a href="../product/product.html"><span>상품 찾기</span></a></li>
-                                <li><a href="../analysis/analysis.html"><span>경쟁력 분석</span></a></li>
-                                <li><a href="../ai/ai.html"><span>AI 판매 예측</span></a></li>
-                                <li><a href="../mymall/mymall.html"><span>내 쇼핑몰 분석</span></a></li>
-                                <li><a href="../ceo/ceo.html"><span>사장님들의 방</span></a></li>
-                                <li><a href="../board/notice.html"><span>공지</span></a></li>
+                                <li class="active"><a href="../product/product.html"><span>키워드 찾기</span></a>
+                                    <ul>
+                                        <li><a href="">키워드 분석</a></li>
+                                        <li><a href="">키워드 큐레이션</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="../analysis/analysis.html"><span>상품 분석</span></a>
+                                    <ul>
+                                        <li><a href="">실시간 순위 확인</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="../ai/ai.html"><span>쇼핑몰 분석</span></a>
+                                    <ul>
+                                        <li><a href="">상품 순위 추적</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="../ceo/ceo.html"><span>사장님 게시판</span></a></li>
+                                <li><a href="#none"><span>서비스 구독</span></a></li>
                             </ul>
                         </nav>
                     </div>
@@ -68,6 +80,7 @@
                         <ul>
                             <li><a href="../mypage/mypage.html" class="mypage"><i class="profile"><img src="../../resources/images/@profile.png" alt="판다랭크"></i><span>판다랭크</span></a></li>
                             <li><a href="../join/index.html" class="btn-join"><span>로그인/회원가입</span></a></li>
+                            <li><a href="../board/notice.html"><span>고객센터</span></a></li>
                         </ul>
                     </div>
                 </div>
@@ -84,15 +97,15 @@
             <div id="center">
                 <div class="title-area">
                     <h2>
-                        <strong>PRODUCT FINDING</strong>
-                        <span>상품 찾기</span>
+                        <strong>SEARCH KEYWORD</strong>
+                        <span>키워드 찾기</span>
                     </h2>
                 </div>
                 <div class="tab-area">
                     <div class="tab" data-position="1"> <!-- 활성화 된 탭의 index 표기 -->
                         <ul role="tablist" class="nav">
                             <li class="active"><a href="#t1" role="tab" data-toggle="tab" aria-selected="true"><span>카테고리로 찾기</span></a></li>
-                            <li><a href="#t2" role="tab" data-toggle="tab" aria-selected="false"><span>상품으로 찾기</span></a></li>
+                            <li><a href="#t2" role="tab" data-toggle="tab" aria-selected="false"><span>키워드로 찾기</span></a></li>
                         </ul>
                     </div>
                 </div>
@@ -163,12 +176,95 @@
                     </div>
                     <div role="tabpanel" class="tab-pane fade" id="t2">
                         <div class="input-area">
-                            <input type="text" class="form-control form-control-panda" placeholder="상품종류를 입력하세요" id="keyword">
+                            <input type="text" class="form-control form-control-panda active" placeholder="상품종류를 입력하세요" id="keyword">
                         </div>
                     </div>
                 </div>
             </div>
             <div class="btn-collapse"><a href="javascript:;"><span class="sr-only">검색영역 접기</span></a></div>
+            <div class="btn-right-collapse">
+                <a href="javascript:;"><span>검색기록</span></a>
+            </div>
+            <div id="alarm-block">
+                <div class="btn-alarm new"> <!-- 새 알람 있을때 .new 추가 -->
+                    <a href="javascript:;"><span class="sr-only">알람</span></a>
+                </div>
+                <div class="alarm">
+                    <ul>
+                        <li>
+                            <div class="type">공지</div>
+                            <a href="javascript:;" class="text-truncate">판다랭크가 오픈했습니다. 그랜드 런칭을 했습니다.</a>
+                            <button class="close"><span class="sr-only">삭제</span></button>
+                        </li>
+                        <li>
+                            <div class="type">댓글</div>
+                            <a href="javascript:;" class="text-truncate"><span class="text-primary">꼬물이</span> 오늘 처음으로 억대 매출을 어쩌고저쩌고</a>
+                            <button class="close"><span class="sr-only">삭제</span></button>
+                        </li>
+                        <li>
+                            <div class="type">공지</div>
+                            <a href="javascript:;" class="text-truncate">판다랭크가 오픈했습니다. 그랜드 런칭을 했습니다.</a>
+                            <button class="close"><span class="sr-only">삭제</span></button>
+                        </li>
+                        <li>
+                            <div class="type">댓글</div>
+                            <a href="javascript:;" class="text-truncate"><span class="text-primary">꼬물이</span> 오늘 처음으로 억대 매출을 어쩌고저쩌고</a>
+                            <button class="close"><span class="sr-only">삭제</span></button>
+                        </li>
+                        <li>
+                            <div class="type">공지</div>
+                            <a href="javascript:;" class="text-truncate">판다랭크가 오픈했습니다. 그랜드 런칭을 했습니다.</a>
+                            <button class="close"><span class="sr-only">삭제</span></button>
+                        </li>
+                        <li>
+                            <div class="type">댓글</div>
+                            <a href="javascript:;" class="text-truncate"><span class="text-primary">꼬물이</span> 오늘 처음으로 억대 매출을 어쩌고저쩌고</a>
+                            <button class="close"><span class="sr-only">삭제</span></button>
+                        </li>
+                        <li>
+                            <div class="type">공지</div>
+                            <a href="javascript:;" class="text-truncate">판다랭크가 오픈했습니다. 그랜드 런칭을 했습니다.</a>
+                            <button class="close"><span class="sr-only">삭제</span></button>
+                        </li>
+                        <li>
+                            <div class="type">댓글</div>
+                            <a href="javascript:;" class="text-truncate"><span class="text-primary">꼬물이</span> 오늘 처음으로 억대 매출을 어쩌고저쩌고</a>
+                            <button class="close"><span class="sr-only">삭제</span></button>
+                        </li>
+                        <li>
+                            <div class="type">공지</div>
+                            <a href="javascript:;" class="text-truncate">판다랭크가 오픈했습니다. 그랜드 런칭을 했습니다.</a>
+                            <button class="close"><span class="sr-only">삭제</span></button>
+                        </li>
+                        <li>
+                            <div class="type">댓글</div>
+                            <a href="javascript:;" class="text-truncate"><span class="text-primary">꼬물이</span> 오늘 처음으로 억대 매출을 어쩌고저쩌고</a>
+                            <button class="close"><span class="sr-only">삭제</span></button>
+                        </li>
+                        <li>
+                            <div class="type">공지</div>
+                            <a href="javascript:;" class="text-truncate">판다랭크가 오픈했습니다. 그랜드 런칭을 했습니다.</a>
+                            <button class="close"><span class="sr-only">삭제</span></button>
+                        </li>
+                        <li>
+                            <div class="type">댓글</div>
+                            <a href="javascript:;" class="text-truncate"><span class="text-primary">꼬물이</span> 오늘 처음으로 억대 매출을 어쩌고저쩌고</a>
+                            <button class="close"><span class="sr-only">삭제</span></button>
+                        </li>
+                        <!-- 알람 없을때 -->
+                        <li>
+                            <div class="data-empty">
+                                <span class="img"></span>
+                                <p>도착한 알람이 없어요</p>
+                            </div>
+                        </li>
+                        <!-- //알람 없을때 -->
+                    </ul>
+                    <div class="go">
+                        <a href="../mypage/alarmcenter.html">알람센터 가기</a>
+                    </div>
+                </div>
+            </div>
         </div>
         <div id="container-block">
             <div id="container">

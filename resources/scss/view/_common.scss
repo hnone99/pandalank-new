@@ -295,7 +295,7 @@
 .location-area{
     position: relative;
     > nav{
-        display: flex;align-items: center;
+        display: flex;align-items: center;margin-bottom: 3px;
         .breadcrumb{margin-right: 10px;}
         .icon-info{display: block;}
     }
@@ -1267,4 +1267,11 @@ body.body-about{
 
 .text-paragraph{
     color: $gray;line-height: 1.86;word-break: keep-all;
+}
+
+.keyword-box{
+    background: #f7f9fd;border: 1px solid $default;border-radius: 5px;padding: 10px 1rem;line-height: 1.8;margin: 16px 0 24px;
+    strong{margin-right: 14px;}
+    a{margin-right: 14px;}
+    em{font-weight: 700;}
 }

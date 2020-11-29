@@ -126,26 +126,31 @@ body{
         #center-block + #container-block{
             margin-left: 200px;
         }
+        #right-block{
+            left: -180px !important;
+        }
     }
-}
-
-#right-block{
-    width: 320px;padding: 50px 32px;transition: all .2s .1s;box-shadow: 0 10px 30px 0 #dee8ef;
-    bottom: 0;height: 100vh;right: -320px;position: fixed;top: 0;background: #fbfafb;z-index: 1001;
 }
 html.is-right-collapsed{
     #right-block{
-        right: 0;
+        left: 200px;
     }
     .btn-right-collapse a::before{transform: rotate(180deg);}
+    .btn-right-collapse a{color: $primary;}
 }
 
-
+#right-block{
+    width: 319px;padding: 50px 32px;transition: all .3s ease-in-out;
+    bottom: 0;height: 100vh;left: -120px;position: fixed;top: 0;background: #fbfafb;z-index: 1000;
+}
 @include media-breakpoint-down(md) {
     #right-block{
-        width: 280px;padding: 56px 24px;right: -280px;
+        width: 280px;padding: 56px 24px;right: -280px;left: auto;
     }
     html.is-right-collapsed{
+        #right-block{
+            right: 0;left: auto;
+        }
         .btn-right-collapse{opacity: 1;visibility: visible;}
     }
 }

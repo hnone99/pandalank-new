@@ -82,6 +82,7 @@
         nav{
             > ul{
                 > li > a{color: $black;line-height: 3;}
+                > li + li{margin-top: 0;}
             }
         }
     }
