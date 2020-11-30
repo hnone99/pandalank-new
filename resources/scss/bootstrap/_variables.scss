@@ -501,9 +501,9 @@ $input-border-color:                    #e2e2e2 !default;
 $input-border-width:                    $input-btn-border-width !default;
 $input-box-shadow:                      none !default;
 
-$input-border-radius:                   0 !default;
-$input-border-radius-lg:                0 !default;
-$input-border-radius-sm:                0 !default;
+$input-border-radius:                   5px !default;
+$input-border-radius-lg:                $input-border-radius !default;
+$input-border-radius-sm:                $input-border-radius !default;
 
 $input-focus-bg:                        $input-bg !default;
 $input-focus-border-color:              lighten($component-active-bg, 25%) !default;

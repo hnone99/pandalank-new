@@ -63,7 +63,7 @@
                                 <li><a href="../dashboard/dashboard.html"><span>홈</span></a></li>
                                 <li class="active"><a href="../product/product.html"><span>키워드 찾기</span></a>
                                     <ul>
-                                        <li><a href="../product/keyword_anlaysis.html">키워드 분석</a></li>
+                                        <li class="active"><a href="../product/keyword_anlaysis.html">키워드 분석</a></li>
                                         <li><a href="../product/keyword_curation.html">키워드 큐레이션</a></li>
                                     </ul>
                                 </li>
@@ -103,88 +103,35 @@
             <div id="center">
                 <div class="title-area">
                     <h2>
-                        <strong>SEARCH KEYWORD</strong>
-                        <span>키워드 찾기</span>
+                        <strong>KEYWORD DETAIL</strong>
+                        <span>키워드 분석</span>
                     </h2>
                 </div>
-                <div class="tab-area">
-                    <div class="tab" data-position="1"> <!-- 활성화 된 탭의 index 표기 -->
-                        <ul role="tablist" class="nav">
-                            <li class="active"><a href="#t1" role="tab" data-toggle="tab" aria-selected="true"><span>카테고리로 찾기</span></a></li>
-                            <li><a href="#t2" role="tab" data-toggle="tab" aria-selected="false"><span>키워드로 찾기</span></a></li>
-                        </ul>
+                <div class="input-area my">
+                    <div class="form-control-wrapper">
+                        <input type="text" class="form-control form-control-panda" placeholder="키워드" id="inputKeyword">
+                        <button type="button" class="btn btn-submit">엔터</button>
                     </div>
                 </div>
-                <div class="tab-content">
-                    <div role="tabpanel" class="tab-pane fade active show" id="t1">
-                        <div class="dropdown-area">
-                            <div class="dropdown" id="select1">
-                                <a href="javascript:;" class="dropdown-value">1차 카테고리 선택</a>
-                                <div class="dropdown-box">
-                                    <div class="dropdown-list">
-                                        <div><a href="javascript:;">여가/생활편의</a></div>
-                                        <div><a href="javascript:;">디지털/가전</a></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="dropdown">
-                                <a href="javascript:;" class="dropdown-value">2차 카테고리 선택</a>
-                                <div class="dropdown-box">
-                                    <div class="dropdown-list">
-                                        <div><a href="javascript:;">여가/생활편의</a></div>
-                                        <div><a href="javascript:;">디지털/가전</a></div>
-                                        <div><a href="javascript:;">여가/생활편의</a></div>
-                                        <div><a href="javascript:;">디지털/가전</a></div>
-                                        <div><a href="javascript:;">여가/생활편의</a></div>
-                                        <div><a href="javascript:;">디지털/가전</a></div>
-                                        <div><a href="javascript:;">여가/생활편의</a></div>
-                                        <div><a href="javascript:;">디지털/가전</a></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="dropdown">
-                                <a href="javascript:;" class="dropdown-value">3차 카테고리 선택</a>
-                                <div class="dropdown-box">
-                                    <div class="dropdown-list">
-                                        <div><a href="javascript:;">여가/생활편의</a></div>
-                                        <div><a href="javascript:;">디지털/가전</a></div>
-                                        <div><a href="javascript:;">여가/생활편의</a></div>
-                                        <div><a href="javascript:;">디지털/가전</a></div>
-                                        <div><a href="javascript:;">여가/생활편의</a></div>
-                                        <div><a href="javascript:;">디지털/가전</a></div>
-                                        <div><a href="javascript:;">여가/생활편의</a></div>
-                                        <div><a href="javascript:;">디지털/가전</a></div>
-                                        <div><a href="javascript:;">디지털/가전</a></div>
-                                        <div><a href="javascript:;">여가/생활편의</a></div>
-                                        <div><a href="javascript:;">디지털/가전</a></div>
-                                        <div><a href="javascript:;">디지털/가전</a></div>
-                                        <div><a href="javascript:;">여가/생활편의</a></div>
-                                        <div><a href="javascript:;">디지털/가전</a></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="dropdown">
-                                <a href="javascript:;" class="dropdown-value">4차 카테고리 선택</a>
-                                <div class="dropdown-box">
-                                    <div class="dropdown-list">
-                                        <div><a href="javascript:;">여가/생활편의</a></div>
-                                        <div><a href="javascript:;">디지털/가전</a></div>
-                                        <div><a href="javascript:;">여가/생활편의</a></div>
-                                        <div><a href="javascript:;">디지털/가전</a></div>
-                                        <div><a href="javascript:;">여가/생활편의</a></div>
-                                        <div><a href="javascript:;">디지털/가전</a></div>
-                                        <div><a href="javascript:;">여가/생활편의</a></div>
-                                        <div><a href="javascript:;">디지털/가전</a></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div role="tabpanel" class="tab-pane fade" id="t2">
-                        <div class="input-area">
-                            <input type="text" class="form-control form-control-panda active" placeholder="상품종류를 입력하세요" id="keyword">
-                        </div>
-                    </div>
+                <div class="history show-delete">
+                    <ul>
+                        <li>
+                            <a href="javascript:;">Led 램프</a>
+                            <button class="close"><span class="sr-only">삭제</span></button>
+                        </li>
+                        <li>
+                            <a href="javascript:;">최대 5개만</a>
+                            <button class="close"><span class="sr-only">삭제</span></button>
+                        </li>
+                        <li>
+                            <a href="javascript:;">저장합니다</a>
+                            <button class="close"><span class="sr-only">삭제</span></button>
+                        </li>
+                        <li>
+                            <a href="javascript:;">저장합니다</a>
+                            <button class="close"><span class="sr-only">삭제</span></button>
+                        </li>
+                    </ul>
                 </div>
             </div>
             <div class="btn-collapse"><a href="javascript:;"><span class="sr-only">검색영역 접기</span></a></div>
@@ -286,61 +233,235 @@
                             </div>
                         </div>
                         <div class="location-area has-line"> <!-- 바로 다음에 나오는 테이블이 이미 라인을 가지고 있어서 .has-line 추가하여 라인 중복 방지 -->
-                            <nav aria-label="breadcrumb">
-                                <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="#">패션잡화</a></li>
-                                    <li class="breadcrumb-item"><a href="#">여성가방</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">토드백</li>
-                                </ol>
-                            </nav>
-                            <div class="row justify-content-between">
-                                <div class="col-auto">
-                                    <div class="text-gray">
-                                        2020년 6월 15일 3시 기준 <span class="d-none d-lg-inline">ㅣ 카테고리 검색량 전월 대비 <span class="text-primary">+4.5%</span> 증가 ㅣ 카테고리 경쟁도 <span class="text-danger">나쁨</span> (3등/5000개)</span>
-                                    </div>
+                            <div class="breadcrumb-category">
+                                <div class="cate">
+                                    <a href="">카테고리 > 카테고리 > 카테고리</a>
                                 </div>
-                                <div class="col-auto d-none d-lg-inline text-right">
-                                    <a href="#modal-search-volume" class="text-gray text-underline" data-toggle="modal">1년 검색량 그래프</a>
-                                </div>
+                                <strong class="keyword">Led 램프</strong>
+                                <button class="btn btn-primary btn-modal-title-aside"><i class="icon-search-white"></i> 검색</button>
                             </div>
-                            <div class="keyword-box">
-                                <div class="d-flex flex-wrap">
-                                    <strong>연관검색어</strong>
-                                    <a href="#none">겨울 자전거 장갑 <em>3,421 / 40,452</em></a>
-                                    <a href="#none">겨울 자전거 장갑 <em>3,421 / 40,452</em></a>
-                                    <a href="#none">겨울 자전거 장갑 <em>3,421 / 40,452</em></a>
-                                    <a href="#none">겨울 자전거 장갑 <em>3,421 / 40,452</em></a>
-                                    <a href="#none">겨울 자전거 장갑 <em>3,421 / 40,452</em></a>
-                                </div>
-                            </div>
+                            <div class="text-gray">2020년 6월 15일 3시 기준</div>
 
                             <!-- 모바일용 메뉴 더보기 -->
                             <div class="dropdown ellipsis d-lg-none">
                                 <a href="javascript:;" class="dropdown-value"><i class="icon-ellipsis"></i><span class="sr-only">모바일 메뉴 더보기</span></a>
                                 <div class="dropdown-box">
                                     <div class="dropdown-list">
-                                        <div><a href="javascript:;" data-toggle="modal" data-target="#modal-search-volume">카테고리 1년 검색량</a></div>
-                                        <div><a href="javascript:;" data-toggle="modal" data-target="#modal-search-filter">검색 필터</a></div>
-                                        <div><a href="javascript:;">숫자로 보기</a></div>
-                                        <div><a href="javascript:;">검색량 /상품량으로 보기</a></div>
                                         <div><a href="javascript:;">엑셀 다운로드</a></div>
-                                        <div><a href="javascript:;">SNS 공유하기</a></div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="table-top d-none d-lg-block has-line"> <!-- 바로 다음에 나오는 테이블이 이미 라인을 가지고 있어서 .has-line 추가하여 라인 중복 방지 -->
+
+                        <div class="table-top d-none d-lg-block">
                             <div class="row justify-content-end">
                                 <div class="col-auto">
                                     <div class="d-flex justify-content-end">
-                                        <button type="button" class="btn btn-sm btn-outline-default" data-toggle="modal" data-target="#modal-search-filter">검색 필터</button>
-                                        <button type="button" class="btn btn-sm btn-outline-default">숫자로 보기</button>
                                         <button type="button" class="btn btn-sm btn-outline-default">엑셀 다운로드</button>
-                                        <button type="button" class="btn btn-sm btn-outline-default">공유하기</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
+
+                        <div class="top-rank-swiper">
+                            <div class="swiper-container">
+                                <ul class="swiper-wrapper">
+                                    <li class="swiper-slide">
+                                        <div class="item">
+                                            <a href="">
+                                                <div class="thumb"><img src="../../resources/images/@300x100.png" alt="" onload="setDirection(this)"></div>
+                                                <div class="price">17,900</div>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <div class="item">
+                                            <a href="">
+                                                <div class="thumb"><img src="../../resources/images/@product-thumb.jpg" alt="" onload="setDirection(this)"></div>
+                                                <div class="price">17,900</div>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <div class="item">
+                                            <a href="">
+                                                <div class="thumb"><img src="../../resources/images/@product-thumb.jpg" alt="" onload="setDirection(this)"></div>
+                                                <div class="price">17,900</div>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <div class="item">
+                                            <a href="">
+                                                <div class="thumb"><img src="../../resources/images/@product-thumb.jpg" alt="" onload="setDirection(this)"></div>
+                                                <div class="price">17,900</div>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <div class="item">
+                                            <a href="">
+                                                <div class="thumb"><img src="../../resources/images/@product-thumb.jpg" alt="" onload="setDirection(this)"></div>
+                                                <div class="price">17,900</div>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <div class="item">
+                                            <a href="">
+                                                <div class="thumb"><img src="../../resources/images/@product-thumb.jpg" onload="setDirection(this)" alt=""></div>
+                                                <div class="price">17,900</div>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <div class="item">
+                                            <a href="">
+                                                <div class="thumb"><img src="../../resources/images/@product-thumb.jpg" alt="" onload="setDirection(this)"></div>
+                                                <div class="price">17,900</div>
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="swiper-scrollbar-rank"></div>
+                        </div>
+
+                        <div class="report report-keyword">
+                            <div class="summary">
+                                <div class="row info">
+                                    <div class="col-6 col-md-3">
+                                        <span>검색량</span>
+                                        <strong>240,138 <i>회</i></strong>
+                                    </div>
+                                    <div class="col-6 col-md-3">
+                                        <span>상품량</span>
+                                        <strong>1,345,212 <i>개</i></strong>
+                                    </div>
+                                    <div class="col-6 col-md-3">
+                                        <span>1페이지 판매량</span>
+                                        <strong>13,768 <i>개</i></strong>
+                                    </div>
+                                    <div class="col-6 col-md-3">
+                                        <span>경쟁률</span>
+                                        <strong class="text-danger">24 <i>%</i></strong>
+                                    </div>
+                                </div>
+                                <div class="row info">
+                                    <div class="col-6 col-md-3">
+                                        <span>카테고리 경쟁도</span>
+                                        <strong class="text-primary">GOOD</strong>
+                                    </div>
+                                    <div class="col-6 col-md-3">
+                                        <span>평균가</span>
+                                        <strong>89,000 <i>원</i></strong>
+                                    </div>
+                                    <div class="col-6 col-md-3">
+                                        <span>광고비</span>
+                                        <strong>356 <i>원</i></strong>
+                                    </div>
+                                    <div class="col-6 col-md-3">
+                                        <span>가격 대비 광고비</span>
+                                        <strong class="text-danger">6.7 <i>%</i></strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="category-rank">
+                            <div class="row">
+                                <div class="col d-flex">
+                                    <strong class="mr-2">1위 카테고리</strong>
+                                    <p>1차 카테고리 > 2차 카테고리 > 3차 카테고리</p>
+                                </div>
+                                <div class="col d-flex">
+                                    <strong class="mr-2">2위 카테고리</strong>
+                                    <p>1차 카테고리 > 2차 카테고리 > 3차 카테고리</p>
+                                </div>
+                            </div>
+                            <div class="text-box">
+                                <p>! 카테고리 경쟁도가 치열합니다. <a href="" class="text-primary text-underline">1차 카테고리 > 2차 카테고리 > 3차 카테고리</a>로 이동을 제안합니다</p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <i class="icon-info"></i> <p>데이터를 어떻게 읽어야 하나요?</p>
+                        </div>
+
+                        <div class="text-right">
+                            <button type="button" class="btn btn-lg btn-primary"><b>이 키워드로 상품 경쟁력 분석하기</b></button>
+                        </div>
+
+                        <div class="keyword-analysis-chart-area">
+                            <div class="date">
+                                <strong>기간</strong>
+                                <div class="btn-group" role="group">
+                                    <button type="button" class="btn btn-outline-default btn-flat">전체</button>
+                                    <button type="button" class="btn btn-outline-default btn-flat">1개월</button>
+                                    <button type="button" class="btn btn-outline-default btn-flat">3개월</button>
+                                    <button type="button" class="btn btn-outline-default btn-flat">1년</button>
+                                </div>
+                                <button type="button" class="btn btn-primary btn-flat">조회하기</button>
+                            </div>
+                            <div class="chart-label">
+                                <span class="l1">매출액</span>
+                                <span class="l2">레이블</span>
+                            </div>
+                            <div class="text-box">
+                                <p>! 이 키워드의 검색량은 <span class="text-primary">12</span>월에 가장 높고 <span class="danger">3</span>월에 가장 낮았습니다. 전 달 대비 최근 한달 검색 동향 <span class="primary">+0.45%</span></p>
+                            </div>
+                        </div>
+
+                        <div class="summary-detail">
+                            <div class="row row-40">
+                                <div class="col-12 col-md-6">
+                                    <div class="tit">쇼핑탭 섹션 순위</div>
+                                    <div class="tit-data">
+                                        <strong class="text-primary">2 <i>위</i></strong>
+                                        <span> / </span>
+                                        <strong class="text-primary">3 <i>위</i></strong>
+                                    </div>
+                                    <div class="row row-20">
+                                        <div class="col-6">
+                                            <ul class="box-ranking">
+                                                <li>파워링크</li>
+                                                <li class="active">쇼핑탭</li>
+                                                <li>지식백과</li>
+                                                <li>카페</li>
+                                                <li>블로그</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-6">
+                                            <ul class="box-ranking">
+                                                <li>파워링크</li>
+                                                <li>지식백과</li>
+                                                <li class="active">쇼핑탭</li>
+                                                <li>카페</li>
+                                                <li>블로그</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="tit">순위별 네이버 키워드 광고 입찰가 (mobile/pc)</div>
+                                    <div class="tit-data">
+                                        <strong class="text-primary">+0.49 <i>% (전 달 대비)</i></strong>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="table-top border-bottom-0">
+                            <div class="row justify-content-between align-items-center">
+                                <div class="col-auto">
+                                    <h3 class="sub-title">연관 키워드</h3>
+                                    <div class="text-gray">중소형 검색량 키워드끼리 조합한 후 상품명을 만드세요.</div>
+                                </div>
+                            </div>
+                        </div>
+
                         <div class="table-wrap">
                             <table class="table table-hover responsive table-data" id="datatable">
                                 <thead>
@@ -527,195 +648,10 @@
                                     </tr>
                                 </tbody>
                             </table>
-                            <div class="img-keyword"></div>
                         </div>
 
                         <div class="banner-area">
                             <img src="../../resources/images/@300x100.png" alt="banner image">
-                        </div>
-
-                        <div class="board">
-                            <div class="board-top">
-                                <div class="col-auto">
-                                    <div class="sort">
-                                        <strong class="board-name">패션잡화 갤러리 ㅣ</strong>
-                                        <a href="" class="active">추천순</a>
-                                        <a href="" class="ml-2">최신순</a>
-                                    </div>
-                                </div>
-                                <div class="col-auto">
-                                    <button type="button" class="btn btn-md btn-dark btn-write">글쓰기</button>
-                                </div>
-                            </div>
-                            <div class="board-list">
-                                <ul>
-                                    <li class="board-item">
-                                        <div class="board-item-simple">
-                                            <a href="javascript:;">
-                                                <div class="cate">팬티</div>
-                                                <div class="subject">
-                                                    <span class="badge badge-primary">BEST</span>
-                                                    <span>오늘 장사는 폭망한 듯</span>
-                                                </div>
-                                                <div class="writer">L3. 닉넴최대여섯</div>
-                                                <div class="date">20.03.24</div>
-                                                <div class="hit">314</div>
-                                            </a>
-                                        </div>
-                                        <div class="board-item-detail">
-                                            <div class="board-content">
-                                                댓글 영역입니다. 회원인 경우 수정 버튼이 나타납니다. 비회원은 수정하기 기능이 없습니다.
-                                                초보님들만 다들 주목~!^^ 판매는 진정 아이템 싸움입니다. 직접 스토어를 경험하고… 아이템스카우트는 신사임당님이 만들었다고
-                                                들었는데 잘못된 소문이 많군요. 댓글작업은 아이브가 한대요. <br><br>
-
-                                                네이버 스마트스토어에 아이템 스카우트 괜찮나요? 그거보다 더 괜찮은거 나왔다등데?
-                                                제가 부업으로 온라인쇼핑몰을 해보려고하는데 아이템찾기도 막막하고 답답한게 한두가지가 아니네요ㅠㅠ 그래서 추천받은게 판다랭크에요
-                                            </div>
-                                            <div class="board-heart row justify-content-between">
-                                                <div class="col-auto">
-                                                    <div class="like">
-                                                        <a class="icon-heart">
-                                                            <svg width="24" height="20" viewBox="0 0 24 20"
-                                                                xmlns="http://www.w3.org/2000/svg">
-                                                                <path class="heart-fill"
-                                                                d="M10,19l-1.4-1.3C3.4,13,0,9.9,0,6.1C0,3,2.4,0.6,5.5,0.6c1.7,0,3.4,0.8,4.5,2.1c1.1-1.3,2.8-2.1,4.5-2.1
-                                                                C17.6,0.6,20,3,20,6.1c0,3.8-3.4,6.9-8.6,11.5L10,19z"
-                                                                fill="none" />
-                                                                <path class="heart-border"
-                                                                d="M14.5,0.6c-1.7,0-3.4,0.8-4.5,2.1C8.9,1.4,7.2,0.6,5.5,0.6C2.4,0.6,0,3,0,6.1C0,9.9,3.4,13,8.6,17.6L10,19
-                                                                l1.4-1.3C16.6,13,20,9.9,20,6.1C20,3,17.6,0.6,14.5,0.6z M10.1,16.2L10,16.3l-0.1-0.1C5.1,11.8,2,9,2,6.1c0-2,1.5-3.5,3.5-3.5
-                                                                c1.5,0,3,1,3.6,2.4h1.9c0.5-1.4,2-2.4,3.6-2.4c2,0,3.5,1.5,3.5,3.5C18,9,14.9,11.8,10.1,16.2z" fill="#34D52E"/>
-                                                            </svg>
-                                                        </a>
-                                                        <strong>0</strong>
-                                                    </div>
-                                                </div>
-                                                <div class="col-auto">
-                                                    <div class="board-control">
-                                                        <a href="javacript:;" class="text-gray">수정</a>
-                                                        <a href="javacript:;" class="text-gray ml-2" data-toggle="modal" data-target="#modal-password">삭제</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!-- 댓글 -->
-                                            <div class="comment">
-                                                <div class="comment-textarea">
-                                                    <div class="box">
-                                                        <textarea name="" id="" cols="" rows="" placeholder="댓글 입력"></textarea>
-                                                        <div class="password">
-                                                            <input type="password" class="form-control" placeholder="비밀번호 입력">
-                                                        </div>
-                                                        <button type="button" class="btn btn-submit">등록</button>
-                                                    </div>
-                                                </div>
-                                                <div class="comment-list">
-                                                    <ul>
-                                                        <li>
-                                                            <div class="comment-info row justify-content-between">
-                                                                <div class="col-auto">
-                                                                    <span class="text-gray">수지</span>
-                                                                    <span class="text-gray ml-2">2020.6.30</span>
-                                                                </div>
-                                                                <div class="col-auto">
-                                                                    <a href="" class="text-gray">수정</a>
-                                                                    <a href="javacript:;" class="text-gray ml-2" data-toggle="modal" data-target="#modal-password">삭제</a>
-                                                                </div>
-                                                            </div>
-                                                            <div class="content">
-                                                                저도요… 100개나 샀는데 ㅠㅠ 수정 삭제 버튼은 회원이 쓴 글에만 나오는 버튼이에요.
-                                                                <br>망했네요.
-                                                            </div>
-                                                        </li>
-                                                        <li>
-                                                            <div class="row justify-content-between">
-                                                                <div class="col-auto">
-                                                                    <span class="text-gray">수지</span>
-                                                                    <span class="text-gray ml-2">2020.6.30</span>
-                                                                </div>
-                                                                <div class="col-auto">
-                                                                    <a href="javacript:;" class="text-gray ml-2" data-toggle="modal" data-target="#modal-password">삭제</a>
-                                                                </div>
-                                                            </div>
-                                                            <div class="content">
-                                                                저도요… 100개나 샀는데 ㅠㅠ 수정 삭제 버튼은 회원이 쓴 글에만 나오는 버튼이에요.
-                                                                <br>망했네요.
-                                                            </div>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <!-- //댓글 -->
-                                        </div>
-                                    </li>
-                                    <li class="board-item">
-                                        <div class="board-item-simple">
-                                            <a href="javascript:;">
-                                                <div class="cate">러닝팬티세트</div>
-                                                <div class="subject">
-                                                    <span>오늘 장사는 폭망한 듯오늘 장사는 폭망한 듯 오늘 장사는 폭망한 듯 오늘 장사는 폭망한 듯 오늘 장사는 폭망한 듯 오늘 장사는 폭망한 듯</span>
-                                                </div>
-                                                <div class="writer">L5. 판다</div>
-                                                <div class="date">18:21</div>
-                                                <div class="hit">2천</div>
-                                            </a>
-                                        </div>
-                                        <div class="board-item-detail">
-                                            <div class="board-content">
-                                                댓글 영역입니다. 회원인 경우 수정 버튼이 나타납니다. 비회원은 수정하기 기능이 없습니다.
-                                                초보님들만 다들 주목~!^^ 판매는 진정 아이템 싸움입니다. 직접 스토어를 경험하고… 아이템스카우트는 신사임당님이 만들었다고
-                                                들었는데 잘못된 소문이 많군요. 댓글작업은 아이브가 한대요. <br><br>
-
-                                                네이버 스마트스토어에 아이템 스카우트 괜찮나요? 그거보다 더 괜찮은거 나왔다등데?
-                                                제가 부업으로 온라인쇼핑몰을 해보려고하는데 아이템찾기도 막막하고 답답한게 한두가지가 아니네요ㅠㅠ 그래서 추천받은게 판다랭크에요
-                                            </div>
-                                            <div class="board-heart row justify-content-between">
-                                                <div class="col-auto">
-                                                    <div class="like">
-                                                        <a class="icon-heart">
-                                                            <svg width="24" height="20" viewBox="0 0 24 20"
-                                                                xmlns="http://www.w3.org/2000/svg">
-                                                                <path class="heart-fill"
-                                                                d="M10,19l-1.4-1.3C3.4,13,0,9.9,0,6.1C0,3,2.4,0.6,5.5,0.6c1.7,0,3.4,0.8,4.5,2.1c1.1-1.3,2.8-2.1,4.5-2.1
-                                                                C17.6,0.6,20,3,20,6.1c0,3.8-3.4,6.9-8.6,11.5L10,19z"
-                                                                fill="none" />
-                                                                <path class="heart-border"
-                                                                d="M14.5,0.6c-1.7,0-3.4,0.8-4.5,2.1C8.9,1.4,7.2,0.6,5.5,0.6C2.4,0.6,0,3,0,6.1C0,9.9,3.4,13,8.6,17.6L10,19
-                                                                l1.4-1.3C16.6,13,20,9.9,20,6.1C20,3,17.6,0.6,14.5,0.6z M10.1,16.2L10,16.3l-0.1-0.1C5.1,11.8,2,9,2,6.1c0-2,1.5-3.5,3.5-3.5
-                                                                c1.5,0,3,1,3.6,2.4h1.9c0.5-1.4,2-2.4,3.6-2.4c2,0,3.5,1.5,3.5,3.5C18,9,14.9,11.8,10.1,16.2z" fill="#34D52E"/>
-                                                            </svg>
-                                                        </a>
-                                                        <strong>0</strong>
-                                                    </div>
-                                                </div>
-                                                <div class="col-auto">
-                                                    <div class="board-control">
-                                                        <a href="javacript:;" class="text-gray">수정</a>
-                                                        <a href="javacript:;" class="text-gray ml-2" data-toggle="modal" data-target="#modal-password">삭제</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!-- 댓글 -->
-                                            <div class="comment">
-                                                <div class="comment-textarea">
-                                                    <div class="box">
-                                                        <textarea name="" id="" cols="" rows="" placeholder="댓글 입력"></textarea>
-                                                        <div class="password">
-                                                            <input type="password" class="form-control invalid" placeholder="비밀번호 입력">
-                                                            <!-- 에러 : invalid 클래스 추가 -->
-                                                        </div>
-                                                        <button type="button" class="btn btn-submit">등록</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!-- //댓글 -->
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="list-more">
-                            <a href="javascript:;"><strong>MORE +</strong></a>
                         </div>
 
                         <!-- 컨텐츠 끝 -->
@@ -1115,53 +1051,6 @@
         </div>
     </div>
 
-    <!-- modal : 비밀번호 입력 -->
-    <div class="modal modal-alert" tabindex="-1" role="dialog" data-backdrop="static" id="modal-password"> <!-- alert 스타일은 .modal-alert 추가 -->
-        <div class="modal-dialog modal-dialog-centered modal-sm">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <p class="alert-message">비밀번호를 입력하세요</p>
-                    <div class="input-box">
-                        <input type="password" class="form-control form-control-lg">
-                        <button type="submit" class="btn btn-submit">확인</button>
-                    </div>
-                    <div class="input-box">
-                        <input type="password" class="form-control form-control-lg is-invalid"> <!-- 유효성체크 (.is-invalid 추가) -->
-                        <button type="submit" class="btn btn-submit" id="btn-ok">확인</button>
-                    </div>
-                    <span class="text-error">! 비밀번호가 일치하지 않습니다</span> <!-- 유효성체크 (토글) -->
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- modal : 삭제 확인 -->
-    <div class="modal modal-alert" tabindex="-1" role="dialog" data-backdrop="static" id="modal-confirm"> <!-- alert 스타일은 .modal-alert 추가 -->
-        <div class="modal-dialog modal-dialog-centered modal-sm">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="only-text">
-                        <p class="alert-message">글을 삭제하시겠습니까?</p>
-                        <p class="alert-message-sub">서브 메시지 가이드입니다. <br>짧고 간결하게 씁니다</p>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-submit" data-dismiss="modal">확인</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <!-- modal : 키워드 리포트 -->
     <div class="modal modal-full" tabindex="-1" role="dialog" id="modal-keyword-report">
         <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
@@ -1393,118 +1282,7 @@
             $('#right .history').css('max-height',historyHeight);
 
             //페이지 로드시 첫번째 셀렉트에 focus 주기
-            $('#select1 .dropdown-value').focus();
-
-            //탭 변경시 첫번째 폼요소에 focus 추가
-            $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
-                if($(e.target).text() === '카테고리로 찾기'){
-                    if(!$('#select1 .dropdown-value').hasClass('filled')){
-                        $('#select1 .dropdown-value').focus();
-                    }
-                }else if($(e.target).text() === '상품으로 찾기'){
-                    if (window.matchMedia('(min-width:992px)').matches) {
-                        $('#keyword').focus();
-                    }
-                }
-            });
-
-            //모바일에서 상품으로 찾기 입력시 modal show
-            $('#keyword').on('focus',function(){
-                if (!window.matchMedia('(min-width:992px)').matches) {
-                    $('#modal-keyword-form').modal('show');
-                }
-            });
-            $('#modal-keyword-form').on('shown.bs.modal', function (e) {
-                $('#keyword-mobile').focus();
-            })
-
-            //키워드 자동완성
-            var availableTags = [
-                "여가/생활편의 > 자기계발/취미 레슨 > 3차 카테고리 > 4차 카테고리",
-                "디지털/가전 > 카메라/캠코더용품 > 카메라/캠코더 관련용품 > 카메라/캠코더용마이크 ",
-                "1차 카테고리 > 2차 카테고리 > 3차 카테고리 > 4차 카테고리",
-                "식품 > 반찬 > 쌀 > 백미",
-                "1차 카테고리 > 2차 카테고리 > 3차 카테고리 > 4차 카테고리",
-                "패션잡화 > 여성가방 > 토드백",
-                "여가/생활편의 > 자기계발/취미 레슨 > 3차 카테고리 > 4차 카테고리",
-                "디지털/가전 > 카메라/캠코더용품 > 카메라/캠코더 관련용품 > 카메라/캠코더용마이크 ",
-                "1차 카테고리 > 2차 카테고리 > 3차 카테고리 > 4차 카테고리",
-                "식품 > 반찬 > 쌀 > 백미",
-                "1차 카테고리 > 2차 카테고리 > 3차 카테고리 > 4차 카테고리",
-                "패션잡화 > 여성가방 > 토드백",
-                "여가/생활편의 > 자기계발/취미 레슨 > 3차 카테고리 > 4차 카테고리",
-                "디지털/가전 > 카메라/캠코더용품 > 카메라/캠코더 관련용품 > 카메라/캠코더용마이크 ",
-                "1차 카테고리 > 2차 카테고리 > 3차 카테고리 > 4차 카테고리",
-                "식품 > 반찬 > 쌀 > 백미",
-                "1차 카테고리 > 2차 카테고리 > 3차 카테고리 > 4차 카테고리",
-                "패션잡화 > 여성가방 > 토드백",
-                "여가/생활편의 > 자기계발/취미 레슨 > 3차 카테고리 > 4차 카테고리",
-                "디지털/가전 > 카메라/캠코더용품 > 카메라/캠코더 관련용품 > 카메라/캠코더용마이크 ",
-                "1차 카테고리 > 2차 카테고리 > 3차 카테고리 > 4차 카테고리",
-                "식품 > 반찬 > 쌀 > 백미",
-                "1차 카테고리 > 2차 카테고리 > 3차 카테고리 > 4차 카테고리",
-                "패션잡화 > 여성가방 > 토드백",
-                "여가/생활편의 > 자기계발/취미 레슨 > 3차 카테고리 > 4차 카테고리",
-                "디지털/가전 > 카메라/캠코더용품 > 카메라/캠코더 관련용품 > 카메라/캠코더용마이크 ",
-                "1차 카테고리 > 2차 카테고리 > 3차 카테고리 > 4차 카테고리",
-                "식품 > 반찬 > 쌀 > 백미",
-                "1차 카테고리 > 2차 카테고리 > 3차 카테고리 > 4차 카테고리",
-                "패션잡화 > 여성가방 > 토드백",
-                "여가/생활편의 > 자기계발/취미 레슨 > 3차 카테고리 > 4차 카테고리",
-                "디지털/가전 > 카메라/캠코더용품 > 카메라/캠코더 관련용품 > 카메라/캠코더용마이크 ",
-                "1차 카테고리 > 2차 카테고리 > 3차 카테고리 > 4차 카테고리",
-                "식품 > 반찬 > 쌀 > 백미",
-                "1차 카테고리 > 2차 카테고리 > 3차 카테고리 > 4차 카테고리",
-                "패션잡화 > 여성가방 > 토드백",
-                "여가/생활편의 > 자기계발/취미 레슨 > 3차 카테고리 > 4차 카테고리",
-                "디지털/가전 > 카메라/캠코더용품 > 카메라/캠코더 관련용품 > 카메라/캠코더용마이크 ",
-                "1차 카테고리 > 2차 카테고리 > 3차 카테고리 > 4차 카테고리",
-                "식품 > 반찬 > 쌀 > 백미",
-                "1차 카테고리 > 2차 카테고리 > 3차 카테고리 > 4차 카테고리",
-                "패션잡화 > 여성가방 > 토드백",
-                "여가/생활편의 > 자기계발/취미 레슨 > 3차 카테고리 > 4차 카테고리",
-                "디지털/가전 > 카메라/캠코더용품 > 카메라/캠코더 관련용품 > 카메라/캠코더용마이크 ",
-                "1차 카테고리 > 2차 카테고리 > 3차 카테고리 > 4차 카테고리",
-                "식품 > 반찬 > 쌀 > 백미",
-                "1차 카테고리 > 2차 카테고리 > 3차 카테고리 > 4차 카테고리",
-                "패션잡화 > 여성가방 > 토드백",
-                "여가/생활편의 > 자기계발/취미 레슨 > 3차 카테고리 > 4차 카테고리",
-                "디지털/가전 > 카메라/캠코더용품 > 카메라/캠코더 관련용품 > 카메라/캠코더용마이크 ",
-                "1차 카테고리 > 2차 카테고리 > 3차 카테고리 > 4차 카테고리",
-                "식품 > 반찬 > 쌀 > 백미",
-                "1차 카테고리 > 2차 카테고리 > 3차 카테고리 > 4차 카테고리",
-                "패션잡화 > 여성가방 > 토드백",
-                "여가/생활편의 > 자기계발/취미 레슨 > 3차 카테고리 > 4차 카테고리",
-                "디지털/가전 > 카메라/캠코더용품 > 카메라/캠코더 관련용품 > 카메라/캠코더용마이크 ",
-                "1차 카테고리 > 2차 카테고리 > 3차 카테고리 > 4차 카테고리",
-                "식품 > 반찬 > 쌀 > 백미",
-                "1차 카테고리 > 2차 카테고리 > 3차 카테고리 > 4차 카테고리",
-                "패션잡화 > 여성가방 > 토드백",
-                "여가/생활편의 > 자기계발/취미 레슨 > 3차 카테고리 > 4차 카테고리",
-                "디지털/가전 > 카메라/캠코더용품 > 카메라/캠코더 관련용품 > 카메라/캠코더용마이크 ",
-                "1차 카테고리 > 2차 카테고리 > 3차 카테고리 > 4차 카테고리",
-                "식품 > 반찬 > 쌀 > 백미",
-                "1차 카테고리 > 2차 카테고리 > 3차 카테고리 > 4차 카테고리",
-                "패션잡화 > 여성가방 > 토드백",
-                "여가/생활편의 > 자기계발/취미 레슨 > 3차 카테고리 > 4차 카테고리",
-                "디지털/가전 > 카메라/캠코더용품 > 카메라/캠코더 관련용품 > 카메라/캠코더용마이크 ",
-                "1차 카테고리 > 2차 카테고리 > 3차 카테고리 > 4차 카테고리",
-                "식품 > 반찬 > 쌀 > 백미",
-                "1차 카테고리 > 2차 카테고리 > 3차 카테고리 > 4차 카테고리",
-                "패션잡화 > 여성가방 > 토드백",
-            ];
-            $("#keyword").autocomplete({
-                source: availableTags
-            });
-            $("#keyword-mobile").autocomplete({
-                source: availableTags,
-                appendTo: '#keyword-autocomplete-area',
-                select: function( event, ui ) { //아이템 클릭시 modla hide
-                    $('#keyword').val( ui.item.value);
-                    $('#modal-keyword-form').modal('hide');
-                    return false;
-                }
-            });
+            $('#inputKeyword').focus();
 
             var breakpoint = window.matchMedia('(min-width:992px)').matches;
             if(breakpoint){
@@ -1541,28 +1319,6 @@
                     ],
                 });
             }
-
-            //MORE+
-            $('#btn-more-table').on('click',function(){
-                if(!$(this).hasClass('active')){
-                    datatable.page.len( -1 ).draw();
-                    $(this).find('strong').text('CLOSE');
-                    $(this).addClass('active');
-                }else{
-                    datatable.page.len( 10 ).draw();
-                    $(this).find('strong').text('MORE +');
-                    $(this).removeClass('active');
-                }
-            });
-
-            //비밀번호 입력 확인 버튼 클릭시
-            $('#btn-ok').on('click',function(e){
-                e.preventDefault();
-                $('#modal-password').modal('hide');
-                $('#modal-confirm').modal('show');
-            });
-
-            //fixedCategory();
         });
         $(window).scroll(function () {
 			//fixedCategory();
@@ -1577,126 +1333,25 @@
             }
         }
 
-        //chartjs
-        var config = {
-			type: 'line',
-			data: {
-				labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-				datasets: [{
-					label: 'My First dataset',
-					backgroundColor: '#fff',
-					borderColor: '#e96b69 ',
-					data: [100, 200, 400, 500, 600, 700, 500],
-					fill: false,
-				}],
-			},
-			options: {
-				responsive: true,
-				tooltips: {
-					mode: 'index',
-					intersect: false,
-				},
-				hover: {
-					mode: 'nearest',
-					intersect: true
-				},
-				scales: {
-					x: {
-						display: true,
-						scaleLabel: {
-							display: true,
-							labelString: 'Month'
-						}
-					},
-					y: {
-						display: true,
-						scaleLabel: {
-							display: true,
-							labelString: 'Value'
-						}
-					}
-				}
-			}
-		};
-
-		window.onload = function() {
-			var ctx = document.getElementById('canvas').getContext('2d');
-			window.myLine = new Chart(ctx, config);
-        };
-
-        //chartjs - 카테고리 1년 검색량
-        var config2 = {
-			type: 'line',
-			data: {
-				labels: ["2020.09", "2020.10", "2020.11", "2020.12", "2021.01", "2021.02", "2021.03", "2021.04", "2021.05", "2021.06", "2021.07", "2021.08"],
-				datasets: [{
-					label: '검색량',
-					backgroundColor: '#fff',
-					borderColor: '#e96b69 ',
-					data: [100, 200, 400, 500, 600, 700, 500, 200, 400, 500, 600, 700, 900],
-					fill: false,
-				}],
-			},
-			options: {
-                responsive: true,
-                legend: {
-                    position: 'top',
-                    labels: {
-                        fontColor : '#000000',
-                        fontSize : 14,
-                        fontFamily : 'Noto Sans Kr',
-                        usePointStyle: true,
-                        boxWidth: 8,
-                    }
+        topRankSlider();
+        function topRankSlider(){
+            rankwiper = new Swiper('.top-rank-swiper .swiper-container', {
+                slidesPerView: 'auto',
+                freeMode: true,
+                slidesOffsetBefore: 2.5,
+                slidesOffsetAfter: 2.5,
+                scrollbar: {
+                    el: '.swiper-scrollbar-rank',
+                    hide: false,
                 },
-				tooltips: {
-					mode: 'index',
-					intersect: false,
-				},
-				hover: {
-					mode: 'nearest',
-					intersect: true
-				},
-				scales: {
-                    xAxes: [{
-                        gridLines: {
-                            display: false,
-                        },
-                        scaleLabel: {
-                            display: false,
-                        },
-                        ticks:{
-                            fontColor : '#888888',
-                            fontSize : 13,
-                            fontFamily : 'Gotham',
-                        },
-                    }],
-                    yAxes: [{
-                        scaleLabel: {
-                            drawBorder: false,
-
-                        },
-                        ticks: {
-                            fontColor : '#888888',
-                            fontSize : 13,
-                            fontFamily : 'Gotham',
-                            stepSize: 200,
-                            beginAtZero: true,
-                            padding:15,
-                        },
-                        gridLines:{
-                            drawBorder:false,
-                        }
-                    }]
+                breakpoints: {
+                    992: {
+                        slidesOffsetBefore: 0,
+                        slidesOffsetAfter: 0,
+                    },
                 }
-			}
-		};
-
-		window.onload = function() {
-			var ctx2 = document.getElementById('canvas-search-volume-year').getContext('2d');
-			window.myLine = new Chart(ctx2, config2);
-		};
-
+            });
+        }
     </script>
 </body>
 </html>
