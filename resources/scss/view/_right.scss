@@ -3,7 +3,9 @@
     a{
         display: block;width: 42px;height: 89px;border-radius: 0 5px 0 0;background: #fff;color: #000;position: relative;border: 1px solid $default;transition: color .01s .3s;
         span{display: block;transform: rotate(90deg) translate(13px, -30px);transform-origin: left top 0;width: 60px;font-size: 14px;font-weight: 700;text-align: center;}
+        &.disabled{color: $default;cursor: default;}
         /* &::before{content: '';display: block;background: url(../images/icon-prev-white.svg) no-repeat 50% 50%;background-size: contain;transition: all .2s .1s;width: 10px; height: 18px;position: absolute;left: 50%;top: 15px;margin-left: -5px;} */
+
     }
 }
 .close-history{
@@ -17,7 +19,8 @@
 }
 @include media-breakpoint-down(md) {
     .btn-right-collapse{
-        opacity: 0;visibility: hidden;transition: all .2s .1s;
+        /* opacity: 0;visibility: hidden;transition: all .2s .1s; */
+        display: none;
     }
 }
 

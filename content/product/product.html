@@ -63,7 +63,7 @@
                                 <li><a href="../dashboard/dashboard.html"><span>홈</span></a></li>
                                 <li class="active"><a href="../product/product.html"><span>키워드 찾기</span></a>
                                     <ul>
-                                        <li><a href="../product/keyword_anlaysis.html">키워드 분석</a></li>
+                                        <li><a href="../product/keyword_analysis.html">키워드 분석</a></li>
                                         <li><a href="../product/keyword_curation.html">키워드 큐레이션</a></li>
                                     </ul>
                                 </li>
@@ -527,7 +527,6 @@
                                     </tr>
                                 </tbody>
                             </table>
-                            <div class="img-keyword"></div>
                         </div>
 
                         <div class="banner-area">
@@ -1506,41 +1505,22 @@
                 }
             });
 
-            var breakpoint = window.matchMedia('(min-width:992px)').matches;
-            if(breakpoint){
-                //pc
-                var datatable = $('#datatable').DataTable({
-                    'responsive': true,
-                    'searching': false,
-                    'info': false,
-                    'paging': true,
-                    'pageLength': 10, //페이징 기준 개수
-                    'ordering': true,
-                    'order': [[1, 'desc']], //최초 sort
-                    'columnDefs': [ // sort 아이콘 hide 타겟 지정
-                        { 'orderable': false, 'targets': [0] },
-                        { "width": "20%", "targets": [0] },
-                    ],
-                });
-            }else{
-                //mobile
-                var datatable = $('#datatable').DataTable({
-                    'fixedHeader': {
-                        'header': true,
-                    },
-                    'responsive': true,
-                    'searching': false,
-                    'info': false,
-                    'paging': false,
-                    'details': false,
-                    'ordering': true,
-                    'order': [[1, 'desc']], //최초 sort
-                    'columnDefs': [ // sort 아이콘 hide 타겟 지정
-                        { 'orderable': false, 'targets': [0] },
-                        { "width": "20%", "targets": [0] },
-                    ],
-                });
-            }
+            var datatable = $('#datatable').DataTable({
+                'fixedHeader': {
+                    'header': true,
+                },
+                'responsive': true,
+                'searching': false,
+                'info': false,
+                'paging': false,
+                'details': false,
+                'ordering': true,
+                'order': [[1, 'desc']], //최초 sort
+                'columnDefs': [ // sort 아이콘 hide 타겟 지정
+                    { 'orderable': false, 'targets': [0] },
+                    { "width": "20%", "targets": [0] },
+                ],
+            });
 
             //MORE+
             $('#btn-more-table').on('click',function(){
@@ -1628,7 +1608,7 @@
         var config2 = {
 			type: 'line',
 			data: {
-				labels: ["2020.09", "2020.10", "2020.11", "2020.12", "2021.01", "2021.02", "2021.03", "2021.04", "2021.05", "2021.06", "2021.07", "2021.08"],
+				labels: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"],
 				datasets: [{
 					label: '검색량',
 					backgroundColor: '#fff',
@@ -1642,7 +1622,7 @@
                 legend: {
                     position: 'top',
                     labels: {
-                        fontColor : '#000000',
+                        fontColor : '#989da0',
                         fontSize : 14,
                         fontFamily : 'Noto Sans Kr',
                         usePointStyle: true,
@@ -1666,7 +1646,7 @@
                             display: false,
                         },
                         ticks:{
-                            fontColor : '#888888',
+                            fontColor : '#989da0',
                             fontSize : 13,
                             fontFamily : 'Gotham',
                         },

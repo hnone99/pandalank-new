@@ -61,9 +61,9 @@
                         <nav>
                             <ul>
                                 <li><a href="../dashboard/dashboard.html"><span>홈</span></a></li>
-                                <li class="active"><a href="../product/product.html"><span>키워드 찾기</span></a>
+                                <li><a href="../product/product.html"><span>키워드 찾기</span></a>
                                     <ul>
-                                        <li class="active"><a href="../product/keyword_anlaysis.html">키워드 분석</a></li>
+                                        <li class="active"><a href="../product/keyword_analysis.html">키워드 분석</a></li>
                                         <li><a href="../product/keyword_curation.html">키워드 큐레이션</a></li>
                                     </ul>
                                 </li>
@@ -113,7 +113,7 @@
                         <button type="button" class="btn btn-submit">엔터</button>
                     </div>
                 </div>
-                <div class="history show-delete">
+                <div class="history show-delete d-none d-lg-block">
                     <ul>
                         <li>
                             <a href="javascript:;">Led 램프</a>
@@ -136,7 +136,7 @@
             </div>
             <div class="btn-collapse"><a href="javascript:;"><span class="sr-only">검색영역 접기</span></a></div>
             <div class="btn-right-collapse">
-                <a href="javascript:;"><span>검색기록</span></a>
+                <a href="javascript:;" class="disabled"><span>검색기록</span></a>
             </div>
             <div id="alarm-block">
                 <div class="btn-alarm new"> <!-- 새 알람 있을때 .new 추가 -->
@@ -232,7 +232,7 @@
                                 <img src="../../resources/images/@300x100.png" alt="banner image">
                             </div>
                         </div>
-                        <div class="location-area has-line"> <!-- 바로 다음에 나오는 테이블이 이미 라인을 가지고 있어서 .has-line 추가하여 라인 중복 방지 -->
+                        <div class="location-area">
                             <div class="breadcrumb-category">
                                 <div class="cate">
                                     <a href="">카테고리 > 카테고리 > 카테고리</a>
@@ -240,7 +240,7 @@
                                 <strong class="keyword">Led 램프</strong>
                                 <button class="btn btn-primary btn-modal-title-aside"><i class="icon-search-white"></i> 검색</button>
                             </div>
-                            <div class="text-gray">2020년 6월 15일 3시 기준</div>
+                            <div class="text-gray d-none d-lg-block">2020년 6월 15일 3시 기준</div>
 
                             <!-- 모바일용 메뉴 더보기 -->
                             <div class="dropdown ellipsis d-lg-none">
@@ -263,6 +263,10 @@
                             </div>
                         </div>
 
+                        <div class="top-rank-title">
+                            <div class="tit">실시간 상위랭킹 상품</div>
+                            <a href="#none" class="d-none d-lg-block">전체 리스트 &gt;</a>
+                        </div>
                         <div class="top-rank-swiper">
                             <div class="swiper-container">
                                 <ul class="swiper-wrapper">
@@ -271,6 +275,7 @@
                                             <a href="">
                                                 <div class="thumb"><img src="../../resources/images/@300x100.png" alt="" onload="setDirection(this)"></div>
                                                 <div class="price">17,900</div>
+                                                <div class="name">하기로마트</div>
                                             </a>
                                         </div>
                                     </li>
@@ -279,6 +284,7 @@
                                             <a href="">
                                                 <div class="thumb"><img src="../../resources/images/@product-thumb.jpg" alt="" onload="setDirection(this)"></div>
                                                 <div class="price">17,900</div>
+                                                <div class="name">아담네구멍가게아담네구멍가게</div>
                                             </a>
                                         </div>
                                     </li>
@@ -287,6 +293,7 @@
                                             <a href="">
                                                 <div class="thumb"><img src="../../resources/images/@product-thumb.jpg" alt="" onload="setDirection(this)"></div>
                                                 <div class="price">17,900</div>
+                                                <div class="name">아담네구멍가게</div>
                                             </a>
                                         </div>
                                     </li>
@@ -295,6 +302,7 @@
                                             <a href="">
                                                 <div class="thumb"><img src="../../resources/images/@product-thumb.jpg" alt="" onload="setDirection(this)"></div>
                                                 <div class="price">17,900</div>
+                                                <div class="name">아담네구멍가게</div>
                                             </a>
                                         </div>
                                     </li>
@@ -303,6 +311,7 @@
                                             <a href="">
                                                 <div class="thumb"><img src="../../resources/images/@product-thumb.jpg" alt="" onload="setDirection(this)"></div>
                                                 <div class="price">17,900</div>
+                                                <div class="name">아담네구멍가게</div>
                                             </a>
                                         </div>
                                     </li>
@@ -311,6 +320,7 @@
                                             <a href="">
                                                 <div class="thumb"><img src="../../resources/images/@product-thumb.jpg" onload="setDirection(this)" alt=""></div>
                                                 <div class="price">17,900</div>
+                                                <div class="name">아담네구멍가게</div>
                                             </a>
                                         </div>
                                     </li>
@@ -319,6 +329,16 @@
                                             <a href="">
                                                 <div class="thumb"><img src="../../resources/images/@product-thumb.jpg" alt="" onload="setDirection(this)"></div>
                                                 <div class="price">17,900</div>
+                                                <div class="name">아담네구멍가게</div>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <div class="item">
+                                            <a href="">
+                                                <div class="thumb"><img src="../../resources/images/@product-thumb.jpg" alt="" onload="setDirection(this)"></div>
+                                                <div class="price">17,900</div>
+                                                <div class="name">아담네구멍가게</div>
                                             </a>
                                         </div>
                                     </li>
@@ -327,54 +347,53 @@
                             <div class="swiper-scrollbar-rank"></div>
                         </div>
 
-                        <div class="report report-keyword">
-                            <div class="summary">
-                                <div class="row info">
-                                    <div class="col-6 col-md-3">
-                                        <span>검색량</span>
-                                        <strong>240,138 <i>회</i></strong>
-                                    </div>
-                                    <div class="col-6 col-md-3">
-                                        <span>상품량</span>
-                                        <strong>1,345,212 <i>개</i></strong>
-                                    </div>
-                                    <div class="col-6 col-md-3">
-                                        <span>1페이지 판매량</span>
-                                        <strong>13,768 <i>개</i></strong>
-                                    </div>
-                                    <div class="col-6 col-md-3">
-                                        <span>경쟁률</span>
-                                        <strong class="text-danger">24 <i>%</i></strong>
-                                    </div>
+                        <div class="summary summary-key-analysis">
+                            <div class="row row-10 info">
+                                <div class="col-6 col-md-3">
+                                    <span>검색량</span>
+                                    <strong>240,138 <i>회</i></strong>
                                 </div>
-                                <div class="row info">
-                                    <div class="col-6 col-md-3">
-                                        <span>카테고리 경쟁도</span>
-                                        <strong class="text-primary">GOOD</strong>
-                                    </div>
-                                    <div class="col-6 col-md-3">
-                                        <span>평균가</span>
-                                        <strong>89,000 <i>원</i></strong>
-                                    </div>
-                                    <div class="col-6 col-md-3">
-                                        <span>광고비</span>
-                                        <strong>356 <i>원</i></strong>
-                                    </div>
-                                    <div class="col-6 col-md-3">
-                                        <span>가격 대비 광고비</span>
-                                        <strong class="text-danger">6.7 <i>%</i></strong>
-                                    </div>
+                                <div class="col-6 col-md-3">
+                                    <span>상품량</span>
+                                    <strong>1,345,212 <i>개</i></strong>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <span>경쟁률</span>
+                                    <strong class="text-danger">24 <i>%</i></strong>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <span>카테고리 총 검색량 순위</span>
+                                    <strong class="text-primary">53 <i>등 / 5000개</i></strong>
+                                </div>
+                            </div>
+                            <div class="row row-10 info">
+                                <div class="col-6 col-md-3">
+                                    <span>1페이지 판매량</span>
+                                    <strong>13,768 <i>개</i></strong>
+                                </div>
+
+                                <div class="col-6 col-md-3">
+                                    <span>예상 시장 규모</span>
+                                    <strong>89,000 <i>원</i></strong>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <span>모바일 클릭당 광고비</span>
+                                    <strong>356 <i>원</i></strong>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <span>상품가 대비 광고비</span>
+                                    <strong class="text-danger">6.7 <i>%</i></strong>
                                 </div>
                             </div>
                         </div>
 
                         <div class="category-rank">
                             <div class="row">
-                                <div class="col d-flex">
+                                <div class="col-12 col-lg d-block d-lg-flex">
                                     <strong class="mr-2">1위 카테고리</strong>
                                     <p>1차 카테고리 > 2차 카테고리 > 3차 카테고리</p>
                                 </div>
-                                <div class="col d-flex">
+                                <div class="col-12 col-lg d-block d-lg-flex mt-3">
                                     <strong class="mr-2">2위 카테고리</strong>
                                     <p>1차 카테고리 > 2차 카테고리 > 3차 카테고리</p>
                                 </div>
@@ -384,11 +403,11 @@
                             </div>
                         </div>
 
-                        <div>
+                        <div class="how-read">
                             <i class="icon-info"></i> <p>데이터를 어떻게 읽어야 하나요?</p>
                         </div>
 
-                        <div class="text-right">
+                        <div class="btn-keyword-analysis">
                             <button type="button" class="btn btn-lg btn-primary"><b>이 키워드로 상품 경쟁력 분석하기</b></button>
                         </div>
 
@@ -407,48 +426,44 @@
                                 <span class="l1">매출액</span>
                                 <span class="l2">레이블</span>
                             </div>
+                            <div class="chart-search-volume-frame">
+                                <canvas id="canvas-search-volume-year"></canvas>
+                            </div>
                             <div class="text-box">
-                                <p>! 이 키워드의 검색량은 <span class="text-primary">12</span>월에 가장 높고 <span class="danger">3</span>월에 가장 낮았습니다. 전 달 대비 최근 한달 검색 동향 <span class="primary">+0.45%</span></p>
+                                <p>! 이 키워드의 검색량은 <strong class="text-primary">12</strong>월에 가장 높고 <strong class="text-danger">3</strong>월에 가장 낮았습니다. 전 달 대비 최근 한달 검색 동향 <strong class="text-primary">+0.45%</strong></p>
                             </div>
                         </div>
 
-                        <div class="summary-detail">
+                        <div class="box-ranking">
                             <div class="row row-40">
                                 <div class="col-12 col-md-6">
-                                    <div class="tit">쇼핑탭 섹션 순위</div>
-                                    <div class="tit-data">
-                                        <strong class="text-primary">2 <i>위</i></strong>
-                                        <span> / </span>
-                                        <strong class="text-primary">3 <i>위</i></strong>
-                                    </div>
-                                    <div class="row row-20">
-                                        <div class="col-6">
-                                            <ul class="box-ranking">
-                                                <li>파워링크</li>
-                                                <li class="active">쇼핑탭</li>
-                                                <li>지식백과</li>
-                                                <li>카페</li>
-                                                <li>블로그</li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-6">
-                                            <ul class="box-ranking">
-                                                <li>파워링크</li>
-                                                <li>지식백과</li>
-                                                <li class="active">쇼핑탭</li>
-                                                <li>카페</li>
-                                                <li>블로그</li>
-                                            </ul>
+                                    <div class="tit-area">
+                                        <div class="tit">쇼핑탭 섹션 순위</div>
+                                        <div class="tit-data">
+                                            <strong class="text-primary">2 <i>위</i></strong>
+                                            <span> / </span>
+                                            <strong class="text-primary">3 <i>위</i></strong>
                                         </div>
                                     </div>
-
+                                    <ol>
+                                        <li>파워링크</li>
+                                        <li class="active">쇼핑탭</li>
+                                        <li>지식백과</li>
+                                        <li>카페</li>
+                                        <li>블로그</li>
+                                    </ol>
                                 </div>
                                 <div class="col-12 col-md-6">
-                                    <div class="tit">순위별 네이버 키워드 광고 입찰가 (mobile/pc)</div>
-                                    <div class="tit-data">
-                                        <strong class="text-primary">+0.49 <i>% (전 달 대비)</i></strong>
+                                    <div class="tit-area">
+                                        <div class="tit">순위별 네이버 키워드 광고 입찰가 (mobile/pc)</div>
                                     </div>
-
+                                    <ol>
+                                        <li>1,250원 / 14,10원</li>
+                                        <li>760원 / 860원</li>
+                                        <li>600원 / 50원</li>
+                                        <li>570원 / 50원</li>
+                                        <li>300원 / 50원</li>
+                                    </ol>
                                 </div>
                             </div>
                         </div>
@@ -457,7 +472,7 @@
                             <div class="row justify-content-between align-items-center">
                                 <div class="col-auto">
                                     <h3 class="sub-title">연관 키워드</h3>
-                                    <div class="text-gray">중소형 검색량 키워드끼리 조합한 후 상품명을 만드세요.</div>
+                                    <div class="text-gray text-14px mt-1">중소형 검색량 키워드끼리 조합한 후 상품명을 만드세요.</div>
                                 </div>
                             </div>
                         </div>
@@ -466,33 +481,7 @@
                             <table class="table table-hover responsive table-data" id="datatable">
                                 <thead>
                                     <tr>
-                                        <th class="text-left">
-                                            키워드
-                                            <a href="#pop-over-keyword" class="th-icon-info" data-toggle="pop-over" data-target-mobile="#modal-keyword">
-                                                <i class="icon-info"><span class="sr-only">물음표 아이콘</span></i>
-                                                <!-- 툴팁 PC용 키워드란? -->
-                                                <div class="pop-over" id="pop-over-keyword">
-                                                    <div class="pop-over-head">
-                                                        상품 찾기의 기본, 키워드란?
-                                                    </div>
-                                                    <div class="pop-over-body">
-                                                        상품 상세 페이지의 제목에 해당하며 키워드 발굴 및 경쟁을 통해 검색 상위노출을 기대합니다. 키워드에는 3가지 대표 지수가 있습니다.<br><br>
-
-                                                        <span class="text-primary">경쟁률</span><br>
-                                                        대형포털들의 일별 제품량 대비 검색량<br>
-                                                        <span class="text-primary">쇼핑전환율</span><br>
-                                                        주별 쇼핑탭 진입 대비 검색량<br>
-                                                        <span class="text-primary">광고비</span><br>
-                                                        키워드별 평균 광고입찰비용<br><br>
-
-                                                        판다랭크만의 데이터 분석 기술을 사용하여 키워드의 3가지 대표 지수를 최적/좋음/보통/나쁨/최악으로 분류합니다. 최적일수록 키워드의 경쟁력이 좋습니다. <br><br>
-
-                                                        *지수는 상대적일 뿐 절대적 지표가 아닙니다.
-                                                    </div>
-                                                </div>
-                                                <!-- //툴팁 PC용 키워드란? -->
-                                            </a>
-                                        </th>
+                                        <th class="text-left">키워드</th>
                                         <th class="text-right">경쟁률</th>
                                         <th class="text-right">쇼핑전환</th>
                                         <th class="text-right">광고비</th>
@@ -648,6 +637,19 @@
                                     </tr>
                                 </tbody>
                             </table>
+                        </div>
+
+                        <div class="text-box m-t-60">
+                            <div class="sourcing row">
+                                <div class="col-12 col-lg">
+                                    <strong>대량 소싱</strong>
+                                    <span>1688  ㅣ  알리바바  ㅣ  아마존</span>
+                                </div>
+                                <div class="col-12 col-lg">
+                                    <strong>소량 소싱</strong>
+                                    <span>타오바오  ㅣ  알리익스프레스  ㅣ  도매꾹  ㅣ  도매매</span>
+                                </div>
+                            </div>
                         </div>
 
                         <div class="banner-area">
@@ -996,285 +998,6 @@
         </div>
     </div>
 
-    <!-- modal : 모바일용 상품으로 찾기 layer -->
-    <div class="modal modal-full" tabindex="-1" role="dialog" id="modal-keyword-form">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="input-area-mobile">
-                        <input type="text" class="form-control form-control-panda" placeholder="상품종류를 입력하세요" id="keyword-mobile">
-                    </div>
-                </div>
-                <div class="keyword-autocomplete-wrap">
-                    <div id="keyword-autocomplete-area"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- modal : 모바일용 툴팁 키워드란? -->
-    <div class="modal" tabindex="-1" role="dialog" id="modal-keyword">
-        <div class="modal-dialog modal-dialog-centered modal-sm">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <div class="modal-title">상품 찾기의 기본, 키워드란?</div>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div>
-                        상품 상세 페이지의 제목에 해당하며 키워드 발굴 및 경쟁을 통해 검색 상위노출을 기대합니다. 키워드에는 3가지 대표 지수가 있습니다.<br><br>
-
-                        <span class="text-primary">경쟁률</span><br>
-                        대형포털들의 일별 제품량 대비 검색량<br>
-                        <span class="text-primary">쇼핑전환율</span><br>
-                        주별 쇼핑탭 진입 대비 검색량<br>
-                        <span class="text-primary">광고비</span><br>
-                        키워드별 평균 광고입찰비용<br><br>
-
-                        판다랭크만의 데이터 분석 기술을 사용하여 키워드의 3가지 대표 지수를 최적/좋음/보통/나쁨/최악으로 분류합니다. 최적일수록 키워드의 경쟁력이 좋습니다.
-                        <br><br>
-
-                        *지수는 상대적일 뿐 절대적 지표가 아닙니다.
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-submit" data-dismiss="modal">확인</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- modal : 키워드 리포트 -->
-    <div class="modal modal-full" tabindex="-1" role="dialog" id="modal-keyword-report">
-        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <div class="modal-title">
-                        <span class="text-primary">자전거 장갑</span> 키워드 리포트
-                        <button class="btn btn-primary btn-modal-title-aside"><i class="icon-search-white"></i> 검색</button>
-                    </div>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="report report-keyword">
-                        <div class="summary">
-                            <div class="row info">
-                                <div class="col-6 col-md-3">
-                                    <span>검색량</span>
-                                    <strong>240,138 <i>회</i></strong>
-                                </div>
-                                <div class="col-6 col-md-3">
-                                    <span>상품량</span>
-                                    <strong>1,345,212 <i>개</i></strong>
-                                </div>
-                                <div class="col-6 col-md-3">
-                                    <span>1페이지 판매량</span>
-                                    <strong>13,768 <i>개</i></strong>
-                                </div>
-                                <div class="col-6 col-md-3">
-                                    <span>경쟁률</span>
-                                    <strong class="text-danger">24 <i>%</i></strong>
-                                </div>
-                            </div>
-                            <div class="row info">
-                                <div class="col-6 col-md-3">
-                                    <span>카테고리 경쟁도</span>
-                                    <strong class="text-primary">GOOD</strong>
-                                </div>
-                                <div class="col-6 col-md-3">
-                                    <span>평균가</span>
-                                    <strong>89,000 <i>원</i></strong>
-                                </div>
-                                <div class="col-6 col-md-3">
-                                    <span>광고비</span>
-                                    <strong>356 <i>원</i></strong>
-                                </div>
-                                <div class="col-6 col-md-3">
-                                    <span>가격 대비 광고비</span>
-                                    <strong class="text-danger">6.7 <i>%</i></strong>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="summary-detail">
-                            <div class="row row-40">
-                                <div class="col-12 col-md-6">
-                                    <div class="tit">쇼핑탭 섹션 순위</div>
-                                    <div class="tit-data">
-                                        <strong class="text-primary">2 <i>위</i></strong>
-                                        <span> / </span>
-                                        <strong class="text-primary">3 <i>위</i></strong>
-                                    </div>
-                                    <div class="row row-20">
-                                        <div class="col-6">
-                                            <ul class="box-ranking">
-                                                <li>파워링크</li>
-                                                <li class="active">쇼핑탭</li>
-                                                <li>지식백과</li>
-                                                <li>카페</li>
-                                                <li>블로그</li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-6">
-                                            <ul class="box-ranking">
-                                                <li>파워링크</li>
-                                                <li>지식백과</li>
-                                                <li class="active">쇼핑탭</li>
-                                                <li>카페</li>
-                                                <li>블로그</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-
-                                </div>
-                                <div class="col-12 col-md-6">
-                                    <div class="tit">최근 한 달 검색 동향</div>
-                                    <div class="tit-data">
-                                        <strong class="text-primary">+0.49 <i>% (전 달 대비)</i></strong>
-                                    </div>
-                                    <div class="chart-frame">
-                                        <canvas id="canvas"></canvas>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="tit">연관 검색어</div>
-                                    <div class="related-keyword">
-                                        <div class="item">
-                                            <span>겨울 자전거 장갑</span><strong>3,421 / 40,452</strong>
-                                        </div>
-                                        <div class="item">
-                                            <span>자전거 장갑 추천</span><strong>3,421 / 40,452</strong>
-                                        </div>
-                                        <div class="item">
-                                            <span>로드자전거장갑</span><strong>3,421 / 40,452</strong>
-                                        </div>
-                                        <div class="item">
-                                            <span>라이더 장갑</span>
-                                        </div>
-                                        <div class="item">
-                                            <span>겨울 자전거 장갑</span>
-                                        </div>
-                                        <div class="item">
-                                            <span>겨울 자전거 장갑</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer p-0">
-                    <button class="btn btn-lg btn-primary btn-block btn-keyword-anlysis">키워드 경쟁령 분석하기</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- modal : 검색 필터 -->
-    <div class="modal modal-full" tabindex="-1" role="dialog" id="modal-search-filter">
-        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <div class="modal-title">
-                        검색 필터
-                    </div>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="search-filter">
-                        <div class="form-group">
-                            <div class="row row-0 align-items-center">
-                                <div class="col-12 col-lg-auto"><label for="">검색어</label></div>
-                                <div class="col"><input type="text" class="form-control form-control-lg" placeholder="1000"></div>
-                                <div class="col-auto"><span class="dash">-</span></div>
-                                <div class="col"><input type="text" class="form-control form-control-lg" placeholder="5000"></div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="row row-0 align-items-center">
-                                <div class="col-12 col-lg-auto"><label for="">상품량</label></div>
-                                <div class="col"><input type="text" class="form-control form-control-lg" placeholder="1000"></div>
-                                <div class="col-auto"><span class="dash">-</span></div>
-                                <div class="col"><input type="text" class="form-control form-control-lg" placeholder="5000"></div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="row row-0 align-items-center">
-                                <div class="col-12 col-lg-auto"><label for="">평균가</label></div>
-                                <div class="col"><input type="text" class="form-control form-control-lg" placeholder="1000"></div>
-                                <div class="col-auto"><span class="dash">-</span></div>
-                                <div class="col"><input type="text" class="form-control form-control-lg" placeholder="5000"></div>
-                            </div>
-                        </div>
-                        <div class="form-group only-new-keyword">
-                            <div class="row row-0 align-items-center">
-                                <div class="col-12 col-lg-auto d-none d-lg-block"><label for=""></label></div>
-                                <div class="col-12 col-lg">
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="chk">
-                                        <label class="custom-control-label" for="chk">전 날 없었던 키워드만 보기</label>
-                                    </div>
-                                </div>
-                                <div class="col-auto d-none d-lg-block"><span class="dash"> </span></div>
-                                <div class="col-12 col-lg">
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="chk2">
-                                        <label class="custom-control-label" for="chk2">최적/좋음만 보기</label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <p class="text-paragraph">
-                                신규몰이라면 검색량이 ㅇㅇㅇㅇ~ㅇㅇㅇㅇ 사이 키워드 추천합니다. ㅇㅇㅇㅇ~ㅇㅇㅇㅇ사이의 키워드를 조합해서 사용하세요. <br>
-                                전날 없었던 키워드는 검색량이 급상승한 키워드입니다. 한 발 빠르게 제품을 소싱해 보세요.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer p-0">
-                    <button class="btn btn-lg btn-primary btn-block btn-keyword-anlysis">검색 필터 적용하기</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- modal : 카테고리 1년 검색량 -->
-    <div class="modal modal-full" tabindex="-1" role="dialog" id="modal-search-volume">
-        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <div class="modal-title">
-                        카테고리 1년 검색량
-                    </div>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="chart-search-volume-frame">
-                        <canvas id="canvas-search-volume-year"></canvas>
-                    </div>
-                </div>
-                <div class="modal-footer p-0">
-                    <button class="btn btn-lg btn-primary btn-block" data-dismiss="modal">닫기</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <script>
         $(document).ready(function(){
             //페이지 로드시 검색어히스토리 max-height 세팅
@@ -1319,27 +1042,22 @@
                     ],
                 });
             }
+
+            //차트 기간 선택 버튼
+            $('.keyword-analysis-chart-area .btn-group .btn').on('click',function(){
+                $(this).siblings().removeClass('active');
+                $(this).addClass('active');
+            });
         });
-        $(window).scroll(function () {
-			//fixedCategory();
-		});
-        //상품카테고리 fixed
-        var fixedCategory = function(){
-            $('.location-area').css('height',$('.location-area').outerHeight());
-            if ($(window).scrollTop() > $('.location-area').offset().top + 100) {
-                $('html').addClass('fixed-category');
-            } else {
-                $('html').removeClass('fixed-category');
-            }
-        }
 
         topRankSlider();
         function topRankSlider(){
             rankwiper = new Swiper('.top-rank-swiper .swiper-container', {
                 slidesPerView: 'auto',
                 freeMode: true,
-                slidesOffsetBefore: 2.5,
-                slidesOffsetAfter: 2.5,
+                slidesOffsetBefore: 24,
+                slidesOffsetAfter: 24,
+                spaceBetween: 18,
                 scrollbar: {
                     el: '.swiper-scrollbar-rank',
                     hide: false,
@@ -1352,6 +1070,85 @@
                 }
             });
         }
+
+        //chartjs - 카테고리 1년 검색량
+        var config2 = {
+			type: 'line',
+			data: {
+				labels: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"],
+				datasets: [{
+                    backgroundColor: "#34d52e",
+                    borderColor: '#34d52e',
+                    borderWidth: 2,
+                    pointRadius: 3,
+                    pointHoverRadius: 6,
+					data: [100, 200, 400, 500, 600, 700, 500, 200, 400, 500, 600, 700, 900],
+					fill: false,
+				}],
+			},
+			options: {
+                responsive: true,
+                legend: {
+                    display: false,
+                },
+				tooltips: {
+					mode: 'index',
+                    intersect: false,
+                    displayColors: false,
+                    position: 'average',
+                    backgroundColor: 'rgba(52, 213, 46, 1)',
+                    bodyFontFamily: 'Gotham',
+                    cornerRadius: 12,
+                    caretSize: 0,
+                    xPadding: 10,
+                    callbacks: {
+                        title: function(tooltipItem, data) {
+                            return "";
+                        },
+                        label: function(tooltipItem) {
+                            return Number(tooltipItem.yLabel);
+                        }
+                    }
+				},
+				hover: {
+					mode: 'nearest',
+					intersect: true
+				},
+				scales: {
+                    xAxes: [{
+                        gridLines: {
+                            //display: false,
+                        },
+                        scaleLabel: {
+                            display: false,
+                        },
+                        ticks:{
+                            fontColor : '#989da0',
+                            fontSize : 15,
+                            fontFamily : 'Gotham',
+                            padding:10,
+                        },
+                    }],
+                    yAxes: [{
+                        scaleLabel: {
+                            drawBorder: false,
+                        },
+                        ticks: {
+                            fontColor : '#989da0',
+                            fontSize : 15,
+                            fontFamily : 'Gotham',
+                            stepSize: 100,
+                            beginAtZero: true,
+                            padding:10,
+                        },
+                    }]
+                }
+			}
+		};
+		window.onload = function() {
+			var ctx2 = document.getElementById('canvas-search-volume-year').getContext('2d');
+			window.myLine = new Chart(ctx2, config2);
+		};
     </script>
 </body>
 </html>

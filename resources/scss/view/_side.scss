@@ -67,7 +67,9 @@
             a {background-image: url('../images/logo.svg');}
         }
         .util{
+            margin-top: 50px;
             > ul > li{
+                & + li{margin-top: 18px;}
                 > a{
                     color: $black;
                 }
@@ -82,9 +84,10 @@
         .side-group{left: 0;}
     }
     .gnb{
+        margin-top: 25px;
         nav{
             > ul{
-                > li > a{color: $black;line-height: 3;}
+                > li > a{color: $black;line-height: 2.8;}
                 > li + li{margin-top: 0;}
             }
         }

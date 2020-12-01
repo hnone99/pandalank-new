@@ -282,20 +282,22 @@
             $('.close-history, .btn-history, .btn-right-collapse').on('click',function(e){
                 e.preventDefault();
 
-                if(!$('html').hasClass('is-right-collapsed')){
-                    if($('html').hasClass('is-collapsed')){
-                        $('html').removeClass('is-collapsed');
-                    }
-                    $('html').addClass('is-right-collapsed');
-                    setTimeout(function(){
-                        $('.btn-right-collapse a span').text('닫기');
-                    },300);
-                }else{
-                    $('html').removeClass('is-right-collapsed');
-                    setTimeout(function(){
-                        $('.btn-right-collapse a span').text('검색기록');
-                    },300);
+                if(!$('.btn-right-collapse > a').hasClass('disabled')){
+                    if(!$('html').hasClass('is-right-collapsed')){
+                        if($('html').hasClass('is-collapsed')){
+                            $('html').removeClass('is-collapsed');
+                        }
+                        $('html').addClass('is-right-collapsed');
+                        setTimeout(function(){
+                            $('.btn-right-collapse a span').text('닫기');
+                        },300);
+                    }else{
+                        $('html').removeClass('is-right-collapsed');
+                        setTimeout(function(){
+                            $('.btn-right-collapse a span').text('검색기록');
+                        },300);
 
+                    }
                 }
             });
 
