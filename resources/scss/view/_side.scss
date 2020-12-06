@@ -29,10 +29,14 @@
         > ul{
             display: block;
             > li{
-                & + li{margin-top: 10px;}
+                & + li{margin-top: 25px;}
             }
             > li > a{
-                display: block;color: #fff;font-size: 16px;line-height: 3;letter-spacing: -0.9px;font-weight: 700;
+                display: block;color: #fff;font-size: 15px;letter-spacing: -0.9px;font-weight: 700;
+            }
+            > li > div{
+                color: $gray;font-size: 13px;margin-bottom: 10px;
+                &::before{content: '';display: block;width: 10px;height: 1px;background: #646464;margin-bottom: 5px;}
             }
             > li:not(.active) > a:hover{
                 color: #D2DAE0;
@@ -50,7 +54,13 @@
         > ul ul{
             margin-top: -8px;
             > li{
-                > a{display: block;font-size: 14px;color: $gray;line-height: 2;-webkit-font-smoothing: auto;}
+                > a{display: block;font-size: 14px;color: #fff;line-height: 2.2;-webkit-font-smoothing: auto;}
+            }
+            > li:not(.active) > a:hover{
+                color: #D2DAE0;
+                -webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
+                -webkit-mask-size: 200%;
+                animation: shine 2s infinite;
             }
             > li.active{
                 > a{color: $primary;}
@@ -71,7 +81,7 @@
             > ul > li{
                 & + li{margin-top: 18px;}
                 > a{
-                    color: $black;
+                    color: $gray;
                 }
             }
         }
@@ -87,8 +97,11 @@
         margin-top: 25px;
         nav{
             > ul{
-                > li > a{color: $black;line-height: 2.8;}
-                > li + li{margin-top: 0;}
+                > li > a{color: $black;}
+                > li + li{margin-top: 1rem;}
+            }
+            > ul ul{
+                > li > a{color: $black;line-height: 1.8;}
             }
         }
     }
@@ -108,6 +121,7 @@
                         }
                     }
                 }
+                > li + li{margin-top: 0;}
                 > li:not(.active) a:hover{
                     color: inherit;
                     animation: none;
