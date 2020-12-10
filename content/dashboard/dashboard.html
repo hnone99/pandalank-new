@@ -54,13 +54,37 @@
                     <div class="gnb">
                         <nav>
                             <ul>
-                                <li class="active"><a href="../dashboard/dashboard.html"><span>홈</span></a></li>
-                                <li><a href="../product/product.html"><span>상품 찾기</span></a></li>
-                                <li><a href="../analysis/analysis.html"><span>경쟁력 분석</span></a></li>
-                                <li><a href="../ai/ai.html"><span>AI 판매 예측</span></a></li>
-                                <li><a href="../mymall/mymall.html"><span>내 쇼핑몰 분석</span></a></li>
-                                <li><a href="../ceo/ceo.html"><span>사장님들의 방</span></a></li>
-                                <li><a href="../board/notice.html"><span>공지</span></a></li>
+                                <li class="active">
+                                    <a href="../dashboard/dashboard.html"><span>홈</span></a>
+                                </li>
+                                <li>
+                                    <div>키워드</div>
+                                    <ul>
+                                        <li><a href="../product/product.html">키워드 찾기</a></li>
+                                        <li><a href="../product/keyword_curation.html">키워드 큐레이션</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <div>상품</div>
+                                    <ul>
+                                        <li><a href="../analysis/analysis.html"><span>상품 분석</span></a></li>
+                                        <li><a href="">실시간 순위 확인</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <div>쇼핑몰</div>
+                                    <ul>
+                                        <li><a href="../ai/ai.html"><span>쇼핑몰 분석</span></a></li>
+                                        <li><a href="">상품 순위 추적</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <div>회원</div>
+                                    <ul>
+                                        <li><a href="../ceo/ceo.html"><span>사장님 게시판</span></a></li>
+                                        <li><a href="#none"><span>서비스 구독</span></a></li>
+                                    </ul>
+                                </li>
                             </ul>
                         </nav>
                     </div>
@@ -79,338 +103,77 @@
                 </div>
             </div>
         </div>
-        <div id="container-block">
+        <div id="main-block">
             <div id="container">
-                <div id="content">
-                    <div class="container-fluid">
-                        <!-- 컨텐츠 시작 -->
+                <!-- 컨텐츠 시작 -->
 
-                        <div class="title-area">
-                            <h2>
-                                <strong>PLAYGROUND PANDA RANK</strong>
-                                <span>셀러들의 플레이 그라운드 <br class="d-block d-lg-none">판다랭크</span>
-                            </h2>
-                            <div class="btn-about">
-                                <a href="../about/about.html" class="btn btn-sm btn-outline-default">판다랭크 소개 <span class="text-gray ml-1">&gt;</span></a>
-                            </div>
+                <div class="main-top">
+                    <div class="container">
+                        <div class="main-logo">
+                            <i class="icon-logo"><span class="sr-only">PANDA RANK</span></i>
+                            <p>셀러들을 위한 상품 분석 커뮤니티</p>
                         </div>
-                        <div class="dashboard-card">
-                            <div class="row row-20">
-                                <div class="col-12 col-lg-6">
-                                    <a href="../mymall/mymall.html">
-                                        <div class="dashboard-title">
-                                            <h3 class="title">내 쇼핑몰 분석</h3>
-                                            <p class="desc">몰 운영을 잘 하고 있는지 궁금하다면?</p>
+                        <div class="input-box">
+                            <input type="text" class="form-control">
+                            <button type="submit" class="btn btn-submit">키워드 검색</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-bottom">
+                    <div class="container">
+                        <div class="row justify-content-between">
+                            <div class="col-auto">
+                                <div class="dropdown dropdown-flat">
+                                    <div class="dropdown-value" style="min-width:140px">가구/인테리어</div>
+                                    <div class="dropdown-box">
+                                        <div class="dropdown-list">
+                                            <div><a href="javascript:;">여가/생활편의</a></div>
+                                            <div><a href="javascript:;">디지털/가전</a></div>
                                         </div>
-                                        <div class="chart">
-                                            <img src="../../resources/images/img-main-chart1.svg" alt="">
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-12 col-lg-6">
-                                    <a href="../analysis/analysis.html">
-                                        <div class="dashboard-title">
-                                            <h3 class="title">경쟁력 분석</h3>
-                                            <p class="desc">소싱하고 싶거나 팔고 있는 상품 경쟁력 분석</p>
-                                        </div>
-                                        <div class="chart">
-                                            <img src="../../resources/images/img-main-chart2.svg" alt="">
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- 상품 찾기 -->
-                        <div class="dashboard-title">
-                            <h3 class="title">상품 찾기</h3>
-                            <p class="desc">카테고리별 경쟁률이 낮은 상품을 찾아보세요.</p>
-                        </div>
-                        <table class="table table-hover responsive table-data" id="datatable">
-                            <thead>
-                                <tr>
-                                    <th class="text-left">키워드</th>
-                                    <th class="text-right">경쟁률</th>
-                                    <th class="text-right">쇼핑전환</th>
-                                    <th class="text-right">광고비</th>
-                                    <th class="text-right">검색량</th>
-                                    <th class="text-right">상품량</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="text-left"><span>타이틀1</span></td>
-                                    <td class="text-right"><span class="text-primary">최적</span></td>
-                                    <td class="text-right"><span class="text-primary">최적</span></td>
-                                    <td class="text-right"><span class="text-primary">좋음</span></td>
-                                    <td class="text-right"><span>32,034</span></td>
-                                    <td class="text-right"><span>32,034</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="text-left"><span>타이틀</span></td>
-                                    <td class="text-right"><span class="text-primary">최적</span></td>
-                                    <td class="text-right"><span class="text-primary">최적</span></td>
-                                    <td class="text-right"><span class="text-gray">보통</span></td>
-                                    <td class="text-right"><span>32,034</span></td>
-                                    <td class="text-right"><span>32,034</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="text-left"><span>타이틀</span></td>
-                                    <td class="text-right"><span class="text-danger">나쁨</span></td>
-                                    <td class="text-right"><span class="text-danger">나쁨</span></td>
-                                    <td class="text-right"><span class="text-gray">보통</span></td>
-                                    <td class="text-right"><span>32,034</span></td>
-                                    <td class="text-right"><span>32,034</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="text-left"><span>타이틀</span></td>
-                                    <td class="text-right"><span class="text-primary">최적</span></td>
-                                    <td class="text-right"><span class="text-primary">최적</span></td>
-                                    <td class="text-right"><span class="text-primary">좋음</span></td>
-                                    <td class="text-right"><span>32,034</span></td>
-                                    <td class="text-right"><span>32,034</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="text-left"><span>타이틀</span></td>
-                                    <td class="text-right"><span class="text-primary">최적</span></td>
-                                    <td class="text-right"><span class="text-primary">최적</span></td>
-                                    <td class="text-right"><span class="text-gray">보통</span></td>
-                                    <td class="text-right"><span>32,034</span></td>
-                                    <td class="text-right"><span>32,034</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="text-left"><span>타이틀</span></td>
-                                    <td class="text-right"><span class="text-danger">나쁨</span></td>
-                                    <td class="text-right"><span class="text-danger">나쁨</span></td>
-                                    <td class="text-right"><span class="text-gray">보통</span></td>
-                                    <td class="text-right"><span>32,034</span></td>
-                                    <td class="text-right"><span>32,034</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="text-left"><span>타이틀</span></td>
-                                    <td class="text-right"><span class="text-primary">최적</span></td>
-                                    <td class="text-right"><span class="text-primary">최적</span></td>
-                                    <td class="text-right"><span class="text-primary">좋음</span></td>
-                                    <td class="text-right"><span>32,034</span></td>
-                                    <td class="text-right"><span>32,034</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="text-left"><span>타이틀</span></td>
-                                    <td class="text-right"><span class="text-primary">최적</span></td>
-                                    <td class="text-right"><span class="text-primary">최적</span></td>
-                                    <td class="text-right"><span class="text-gray">보통</span></td>
-                                    <td class="text-right"><span>32,034</span></td>
-                                    <td class="text-right"><span>32,034</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="text-left"><span>타이틀</span></td>
-                                    <td class="text-right"><span class="text-danger">나쁨</span></td>
-                                    <td class="text-right"><span class="text-danger">나쁨</span></td>
-                                    <td class="text-right"><span class="text-gray">보통</span></td>
-                                    <td class="text-right"><span>32,034</span></td>
-                                    <td class="text-right"><span>32,034</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="text-left"><span>타이틀</span></td>
-                                    <td class="text-right"><span class="text-primary">최적</span></td>
-                                    <td class="text-right"><span class="text-primary">최적</span></td>
-                                    <td class="text-right"><span class="text-primary">좋음</span></td>
-                                    <td class="text-right"><span>32,034</span></td>
-                                    <td class="text-right"><span>32,034</span></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <div class="list-more">
-                            <a href="../product/product.html"><strong>MORE +</strong></a>
-                        </div>
-                        <!-- //상품 찾기 -->
-                        <!-- 사장님 게시판 -->
-                        <div class="dashboard-title">
-                            <h3 class="title">사장님 게시판</h3>
-                        </div>
-                        <div class="board">
-                            <div class="board-top">
-                                <div class="col-auto">
-                                    <div class="sort">
-                                        <strong class="board-name">베스트 ㅣ</strong>
-                                        <a href="" class="active">추천순</a>
-                                        <a href="" class="ml-2">최신순</a>
                                     </div>
                                 </div>
                             </div>
-                            <div class="board-list">
-                                <ul>
-                                    <li class="board-item">
-                                        <div class="board-item-simple">
-                                            <a href="javascript:;">
-                                                <div class="cate">팬티</div>
-                                                <div class="subject">
-                                                    <span class="badge badge-primary">BEST</span>
-                                                    <span>오늘 장사는 폭망한 듯</span>
-                                                </div>
-                                                <div class="writer">L3. 닉넴최대여섯</div>
-                                                <div class="date">20.03.24</div>
-                                                <div class="hit">314</div>
-                                            </a>
+                            <div class="col-auto">
+                                <div class="dropdown dropdown-flat">
+                                    <div class="dropdown-value">일별</div>
+                                    <div class="dropdown-box">
+                                        <div class="dropdown-list">
+                                            <div><a href="javascript:;">1</a></div>
+                                            <div><a href="javascript:;">2</a></div>
+                                            <div><a href="javascript:;">3</a></div>
+                                            <div><a href="javascript:;">4</a></div>
+                                            <div><a href="javascript:;">5</a></div>
+                                            <div><a href="javascript:;">1</a></div>
+                                            <div><a href="javascript:;">2</a></div>
+                                            <div><a href="javascript:;">3</a></div>
+                                            <div><a href="javascript:;">4</a></div>
+                                            <div><a href="javascript:;">5</a></div>
                                         </div>
-                                        <div class="board-item-detail">
-                                            <div class="board-content">
-                                                댓글 영역입니다. 회원인 경우 수정 버튼이 나타납니다. 비회원은 수정하기 기능이 없습니다.
-                                                초보님들만 다들 주목~!^^ 판매는 진정 아이템 싸움입니다. 직접 스토어를 경험하고… 아이템스카우트는 신사임당님이 만들었다고
-                                                들었는데 잘못된 소문이 많군요. 댓글작업은 아이브가 한대요. <br><br>
-
-                                                네이버 스마트스토어에 아이템 스카우트 괜찮나요? 그거보다 더 괜찮은거 나왔다등데?
-                                                제가 부업으로 온라인쇼핑몰을 해보려고하는데 아이템찾기도 막막하고 답답한게 한두가지가 아니네요ㅠㅠ 그래서 추천받은게 판다랭크에요
-                                            </div>
-                                            <div class="board-heart row justify-content-between">
-                                                <div class="col-auto">
-                                                    <div class="like">
-                                                        <a class="icon-heart">
-                                                            <svg width="24" height="20" viewBox="0 0 24 20"
-                                                                xmlns="http://www.w3.org/2000/svg">
-                                                                <path class="heart-fill"
-                                                                d="M10,19l-1.4-1.3C3.4,13,0,9.9,0,6.1C0,3,2.4,0.6,5.5,0.6c1.7,0,3.4,0.8,4.5,2.1c1.1-1.3,2.8-2.1,4.5-2.1
-                                                                C17.6,0.6,20,3,20,6.1c0,3.8-3.4,6.9-8.6,11.5L10,19z"
-                                                                fill="none" />
-                                                                <path class="heart-border"
-                                                                d="M14.5,0.6c-1.7,0-3.4,0.8-4.5,2.1C8.9,1.4,7.2,0.6,5.5,0.6C2.4,0.6,0,3,0,6.1C0,9.9,3.4,13,8.6,17.6L10,19
-                                                                l1.4-1.3C16.6,13,20,9.9,20,6.1C20,3,17.6,0.6,14.5,0.6z M10.1,16.2L10,16.3l-0.1-0.1C5.1,11.8,2,9,2,6.1c0-2,1.5-3.5,3.5-3.5
-                                                                c1.5,0,3,1,3.6,2.4h1.9c0.5-1.4,2-2.4,3.6-2.4c2,0,3.5,1.5,3.5,3.5C18,9,14.9,11.8,10.1,16.2z" fill="#34D52E"/>
-                                                            </svg>
-                                                        </a>
-                                                        <strong>0</strong>
-                                                    </div>
-                                                </div>
-                                                <div class="col-auto">
-                                                    <div class="board-control">
-                                                        <a href="javacript:;" class="text-gray">수정</a>
-                                                        <a href="javacript:;" class="text-gray ml-2" data-toggle="modal" data-target="#modal-password">삭제</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!-- 댓글 -->
-                                            <div class="comment">
-                                                <div class="comment-textarea">
-                                                    <div class="box">
-                                                        <textarea name="" id="" cols="" rows="" placeholder="댓글 입력"></textarea>
-                                                        <div class="password">
-                                                            <input type="password" class="form-control" placeholder="비밀번호 입력">
-                                                        </div>
-                                                        <button type="button" class="btn btn-submit">등록</button>
-                                                    </div>
-                                                </div>
-                                                <div class="comment-list">
-                                                    <ul>
-                                                        <li>
-                                                            <div class="comment-info row justify-content-between">
-                                                                <div class="col-auto">
-                                                                    <span class="text-gray">수지</span>
-                                                                    <span class="text-gray ml-2">2020.6.30</span>
-                                                                </div>
-                                                                <div class="col-auto">
-                                                                    <a href="" class="text-gray">수정</a>
-                                                                    <a href="javacript:;" class="text-gray ml-2" data-toggle="modal" data-target="#modal-password">삭제</a>
-                                                                </div>
-                                                            </div>
-                                                            <div class="content">
-                                                                저도요… 100개나 샀는데 ㅠㅠ 수정 삭제 버튼은 회원이 쓴 글에만 나오는 버튼이에요.
-                                                                <br>망했네요.
-                                                            </div>
-                                                        </li>
-                                                        <li>
-                                                            <div class="row justify-content-between">
-                                                                <div class="col-auto">
-                                                                    <span class="text-gray">수지</span>
-                                                                    <span class="text-gray ml-2">2020.6.30</span>
-                                                                </div>
-                                                                <div class="col-auto">
-                                                                    <a href="javacript:;" class="text-gray ml-2" data-toggle="modal" data-target="#modal-password">삭제</a>
-                                                                </div>
-                                                            </div>
-                                                            <div class="content">
-                                                                저도요… 100개나 샀는데 ㅠㅠ 수정 삭제 버튼은 회원이 쓴 글에만 나오는 버튼이에요.
-                                                                <br>망했네요.
-                                                            </div>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <!-- //댓글 -->
-                                        </div>
-                                    </li>
-                                    <li class="board-item">
-                                        <div class="board-item-simple">
-                                            <a href="javascript:;">
-                                                <div class="cate">러닝팬티세트</div>
-                                                <div class="subject">
-                                                    <span>오늘 장사는 폭망한 듯오늘 장사는 폭망한 듯 오늘 장사는 폭망한 듯 오늘 장사는 폭망한 듯 오늘 장사는 폭망한 듯 오늘 장사는 폭망한 듯</span>
-                                                </div>
-                                                <div class="writer">L5. 판다</div>
-                                                <div class="date">18:21</div>
-                                                <div class="hit">2천</div>
-                                            </a>
-                                        </div>
-                                        <div class="board-item-detail">
-                                            <div class="board-content">
-                                                댓글 영역입니다. 회원인 경우 수정 버튼이 나타납니다. 비회원은 수정하기 기능이 없습니다.
-                                                초보님들만 다들 주목~!^^ 판매는 진정 아이템 싸움입니다. 직접 스토어를 경험하고… 아이템스카우트는 신사임당님이 만들었다고
-                                                들었는데 잘못된 소문이 많군요. 댓글작업은 아이브가 한대요. <br><br>
-
-                                                네이버 스마트스토어에 아이템 스카우트 괜찮나요? 그거보다 더 괜찮은거 나왔다등데?
-                                                제가 부업으로 온라인쇼핑몰을 해보려고하는데 아이템찾기도 막막하고 답답한게 한두가지가 아니네요ㅠㅠ 그래서 추천받은게 판다랭크에요
-                                            </div>
-                                            <div class="board-heart row justify-content-between">
-                                                <div class="col-auto">
-                                                    <div class="like">
-                                                        <a class="icon-heart">
-                                                            <svg width="24" height="20" viewBox="0 0 24 20"
-                                                                xmlns="http://www.w3.org/2000/svg">
-                                                                <path class="heart-fill"
-                                                                d="M10,19l-1.4-1.3C3.4,13,0,9.9,0,6.1C0,3,2.4,0.6,5.5,0.6c1.7,0,3.4,0.8,4.5,2.1c1.1-1.3,2.8-2.1,4.5-2.1
-                                                                C17.6,0.6,20,3,20,6.1c0,3.8-3.4,6.9-8.6,11.5L10,19z"
-                                                                fill="none" />
-                                                                <path class="heart-border"
-                                                                d="M14.5,0.6c-1.7,0-3.4,0.8-4.5,2.1C8.9,1.4,7.2,0.6,5.5,0.6C2.4,0.6,0,3,0,6.1C0,9.9,3.4,13,8.6,17.6L10,19
-                                                                l1.4-1.3C16.6,13,20,9.9,20,6.1C20,3,17.6,0.6,14.5,0.6z M10.1,16.2L10,16.3l-0.1-0.1C5.1,11.8,2,9,2,6.1c0-2,1.5-3.5,3.5-3.5
-                                                                c1.5,0,3,1,3.6,2.4h1.9c0.5-1.4,2-2.4,3.6-2.4c2,0,3.5,1.5,3.5,3.5C18,9,14.9,11.8,10.1,16.2z" fill="#34D52E"/>
-                                                            </svg>
-                                                        </a>
-                                                        <strong>0</strong>
-                                                    </div>
-                                                </div>
-                                                <div class="col-auto">
-                                                    <div class="board-control">
-                                                        <a href="javacript:;" class="text-gray">수정</a>
-                                                        <a href="javacript:;" class="text-gray ml-2" data-toggle="modal" data-target="#modal-password">삭제</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!-- 댓글 -->
-                                            <div class="comment">
-                                                <div class="comment-textarea">
-                                                    <div class="box">
-                                                        <textarea name="" id="" cols="" rows="" placeholder="댓글 입력"></textarea>
-                                                        <div class="password">
-                                                            <input type="password" class="form-control invalid" placeholder="비밀번호 입력">
-                                                            <!-- 에러 : invalid 클래스 추가 -->
-                                                        </div>
-                                                        <button type="button" class="btn btn-submit">등록</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!-- //댓글 -->
-                                        </div>
-                                    </li>
-                                </ul>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="list-more">
-                            <a href="../ceo/ceo.html"><strong>MORE +</strong></a>
+                        <div class="new-keyword">
+                            <strong>검색량 5,000 이상 새로 생긴 키워드</strong>
+                            <p>2020. 3.21일 기준</p>
+                            <ul>
+                                <li><a href="">햄토리</a></li>
+                                <li><a href="">Led 램프</a></li>
+                                <li><a href="">박스</a></li>
+                                <li><a href="">테이블보</a></li>
+                                <li><a href="">무소음시계</a></li>
+                                <li><a href="">무소음시계</a></li>
+                                <li><a href="">무소음시계</a></li>
+                                <li><a href="">무소음시계</a></li>
+                            </ul>
                         </div>
-                        <!-- //사장님 게시판 -->
-
-                        <!-- 컨텐츠 끝 -->
+                        <div class="m-t-40">
+                            <img src="../../resources/images/577@3x.png" alt="제 쇼핑몰 좀 봐 주세요는 이제 그만!">
+                        </div>
                     </div>
                 </div>
+
+                <!-- 컨텐츠 끝 -->
             </div>
         </div>
         <div id="alarm-block">
@@ -497,9 +260,10 @@
             <div class="footer">
                 <div class="menu">
                     <ul>
+                        <li><a href="../about/about.html">서비스소개</a></li>
                         <li><a href="../join/privacy.html">개인정보처리방침</a></li>
                         <li><a href="../join/terms.html">이용약관</a></li>
-                        <li><a href="mailto:official@pandarank.net">이메일</a></li>
+                        <li class="d-none d-md-inline"><a href="mailto:official@pandarank.net">이메일</a></li>
                         <li><a href="http://pf.kakao.com/_KuJAK" target="_blank">문의</a></li>
                     </ul>
                 </div>
@@ -528,20 +292,6 @@
             setTimeout(function(){
                 $('#welcome').removeClass('show');
             },4000);
-
-            var datatable = $('#datatable').DataTable({
-                'responsive': true,
-                'searching': false,
-                'info': false,
-                'paging': true,
-                'pageLength': 10, //페이징 기준 개수
-                'details': false,
-                'ordering': true,
-                'order': [[1, 'desc']], //최초 sort
-                'columnDefs': [ // sort 아이콘 hide 타겟 지정
-                    { 'orderable': false, 'targets': [0] }
-                ]
-            });
         });
     </script>
 </body>

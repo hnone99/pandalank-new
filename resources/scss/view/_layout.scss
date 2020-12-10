@@ -56,17 +56,25 @@ body{
 #side-block{
     transition: all .3s ease-in-out;
 }
+
 #center-block{
     background: #fcfafa;
     padding: 40px 24px 40px;
     transition: all .3s ease-in-out;
 }
+
 #container-block{
     transition: all .3s ease-in-out;
 }
+
 #center-block + #container-block{
     border-top: 1px solid $border-color;padding-top: 50px;
 }
+
+#main-block{
+    .container{max-width: 990px;margin: 0 auto;padding-left: 24px;padding-right: 24px;}
+}
+
 #content{max-width: 960px;margin: 0 auto;padding-bottom: 100px;}
 
 #footer-block{
@@ -74,7 +82,7 @@ body{
     .footer{max-width: 960px;margin: 0 auto;padding-left: 24px;padding-right: 24px;}
     .menu{
         margin-bottom: 15px;
-        li{display: inline;margin-right: 16px;
+        li{display: inline;margin-right: 15px;
             a{color: $gray;font-size: 14px;}
         }
     }
@@ -108,6 +116,10 @@ body{
     }
     #center-block + #container-block{
         margin-left: 520px;border-top: 0;
+    }
+    #main-block{
+        margin-left: 200px;
+        .container{padding-left: 15px;padding-right: 15px;}
     }
     #footer-block{
         padding: 50px 80px;margin-left: 200px;min-width:756px;

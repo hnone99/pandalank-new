@@ -161,6 +161,14 @@
         border-color: $primary;color: $primary;outline: 0;
         &::before{border-color: $primary transparent transparent transparent;}
     }
+
+    &.dropdown-flat{
+        height: 40px;border: 1px solid $default;border-radius: $input-border-radius;margin-bottom: 0 !important;background: #fff;
+        .dropdown-value{
+            border-bottom: 0;padding: .55rem 2.85rem 0 1rem;font-size: 14px;position: static;min-width:86px;
+            &::before{right: 16px;}
+        }
+    }
 }
 @include media-breakpoint-down(md) {
     .dropdown{
@@ -259,15 +267,17 @@
         display: none;
     }
 }
-.icon-download{display: inline-block;vertical-align: middle;width: 16px;height: 16px;background: url('../images/icon-download.svg') no-repeat 50% 50%;}
-.icon-delete{display: inline-block;vertical-align: middle;width: 10px;height: 10px;background: url('../images/icon-close.svg') no-repeat 50% 50%;opacity: 0.35;}
-.icon-ellipsis{display: inline-block;vertical-align: middle;width: 3px;height: 20px;background: url('../images/ellipsis-v-solid.svg') no-repeat 50% 50%;background-size: contain;}
-.icon-prev{display: inline-block;vertical-align: middle;width: 7px;height: 13px;background: url('../images/icon-prev.svg') no-repeat 50% 50%;background-size: contain;}
+[class^=icon-]{display: inline-block;font-size: 0;}
+.icon-logo{width: 180px;height: 30px;background:url('../images/logo.svg') no-repeat 50% 50%;background-size: contain;}
+.icon-download{vertical-align: middle;width: 16px;height: 16px;background: url('../images/icon-download.svg') no-repeat 50% 50%;}
+.icon-delete{vertical-align: middle;width: 10px;height: 10px;background: url('../images/icon-close.svg') no-repeat 50% 50%;opacity: 0.35;}
+.icon-ellipsis{vertical-align: middle;width: 3px;height: 20px;background: url('../images/ellipsis-v-solid.svg') no-repeat 50% 50%;background-size: contain;}
+.icon-prev{vertical-align: middle;width: 7px;height: 13px;background: url('../images/icon-prev.svg') no-repeat 50% 50%;background-size: contain;}
 .icon-prev:hover{background-image: url('../images/icon-prev-green.svg');}
-.icon-next{display: inline-block;vertical-align: middle;width: 7px;height: 13px;background: url('../images/icon-next.svg') no-repeat 50% 50%;background-size: contain;}
+.icon-next{vertical-align: middle;width: 7px;height: 13px;background: url('../images/icon-next.svg') no-repeat 50% 50%;background-size: contain;}
 .icon-next:hover{background-image: url('../images/icon-next-green.svg');}
-.icon-info{display: inline-block;width: 24px;height: 24px;background: url('../images/icon-info.svg') no-repeat 50% 50%;background-size: contain;}
-.icon-search-white{display: inline-block;width: 12px;height: 12px;background: url('../images/icon-search-white.svg') no-repeat 50% 50%;background-size: contain;}
+.icon-info{width: 24px;height: 24px;background: url('../images/icon-info.svg') no-repeat 50% 50%;background-size: contain;}
+.icon-search-white{width: 12px;height: 12px;background: url('../images/icon-search-white.svg') no-repeat 50% 50%;background-size: contain;}
 
 .th-icon-info{
     display: inline-block;vertical-align: top;margin-left: 3px;margin-top: -2px;margin-bottom: -1px;font-weight: 400;position: relative;
