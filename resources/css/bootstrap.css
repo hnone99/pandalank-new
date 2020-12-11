@@ -1487,6 +1487,8 @@ input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="butto
 
 .btn-outline-default:hover { border-color: #34D52E; color: #34D52E; background: #fff; }
 
+.btn-outline-default.text-gray:hover { color: #34D52E !important; }
+
 .btn-submit { border: 0; background: rgba(52, 213, 46, 0.1); color: #34D52E; padding: 8px 16px; border-radius: 10px; line-height: 1; }
 
 .btn-submit:focus { background: rgba(52, 213, 46, 0.1); box-shadow: 0 0 0 0.2rem rgba(52, 213, 46, 0.5); }
@@ -2710,6 +2712,8 @@ a.bg-black:hover, a.bg-black:focus, button.bg-black:hover, button.bg-black:focus
 
 .d-table { display: table !important; }
 
+.d-table-column { display: table-column !important; }
+
 .d-table-row { display: table-row !important; }
 
 .d-table-cell { display: table-cell !important; }
@@ -2723,6 +2727,7 @@ a.bg-black:hover, a.bg-black:focus, button.bg-black:hover, button.bg-black:focus
   .d-xs-inline-block { display: inline-block !important; }
   .d-xs-block { display: block !important; }
   .d-xs-table { display: table !important; }
+  .d-xs-table-column { display: table-column !important; }
   .d-xs-table-row { display: table-row !important; }
   .d-xs-table-cell { display: table-cell !important; }
   .d-xs-flex { display: flex !important; }
@@ -2733,6 +2738,7 @@ a.bg-black:hover, a.bg-black:focus, button.bg-black:hover, button.bg-black:focus
   .d-sm-inline-block { display: inline-block !important; }
   .d-sm-block { display: block !important; }
   .d-sm-table { display: table !important; }
+  .d-sm-table-column { display: table-column !important; }
   .d-sm-table-row { display: table-row !important; }
   .d-sm-table-cell { display: table-cell !important; }
   .d-sm-flex { display: flex !important; }
@@ -2743,6 +2749,7 @@ a.bg-black:hover, a.bg-black:focus, button.bg-black:hover, button.bg-black:focus
   .d-md-inline-block { display: inline-block !important; }
   .d-md-block { display: block !important; }
   .d-md-table { display: table !important; }
+  .d-md-table-column { display: table-column !important; }
   .d-md-table-row { display: table-row !important; }
   .d-md-table-cell { display: table-cell !important; }
   .d-md-flex { display: flex !important; }
@@ -2753,6 +2760,7 @@ a.bg-black:hover, a.bg-black:focus, button.bg-black:hover, button.bg-black:focus
   .d-lg-inline-block { display: inline-block !important; }
   .d-lg-block { display: block !important; }
   .d-lg-table { display: table !important; }
+  .d-lg-table-column { display: table-column !important; }
   .d-lg-table-row { display: table-row !important; }
   .d-lg-table-cell { display: table-cell !important; }
   .d-lg-flex { display: flex !important; }
@@ -2763,6 +2771,7 @@ a.bg-black:hover, a.bg-black:focus, button.bg-black:hover, button.bg-black:focus
   .d-xl-inline-block { display: inline-block !important; }
   .d-xl-block { display: block !important; }
   .d-xl-table { display: table !important; }
+  .d-xl-table-column { display: table-column !important; }
   .d-xl-table-row { display: table-row !important; }
   .d-xl-table-cell { display: table-cell !important; }
   .d-xl-flex { display: flex !important; }
@@ -2773,6 +2782,7 @@ a.bg-black:hover, a.bg-black:focus, button.bg-black:hover, button.bg-black:focus
   .d-xxl-inline-block { display: inline-block !important; }
   .d-xxl-block { display: block !important; }
   .d-xxl-table { display: table !important; }
+  .d-xxl-table-column { display: table-column !important; }
   .d-xxl-table-row { display: table-row !important; }
   .d-xxl-table-cell { display: table-cell !important; }
   .d-xxl-flex { display: flex !important; }
@@ -2783,6 +2793,7 @@ a.bg-black:hover, a.bg-black:focus, button.bg-black:hover, button.bg-black:focus
   .d-print-inline-block { display: inline-block !important; }
   .d-print-block { display: block !important; }
   .d-print-table { display: table !important; }
+  .d-print-table-column { display: table-column !important; }
   .d-print-table-row { display: table-row !important; }
   .d-print-table-cell { display: table-cell !important; }
   .d-print-flex { display: flex !important; }

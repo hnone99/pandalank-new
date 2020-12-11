@@ -192,6 +192,11 @@ input[type="button"] {
     color: $primary;
     background: #fff;
   }
+  &.text-gray{
+    &:hover{
+      color: $primary !important;
+    }
+  }
 }
 
 .btn-submit{

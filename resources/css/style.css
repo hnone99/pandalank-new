@@ -1396,6 +1396,21 @@ body.body-about #container-block::before { content: ''; width: 100%; height: 680
 
 .table-wrap + .text-box { margin-top: 64px; }
 
+.btn-realtime { margin-top: 30px; }
+
+.realtime { margin-top: 17px; }
+
+.table-result .thumb { width: 104px; height: 104px; border-radius: 5px; border: 1px solid #dce6ed; overflow: hidden; }
+
+.table-result .rank strong { font-size: 22px; font-weight: 700; }
+
+.table-result .rank i { font-size: 13px; }
+
+@media (max-width: 767.98px) { .realtime { margin-top: 0; }
+  .table-result .thumb { width: 57px; height: 57px; }
+  .table-result .product { font-size: 13px; }
+  .table-result .rank strong { font-size: 16px; } }
+
 .dashboard-title { margin-bottom: 20px; margin-top: 50px; }
 
 .dashboard-title .title { font-size: 18px; font-weight: 700; color: #000; }
