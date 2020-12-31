@@ -80,7 +80,7 @@
                                 <li>
                                     <div>쇼핑몰</div>
                                     <ul>
-                                        <li><a href="../ai/ai.html"><span>쇼핑몰 분석</span></a></li>
+                                        <li><a href="../mymall/mymall.html"><span>쇼핑몰 분석</span></a></li>
                                         <li><a href="">상품 순위 추적</a></li>
                                     </ul>
                                 </li>
@@ -1067,9 +1067,13 @@
             rankwiper = new Swiper('.top-rank-swiper .swiper-container', {
                 slidesPerView: 'auto',
                 freeMode: true,
+                mousewheel: true,
                 slidesOffsetBefore: 24,
                 slidesOffsetAfter: 24,
                 spaceBetween: 18,
+                observer: true,
+                observeParents: true,
+                observeSlideChildren: true,
                 scrollbar: {
                     el: '.swiper-scrollbar-rank',
                     hide: false,

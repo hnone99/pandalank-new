@@ -24,6 +24,10 @@
     <!-- DataTables -->
     <script src="../../resources/plugins/datatables/js/jquery.dataTables.min.js"></script>
     <script src="../../resources/plugins/datatables/js/dataTables.bootstrap4.js"></script>
+
+    <!-- chartjs -->
+    <script src="../../resources/plugins/chartjs/Chart.min.js"></script>
+
     <!-- Swiper -->
     <script src="../../resources/plugins/swiper/js/swiper.min.js"></script>
     <!-- ui 관련 -->
@@ -42,9 +46,9 @@
                         <ul class="swiper-wrapper">
                             <li class="swiper-slide"><a href="../dashboard/dashboard.html"><span>홈</span></a></li>
                             <li class="swiper-slide"><a href="../product/product.html"><span>상품 찾기</span></a></li>
-                            <li class="swiper-slide"><a href="../analysis/analysis.html"><span>경쟁력 분석</span></a></li>
+                            <li class="swiper-slide active"><a href="../analysis/analysis.html"><span>경쟁력 분석</span></a></li>
                             <li class="swiper-slide"><a href="../ai/ai.html"><span>AI 판매 예측</span></a></li>
-                            <li class="swiper-slide active"><a href="../mymall/mymall.html"><span>내 쇼핑몰 분석</span></a></li>
+                            <li class="swiper-slide"><a href="../mymall/mymall.html"><span>내 쇼핑몰 분석</span></a></li>
                             <li class="swiper-slide"><a href="../ceo/ceo.html"><span>사장님들의 방</span></a></li>
                             <li class="swiper-slide"><a href="../board/notice.html"><span>공지</span></a></li>
                         </ul>
@@ -54,13 +58,37 @@
                     <div class="gnb">
                         <nav>
                             <ul>
-                                <li><a href="../dashboard/dashboard.html"><span>홈</span></a></li>
-                                <li><a href="../product/product.html"><span>상품 찾기</span></a></li>
-                                <li><a href="../analysis/analysis.html"><span>경쟁력 분석</span></a></li>
-                                <li><a href="../ai/ai.html"><span>AI 판매 예측</span></a></li>
-                                <li class="active"><a href="../mymall/mymall.html"><span>내 쇼핑몰 분석</span></a></li>
-                                <li><a href="../ceo/ceo.html"><span>사장님들의 방</span></a></li>
-                                <li><a href="../board/notice.html"><span>공지</span></a></li>
+                                <li>
+                                    <a href="../dashboard/dashboard.html"><span>홈</span></a>
+                                </li>
+                                <li>
+                                    <div>키워드</div>
+                                    <ul>
+                                        <li><a href="../product/product.html">키워드 찾기</a></li>
+                                        <li><a href="../product/keyword_curation.html">키워드 큐레이션</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <div>상품</div>
+                                    <ul>
+                                        <li><a href="../analysis/analysis.html"><span>상품 분석</span></a></li>
+                                        <li><a href="../analysis/realtime.html">실시간 순위 확인</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <div>쇼핑몰</div>
+                                    <ul>
+                                        <li class="active"><a href="../mymall/mymall.html"><span>쇼핑몰 분석</span></a></li>
+                                        <li><a href="">상품 순위 추적</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <div>회원</div>
+                                    <ul>
+                                        <li><a href="../ceo/ceo.html"><span>사장님 게시판</span></a></li>
+                                        <li><a href="#none"><span>서비스 구독</span></a></li>
+                                    </ul>
+                                </li>
                             </ul>
                         </nav>
                     </div>
@@ -84,25 +112,37 @@
             <div id="center">
                 <div class="title-area">
                     <h2>
-                        <strong>ANALYZE MY MALL</strong>
-                        <span>내 쇼핑몰 분석</span>
+                        <strong>ANALYZE MALL</strong>
+                        <span>쇼핑몰 분석 beta</span>
                     </h2>
                 </div>
                 <div class="input-area my">
                     <div class="form-control-wrapper">
-                        <input type="text" class="form-control form-control-panda" placeholder="스마트스토어 api url" id="url">
+                        <input type="text" class="form-control form-control-panda" placeholder="스마트스토어 URL" id="url">
                         <button type="button" class="btn btn-submit">엔터</button>
                     </div>
+                    <p class="text-14px text-gray mt-2">최대 3개까지 등록 가능합니다</p>
                 </div>
-            </div>
-            <div class="banner-api">
-                <a href="#none">
-                    <span>딱 한번만! api를 입력하세요. <br>하는 방법은 여기 클릭</span>
-                </a>
+                <div class="history show-delete d-none d-lg-block">
+                    <ul>
+                        <li>
+                            <a href="javascript:;" class="text-underline text-black">Led 램프</a>
+                            <button class="close"><span class="sr-only">삭제</span></button>
+                        </li>
+                        <li>
+                            <a href="javascript:;" class="text-underline text-black">플랫화이트샵</a>
+                            <button class="close"><span class="sr-only">삭제</span></button>
+                        </li>
+                        <li>
+                            <a href="javascript:;" class="text-underline text-black">데일리라이프</a>
+                            <button class="close"><span class="sr-only">삭제</span></button>
+                        </li>
+                    </ul>
+                </div>
             </div>
             <div class="btn-collapse"><a href="javascript:;"><span class="sr-only">검색영역 접기</span></a></div>
             <div class="btn-right-collapse">
-                <a href="javascript:;"><span>검색기록</span></a>
+                <a href="javascript:;" class="disabled"><span>검색기록</span></a>
             </div>
             <div id="alarm-block">
                 <div class="btn-alarm new"> <!-- 새 알람 있을때 .new 추가 -->
@@ -199,130 +239,198 @@
                             </div>
                         </div>
                         <div class="location-area">
-                            <nav aria-label="breadcrumb">
-                                <ol class="breadcrumb">
-                                    <li class="breadcrumb-item active" aria-current="page">내 쇼핑몰 분석 결과</li>
-                                </ol>
-                            </nav>
-                            <div class="text-gray">2020년 6월 15일 3시 기준</div>
-                            <!-- 모바일용 메뉴 더보기 -->
-                            <div class="dropdown ellipsis d-lg-none">
-                                <a href="javascript:;" class="dropdown-value"><i class="icon-ellipsis"></i><span class="sr-only">모바일 메뉴 더보기</span></a>
-                                <div class="dropdown-box">
-                                    <div class="dropdown-list">
-                                        <div><a href="javascript:;">예상 매출액 계산</a></div>
-                                        <div><a href="javascript:;">상세 리포트</a></div>
-                                        <div><a href="javascript:;">공유하기</a></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="table-top d-none d-lg-block">
-                            <div class="row justify-content-end">
-                                <div class="col-auto">
-                                    <div class="d-flex justify-content-end">
-                                        <button type="button" class="btn btn-sm btn-outline-default">예상 매출액 계산</button>
-                                        <button type="button" class="btn btn-sm btn-outline-default">상세 리포트</button>
-                                        <button type="button" class="btn btn-sm btn-outline-default">공유하기</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="mymall">
-                            <div class="grade">
-                                <strong class="text-primary">LEVEL 3</strong>
-                                <a href="#pop-over-keyword" class="th-icon-info" data-toggle="pop-over" data-target-mobile="#modal-keyword">
-                                    <i class="icon-info"><span class="sr-only">물음표 아이콘</span></i>
-                                    <!-- 툴팁 PC용 -->
-                                    <div class="pop-over" id="pop-over-keyword">
-                                        <!-- <div class="pop-over-head">
-                                            상품 경쟁력 등급
+                            <div class="breadcrumb-category">
+                                <strong class="keyword">하기로마트</strong>
+                                <button class="btn btn-primary btn-modal-title-aside d-none d-lg-block"><i class="icon-search-white"></i> 검색</button>
+                                <div class="dropdown d-lg-none">
+                                    <a href="javascript:;"><i class="icon-arrow-down"></i></a>
+                                    <div class="dropdown-box">
+                                        <div class="dropdown-list">
+                                            <div><a href="javascript:;" class="text-black">아담네 구멍가게</a></div>
+                                            <div><a href="javascript:;" class="text-black">아이브몰</a></div>
                                         </div>
-                                        <div class="pop-over-body">
-                                            상품의 경쟁력을 6가지 기준으로 점수화해서 WORST/BAD/SOSO/GOOD/BEST 5 단계로 분류합니다. <br><br>
-
-                                            <span class="text-primary">가 격</span> 경쟁제품 대비 가격경쟁력 <br>
-                                            <span class="text-primary">반복성</span> 구매사이클이 짧고 반복적인 상품 <br>
-                                            <span class="text-primary">필수성</span> 사치품이 아닌 의식주에 가까운 상품 <br>
-                                            <span class="text-primary">허욕성</span> 의식주가 아닌 사치품에 가까운 상품 <br>
-                                            <span class="text-primary">경쟁도</span> 경쟁제품의 수가 적은 상품 <br>
-                                            <span class="text-primary">시장성</span> 쇼핑검색량이 많은 상품 <br><br>
-
-                                            *등급은 상대적일 뿐 절대적 지표가 아닙니다.
-                                        </div> -->
-                                    </div>
-                                    <!-- //툴팁 PC용 -->
-                                </a>
-                                <p>상위 30% 몰을 운영하고 있습니다. 훌륭합니다!</p>
-                            </div>
-                            <div class="chart">
-                                <div id="chart-line"></div>
-                                <div class="text-center">
-                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                                        <label class="btn btn-sm active" for="option1">
-                                            <input type="radio" name="options" id="option1" checked>월간
-                                        </label>
-                                        <label class="btn btn-sm" for="option2">
-                                            <input type="radio" name="options" id="option2">년간
-                                        </label>
                                     </div>
                                 </div>
                             </div>
+                            <div class="text-gray">등록일 2020년 8월 12일 기준 | <br class="d-sm-none">일주일 매출 1.000만원 이상, 전환율 3.0 이상 </div>
+                        </div>
 
-                            <div class="table-title">몰 전체</div>
-                            <div class="result-table">
-                                <div class="d-none d-md-block">
-                                    <div class="row result-table-head">
-                                        <div class="col-md-4 text-left">지표</div>
-                                        <div class="col-md-2 text-center">내 쇼핑몰</div>
-                                        <div class="col-md-2 text-center">전 주 대비</div>
-                                        <div class="col-md-2 text-center">전 월 대비</div>
-                                        <div class="col-md-2 text-center">경쟁사 평균</div>
-                                    </div>
-                                </div>
-                                <div class="box">
-                                    <div class="row">
-                                        <div class="col-md-4 text-left"><span>유입율(유입수)</span></div>
-                                        <div class="col-md-2 text-center"><b class="d-md-none">내 쇼핑몰</b><strong>12%</strong><i>(421/3521)</i></div>
-                                        <div class="col-md-2 text-center"><b class="d-md-none">전 주 대비</b><strong class="text-primary">3%</strong></div>
-                                        <div class="col-md-2 text-center"><b class="d-md-none">전 월 대비</b><strong class="text-danger">-10%</strong></div>
-                                        <div class="col-md-2 text-center"><b class="d-md-none">경쟁사 평균</b><strong class="text-gray">24%</strong></div>
-                                    </div>
-                                </div>
-                                <div class="desc">전환율이 전주보다 2% 하락했습니다. 쇼핑탭에서의 섬네일 이미지와 노출가격이 가장 큰 영향을 끼친다. 전 주 대비 유의미하게 떨어진다면 섬네일 이미지나 노출가격 그리고 쇼핑탭에 노출되는 마케팅문구 수정을 권고한다.</div>
-                                <div class="box">
-                                    <div class="row">
-                                        <div class="col-md-4 text-left"><span>전환율(결제수)</span></div>
-                                        <div class="col-md-2 text-center"><strong>12%</strong></div>
-                                        <div class="col-md-2 text-center"><strong class="text-primary">3%</strong></div>
-                                        <div class="col-md-2 text-center"><strong class="text-danger">-10%</strong></div>
-                                        <div class="col-md-2 text-center"><strong class="text-gray">24%</strong></div>
-                                    </div>
-                                </div>
-                                <div class="desc">전환율이 전주보다 2% 하락했습니다. 쇼핑탭에서의 섬네일 이미지와 노출가격이 가장 큰 영향을 끼친다. 전 주 대비 유의미하게 떨어진다면 섬네일 이미지나 노출가격 그리고 쇼핑탭에 노출되는 마케팅문구 수정을 권고한다.</div>
-                                <div class="box">
-                                    <div class="row">
-                                        <div class="col-md-4 text-left"><span>재구매율(재구매수)</span></div>
-                                        <div class="col-md-2 text-center"><strong>0%</strong><i>(0/0)</i></div>
-                                        <div class="col-md-2 text-center"><strong class="text-primary">3%</strong></div>
-                                        <div class="col-md-2 text-center"><strong class="text-danger">-10%</strong></div>
-                                        <div class="col-md-2 text-center"><strong class="text-gray">24%</strong></div>
-                                    </div>
-                                </div>
-                                <div class="desc">전환율이 전주보다 2% 하락했습니다. 쇼핑탭에서의 섬네일 이미지와 노출가격이 가장 큰 영향을 끼친다. 전 주 대비 유의미하게 떨어진다면 섬네일 이미지나 노출가격 그리고 쇼핑탭에 노출되는 마케팅문구 수정을 권고한다.</div>
-                                <div class="box">
-                                    <div class="row">
-                                        <div class="col-md-4 text-left"><span>반품율(반품수)</span></div>
-                                        <div class="col-md-2 text-center"><strong>10%</strong><i>(1/100)</i></div>
-                                        <div class="col-md-2 text-center"><strong class="text-primary">3%</strong></div>
-                                        <div class="col-md-2 text-center"><strong class="text-danger">-10%</strong></div>
-                                        <div class="col-md-2 text-center"><strong class="text-gray">24%</strong></div>
-                                    </div>
-                                </div>
-                                <div class="desc">전환율이 전주보다 2% 하락했습니다. 쇼핑탭에서의 섬네일 이미지와 노출가격이 가장 큰 영향을 끼친다. 전 주 대비 유의미하게 떨어진다면 섬네일 이미지나 노출가격 그리고 쇼핑탭에 노출되는 마케팅문구 수정을 권고한다.</div>
+                        <div class="line-2px-black mt-3 d-none d-lg-block"></div>
+
+                        <div class="top-rank-title">
+                            <div class="tit">주간 판매량 순위</div>
+                        </div>
+                        <div class="top-rank-swiper">
+                            <div class="swiper-container">
+                                <ul class="swiper-wrapper">
+                                    <li class="swiper-slide">
+                                        <div class="item">
+                                            <a href="">
+                                                <div class="thumb"><img src="../../resources/images/@300x100.png" alt="" onload="setDirection(this)"></div>
+                                                <div class="price"><b>1위</b> 14,900</div>
+                                                <div class="name">하기로마트</div>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <div class="item">
+                                            <a href="">
+                                                <div class="thumb"><img src="../../resources/images/@product-thumb.jpg" alt="" onload="setDirection(this)"></div>
+                                                <div class="price"><b>2위</b> 14,900</div>
+                                                <div class="name">아담네구멍가게아담네구멍가게</div>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <div class="item">
+                                            <a href="">
+                                                <div class="thumb"><img src="../../resources/images/@product-thumb.jpg" alt="" onload="setDirection(this)"></div>
+                                                <div class="price"><b>1위</b> 14,900</div>
+                                                <div class="name">아담네구멍가게</div>
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ul>
                             </div>
-                            <div class="table-area">
-                                <div class="table-title">상품 순위</div>
+                            <div class="swiper-scrollbar-rank"></div>
+                        </div>
+
+                        <div class="summary summary-key-analysis">
+                            <div class="row row-10 info">
+                                <div class="col-6 col-md-3">
+                                    <span>등급</span>
+                                    <strong class="text-primary">power</strong>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <span>몰 방문수</span>
+                                    <strong>240,138 <i>회</i></strong>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <span>스토어찜수</span>
+                                    <strong>2,400 <i>회</i></strong>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <span>6개월 판매량</span>
+                                    <strong>3 <i>개</i></strong>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="keyword-analysis-chart-area border-top-0 mt-4">
+                            <div class="date">
+                                <strong>기간</strong>
+                                <div class="btn-group" role="group">
+                                    <button type="button" class="btn btn-outline-default btn-flat">전체</button>
+                                    <button type="button" class="btn btn-outline-default btn-flat">1개월</button>
+                                    <button type="button" class="btn btn-outline-default btn-flat">3개월</button>
+                                    <button type="button" class="btn btn-outline-default btn-flat">1년</button>
+                                </div>
+                                <button type="button" class="btn btn-primary btn-flat">조회하기</button>
+                            </div>
+                            <div class="chart-label">
+                                <span class="l1">매출액</span>
+                                <span class="l2">레이블</span>
+                            </div>
+                            <div class="chart-search-volume-frame">
+                                <canvas id="canvas-search-volume-year"></canvas>
+                            </div>
+                        </div>
+
+
+                        <div class="sticky-tab-area">
+                            <div class="sticky-tab">
+                                <ul role="tablist" class="nav">
+                                    <li><a href="#t-mall" role="tab" data-toggle="tab" aria-selected="true" class="active"><span>쇼핑몰 지표</span></a></li>
+                                    <li><a href="#t-ranking" role="tab" data-toggle="tab" aria-selected="false"><span>상품 순위 지표</span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane fade active show" id="t-mall">
+                                <div class="location-area mb-3">
+                                    <div class="breadcrumb-category">
+                                        <strong class="keyword">몰 전체</strong>
+                                    </div>
+                                    <div class="row justify-content-between mt-1">
+                                        <div class="col-auto">
+                                            <div class="text-gray">
+                                                오늘을 기준으로 전 주, 전 월 대비 지표입니다.
+                                            </div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <div class="how-read mt-0 mt-md-n2">
+                                                <i class="icon-info"></i> <p class="d-none d-md-block">데이터를 어떻게 읽어야 하나요?</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="result-table">
+                                    <div class="d-none d-md-block">
+                                        <div class="row result-table-head">
+                                            <div class="col-md-4 text-left">지표</div>
+                                            <div class="col-md-2 text-center">내 쇼핑몰</div>
+                                            <div class="col-md-2 text-center">전 주 대비</div>
+                                            <div class="col-md-2 text-center">전 월 대비</div>
+                                            <div class="col-md-2 text-center">경쟁사 평균</div>
+                                        </div>
+                                    </div>
+                                    <div class="box">
+                                        <div class="row">
+                                            <div class="col-md-4 text-left"><span>유입율(유입수)</span></div>
+                                            <div class="col-md-2 text-center"><b class="d-md-none">내 쇼핑몰</b><strong>12%</strong><i>(421/3521)</i></div>
+                                            <div class="col-md-2 text-center"><b class="d-md-none">전 주 대비</b><strong class="text-primary">3%</strong></div>
+                                            <div class="col-md-2 text-center"><b class="d-md-none">전 월 대비</b><strong class="text-danger">-10%</strong></div>
+                                            <div class="col-md-2 text-center"><b class="d-md-none">경쟁사 평균</b><strong class="text-gray">24%</strong></div>
+                                        </div>
+                                    </div>
+                                    <div class="desc">전환율이 전주보다 2% 하락했습니다. 쇼핑탭에서의 섬네일 이미지와 노출가격이 가장 큰 영향을 끼친다. 전 주 대비 유의미하게 떨어진다면 섬네일 이미지나 노출가격 그리고 쇼핑탭에 노출되는 마케팅문구 수정을 권고한다.</div>
+                                    <div class="box">
+                                        <div class="row">
+                                            <div class="col-md-4 text-left"><span>전환율(결제수)</span></div>
+                                            <div class="col-md-2 text-center"><strong>12%</strong></div>
+                                            <div class="col-md-2 text-center"><strong class="text-primary">3%</strong></div>
+                                            <div class="col-md-2 text-center"><strong class="text-danger">-10%</strong></div>
+                                            <div class="col-md-2 text-center"><strong class="text-gray">24%</strong></div>
+                                        </div>
+                                    </div>
+                                    <div class="desc">전환율이 전주보다 2% 하락했습니다. 쇼핑탭에서의 섬네일 이미지와 노출가격이 가장 큰 영향을 끼친다. 전 주 대비 유의미하게 떨어진다면 섬네일 이미지나 노출가격 그리고 쇼핑탭에 노출되는 마케팅문구 수정을 권고한다.</div>
+                                    <div class="box">
+                                        <div class="row">
+                                            <div class="col-md-4 text-left"><span>재구매율(재구매수)</span></div>
+                                            <div class="col-md-2 text-center"><strong>0%</strong><i>(0/0)</i></div>
+                                            <div class="col-md-2 text-center"><strong class="text-primary">3%</strong></div>
+                                            <div class="col-md-2 text-center"><strong class="text-danger">-10%</strong></div>
+                                            <div class="col-md-2 text-center"><strong class="text-gray">24%</strong></div>
+                                        </div>
+                                    </div>
+                                    <div class="desc">전환율이 전주보다 2% 하락했습니다. 쇼핑탭에서의 섬네일 이미지와 노출가격이 가장 큰 영향을 끼친다. 전 주 대비 유의미하게 떨어진다면 섬네일 이미지나 노출가격 그리고 쇼핑탭에 노출되는 마케팅문구 수정을 권고한다.</div>
+                                    <div class="box">
+                                        <div class="row">
+                                            <div class="col-md-4 text-left"><span>반품율(반품수)</span></div>
+                                            <div class="col-md-2 text-center"><strong>10%</strong><i>(1/100)</i></div>
+                                            <div class="col-md-2 text-center"><strong class="text-primary">3%</strong></div>
+                                            <div class="col-md-2 text-center"><strong class="text-danger">-10%</strong></div>
+                                            <div class="col-md-2 text-center"><strong class="text-gray">24%</strong></div>
+                                        </div>
+                                    </div>
+                                    <div class="desc">전환율이 전주보다 2% 하락했습니다. 쇼핑탭에서의 섬네일 이미지와 노출가격이 가장 큰 영향을 끼친다. 전 주 대비 유의미하게 떨어진다면 섬네일 이미지나 노출가격 그리고 쇼핑탭에 노출되는 마케팅문구 수정을 권고한다.</div>
+                                </div>
+                                <div class="text-box">
+                                    <div class="row justify-content-between">
+                                        <div class="col-auto">
+                                            <p>
+                                                내 몰에 유입되는 키워드는 <strong class="text-primary">앞치마, 무소음 벽시계, 북유럽 카페트, 램프등, 무드등</strong>입니다.
+                                            </p>
+                                        </div>
+                                        <div class="col-auto">
+                                            <a href="">유효 키워드 순위 확인하기  &gt;</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div role="tabpanel" class="tab-pane fade" id="t-ranking">
+                                <h3 class="sub-title">주간 상품 순위 TOP 10</h3>
+                                <div class="text-gray text-14px mt-1 mb-3">네이버에 등록된 데이터이며 카테고리 기준입니다</div>
                                 <table class="table table-hover responsive table-data no-sort" id="datatable">
                                     <thead>
                                         <tr>
@@ -337,7 +445,7 @@
                                     <tbody>
                                         <tr>
                                             <td class="text-left">
-                                                <div class="text-truncate"><img src="../../resources/images/@product-thumb.jpg" alt="" class="product-thumb"> 상품명 상품명상품명 상품명 111111111 상품명 상품명</div>
+                                                <div class="text-truncate" style="max-width:260px"><img src="../../resources/images/@product-thumb.jpg" alt="" class="product-thumb"> 상품명 상품명상품명 상품명 111111111 상품명 상품명</div>
                                             </td>
                                             <td class="text-right">55</td>
                                             <td class="text-right">2.6%</td>
@@ -347,7 +455,7 @@
                                         </tr>
                                         <tr>
                                             <td class="text-left">
-                                                <div class="text-truncate"><img src="../../resources/images/@product-thumb.jpg" alt="" class="product-thumb"> 222 222222 22222222222222222222222222</div>
+                                                <div class="text-truncate" style="max-width:260px"><img src="../../resources/images/@product-thumb.jpg" alt="" class="product-thumb"> 222 222222 22222222222222222222222222</div>
                                             </td>
                                             <td class="text-right">55</td>
                                             <td class="text-right">2.6%</td>
@@ -357,8 +465,147 @@
                                         </tr>
                                     </tbody>
                                 </table>
+                                <div class="list-more">
+                                    <a href=""><strong>MORE +</strong></a>
+                                </div>
+
+                                <h3 class="sub-title mt-6">경쟁 상품 순위</h3>
+                                <div class="row justify-content-between align-items-end mb-3">
+                                    <div class="col-12 col-md-auto">
+                                        <div class="text-gray text-14px mt-1">네이버에 등록된 데이터이며 선택된 키워드 기준입니다</div>
+                                    </div>
+                                    <div class="col-12 col-md-auto mt-3 mt-md-0">
+                                        <strong class="text-14px">TOP 30개 예상 매출액 <span class="text-primary">3.352,111</span>원</strong>
+                                    </div>
+                                </div>
+                                <div class="keyword-box-slider m-b-10">
+                                    <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#modal-keyword-edit">키워드 변경 +</button>
+                                    <div class="keyword-box">
+                                        <div class="swiper-container">
+                                            <ul class="swiper-wrapper">
+                                                <li class="swiper-slide">
+                                                    <div class="item">
+                                                        <a href="#none" class="active">린넨커버</a>
+                                                        <a href="" class="del"><i class="icon-delete"><span class="sr-only">삭제</span></i></a>
+                                                    </div>
+                                                </li>
+                                                <li class="swiper-slide">
+                                                    <div class="item">
+                                                        <a href="#none">앞치마</a>
+                                                        <a href="" class="del"><i class="icon-delete"><span class="sr-only">삭제</span></i></a>
+                                                    </div>
+                                                </li>
+                                                <li class="swiper-slide">
+                                                    <div class="item">
+                                                        <a href="#none">후드티</a>
+                                                        <a href="" class="del"><i class="icon-delete"><span class="sr-only">삭제</span></i></a>
+                                                    </div>
+                                                </li>
+                                                <li class="swiper-slide">
+                                                    <div class="item">
+                                                        <a href="#none">사슴뿔</a>
+                                                        <a href="" class="del"><i class="icon-delete"><span class="sr-only">삭제</span></i></a>
+                                                    </div>
+                                                </li>
+                                                <li class="swiper-slide">
+                                                    <div class="item">
+                                                        <a href="#none">최대 5개</a>
+                                                        <a href="" class="del"><i class="icon-delete"><span class="sr-only">삭제</span></i></a>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <table class="table table-hover responsive table-data no-sort" id="datatable">
+                                    <thead>
+                                        <tr>
+                                            <th class="text-left">상품명</th>
+                                            <th class="text-right">구매수</th>
+                                            <th class="text-right">전환율</th>
+                                            <th class="text-right">순위</th>
+                                            <th class="text-right">광고순위</th>
+                                            <th class="text-right">가격경쟁력</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="text-left">
+                                                <div class="text-truncate" style="max-width:260px"><img src="../../resources/images/@product-thumb.jpg" alt="" class="product-thumb"> 1.상품명 <strong class="text-primary">린넨 커버</strong> 길어어어어어어…</div>
+                                            </td>
+                                            <td class="text-right">55</td>
+                                            <td class="text-right">2.6%</td>
+                                            <td class="text-right">36(4p/8) <span class="ml-1 text-danger">11 <i class="icon-decrease"></i></span></td>
+                                            <td class="text-right">36(4p/8) <span class="ml-1 text-primary">11 <i class="icon-increase"></i></span></td>
+                                            <td class="text-right">상위 14%</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left">
+                                                <div class="text-truncate" style="max-width:260px"><img src="../../resources/images/@product-thumb.jpg" alt="" class="product-thumb"> 222 222222 22222222222222222222222222</div>
+                                            </td>
+                                            <td class="text-right">55</td>
+                                            <td class="text-right">2.6%</td>
+                                            <td class="text-right">36(4p/8) <span class="ml-1 text-danger">11 <i class="icon-decrease"></i></span></td>
+                                            <td class="text-right">36(4p/8) <span class="ml-1 text-primary">11 <i class="icon-increase"></i></span></td>
+                                            <td class="text-right">상위 14%</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="list-more">
+                                    <a href=""><strong>MORE +</strong></a>
+                                </div>
+
+                                <h3 class="sub-title mt-6">연관 키워드</h3>
+                                <div class="text-gray text-14px mt-1 mb-3">더 효율이 좋은 키워드로 조합해 보세요</div>
+                                <div class="row row-30">
+                                    <div class="col-12 col-md-6">
+                                        <table class="table table-hover table-data mb-0">
+                                            <colgroup>
+                                                <col style="width:50%">
+                                                <col style="width:50%">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th class="text-left pl-0">앞치마 연관키워드</th>
+                                                    <th class="text-left">검색량/클릭당 광고비</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="text-left pl-0">난방텐트</td>
+                                                    <td class="text-left">135,800/440원</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <table class="table table-hover table-data mb-0">
+                                            <colgroup>
+                                                <col style="width:50%">
+                                                <col style="width:50%">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th class="text-left pl-0">앞치마 연관키워드</th>
+                                                    <th class="text-left">검색량/클릭당 광고비</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="text-left pl-0">난방텐트</td>
+                                                    <td class="text-left">135,800/440원</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="list-more">
+                                    <a href=""><strong>MORE +</strong></a>
+                                </div>
                             </div>
                         </div>
+
+
                         <!-- 컨텐츠 끝 -->
                     </div>
                 </div>
@@ -701,35 +948,30 @@
         </div>
     </div>
 
-    <link rel="stylesheet" href="../../resources/plugins/nwagon/Nwagon.css" type="text/css">
-    <script src="../../resources/plugins/nwagon/Nwagon.js"></script>
+    <!-- modal : 키워드 변경 -->
+    <div class="modal modal-alert" tabindex="-1" role="dialog" data-backdrop="static" id="modal-keyword-edit"> <!-- alert 스타일은 .modal-alert 추가 -->
+        <div class="modal-dialog modal-dialog-centered modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p class="alert-message">키워드를 입력하세요</p>
+                    <div class="input-box">
+                        <input type="text" class="form-control form-control-lg" placeholder="키워드">
+                        <button type="submit" class="btn btn-submit">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script>
         $(document).ready(function(){
             //페이지 로드시 첫번째 셀렉트에 focus 주기
             $('#url').focus();
-
-            var options = {
-                'legend':{
-                    names: ['08-12', '08-19', '08-26', '09-02', '09-09', '09-16'],
-                    hrefs: []
-                },
-                'dataset':{
-                    title:'Playing time per day',
-                    values: [[61,7, 66], [76,33, 66], [49,22, 45], [58,26, 76],
-                            [48, 15, 76], [56, 18,83]],
-                    colorset: ['#DC143C','#FF8C00', '#30a1ce'],
-                    fields:['Error', 'Warning', 'Pass']
-                },
-                'chartDiv' : 'chart-line',
-                'chartType' : 'line',
-                'chartSize' : {width:700, height:300},
-                'minValue' : 40,
-                'maxValue' : 100,
-                'increment' : 10,
-                'isGuideLineNeeded' : true  //default set to false
-            };
-            //Nwagon.chart(options);
 
             //datatable
             var datatable = $('#datatable').DataTable({
@@ -745,6 +987,133 @@
                     { "width": "13%", "targets": 2 }
                 ]
             });
+
+            //주간 판매량 순위 slider
+            topRankSlider();
+            function topRankSlider(){
+                rankwiper = new Swiper('.top-rank-swiper .swiper-container', {
+                    slidesPerView: 'auto',
+                    freeMode: true,
+                    mousewheel: true,
+                    slidesOffsetBefore: 24,
+                    slidesOffsetAfter: 24,
+                    spaceBetween: 18,
+                    observer: true,
+                    observeParents: true,
+                    observeSlideChildren: true,
+                    scrollbar: {
+                        el: '.swiper-scrollbar-rank',
+                        hide: false,
+                    },
+                    breakpoints: {
+                        992: {
+                            slidesOffsetBefore: 0,
+                            slidesOffsetAfter: 0,
+                        },
+                    }
+                });
+            }
+
+            //경쟁 상품 순위 키워드 slider
+            keywordBoxSlider();
+            function keywordBoxSlider(){
+                keywordSwiper = new Swiper('.keyword-box-slider .swiper-container', {
+                    slidesPerView: 'auto',
+                    freeMode: true,
+                    mousewheel: true,
+                    slidesOffsetBefore: 16,
+                    slidesOffsetAfter: 16,
+                    spaceBetween: 21,
+                    observer: true,
+                    observeParents: true,
+                    observeSlideChildren: true,
+                });
+            }
+            //경쟁 상품 순위 키워드 활성화
+            $('.keyword-box-slider a:not(.del)').on('click',function(e){
+                e.preventDefault();
+                $(this).closest('.swiper-slide').siblings().find('a').removeClass('active');
+                $(this).addClass('active');
+            });
+
+            //chartjs - 카테고리 1년 검색량
+            var config2 = {
+                type: 'line',
+                data: {
+                    labels: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"],
+                    datasets: [{
+                        backgroundColor: "#34d52e",
+                        borderColor: '#34d52e',
+                        borderWidth: 2,
+                        pointRadius: 3,
+                        pointHoverRadius: 6,
+                        data: [100, 200, 400, 500, 600, 700, 500, 200, 400, 500, 600, 700, 900],
+                        fill: false,
+                    }],
+                },
+                options: {
+                    responsive: true,
+                    legend: {
+                        display: false,
+                    },
+                    tooltips: {
+                        mode: 'index',
+                        intersect: false,
+                        displayColors: false,
+                        position: 'average',
+                        backgroundColor: 'rgba(52, 213, 46, 1)',
+                        bodyFontFamily: 'Gotham',
+                        cornerRadius: 12,
+                        caretSize: 0,
+                        xPadding: 10,
+                        callbacks: {
+                            title: function(tooltipItem, data) {
+                                return "";
+                            },
+                            label: function(tooltipItem) {
+                                return Number(tooltipItem.yLabel);
+                            }
+                        }
+                    },
+                    hover: {
+                        mode: 'nearest',
+                        intersect: true
+                    },
+                    scales: {
+                        xAxes: [{
+                            gridLines: {
+                                //display: false,
+                            },
+                            scaleLabel: {
+                                display: false,
+                            },
+                            ticks:{
+                                fontColor : '#989da0',
+                                fontSize : 15,
+                                fontFamily : 'Gotham',
+                                padding:10,
+                            },
+                        }],
+                        yAxes: [{
+                            scaleLabel: {
+                                drawBorder: false,
+                            },
+                            ticks: {
+                                fontColor : '#989da0',
+                                fontSize : 15,
+                                fontFamily : 'Gotham',
+                                stepSize: 100,
+                                beginAtZero: true,
+                                padding:10,
+                            },
+                        }]
+                    }
+                }
+            };
+            window.onload = function() {
+                var ctx2 = document.getElementById('canvas-search-volume-year').getContext('2d');
+                window.myLine = new Chart(ctx2, config2);
+            };
         });
     </script>
 </body>

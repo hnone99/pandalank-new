@@ -66,6 +66,9 @@
         scrolling : function(e){
             var scrollTop = $(window).scrollTop();
             var gnbTop = $('#header').height();
+            if($('.sticky-tab-area').length > 0){
+                var stickyTabOffsetTop = $('.sticky-tab-area').offset().top;
+            }
             gnbTop = Number(gnbTop);
 
             //if(scrollTop > 0){
@@ -79,6 +82,12 @@
                 $('html').addClass('is-scrolled');
             }else{
                 $('html').removeClass('is-scrolled');
+            }
+
+            if(scrollTop > stickyTabOffsetTop){
+                $('html').addClass('is-tab-sticky');
+            }else{
+                $('html').removeClass('is-tab-sticky');
             }
         },
         gnb : function(){
@@ -98,28 +107,30 @@
             });
         },
         category : function(){
-            const breakpoint = window.matchMedia( '(min-width:1279px)' );
+            if($('.category').length > 0){
+                const breakpoint = window.matchMedia( '(min-width:1279px)' );
 
-            let categorySwiper;
+                let categorySwiper;
 
-            const breakpointChecker = function() {
-                if ( breakpoint.matches === true ) {
-                    if ( categorySwiper !== undefined ) categorySwiper.destroy( true, true );
-                    return;
-                } else if ( breakpoint.matches === false ) {
-                    return enableSwiper();
-                }
-            };
-            const enableSwiper = function() {
-                categorySwiper = new Swiper('.category nav', {
-                    slidesPerView: 'auto',
-                    freeMode: true,
-                    slidesOffsetBefore: 12,
-                    slidesOffsetAfter: 12
-                });
-            };
-            breakpoint.addListener(breakpointChecker);
-            breakpointChecker();
+                const breakpointChecker = function() {
+                    if ( breakpoint.matches === true ) {
+                        if ( categorySwiper !== undefined ) categorySwiper.destroy( true, true );
+                        return;
+                    } else if ( breakpoint.matches === false ) {
+                        return enableSwiper();
+                    }
+                };
+                const enableSwiper = function() {
+                    categorySwiper = new Swiper('.category nav', {
+                        slidesPerView: 'auto',
+                        freeMode: true,
+                        slidesOffsetBefore: 12,
+                        slidesOffsetAfter: 12
+                    });
+                };
+                breakpoint.addListener(breakpointChecker);
+                breakpointChecker();
+            }
         },
     };
 

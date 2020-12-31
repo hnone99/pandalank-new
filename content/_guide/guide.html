@@ -62,7 +62,7 @@
             <button type="button" class="btn btn-sm btn-outline-black">엑셀다운로드</button>
             <button type="button" class="btn btn-sm btn-outline-gray">엑셀다운로드</button>
             <button type="button" class="btn btn-sm btn-outline-default">엑셀다운로드</button>
-            <button type="button" class="btn btn-sm btn-outline-gray btn-flat text-gray">추적</button>
+            <button type="button" class="btn btn-sm btn-flat btn-outline-default text-gray">추적</button>
             <button class="btn btn-primary btn-modal-title-aside"><i class="icon-search-white"></i> 검색</button>
         </section>
 
@@ -80,6 +80,16 @@
                     </ol>
                 </nav>
             </div>
+
+            <div class="location-area">
+                <div class="breadcrumb-category">
+                    <strong class="keyword">몰 전체</strong>
+                </div>
+                <div class="text-gray d-none d-lg-block">오늘을 기준으로 전 주, 전 월 대비 지표입니다. </div>
+            </div>
+
+            <h3 class="sub-title">연관 키워드</h3>
+            <div class="text-gray text-14px mt-1 mb-3">더 효율이 좋은 키워드로 조합해 보세요</div>
         </section>
 
         <section>
@@ -173,6 +183,123 @@
                 </div>
             </div>
         </section>
+
+        <section>
+            <div class="text-box">
+                <p>! 카테고리 경쟁도가 치열합니다. <a href="" class="text-primary text-underline">1차 카테고리 > 2차 카테고리 > 3차 카테고리</a>로 이동을 제안합니다</p>
+            </div>
+            <div class="text-box">
+                <div class="row justify-content-between">
+                    <div class="col-auto">
+                        <p>
+                            내 몰에 유입되는 키워드는 <strong class="text-primary">앞치마, 무소음 벽시계, 북유럽 카페트, 램프등, 무드등</strong>입니다.
+                        </p>
+                    </div>
+                    <div class="col-auto">
+                        <a href="">유효 키워드 순위 확인하기  &gt;</a>
+                    </div>
+                </div>
+            </div>
+            <div class="keyword-box-slider">
+                <button type="button" class="btn btn-dark">키워드 변경 +</button>
+                <div class="keyword-box">
+                    <div class="swiper-container">
+                        <ul class="swiper-wrapper">
+                            <li class="swiper-slide">
+                                <div class="item">
+                                    <a href="#none" class="active">린넨커버</a>
+                                    <a href="" class="del"><i class="icon-delete"><span class="sr-only">삭제</span></i></a>
+                                </div>
+                            </li>
+                            <li class="swiper-slide">
+                                <div class="item">
+                                    <a href="#none">앞치마</a>
+                                    <a href="" class="del"><i class="icon-delete"><span class="sr-only">삭제</span></i></a>
+                                </div>
+                            </li>
+                            <li class="swiper-slide">
+                                <div class="item">
+                                    <a href="#none">후드티</a>
+                                    <a href="" class="del"><i class="icon-delete"><span class="sr-only">삭제</span></i></a>
+                                </div>
+                            </li>
+                            <li class="swiper-slide">
+                                <div class="item">
+                                    <a href="#none">사슴뿔</a>
+                                    <a href="" class="del"><i class="icon-delete"><span class="sr-only">삭제</span></i></a>
+                                </div>
+                            </li>
+                            <li class="swiper-slide">
+                                <div class="item">
+                                    <a href="#none">최대 5개</a>
+                                    <a href="" class="del"><i class="icon-delete"><span class="sr-only">삭제</span></i></a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <table class="table table-result">
+                <colgroup>
+                    <col style="width: 128px;" class="d-none d-md-table-column">
+                    <col style="width: 90px;" class="d-md-none">
+                    <col class="d-none d-md-table-column">
+                    <col class="d-none d-md-table-column">
+                    <col>
+                    <col>
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th class="pl-0">썸네일</th>
+                        <th class="d-none d-md-table-cell">키워드</th>
+                        <th class="d-none d-md-table-cell">스토어</th>
+                        <th>
+                            <span class="d-none d-md-inline">상위노출 순위</span> <!-- pc용 제품명 -->
+                            <span class="d-md-none">실시간 순위 확인</span> <!-- 모바일용 제품명 -->
+                        </th>
+                        <th class="text-center">순위 변동 <span class="d-none d-md-inline">추적</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td rowspan="2" class="pl-0 d-none d-md-table-cell">
+                            <a href="">
+                                <div class="thumb"><img src="../../resources/images/@product-thumb.jpg" alt="" onload="setDirection(this)"></div>
+                            </a>
+                        </td>
+                        <td class="pl-0 d-md-none">
+                            <a href="">
+                                <div class="thumb"><img src="../../resources/images/@product-thumb.jpg" alt="" onload="setDirection(this)"></div>
+                            </a>
+                        </td>
+                        <td class="d-none d-md-table-cell">명화 그리기</td> <!-- pc용 제품명 -->
+                        <td class="d-none d-md-table-cell">
+                            <div class="text-truncate" style="max-width: 121px">
+                                <a href="" class="text-underline">하기로마트</a>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="product d-md-none">명화 그리기</div> <!-- 모바일용 제품명 -->
+                            <div class="rank">
+                                <strong class="text-primary">4</strong>
+                                <i>위 / 4 page 2</i>
+                            </div>
+                        </td>
+                        <td class="text-center">
+                            <a href="" class="btn btn-sm btn-flat btn-outline-default text-gray">추적</a>
+                        </td>
+                    </tr>
+                    <tr class="d-none d-md-table-row">
+                        <td colspan="4">
+                            퀄리티보장 장기보관 가능 패브릭트리 <span class="text-primary">포스터</span> 크리스마스트리 전구 코로나 데이트
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
     </div>
 
     <!-- modal : 비밀번호 입력 -->
@@ -224,6 +351,26 @@
 
     <script>
         $(document).ready(function(){
+            //경쟁 상품 순위 키워드 slider
+            keywordBoxSlider();
+            function keywordBoxSlider(){
+                keywordSwiper = new Swiper('.keyword-box-slider .swiper-container', {
+                    slidesPerView: 'auto',
+                    freeMode: true,
+                    mousewheel: true,
+                    slidesOffsetBefore: 16,
+                    slidesOffsetAfter: 16,
+                    spaceBetween: 21,
+                    observer: true,
+                    observeParents: true
+                });
+            }
+            //경쟁 상품 순위 키워드 활성화
+            $('.keyword-box-slider a:not(.del)').on('click',function(e){
+                e.preventDefault();
+                $(this).closest('.swiper-slide').siblings().find('a').removeClass('active');
+                $(this).addClass('active');
+            });
         });
     </script>
 </body>
