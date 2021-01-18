@@ -119,6 +119,21 @@ select.form-control {
   }
 }
 
+select.form-control-simple{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: url('../images/select.svg') no-repeat 100% 50%;
+  border: 0;
+  border-radius: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: -0.8px;padding:0 20px 0 0;
+  &::-ms-expand {
+    background-color: transparent;
+    border: 0;
+  }
+}
+
 // Make file inputs better match text inputs by forcing them to new lines.
 .form-control-file,
 .form-control-range {

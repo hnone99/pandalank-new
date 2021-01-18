@@ -83,7 +83,7 @@ body{
     .menu{
         margin-bottom: 15px;
         li{display: inline;margin-right: 15px;
-            a{color: $gray;font-size: 14px;}
+            a{color: $gray;font-size: 14px;letter-spacing: -0.7px;}
         }
     }
     .info{font-size: 12px;color: $gray;line-height: 1.67;font-family: 'Noto Sans KR';}

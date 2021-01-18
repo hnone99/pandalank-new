@@ -41,13 +41,37 @@
                     <div class="gnb">
                         <nav>
                             <ul>
-                                <li class="active"><a href="../dashboard/dashboard.html"><span>홈</span></a></li>
-                                <li><a href="../product/product.html"><span>상품 찾기</span></a></li>
-                                <li><a href="../analysis/analysis.html"><span>경쟁력 분석</span></a></li>
-                                <li><a href="../ai/ai.html"><span>AI 판매 예측</span></a></li>
-                                <li><a href="../mymall/mymall.html"><span>내 쇼핑몰 분석</span></a></li>
-                                <li><a href="../ceo/ceo.html"><span>사장님들의 방</span></a></li>
-                                <li><a href="../board/notice.html"><span>공지</span></a></li>
+                                <li>
+                                    <a href="../dashboard/dashboard.html"><span>홈</span></a>
+                                </li>
+                                <li>
+                                    <div>키워드</div>
+                                    <ul>
+                                        <li><a href="../product/product.html">키워드 찾기</a></li>
+                                        <li><a href="../product/keyword_curation.html">키워드 큐레이션</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <div>상품</div>
+                                    <ul>
+                                        <li><a href="../analysis/analysis.html"><span>상품 분석</span></a></li>
+                                        <li><a href="../analysis/realtime.html">실시간 순위 확인</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <div>쇼핑몰</div>
+                                    <ul>
+                                        <li><a href="../mymall/mymall.html"><span>쇼핑몰 분석</span></a></li>
+                                        <li><a href="">상품 순위 추적</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <div>커뮤니티</div>
+                                    <ul>
+                                        <li><a href="../community/free.html"><span>커뮤니티 게시판</span></a></li>
+                                        <li><a href="#none"><span>서비스 구독</span></a></li>
+                                    </ul>
+                                </li>
                             </ul>
                         </nav>
                     </div>
@@ -91,7 +115,7 @@
                                 </div>
                             </div>
                             <div class="tab-content">
-                                <div role="tabpanel" class="tab-pane fade active show" id="t1">                                    
+                                <div role="tabpanel" class="tab-pane fade active show" id="t1">
                                     <div class="board">
                                         <div class="board-top">
                                             <div class="col-auto">
@@ -103,12 +127,13 @@
                                         <div class="board-list">
                                             <ul>
                                                 <!-- 알람 없음 -->
-                                                <li class="board-item border-bottom-0">
+                                                <li>
                                                     <div class="data-empty">
                                                         <span class="img"></span>
                                                         <p>도착한 알람이 없어요</p>
                                                     </div>
                                                 </li>
+                                                <!-- //알람 없음 -->
                                             </ul>
                                         </div>
                                     </div>
@@ -123,25 +148,19 @@
                                         <div class="board-list">
                                             <ul>
                                                 <li class="board-item">
-                                                    <div class="board-item-normal">
-                                                        <div class="cate">공지</div>
-                                                        <div class="subject"><span>판다랭크가 오픈했습니다. 그랜드 런칭 오픈파티를 시그니엘에서 합니다</span></div>
-                                                        <div class="delete"><a href="javascript:;"><i class="icon-delete"></i></a></div>
-                                                    </div>
+                                                    <div class="cate">공지</div>
+                                                    <div class="subject mb-0"><span>판다랭크가 오픈했습니다. 그랜드 런칭 오픈파티를 시그니엘에서 합니다</span></div>
+                                                    <div class="delete"><a href="javascript:;"><i class="icon-delete"></i></a></div>
                                                 </li>
                                                 <li class="board-item">
-                                                    <div class="board-item-normal">
-                                                        <div class="cate">내몰</div>
-                                                        <div class="subject"><span>유입율이 전주 대비 <span class="text-primary">2% 상승</span>했습니다</span></div>
-                                                        <div class="delete"><a href="javascript:;"><i class="icon-delete"></i></a></div>
-                                                    </div>
+                                                    <div class="cate">내몰</div>
+                                                    <div class="subject mb-0"><span>유입율이 전주 대비 <span class="text-primary">2% 상승</span>했습니다</span></div>
+                                                    <div class="delete"><a href="javascript:;"><i class="icon-delete"></i></a></div>
                                                 </li>
                                                 <li class="board-item">
-                                                    <div class="board-item-normal">
-                                                        <div class="cate">내몰</div>
-                                                        <div class="subject"><span>전환율이 전주 대비 <span class="text-danger">1% 하락</span>했습니다</span></div>
-                                                        <div class="delete"><a href="javascript:;"><i class="icon-delete"></i></a></div>
-                                                    </div>
+                                                    <div class="cate">내몰</div>
+                                                    <div class="subject mb-0"><span>전환율이 전주 대비 <span class="text-danger">1% 하락</span>했습니다</span></div>
+                                                    <div class="delete"><a href="javascript:;"><i class="icon-delete"></i></a></div>
                                                 </li>
                                             </ul>
                                         </div>
@@ -157,11 +176,9 @@
                                         <div class="board-list">
                                             <ul>
                                                 <li class="board-item">
-                                                    <div class="board-item-normal">
-                                                        <div class="cate">공지</div>
-                                                        <div class="subject"><span>판다랭크가 오픈했습니다. 그랜드 런칭 오픈파티를 시그니엘에서 합니다</span></div>
-                                                        <div class="delete"><a href="javascript:;"><i class="icon-delete"></i></a></div>
-                                                    </div>
+                                                    <div class="cate">공지</div>
+                                                    <div class="subject"><span>판다랭크가 오픈했습니다. 그랜드 런칭 오픈파티를 시그니엘에서 합니다</span></div>
+                                                    <div class="delete"><a href="javascript:;"><i class="icon-delete"></i></a></div>
                                                 </li>
                                             </ul>
                                         </div>
@@ -179,16 +196,12 @@
                                         <div class="board-list">
                                             <ul>
                                                 <li class="board-item">
-                                                    <div class="board-item-normal">
-                                                        <div class="subject"><span>유입율이 전주 대비 <span class="text-primary">2% 상승</span>했습니다</span></div>
-                                                        <div class="delete"><a href="javascript:;"><i class="icon-delete"></i></a></div>
-                                                    </div>
+                                                    <div class="subject"><span>유입율이 전주 대비 <span class="text-primary">2% 상승</span>했습니다</span></div>
+                                                    <div class="delete"><a href="javascript:;"><i class="icon-delete"></i></a></div>
                                                 </li>
                                                 <li class="board-item">
-                                                    <div class="board-item-normal">
-                                                        <div class="subject"><span>전환율이 전주 대비 <span class="text-danger">1% 하락</span>했습니다</span></div>
-                                                        <div class="delete"><a href="javascript:;"><i class="icon-delete"></i></a></div>
-                                                    </div>
+                                                    <div class="subject"><span>전환율이 전주 대비 <span class="text-danger">1% 하락</span>했습니다</span></div>
+                                                    <div class="delete"><a href="javascript:;"><i class="icon-delete"></i></a></div>
                                                 </li>
                                             </ul>
                                         </div>
@@ -206,18 +219,14 @@
                                         <div class="board-list">
                                             <ul>
                                                 <li class="board-item">
-                                                    <div class="board-item-normal">
-                                                        <div class="cate">댓글</div>
-                                                        <div class="subject"><span>텍스트 방식 미정</span></div>
-                                                        <div class="delete"><a href="javascript:;"><i class="icon-delete"></i></a></div>
-                                                    </div>
+                                                    <div class="cate">댓글</div>
+                                                    <div class="subject"><span>텍스트 방식 미정</span></div>
+                                                    <div class="delete"><a href="javascript:;"><i class="icon-delete"></i></a></div>
                                                 </li>
                                                 <li class="board-item">
-                                                    <div class="board-item-normal">
-                                                        <div class="cate">댓글</div>
-                                                        <div class="subject"><span>텍스트 방식 미정</span></div>
-                                                        <div class="delete"><a href="javascript:;"><i class="icon-delete"></i></a></div>
-                                                    </div>
+                                                    <div class="cate">댓글</div>
+                                                    <div class="subject"><span>텍스트 방식 미정</span></div>
+                                                    <div class="delete"><a href="javascript:;"><i class="icon-delete"></i></a></div>
                                                 </li>
                                             </ul>
                                         </div>
@@ -233,18 +242,14 @@
                                         <div class="board-list">
                                             <ul>
                                                 <li class="board-item">
-                                                    <div class="board-item-normal">
-                                                        <div class="cate">댓글</div>
-                                                        <div class="subject"><span>텍스트 방식 미정</span></div>
-                                                        <div class="delete"><a href="javascript:;"><i class="icon-delete"></i></a></div>
-                                                    </div>
+                                                    <div class="cate">댓글</div>
+                                                    <div class="subject"><span>텍스트 방식 미정</span></div>
+                                                    <div class="delete"><a href="javascript:;"><i class="icon-delete"></i></a></div>
                                                 </li>
                                                 <li class="board-item">
-                                                    <div class="board-item-normal">
-                                                        <div class="cate">댓글</div>
-                                                        <div class="subject"><span>텍스트 방식 미정</span></div>
-                                                        <div class="delete"><a href="javascript:;"><i class="icon-delete"></i></a></div>
-                                                    </div>
+                                                    <div class="cate">댓글</div>
+                                                    <div class="subject"><span>텍스트 방식 미정</span></div>
+                                                    <div class="delete"><a href="javascript:;"><i class="icon-delete"></i></a></div>
                                                 </li>
                                             </ul>
                                         </div>
@@ -260,18 +265,14 @@
                                         <div class="board-list">
                                             <ul>
                                                 <li class="board-item">
-                                                    <div class="board-item-normal">
-                                                        <div class="cate">댓글</div>
-                                                        <div class="subject"><span>텍스트 방식 미정</span></div>
-                                                        <div class="delete"><a href="javascript:;"><i class="icon-delete"></i></a></div>
-                                                    </div>
+                                                    <div class="cate">댓글</div>
+                                                    <div class="subject"><span>텍스트 방식 미정</span></div>
+                                                    <div class="delete"><a href="javascript:;"><i class="icon-delete"></i></a></div>
                                                 </li>
                                                 <li class="board-item">
-                                                    <div class="board-item-normal">
-                                                        <div class="cate">댓글</div>
-                                                        <div class="subject"><span>텍스트 방식 미정</span></div>
-                                                        <div class="delete"><a href="javascript:;"><i class="icon-delete"></i></a></div>
-                                                    </div>
+                                                    <div class="cate">댓글</div>
+                                                    <div class="subject"><span>텍스트 방식 미정</span></div>
+                                                    <div class="delete"><a href="javascript:;"><i class="icon-delete"></i></a></div>
                                                 </li>
                                             </ul>
                                         </div>

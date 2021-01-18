@@ -241,7 +241,7 @@
         fill:$primary;
     }
     .animation-grow{
-        animation: grow;animation-duration: .25s;animation-direction:forwards;animation-timing-function: ease-in-out;
+        animation: grow;animation-duration: .35s;animation-direction:forwards;animation-timing-function: ease-in-out;
     }
 }
 
@@ -370,7 +370,24 @@
         .empty{font-size: 14px;color: #000;font-weight: 500;}
         > ul{
             border-top: 2px solid $black;
-            > li{border-bottom: 1px solid $border-color;}
+        }
+    }
+    .board-item{
+        border-bottom: 1px solid $border-color;height: 48px;display: flex;align-items: center;justify-content: space-between;
+        > a{
+            display: inline-block;position: relative;transition: color .1s;
+        }
+        .cate{width: 100px;font-weight: 500;color: $danger;}
+        .subject{
+            font-size: 14px;font-weight: 400;flex: 1 1 0;padding-right: 32px;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;
+            .badge{margin-right: 3px;}
+        }
+        .writer{width: 130px;color: $gray;}
+        .date{width: 85px;color: $gray;}
+        .period{width: 135px;color: $gray;text-align: center;}
+        .hit{width: 35px;color: $gray;}
+        .down{width: 35px;
+            i{vertical-align: top;}
         }
     }
     .board-item-normal{
@@ -391,42 +408,17 @@
         }
         a:hover .icon-download{background-image: url('../images/icon-download-green.svg');}
     }
-    .board-item-simple{
-        font-size: 13px;
-        > a{
-            display: block;padding-right: 56px;height: 48px;display: flex;align-items: center;justify-content: space-between; position: relative;
-            &::before{content: '';display: block;width: 13px;height: 7px;background: url('../images/icon-arrow-down.svg') no-repeat 50% 50%;background-size: contain;position: absolute;right:21px;top: 50%;margin-top: -3.5px;transition: all .2s .1s;}
-            &:hover{text-decoration: underline;color: inherit;text-decoration: none;}
-        }
-        .cate{width: 100px;font-weight: 500;color: $danger;}
-        .subject{
-            font-size: 14px;font-weight: 400;flex: 1 1 0;padding-right: 32px;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;
-            .badge{margin-right: 3px;}
-        }
-        .writer{width: 130px;color: $gray;}
-        .date{width: 85px;color: $gray;}
-        .period{width: 135px;color: $gray;text-align: center;}
-        .hit{width: 35px;color: $gray;}
-        .down{width: 35px;
-            i{vertical-align: top;}
-        }
+    .board-detail{
+        border-top: 2px solid #000;border-bottom: 2px solid #000;
+        .board-item-detail{padding: 27px 0;}
     }
-    .board-item-detail{
-        background: #fbfafb;padding: 30px;border-top: 1px solid $border-color;display: none;
+    .link-copy{
+        text-align: right;color: $gray;margin-bottom: 27px;font-size: 14px;
+        a{margin-left: 8px;}
     }
     .board-content{margin-bottom: 28px;line-height: 1.6;font-size: 14px;position: relative;}
     .board-heart{margin-bottom: 30px;clear: both;}
     .board-control{font-size: 14px;}
-    li.active{
-        .board-item-simple{
-            > a{
-                &::before{transform: rotate(180deg);}
-            }
-        }
-        .board-item-detail{
-            display: block;
-        }
-    }
     li.board-item-best{
         .board-item-simple .subject{font-weight: 500;}
     }
@@ -436,36 +428,39 @@
         .board-item-normal{
             .delete{width: auto;padding-right: 10px;}
         }
-        .board-item-simple{
-            > a{
-                flex-wrap: wrap;justify-content: start;height: auto;padding: 10px 25px 10px 0;
-                &::before{top: 24px;right: 0;}
-                > div{width: auto !important;margin-right: 12px;}
-            }
-            .cate{order:2}
-            .subject{order:1;width: 100% !important;flex: 1 1 100%;white-space: normal;padding-right: 0;margin-bottom: 10px}
-            .writer{order:3}
-            .date{order:4}
-            .hit{order:5}
-        }
-        .board-item-detail{padding: 24px;}
         .board-heart{margin-bottom: 20px;}
     }
 }
 @include media-breakpoint-down(md) {
     .board{
-        font-size: 14px;
         &.notice{margin-top: 20px;}
         .sort{
             .board-name{font-size: 14px;}
             a{font-size: 14px;}
         }
-        .board-item-normal{
-            .cate{display: none;}
-            .subject{white-space: normal;}
-            .date{width: auto;}
-            .period{width: auto;}
-            .down{display: none;}
+        .board-list{
+
+        }
+        .board-item{
+            flex-wrap: wrap;justify-content: start;height: auto;padding: 10px 0;
+            > a{
+                > div{width: auto !important;margin-right: 12px;}
+            }
+            .subject{order:1;flex: 1 1 100%;white-space: normal;padding-right: 0;margin-bottom: 10px}
+            .cate{width: auto;order: 2;margin-right: 8px;}
+            .writer{width: auto;order:3;margin-right: 8px;}
+            .date{width: auto;order:4;margin-right: 8px;}
+            .hit{width: auto;order: 5;
+                &::before{content: '조회수 ';}
+            }
+            .period{width: auto;order: 10;}
+            .down{display: none;order: 10;}
+            .delete{order: 10;}
+            &.my-purchase{
+                justify-content: space-between;
+                .subject{flex: 0 0 auto;margin-bottom: 0;}
+                .cate{display: none;}
+            }
         }
         .alarmcenter &{
             .board-item-normal{
@@ -477,22 +472,30 @@
     /* .btn-write{position: fixed;width: 100%;bottom: 0;left: 0;z-index: 1;} */
 }
 
+.board-move{margin-top: 20px;}
+@include media-breakpoint-down(md) {
+    .board-move{
+        margin-top: 15px;
+        .btn.min-width-200px{min-width: 100px;}
+    }
+}
 .board-search {
     display: flex;justify-content: center;margin-top: 40px;
     .input-box{width: 280px;}
+    .form-control{padding-right: 80px;}
 }
 
 .comment{
     .comment-textarea{
         .box{
-            border: 1px solid $border-color;position: relative;background: #fff;height: 58px;transition: all 0.25s .05s;
+            border: 1px solid $border-color;position: relative;background: #fff;height: 56px;transition: all 0.25s .05s;
             textarea{display: block;border: 0;margin: 0;resize: none;width: 100%;height: 100%;outline:0;padding: 1rem;}
             .password{
                 border-top: 1px solid $border-color;position: absolute;width: 100%;left: 0;bottom: 0;visibility: hidden;opacity: 0;transition: opacity 0.15s, visibility 0.15s;transition-delay: .3s;
                 .form-control{border: 0;height: 55px;padding-left: 1rem;font-size: 13px;}
             }
             &.active{
-                border-color: $primary;height: 160px;padding-bottom: 56px;
+                border-color: $primary;height: 120px;padding-bottom: 56px;
                 .password{visibility: visible;opacity: 1;}
             }
             .btn-submit{
@@ -524,6 +527,7 @@
 .input-box{
     position: relative;
     .btn-submit{position: absolute;right:10px;top:50%;transform: translateY(-50%);}
+    .btn-primary-submit{position: absolute;right:10px;top:50%;transform: translateY(-50%);}
 }
 .alert-message + .input-box{margin-top: 30px;}
 .alert-message-sub{margin-top: 12px;line-height: 1.6;text-align: center;}
@@ -1524,8 +1528,8 @@ body.body-about{
     li{
         margin-right: 20px;
         a{
-            font-size: 16px;font-weight: 700;display: block;padding: 12px 0;position: relative;transition: all .2s;
-            &::before{content: '';display: block;width: 100%;height: 4px;position: absolute;left: 0;bottom: 0;background: transparent;transition: all .2s;}
+            font-size: 16px;font-weight: 500;display: block;padding: 12px 0;position: relative;transition: all .2s;
+            &::before{content: '';display: block;width: 100%;height: 4px;border-radius: 4px;position: absolute;left: 0;bottom: 0;background: transparent;transition: all .2s;}
         }
         a.active{
             color: $primary;
@@ -1562,3 +1566,12 @@ body.body-about{
 }
 
 .line-2px-black{width: 100%;height: 2px;background: $black;}
+
+.bdw-2{border-width: 2px;}
+
+@include media-breakpoint-down(md) {
+    .adv-banner{margin: 0 -24px;}
+}
+
+.min-width-200px{min-width: 200px;}
+
