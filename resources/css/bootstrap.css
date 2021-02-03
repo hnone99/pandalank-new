@@ -1501,9 +1501,9 @@ input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="butto
 
 .btn-primary-submit { border: 0; background: #34D52E; color: #fff; padding: 8px 16px; border-radius: 10px; line-height: 1; }
 
-.btn-primary-submit:focus { background: rgba(52, 213, 46, 0.1); box-shadow: 0 0 0 0.2rem rgba(52, 213, 46, 0.5); }
+.btn-primary-submit:focus { background: #34d52e; box-shadow: 0 0 0 0.2rem rgba(52, 213, 46, 0.5); }
 
-.btn-primary-submit:hover { color: #fff; }
+.btn-primary-submit:hover { background: #34d52e; box-shadow: 0 0 0 0.2rem rgba(52, 213, 46, 0.5); color: #fff; }
 
 .btn-primary.disabled, .btn-primary:disabled { opacity: 1; background: #222; border-color: #222; color: #989da0; }
 

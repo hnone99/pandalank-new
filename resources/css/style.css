@@ -214,6 +214,14 @@ html.open-alarm .alarm { opacity: 1; visibility: visible; }
 
 @media (max-width: 991.98px) { #alarm-block { display: none; } }
 
+#center .quick-banner { margin-top: 170px; }
+
+#center .quick-banner a { padding: 20px; min-height: 0; }
+
+#center .quick-banner p { font-size: 14px; }
+
+#center .quick-banner strong { font-size: 18px; }
+
 @media (max-width: 991.98px) { #center { display: block; max-width: 312px; margin: 0 auto; } }
 
 .btn-top { position: fixed; right: -50px; bottom: 24px; z-index: 10; transition: all .25s .2s ease-in-out; }
@@ -954,8 +962,8 @@ body.body-half { background: #fbf9fa url("../images/bg-join.png") no-repeat 0 10
 @media (max-width: 991.98px) { body.body-mymall #center-block { position: relative; padding-top: 40px; padding-bottom: 40px; background: #fbfafb; }
   body.body-mymall .banner-api { top: 0; left: 0; bottom: auto; }
   body.body-mymall #center-block + #container-block { border-top: 0; padding-top: 0; }
-  .mymall .btn-group { margin-bottom: 16px; }
-  .mymall .table .text-truncate { max-width: 140px; } }
+  body.body-mymall .btn-group { margin-bottom: 16px; }
+  body.body-mymall .table .text-truncate { max-width: 140px; } }
 
 .result-table { border-top: 2px solid #000; }
 
@@ -1501,7 +1509,9 @@ body.body-about #container-block::before { content: ''; width: 100%; height: 680
 
 .main-top .input-box { max-width: 480px; margin: 80px auto 0; }
 
-.main-top .input-box .form-control { height: 56px; }
+.main-top .input-box .form-control { height: 56px; border-color: #d2dae0; }
+
+.main-top .input-box .form-control:focus { border-color: #34D52E; }
 
 .main-bottom { background: #fbfafb; padding: 40px 0; }
 

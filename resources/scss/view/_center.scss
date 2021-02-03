@@ -1,4 +1,11 @@
 #center{
+    .quick-banner{
+        margin-top: 170px;
+        a{padding: 20px;min-height: 0;}
+        p{font-size: 14px;}
+        strong{font-size: 18px;}
+    }
+
 }
 
 @include media-breakpoint-down(md) {
