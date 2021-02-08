@@ -121,8 +121,8 @@
                             <div class="sticky-tab">
                                 <ul class="nav">
                                     <li><a href="../community/free.html"><span>자유</span></a></li>
-                                    <li><a href="../community/category.html" class="active"><span>카테고리</span></a></li>
-                                    <li><a href="../community/expert.html"><span>전문가 상담</span></a></li>
+                                    <li><a href="../community/category.html"><span>카테고리</span></a></li>
+                                    <li><a href="../community/expert.html" class="active"><span>전문가 상담</span></a></li>
                                     <li><a href=""><span>판다랭크 이용팁</span></a></li>
                                     <li><a href="../community/ggultip.html"><span>꿀팁 저장소</span></a></li>
                                     <li><a href=""><span>이용문의</span></a></li>
@@ -134,40 +134,64 @@
                         <div class="m-t-40 mb-4 d-lg-none">
                             <select name="" id="" class="form-control-simple">
                                 <option value="">자유</option>
-                                <option value="" selected>카테고리</option>
-                                <option value="">전문가 상담</option>
+                                <option value="">카테고리</option>
+                                <option value="" selected>전문가 상담</option>
                                 <option value="">판다랭크 이용팁</option>
                                 <option value="">꿀팁 저장소</option>
                                 <option value="">이용문의</option>
                             </select>
                         </div>
 
-                        <div class="category mt-lg-4">
-                            <nav class="swiper-container">
-                                <ul class="swiper-wrapper">
-                                    <li class="swiper-slide"><a href=""><span>베스트</span></a></li>
-                                    <li class="swiper-slide active"><a href=""><span>패션의류</span></a></li>
-                                    <li class="swiper-slide"><a href=""><span>패션잡화</span></a></li>
-                                    <li class="swiper-slide"><a href=""><span>화장품/미용</span></a></li>
-                                    <li class="swiper-slide"><a href=""><span>디지털/가전</span></a></li>
-                                    <li class="swiper-slide"><a href=""><span>가구/인테리어</span></a></li>
-                                    <li class="swiper-slide"><a href=""><span>출산/육아</span></a></li>
-                                    <li class="swiper-slide"><a href=""><span>식품</span></a></li>
-                                    <li class="swiper-slide"><a href=""><span>스포르/레저</span></a></li>
-                                    <li class="swiper-slide"><a href=""><span>생활/건강</span></a></li>
-                                    <li class="swiper-slide"><a href=""><span>여가/생활편의</span></a></li>
-                                    <li class="swiper-slide"><a href=""><span>면세점</span></a></li>
-                                    <li class="swiper-slide"><a href=""><span>사업질문</span></a></li>
-                                </ul>
-                            </nav>
+                        <h3 class="sub-title-lg mb-4 mt-5 mt-lg-7">혼자 해결하기 막막했던 문제, <br class="d-block d-md-none"> 이제 전문가와 상담하세요!</h3>
+                        <div class="expert">
+                            <div class="swiper-container">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="item">
+                                            <div class="img"><a href=""></a></div>
+                                            <div class="info">소싱 ㅣ 자네드거</div>
+                                            <div class="name">100억 매출 알리바바 소싱 전문가</div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="item">
+                                            <div class="img"><a href=""></a></div>
+                                            <div class="info">소싱 ㅣ 자네드거</div>
+                                            <div class="name">100억 매출 알리바바 소싱 전문가</div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="item">
+                                            <div class="img"><a href=""></a></div>
+                                            <div class="info">소싱 ㅣ 자네드거</div>
+                                            <div class="name">100억 매출 알리바바 소싱 전문가</div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="item">
+                                            <div class="img"><a href=""></a></div>
+                                            <div class="info">소싱 ㅣ 자네드거</div>
+                                            <div class="name">100억 매출 알리바바 소싱 전문가</div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="item">
+                                            <div class="img"><a href=""></a></div>
+                                            <div class="info">소싱 ㅣ 자네드거</div>
+                                            <div class="name">100억 매출 알리바바 소싱 전문가</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
                         </div>
 
-                        <div class="board mt-4">
+                        <div class="board">
                             <div class="board-top">
                                 <div class="col-auto">
-                                    <div class="sort">
-                                        <a href="" class="active">추천순</a>
-                                        <a href="" class="ml-2">최신순</a>
+                                    <div class="breadcrumb-category mt-0">
+                                        <strong class="keyword">자네드거에게 물어보세요</strong>
                                     </div>
                                 </div>
                                 <div class="col-auto">
@@ -270,6 +294,31 @@
 
     <script>
         $(document).ready(function(){
+            var expertSwiper = new Swiper('.expert .swiper-container', {
+                slidesPerView: 'auto',
+                freeMode: true,
+                slidesOffsetBefore: 24,
+                slidesOffsetAfter: 24,
+                spaceBetween: 20,
+                observer: true,
+                observeParents: true,
+                observeSlideChildren: true,
+                scrollbar: {
+                    el: '.swiper-scrollbar-rank',
+                    hide: false,
+                },
+                breakpoints: {
+                    992: {
+                        slidesOffsetBefore: 0,
+                        slidesOffsetAfter: 0,
+                        spaceBetween: 13,
+                    },
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            });
         });
     </script>
 </body>
