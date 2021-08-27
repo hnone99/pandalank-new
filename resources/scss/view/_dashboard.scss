@@ -53,27 +53,44 @@
     }
 }
 
-.main-top{
-    height: 523px;display: flex;align-items: center;justify-content: center;
-    p{font-size: 14px;letter-spacing: -.7px;margin-top: 10px;}
-    .input-box{
-        max-width: 480px;margin: 80px auto 0;
-        .form-control{height: 56px;border-color: $default;
-            &:focus{border-color: $primary;}
+.main-type-1{
+    .main-top{
+        height: 523px;display: flex;align-items: center;justify-content: center;
+        p{font-size: 14px;letter-spacing: -.7px;margin-top: 10px;}
+        .input-box{
+            max-width: 480px;margin: 80px auto 0;
+            .form-control{height: 56px;border-color: $default;
+                &:focus{border-color: $primary;}
+            }
         }
     }
-}
-.main-bottom{
-    background: #fbfafb;padding: 40px 0;
-}
-@include media-breakpoint-down(md) {
     .main-bottom{
-        padding-top: 24px;
+        background: #fbfafb;padding: 40px 0;
+    }
+    @include media-breakpoint-down(md) {
+        .main-bottom{
+            padding-top: 24px;
+        }
+    }
+    .main-logo{
+        text-align: center;
     }
 }
 
-.main-logo{
-    text-align: center;
+.main-type-2{
+    .main-top{
+        padding-top: 80px;
+        .input-box{
+            max-width: 500px;margin: 10px auto 20px;
+            .form-control{height: 43px;border-color: $primary;border-radius: 50rem;padding-left: 26px;padding-right: 50px;
+                &:focus{border-color: $primary;}
+            }
+            button{position: absolute;right: 0;top: 0;border: 0;background: transparent;height: 100%;width: 50px;}
+        }
+    }
+    .main-logo{
+        text-align: center;
+    }
 }
 
 .new-keyword{
@@ -85,7 +102,6 @@
         li{width: 25%;padding: 0 3px;line-height: 2;@include text-truncate();}
     }
 }
-
 @include media-breakpoint-down(md) {
     .new-keyword{
         padding: 20px 24px;
@@ -108,7 +124,6 @@
         &::before{content: '';display: block;width: 7px;height: 13px;background: url('../images/icon-next.svg') no-repeat 0 0;position: absolute;right: 0;top: 50%;transform: translateY(-50%);}
     }
 }
-
 @include media-breakpoint-down(md) {
     .quick-banner{
         a{
@@ -119,3 +134,13 @@
     }
 
 }
+
+.open-banner{
+    text-align: center;
+    .d-inline-flex{background: #f7f9fd;border-radius: 10px;padding: 12px 24px;text-align: left;}
+    .icon-chart{margin-right: 12px;}
+    p{font-size: 16px;letter-spacing: 0;}
+    span{color: $gray;font-size: 12px;}
+}
+
+.main-inquiry{margin-top: 65px;}

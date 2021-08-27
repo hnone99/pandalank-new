@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-Compatible" content="IE=edge">
+    <title>PANDA RANK</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="icon" href="../../resources/images/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="../../resources/images/favicon-128.png" sizes="128x128">
+    <link rel="stylesheet" href="../../resources/css/bootstrap.css">
+    <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/OverlayScrollbars/css/OverlayScrollbars.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/datatables/css/dataTables.bootstrap4.css">
+    <link rel="stylesheet" href="../../resources/css/style.css">
+    <!-- jquery -->
+    <script src="../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- jquery ui -->
+    <script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- bootstrap -->
+    <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- DataTables -->
+    <script src="../../resources/plugins/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="../../resources/plugins/datatables/js/dataTables.bootstrap4.js"></script>
+    <!-- Swiper -->
+    <script src="../../resources/plugins/swiper/js/swiper.min.js"></script>
+    <!-- ui 관련 -->
+    <script src="../../resources/js/ui.js"></script>
+</head>
+
+<body class="body-dashboard">
+    <div id="wrap">
+        <div id="side-block">
+            <div id="side">
+                <div class="logo">
+                    <h1><a href="../dashboard/main-type-1.html"><span class="sr-only">PANDA RANK LOGO</span></a></h1>
+                </div>
+                <div class="gnb" id="gnb-mobile">
+                    <nav class="swiper-container">
+                        <ul class="swiper-wrapper">
+                            <li class="swiper-slide"><a href="../dashboard/main-type-1.html"><span>홈1</span></a></li>
+                            <li class="swiper-slide active"><a href="../dashboard/main-type-2.html"><span>홈2</span></a></li>
+                            <li class="swiper-slide"><a href="../product/product.html"><span>상품 찾기</span></a></li>
+                            <li class="swiper-slide"><a href="../analysis/analysis.html"><span>경쟁력 분석</span></a></li>
+                            <li class="swiper-slide"><a href="../ai/ai.html"><span>AI 판매 예측</span></a></li>
+                            <li class="swiper-slide"><a href="../mymall/mymall.html"><span>내 쇼핑몰 분석</span></a></li>
+                            <li class="swiper-slide"><a href="../community/free.html"><span>커뮤니티</span></a></li>
+                            <li class="swiper-slide"><a href="../board/notice.html"><span>공지</span></a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="side-group">
+                    <div class="gnb">
+                        <nav>
+                            <ul>
+                                <li>
+                                    <a href="../dashboard/main-type-1.html"><span>홈</span></a>
+                                </li>
+                                <li class="active">
+                                    <a href="../dashboard/main-type-2.html"><span>홈2</span></a>
+                                </li>
+                                <li>
+                                    <div>키워드</div>
+                                    <ul>
+                                        <li><a href="../product/product.html">키워드 찾기</a></li>
+                                        <li><a href="../product/keyword_curation.html">키워드 큐레이션</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <div>상품</div>
+                                    <ul>
+                                        <li><a href="../analysis/analysis.html"><span>상품 분석</span></a></li>
+                                        <li><a href="../analysis/realtime.html">실시간 순위 확인</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <div>쇼핑몰</div>
+                                    <ul>
+                                        <li><a href="../mymall/mymall.html"><span>쇼핑몰 분석</span></a></li>
+                                        <li><a href="">상품 순위 추적</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <div>커뮤니티</div>
+                                    <ul>
+                                        <li><a href="../community/free.html"><span>커뮤니티 게시판</span></a></li>
+                                        <li><a href="#none"><span>서비스 구독</span></a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="util">
+                        <ul>
+                            <li><a href="../mypage/mypage.html" class="mypage"><i class="profile"><img src="../../resources/images/@profile.png" alt="판다랭크"></i><span>판다랭크</span></a></li>
+                            <li><a href="../join/index.html" class="btn-join"><span>로그인/회원가입</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="hamburger">
+                    <button type="button" class="btn-menu"><i class="icon-hamburger"></i><span class="sr-only">모바일 메뉴</span></button>
+                </div>
+                <div class="right-menu">
+                    <a href="../mypage/alarmcenter.html" class="btn-bell"><i class="icon-bell"></i><span class="sr-only">모바일 알림</span></a>
+                </div>
+            </div>
+        </div>
+        <div id="main-block">
+            <div id="container">
+                <!-- 컨텐츠 시작 -->
+
+                <div class="main-type-2">
+                    <div class="container">
+                        <div class="main-top">
+                            <div class="main-logo">
+                                <i class="icon-new-logo"><span class="sr-only">PANDA RANK</span></i>
+                            </div>
+                            <div class="input-box">
+                                <input type="text" class="form-control bdw-2" placeholder="팔고 싶은 상품을 검색해보세요 (ex. 무드등)">
+                                <button type="submit" aria-label="검색"><i class="icon-search-primary"></i></button>
+                            </div>
+                            <div class="open-banner">
+                                <div class="d-inline-flex align-items-center">
+                                    <i class="icon-chart"></i>
+                                    <div>
+                                        <p>내 상품은 몇 번째에? <strong>순위추적 서비스 OPEN!</strong></p>
+                                        <span>판다에서는 <span class="text-danger">무료</span>로 이용해보세요.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-inquiry">
+                            <div class="tit">쇼핑 랭크를 한 눈에!</div>
+                            <div class="row align-items-center">
+                                <div class="col-auto">
+                                    <div class="dropdown dropdown-flat">
+                                        <div class="dropdown-value" style="min-width:140px">생활/건강</div>
+                                        <div class="dropdown-box">
+                                            <div class="dropdown-list">
+                                                <div><a href="javascript:;">여가/생활편의</a></div>
+                                                <div><a href="javascript:;">디지털/가전</a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-auto">
+                                    <div class="row align-items-center row-16">
+                                        <div class="col-auto">
+                                            일간  | 주간
+                                        </div>
+                                        <div class="col">
+                                            <input type="text" class="form-control form-control-sm" data-event="datepicker">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-cards">
+                            <div class="row row-20">
+                                <div class="col-5">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <div class="card-title">
+                                                <span class="text-primary">키워드</span> RANK
+                                                <a href="#pop-over-keyword" class="th-icon-info" data-toggle="pop-over" data-target-mobile="#modal-keyword">
+                                                    <i class="icon-info"><span class="sr-only">물음표 아이콘</span></i>
+                                                    <!-- 툴팁 PC용 키워드란? -->
+                                                    <div class="pop-over" id="pop-over-keyword">
+                                                        <div class="pop-over-head">
+                                                            상품 찾기의 기본, 키워드란?
+                                                        </div>
+                                                        <div class="pop-over-body">
+                                                            상품 상세 페이지의 제목에 해당하며 키워드 발굴 및 경쟁을 통해 검색 상위노출을 기대합니다. 키워드에는 3가지 대표 지수가 있습니다.<br><br>
+                                                            <span class="text-primary">경쟁률</span><br>
+                                                            대형포털들의 일별 제품량 대비 검색량<br>
+                                                            <span class="text-primary">쇼핑전환율</span><br>
+                                                            주별 쇼핑탭 진입 대비 검색량<br>
+                                                            <span class="text-primary">광고비</span><br>
+                                                            키워드별 평균 광고입찰비용<br><br>
+                                                            판다랭크만의 데이터 분석 기술을 사용하여 키워드의 3가지 대표 지수를 최적/좋음/보통/나쁨/최악으로 분류합니다. 최적일수록 키워드의 경쟁력이 좋습니다. <br><br>
+                                                            *지수는 상대적일 뿐 절대적 지표가 아닙니다.
+                                                        </div>
+                                                    </div>
+                                                    <!-- //툴팁 PC용 키워드란? -->
+                                                </a>
+                                            </div>
+                                            <div class="card-desc">가장 많이 검색한 키워드</div>
+                                            <a href="" class="btn-share" aria-label="공유"><i class="icon-share"></i></a>
+                                        </div>
+                                        <div class="card-body">
+                                            <ol class="keyword-rank">
+                                                <li></li>
+                                            </ol>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-7">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <div class="card-title">
+                                                <span class="text-primary">판매량</span> RANK
+                                                <a href="#pop-over-keyword" class="th-icon-info" data-toggle="pop-over" data-target-mobile="#modal-keyword">
+                                                    <i class="icon-info"><span class="sr-only">물음표 아이콘</span></i>
+                                                    <!-- 툴팁 PC용 키워드란? -->
+                                                    <div class="pop-over" id="pop-over-keyword">
+                                                        <div class="pop-over-head">
+                                                            상품 찾기의 기본, 키워드란?
+                                                        </div>
+                                                        <div class="pop-over-body">
+                                                            상품 상세 페이지의 제목에 해당하며 키워드 발굴 및 경쟁을 통해 검색 상위노출을 기대합니다. 키워드에는 3가지 대표 지수가 있습니다.<br><br>
+                                                            <span class="text-primary">경쟁률</span><br>
+                                                            대형포털들의 일별 제품량 대비 검색량<br>
+                                                            <span class="text-primary">쇼핑전환율</span><br>
+                                                            주별 쇼핑탭 진입 대비 검색량<br>
+                                                            <span class="text-primary">광고비</span><br>
+                                                            키워드별 평균 광고입찰비용<br><br>
+                                                            판다랭크만의 데이터 분석 기술을 사용하여 키워드의 3가지 대표 지수를 최적/좋음/보통/나쁨/최악으로 분류합니다. 최적일수록 키워드의 경쟁력이 좋습니다. <br><br>
+                                                            *지수는 상대적일 뿐 절대적 지표가 아닙니다.
+                                                        </div>
+                                                    </div>
+                                                    <!-- //툴팁 PC용 키워드란? -->
+                                                </a>
+                                            </div>
+                                            <div class="card-desc">가장 많이 구매한 상품</div>
+                                            <a href="" class="btn-share" aria-label="공유"><i class="icon-share"></i></a>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="sales-rank">
+                                                <ol>
+                                                    <li class="row">
+                                                        <div class="col-auto">
+                                                            <div class="thumb">
+                                                                <img src="../../resources/images/@product-thumb.jpg" alt="">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col">
+                                                            <div class="name">삼성 갤럭시 워치4 클래식 40mm 44mm 42mm 46mm 삼성 갤럭시 워치4 클래식 40mm 44mm 42mm 46mm </div>
+                                                            <div>
+                                                                <span class="price">269,000원</span>
+                                                                <span class="seller">삼성공식파트너 dmac</span>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row row-20">
+                                <div class="col">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <div class="card-title">
+                                                <span class="text-primary">쇼핑몰</span> RANK
+                                                <a href="#pop-over-keyword" class="th-icon-info" data-toggle="pop-over" data-target-mobile="#modal-keyword">
+                                                    <i class="icon-info"><span class="sr-only">물음표 아이콘</span></i>
+                                                    <!-- 툴팁 PC용 키워드란? -->
+                                                    <div class="pop-over" id="pop-over-keyword">
+                                                        <div class="pop-over-head">
+                                                            상품 찾기의 기본, 키워드란?
+                                                        </div>
+                                                        <div class="pop-over-body">
+                                                            상품 상세 페이지의 제목에 해당하며 키워드 발굴 및 경쟁을 통해 검색 상위노출을 기대합니다. 키워드에는 3가지 대표 지수가 있습니다.<br><br>
+                                                            <span class="text-primary">경쟁률</span><br>
+                                                            대형포털들의 일별 제품량 대비 검색량<br>
+                                                            <span class="text-primary">쇼핑전환율</span><br>
+                                                            주별 쇼핑탭 진입 대비 검색량<br>
+                                                            <span class="text-primary">광고비</span><br>
+                                                            키워드별 평균 광고입찰비용<br><br>
+                                                            판다랭크만의 데이터 분석 기술을 사용하여 키워드의 3가지 대표 지수를 최적/좋음/보통/나쁨/최악으로 분류합니다. 최적일수록 키워드의 경쟁력이 좋습니다. <br><br>
+                                                            *지수는 상대적일 뿐 절대적 지표가 아닙니다.
+                                                        </div>
+                                                    </div>
+                                                    <!-- //툴팁 PC용 키워드란? -->
+                                                </a>
+                                            </div>
+                                            <div class="card-desc">가장 인기 있는 소호몰</div>
+                                            <a href="" class="btn-share" aria-label="공유"><i class="icon-share"></i></a>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-auto">
+                                                    <ol class="keyword-rank">
+                                                        <li></li>
+                                                    </ol>
+                                                </div>
+                                                <div class="col">
+                                                    <div class="top-rank-swiper">
+                                                        <div class="swiper-container">
+                                                            <ul class="swiper-wrapper">
+                                                                <li class="swiper-slide">
+                                                                    <div class="item">
+                                                                        <a href="">
+                                                                            <div class="thumb"><img src="../../resources/images/@300x100.png" alt="" onload="setDirection(this)"></div>
+                                                                            <div class="price">17,900</div>
+                                                                        </a>
+                                                                    </div>
+                                                                </li>
+                                                                <li class="swiper-slide">
+                                                                    <div class="item">
+                                                                        <a href="">
+                                                                            <div class="thumb"><img src="../../resources/images/@product-thumb.jpg" alt="" onload="setDirection(this)"></div>
+                                                                            <div class="price">17,900</div>
+                                                                        </a>
+                                                                    </div>
+                                                                </li>
+                                                                <li class="swiper-slide">
+                                                                    <div class="item">
+                                                                        <a href="">
+                                                                            <div class="thumb"><img src="../../resources/images/@product-thumb.jpg" alt="" onload="setDirection(this)"></div>
+                                                                            <div class="price">17,900</div>
+                                                                        </a>
+                                                                    </div>
+                                                                </li>
+                                                                <li class="swiper-slide">
+                                                                    <div class="item">
+                                                                        <a href="">
+                                                                            <div class="thumb"><img src="../../resources/images/@product-thumb.jpg" alt="" onload="setDirection(this)"></div>
+                                                                            <div class="price">17,900</div>
+                                                                        </a>
+                                                                    </div>
+                                                                </li>
+                                                                <li class="swiper-slide">
+                                                                    <div class="item">
+                                                                        <a href="">
+                                                                            <div class="thumb"><img src="../../resources/images/@product-thumb.jpg" alt="" onload="setDirection(this)"></div>
+                                                                            <div class="price">17,900</div>
+                                                                        </a>
+                                                                    </div>
+                                                                </li>
+                                                                <li class="swiper-slide">
+                                                                    <div class="item">
+                                                                        <a href="">
+                                                                            <div class="thumb"><img src="../../resources/images/@product-thumb.jpg" onload="setDirection(this)" alt=""></div>
+                                                                            <div class="price">17,900</div>
+                                                                        </a>
+                                                                    </div>
+                                                                </li>
+                                                                <li class="swiper-slide">
+                                                                    <div class="item">
+                                                                        <a href="">
+                                                                            <div class="thumb"><img src="../../resources/images/@product-thumb.jpg" alt="" onload="setDirection(this)"></div>
+                                                                            <div class="price">17,900</div>
+                                                                        </a>
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="swiper-scrollbar-rank"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-4">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <div class="card-title">기기</div>
+                                            <div class="card-desc">클릭량 기준 활용 기기 비중</div>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="chart">
+                                                <div class="chart-donut-wrap">
+                                                    <div id="chart-donut1"></div>
+                                                    <div class="name">남성 <i class="text-default">ㅣ</i> <span class="text-primary">여성</span></div>
+                                                    <div class="num-left">24%</div>
+                                                    <div class="num-right">76%</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <div class="card-title">성별</div>
+                                            <div class="card-desc">클릭량 기준 활용 성별 비중</div>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="chart">
+                                                <div class="chart-donut-wrap">
+                                                    <div id="chart-donut2"></div>
+                                                    <div class="name">남성 <i class="text-default">ㅣ</i> <span class="text-primary">여성</span></div>
+                                                    <div class="num-left">24%</div>
+                                                    <div class="num-right">76%</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <div class="card-title">성별</div>
+                                            <div class="card-desc">클릭량 기준 활용 성별 비중</div>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="progress-wrap">
+                                                <div class="progress-panda-vertical">
+                                                    <div class="progress-panda-bar" data-percent="20"></div>
+                                                    <div class="progress-panda-title">10대</div>
+                                                </div>
+                                                <div class="progress-panda-vertical">
+                                                    <div class="progress-panda-bar" data-percent="80"></div>
+                                                    <div class="progress-panda-title">20대</div>
+                                                </div>
+                                                <div class="progress-panda-vertical">
+                                                    <div class="progress-panda-bar" data-percent="90"></div>
+                                                    <div class="progress-panda-title">30대</div>
+                                                </div>
+                                                <div class="progress-panda-vertical">
+                                                    <div class="progress-panda-bar" data-percent="50"></div>
+                                                    <div class="progress-panda-title">40대</div>
+                                                </div>
+                                                <div class="progress-panda-vertical">
+                                                    <div class="progress-panda-bar" data-percent="30"></div>
+                                                    <div class="progress-panda-title">50대</div>
+                                                </div>
+                                                <div class="progress-panda-vertical">
+                                                    <div class="progress-panda-bar" data-percent="10"></div>
+                                                    <div class="progress-panda-title">60대</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 컨텐츠 끝 -->
+            </div>
+        </div>
+        <div id="footer-block">
+            <div class="footer">
+                <div class="menu">
+                    <ul>
+                        <li><a href="../about/about.html">서비스소개</a></li>
+                        <li><a href="../join/privacy.html">개인정보처리방침</a></li>
+                        <li><a href="../join/terms.html">이용약관</a></li>
+                        <li class="d-none d-md-inline"><a href="mailto:official@pandarank.net">이메일</a></li>
+                        <li><a href="http://pf.kakao.com/_KuJAK" target="_blank">문의</a></li>
+                    </ul>
+                </div>
+                <div class="info">서울시 강남구 논현로 85길  59, 4층 (주)선데이띵커   사업자 등록번호 114-88-01873   통신판매업 신고 114-88-01873</div>
+                <div class="copyright">Copyrights all reserves@sundaythinker</div>
+            </div>
+            <div class="btn-top">
+                <a href="javascript:;"><span class="sr-only">TOP으로 이동</span></a>
+            </div>
+            <div class="dim"></div>
+        </div>
+    </div>
+
+    <!-- 환영합니다 -->
+    <div id="welcome">
+        <div class="welcome">
+            <p>환영합니다 판다랭크님!</p>
+        </div>
+    </div>
+    <!-- //환영합니다 -->
+
+    <link rel="stylesheet" href="../../resources/plugins/nwagon/Nwagon.css" type="text/css">
+    <script src="../../resources/plugins/nwagon/Nwagon.js"></script>
+    <script>
+        $(document).ready(function(){
+            //로그인 사용자 환영 메세지
+            //$('#welcome').addClass('show');
+            setTimeout(function(){
+                $('#welcome').removeClass('show');
+            },4000);
+
+            topRankSlider();
+        });
+
+        function topRankSlider(){
+            rankwiper = new Swiper('.top-rank-swiper .swiper-container', {
+                slidesPerView: 'auto',
+                freeMode: true,
+                mousewheel: true,
+                slidesOffsetBefore: 15,
+                slidesOffsetAfter: 15,
+                spaceBetween: 18,
+                observer: true,
+                observeParents: true,
+                observeSlideChildren: true,
+                breakpoints: {
+                    992: {
+                        slidesOffsetBefore: 0,
+                        slidesOffsetAfter: 0,
+                        spaceBetween: 25,
+                    },
+                }
+            });
+        }
+
+        var options1 = {
+            'dataset':{
+                title: 'Web accessibility status',
+                values:[25, 3],
+                colorset: ['#34d52e', '#d2dae0'],
+                fields: ['여성', '남성'],
+            },
+            'donut_width' : 40,
+            'core_circle_radius':50,
+            'chartDiv': 'chart-donut1',
+            'chartType': 'donut',
+            'chartSize': {width:280, height:200}
+        };
+	    Nwagon.chart(options1);
+
+        var options2 = {
+            'dataset':{
+                title: 'Web accessibility status',
+                values:[25, 3],
+                colorset: ['#34d52e', '#d2dae0'],
+                fields: ['여성', '남성'],
+            },
+            'donut_width' : 40,
+            'core_circle_radius':50,
+            'chartDiv': 'chart-donut2',
+            'chartType': 'donut',
+            'chartSize': {width:280, height:200}
+        };
+	    Nwagon.chart(options2);
+    </script>
+</body>
+</html>

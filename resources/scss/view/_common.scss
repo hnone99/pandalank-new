@@ -200,6 +200,10 @@
     }
 }
 
+.form-control[data-event="datepicker"]{
+    background: url('../images/icon-calendar.svg') no-repeat right 1rem top 50%;background-size: 20px auto;
+}
+
 .title-area{
     margin-bottom: 52px;
     h2{
@@ -272,6 +276,8 @@
 }
 [class^=icon-]{display: inline-block;font-size: 0;line-height: 1;}
 .icon-logo{width: 180px;height: 30px;background:url('../images/logo.svg') no-repeat 50% 50%;background-size: contain;}
+.icon-new-logo{width: 180px;height: 180px;background:url('../images/logo-new.svg') no-repeat 50% 50%;background-size: contain;}
+.icon-new-logo-white{width: 100px;height: 100px;background:url('../images/logo-new-white.svg') no-repeat 50% 50%;background-size: contain;}
 .icon-download{vertical-align: middle;width: 16px;height: 16px;background: url('../images/icon-download.svg') no-repeat 50% 50%;}
 .icon-delete{vertical-align: middle;width: 10px;height: 10px;background: url('../images/icon-close.svg') no-repeat 50% 50%;opacity: 0.35;}
 .icon-ellipsis{vertical-align: middle;width: 3px;height: 20px;background: url('../images/ellipsis-v-solid.svg') no-repeat 50% 50%;background-size: contain;}
@@ -284,6 +290,9 @@
 .icon-arrow-down{width: 13px;height: 7px;background: url('../images/icon-arrow-down.svg') no-repeat 50% 50%;background-size: contain;}
 .icon-blog{width: 40px;height: 20px;background: url('../images/icon-blog.png') no-repeat 50% 50%;background-size: contain;}
 .icon-youtube{width: 40px;height: 20px;background: url('../images/icon-youtube.png') no-repeat 50% 50%;background-size: contain;}
+.icon-search-primary{width: 19px;height: 19px;background: url('../images/icon-search-primary.svg') no-repeat 50% 50%;background-size: contain;}
+.icon-share{width: 18px;height: 18px;background: url('../images/icon-share.svg') no-repeat 50% 50%;background-size: contain;}
+.icon-chart{width: 30px;height: 30px;background: url('../images/icon-chart.svg') no-repeat 50% 50%;background-size: contain;}
 
 
 .th-icon-info{
