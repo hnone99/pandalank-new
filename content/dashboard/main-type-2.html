@@ -125,7 +125,7 @@
                                 <div class="d-inline-flex align-items-center">
                                     <i class="icon-chart"></i>
                                     <div>
-                                        <p>내 상품은 몇 번째에? <strong>순위추적 서비스 OPEN!</strong></p>
+                                        <p><em class="d-none d-md-inline-block">내 상품은 몇 번째에?</em> <strong>순위추적 서비스 OPEN!</strong></p>
                                         <span>판다에서는 <span class="text-danger">무료</span>로 이용해보세요.</span>
                                     </div>
                                 </div>
@@ -133,33 +133,87 @@
                         </div>
                         <div class="main-inquiry">
                             <div class="tit">쇼핑 랭크를 한 눈에!</div>
-                            <div class="row align-items-center">
+                            <div class="row align-items-center justify-content-between">
                                 <div class="col-auto">
-                                    <div class="dropdown dropdown-flat">
-                                        <div class="dropdown-value" style="min-width:140px">생활/건강</div>
-                                        <div class="dropdown-box">
-                                            <div class="dropdown-list">
-                                                <div><a href="javascript:;">여가/생활편의</a></div>
-                                                <div><a href="javascript:;">디지털/가전</a></div>
+                                    <div class="category-dropdown-wrap row">
+                                        <div class="col">
+                                            <div class="dropdown dropdown-flat">
+                                                <div class="dropdown-value" style="min-width:140px">생활/건강</div>
+                                                <div class="dropdown-box">
+                                                    <div class="dropdown-list">
+                                                        <div><a href="javascript:;">여가/생활편의</a></div>
+                                                        <div><a href="javascript:;">디지털/가전</a></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="dropdown dropdown-flat">
+                                                <div class="dropdown-value" style="min-width:140px">생활/건강</div>
+                                                <div class="dropdown-box">
+                                                    <div class="dropdown-list">
+                                                        <div><a href="javascript:;">여가/생활편의</a></div>
+                                                        <div><a href="javascript:;">디지털/가전</a></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="dropdown dropdown-flat">
+                                                <div class="dropdown-value" style="min-width:140px">생활/건강</div>
+                                                <div class="dropdown-box">
+                                                    <div class="dropdown-list">
+                                                        <div><a href="javascript:;">여가/생활편의</a></div>
+                                                        <div><a href="javascript:;">디지털/가전</a></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="dropdown dropdown-flat">
+                                                <div class="dropdown-value" style="min-width:140px">생활/건강</div>
+                                                <div class="dropdown-box">
+                                                    <div class="dropdown-list">
+                                                        <div><a href="javascript:;">여가/생활편의</a></div>
+                                                        <div><a href="javascript:;">디지털/가전</a></div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-auto">
-                                    <div class="row align-items-center row-16">
+                                <div class="col col-lg-auto">
+                                    <div class="row align-items-center row-16 justify-content-end">
                                         <div class="col-auto">
-                                            일간  | 주간
+                                            <div class="period">
+                                                <a href="javascript:;" class="text-primary">일간</a> <span class="mx-1">|</span> <a href="javascript:;">주간</a>
+                                            </div>
                                         </div>
-                                        <div class="col">
+                                        <div class="col d-none d-lg-block">
                                             <input type="text" class="form-control form-control-sm" data-event="datepicker">
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <div class="sticky-tab-area my-2 d-lg-none"> <!-- 모바일용 탭 -->
+                            <div class="sticky-tab">
+                                <ul role="tablist" class="nav">
+                                    <li><a href="#t-keyword" role="tab" data-toggle="tab" aria-selected="true" class="active"><span>키워드 RANK</span></a></li>
+                                    <li><a href="#t-sales" role="tab" data-toggle="tab" aria-selected="false"><span>판매량 RANK</span></a></li>
+                                    <li><a href="#t-mall" role="tab" data-toggle="tab" aria-selected="false"><span>쇼핑몰 RANK</span></a></li>
+                                </ul>
+                                <script>
+                                    /* $('.sticky-tab a').on('click',function(){
+                                        $($(this).siblings().attr('href')).css('display','none !impora');
+                                        $($(this).attr('href')).show();
+                                    }); */
+                                </script>
+                            </div>
+                        </div>
                         <div class="main-cards">
-                            <div class="row row-20">
-                                <div class="col-5">
+                            <div class="row row-20 card-control">
+                                <div class="col-12 col-lg-auto active" id="t-keyword">
                                     <div class="card">
                                         <div class="card-header">
                                             <div class="card-title">
@@ -190,13 +244,71 @@
                                             <a href="" class="btn-share" aria-label="공유"><i class="icon-share"></i></a>
                                         </div>
                                         <div class="card-body">
-                                            <ol class="keyword-rank">
-                                                <li></li>
+                                            <ol class="keyword-rank has-line">
+                                                <li>
+                                                    <div class="num">1.</div>
+                                                    <div class="item">갤럭시 워치4 사전예약</div>
+                                                    <div class="rank"><i class="icon-increase"></i> <span class="text-primary">3</span></div>
+                                                </li>
+                                                <li>
+                                                    <div class="num">2.</div>
+                                                    <div class="item">갤럭시 z플립3 케이스</div>
+                                                    <div class="rank"><i class="icon-decrease"></i> <span class="text-danger">1</span></div>
+                                                </li>
+                                                <li>
+                                                    <div class="num">3.</div>
+                                                    <div class="item">갤럭시 z플립3</div>
+                                                    <div class="rank">new</div>
+                                                </li>
+                                                <li>
+                                                    <div class="num">4.</div>
+                                                    <div class="item">갤럭시 폴드3</div>
+                                                    <div class="rank">new</div>
+                                                </li>
+                                                <li>
+                                                    <div class="num">5.</div>
+                                                    <div class="item">갤럭시 폴드3</div>
+                                                    <div class="rank">new</div>
+                                                </li>
+                                                <li>
+                                                    <div class="num">6.</div>
+                                                    <div class="item">갤럭시 버즈2 갤럭시 버즈2 갤럭시 버즈2</div>
+                                                    <div class="rank">new</div>
+                                                </li>
+                                                <li>
+                                                    <div class="num">7.</div>
+                                                    <div class="item">갤럭시 폴드3</div>
+                                                    <div class="rank">new</div>
+                                                </li>
+                                                <li>
+                                                    <div class="num">8.</div>
+                                                    <div class="item">갤럭시 폴드3</div>
+                                                    <div class="rank">new</div>
+                                                </li>
+                                                <li>
+                                                    <div class="num">9.</div>
+                                                    <div class="item">갤럭시 폴드3</div>
+                                                    <div class="rank">new</div>
+                                                </li><li>
+                                                    <div class="num">10.</div>
+                                                    <div class="item">갤럭시 폴드3</div>
+                                                    <div class="rank">new</div>
+                                                </li>
+                                                <li>
+                                                    <div class="num">11.</div>
+                                                    <div class="item">갤럭시 폴드3</div>
+                                                    <div class="rank">new</div>
+                                                </li>
+                                                <li>
+                                                    <div class="num">12.</div>
+                                                    <div class="item">갤럭시 폴드3</div>
+                                                    <div class="rank">new</div>
+                                                </li>
                                             </ol>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-7">
+                                <div class="col-12 col-lg d-none d-lg-block" id="t-sales">
                                     <div class="card">
                                         <div class="card-header">
                                             <div class="card-title">
@@ -229,28 +341,97 @@
                                         <div class="card-body">
                                             <div class="sales-rank">
                                                 <ol>
-                                                    <li class="row">
-                                                        <div class="col-auto">
-                                                            <div class="thumb">
-                                                                <img src="../../resources/images/@product-thumb.jpg" alt="">
+                                                    <li>
+                                                        <a href="" class="row row-20 align-items-center">
+                                                            <div class="col-auto">
+                                                                <div class="thumb">
+                                                                    <img src="../../resources/images/@product-thumb.jpg" alt="" onload="setDirection(this)" class="vertical">
+                                                                    <span>1</span>
+                                                                </div>
                                                             </div>
-                                                        </div>
-                                                        <div class="col">
-                                                            <div class="name">삼성 갤럭시 워치4 클래식 40mm 44mm 42mm 46mm 삼성 갤럭시 워치4 클래식 40mm 44mm 42mm 46mm </div>
-                                                            <div>
-                                                                <span class="price">269,000원</span>
-                                                                <span class="seller">삼성공식파트너 dmac</span>
+                                                            <div class="col">
+                                                                <div class="name">삼성 갤럭시 워치4 클래식 40mm 44mm 42mm 46mm 삼성 갤럭시 워치4 클래식 40mm 44mm 42mm 46mm </div>
+                                                                <div>
+                                                                    <span class="price">269,000원</span>
+                                                                    <span class="seller">삼성공식파트너 dmac</span>
+                                                                </div>
                                                             </div>
-                                                        </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="" class="row row-20 align-items-center">
+                                                            <div class="col-auto">
+                                                                <div class="thumb">
+                                                                    <img src="../../resources/images/@product-thumb.jpg" alt="" onload="setDirection(this)" class="vertical">
+                                                                    <span>1</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col">
+                                                                <div class="name">삼성 갤럭시 워치4 클래식 40mm 44mm 42mm 46mm 삼성 갤럭시 워치4 클래식 40mm 44mm 42mm 46mm </div>
+                                                                <div>
+                                                                    <span class="price">269,000원</span>
+                                                                    <span class="seller">삼성공식파트너 dmac</span>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="" class="row row-20 align-items-center">
+                                                            <div class="col-auto">
+                                                                <div class="thumb">
+                                                                    <img src="../../resources/images/@product-thumb.jpg" alt="" onload="setDirection(this)" class="vertical">
+                                                                    <span>1</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col">
+                                                                <div class="name">삼성 갤럭시 워치4 클래식 40mm 44mm 42mm 46mm 삼성 갤럭시 워치4 클래식 40mm 44mm 42mm 46mm </div>
+                                                                <div>
+                                                                    <span class="price">269,000원</span>
+                                                                    <span class="seller">삼성공식파트너 dmac</span>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="" class="row row-20 align-items-center">
+                                                            <div class="col-auto">
+                                                                <div class="thumb">
+                                                                    <img src="../../resources/images/@product-thumb.jpg" alt="" onload="setDirection(this)" class="vertical">
+                                                                    <span>1</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col">
+                                                                <div class="name">삼성 갤럭시 워치4 클래식 40mm 44mm 42mm 46mm 삼성 갤럭시 워치4 클래식 40mm 44mm 42mm 46mm </div>
+                                                                <div>
+                                                                    <span class="price">269,000원</span>
+                                                                    <span class="seller">삼성공식파트너 dmac</span>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="" class="row row-20 align-items-center">
+                                                            <div class="col-auto">
+                                                                <div class="thumb">
+                                                                    <img src="../../resources/images/@product-thumb.jpg" alt="" onload="setDirection(this)" class="vertical">
+                                                                    <span>1</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col">
+                                                                <div class="name">삼성 갤럭시 워치4 클래식 40mm 44mm 42mm 46mm 삼성 갤럭시 워치4 클래식 40mm 44mm 42mm 46mm </div>
+                                                                <div>
+                                                                    <span class="price">269,000원</span>
+                                                                    <span class="seller">삼성공식파트너 dmac</span>
+                                                                </div>
+                                                            </div>
+                                                        </a>
                                                     </li>
                                                 </ol>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="row row-20">
-                                <div class="col">
+                                <div class="col-12 d-none d-lg-block" id="t-mall">
                                     <div class="card">
                                         <div class="card-header">
                                             <div class="card-title">
@@ -281,120 +462,248 @@
                                             <a href="" class="btn-share" aria-label="공유"><i class="icon-share"></i></a>
                                         </div>
                                         <div class="card-body">
-                                            <div class="row">
-                                                <div class="col-auto">
-                                                    <ol class="keyword-rank">
-                                                        <li></li>
-                                                    </ol>
-                                                </div>
-                                                <div class="col">
-                                                    <div class="top-rank-swiper">
-                                                        <div class="swiper-container">
-                                                            <ul class="swiper-wrapper">
-                                                                <li class="swiper-slide">
-                                                                    <div class="item">
-                                                                        <a href="">
-                                                                            <div class="thumb"><img src="../../resources/images/@300x100.png" alt="" onload="setDirection(this)"></div>
-                                                                            <div class="price">17,900</div>
-                                                                        </a>
-                                                                    </div>
-                                                                </li>
-                                                                <li class="swiper-slide">
-                                                                    <div class="item">
-                                                                        <a href="">
-                                                                            <div class="thumb"><img src="../../resources/images/@product-thumb.jpg" alt="" onload="setDirection(this)"></div>
-                                                                            <div class="price">17,900</div>
-                                                                        </a>
-                                                                    </div>
-                                                                </li>
-                                                                <li class="swiper-slide">
-                                                                    <div class="item">
-                                                                        <a href="">
-                                                                            <div class="thumb"><img src="../../resources/images/@product-thumb.jpg" alt="" onload="setDirection(this)"></div>
-                                                                            <div class="price">17,900</div>
-                                                                        </a>
-                                                                    </div>
-                                                                </li>
-                                                                <li class="swiper-slide">
-                                                                    <div class="item">
-                                                                        <a href="">
-                                                                            <div class="thumb"><img src="../../resources/images/@product-thumb.jpg" alt="" onload="setDirection(this)"></div>
-                                                                            <div class="price">17,900</div>
-                                                                        </a>
-                                                                    </div>
-                                                                </li>
-                                                                <li class="swiper-slide">
-                                                                    <div class="item">
-                                                                        <a href="">
-                                                                            <div class="thumb"><img src="../../resources/images/@product-thumb.jpg" alt="" onload="setDirection(this)"></div>
-                                                                            <div class="price">17,900</div>
-                                                                        </a>
-                                                                    </div>
-                                                                </li>
-                                                                <li class="swiper-slide">
-                                                                    <div class="item">
-                                                                        <a href="">
-                                                                            <div class="thumb"><img src="../../resources/images/@product-thumb.jpg" onload="setDirection(this)" alt=""></div>
-                                                                            <div class="price">17,900</div>
-                                                                        </a>
-                                                                    </div>
-                                                                </li>
-                                                                <li class="swiper-slide">
-                                                                    <div class="item">
-                                                                        <a href="">
-                                                                            <div class="thumb"><img src="../../resources/images/@product-thumb.jpg" alt="" onload="setDirection(this)"></div>
-                                                                            <div class="price">17,900</div>
-                                                                        </a>
-                                                                    </div>
-                                                                </li>
-                                                            </ul>
+                                            <!-- pc -->
+                                            <div class="d-none d-lg-block">
+                                                <div class="row">
+                                                    <div class="col-12 col-lg-auto border-right">
+                                                        <ol class="keyword-rank">
+                                                            <li class="cursor-pointer selected">
+                                                                <div class="num">1.</div>
+                                                                <div class="item">아마존몰</div>
+                                                                <div class="rank"><i class="icon-increase"></i> <span class="text-primary">3</span></div>
+                                                            </li>
+                                                            <li class="cursor-pointer">
+                                                                <div class="num">2.</div>
+                                                                <div class="item">갤럭대한민국 1번가</div>
+                                                                <div class="rank"><i class="icon-decrease"></i> <span class="text-danger">1</span></div>
+                                                            </li>
+                                                            <li class="cursor-pointer">
+                                                                <div class="num">3.</div>
+                                                                <div class="item">블루스카이쇼핑</div>
+                                                                <div class="rank">new</div>
+                                                            </li>
+                                                            <li class="cursor-pointer">
+                                                                <div class="num">4.</div>
+                                                                <div class="item">조기몰</div>
+                                                                <div class="rank">new</div>
+                                                            </li>
+                                                            <li class="cursor-pointer">
+                                                                <div class="num">5.</div>
+                                                                <div class="item">클릭컨텐츠</div>
+                                                                <div class="rank">new</div>
+                                                            </li>
+                                                            <li class="cursor-pointer">
+                                                                <div class="num">6.</div>
+                                                                <div class="item">브랜디홈</div>
+                                                                <div class="rank">new</div>
+                                                            </li>
+                                                        </ol>
+                                                    </div>
+                                                    <div class="col-12 col-lg">
+                                                        <div class="top-rank-swiper">
+                                                            <div class="swiper-container" id="pc-swiper">
+                                                                <ul class="swiper-wrapper">
+                                                                    <li class="swiper-slide">
+                                                                        <div class="item">
+                                                                            <a href="">
+                                                                                <div class="thumb"><img src="../../resources/images/@300x100.png" alt="" onload="setDirection(this)"></div>
+                                                                                <div class="name">잘만ZM-NS1000 노트북 쿨링 받침노트북 쿨링 받침</div>
+                                                                                <div class="price">17,900</div>
+                                                                            </a>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li class="swiper-slide">
+                                                                        <div class="item">
+                                                                            <a href="">
+                                                                                <div class="thumb"><img src="../../resources/images/@product-thumb.jpg" alt="" onload="setDirection(this)"></div>
+                                                                                <div class="name">잘만ZM-NS1000 노트북 쿨링 받침노트북 쿨링 받침</div>
+                                                                                <div class="price">17,900</div>
+                                                                            </a>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li class="swiper-slide">
+                                                                        <div class="item">
+                                                                            <a href="">
+                                                                                <div class="thumb"><img src="../../resources/images/@product-thumb.jpg" alt="" onload="setDirection(this)"></div>
+                                                                                <div class="name">잘만ZM-NS1000 노트북 쿨링 받침노트북 쿨링 받침</div>
+                                                                                <div class="price">17,900</div>
+                                                                            </a>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li class="swiper-slide">
+                                                                        <div class="item">
+                                                                            <a href="">
+                                                                                <div class="thumb"><img src="../../resources/images/@product-thumb.jpg" alt="" onload="setDirection(this)"></div>
+                                                                                <div class="name">잘만ZM-NS1000 노트북 쿨링 받침노트북 쿨링 받침</div>
+                                                                                <div class="price">17,900</div>
+                                                                            </a>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li class="swiper-slide">
+                                                                        <div class="item">
+                                                                            <a href="">
+                                                                                <div class="thumb"><img src="../../resources/images/@product-thumb.jpg" alt="" onload="setDirection(this)"></div>
+                                                                                <div class="name">잘만ZM-NS1000 노트북 쿨링 받침노트북 쿨링 받침</div>
+                                                                                <div class="price">17,900</div>
+                                                                            </a>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li class="swiper-slide">
+                                                                        <div class="item">
+                                                                            <a href="">
+                                                                                <div class="thumb"><img src="../../resources/images/@product-thumb.jpg" onload="setDirection(this)" alt=""></div>
+                                                                                <div class="name">잘만ZM-NS1000 노트북 쿨링 받침노트북 쿨링 받침</div>
+                                                                                <div class="price">17,900</div>
+                                                                            </a>
+                                                                        </div>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="swiper-button-prev"></div>
+                                                            <div class="swiper-button-next"></div>
                                                         </div>
-                                                        <div class="swiper-scrollbar-rank"></div>
                                                     </div>
                                                 </div>
+                                            </div>
+                                            <!-- mobile -->
+                                            <div class="d-lg-none">
+                                                <ol class="keyword-rank">
+                                                    <li class="cursor-pointer selected">
+                                                        <div class="num">1.</div>
+                                                        <div class="item">아마존몰</div>
+                                                        <div class="rank"><i class="icon-increase"></i> <span class="text-primary">3</span></div>
+                                                    </li>
+                                                    <li class="slider-append-area">
+                                                        <div class="top-rank-swiper">
+                                                            <div class="swiper-container" id="mobile-swiper">
+                                                                <ul class="swiper-wrapper">
+                                                                    <li class="swiper-slide">
+                                                                        <div class="item">
+                                                                            <a href="">
+                                                                                <div class="thumb"><img src="../../resources/images/@300x100.png" alt="" onload="setDirection(this)"></div>
+                                                                                <div class="name">잘만ZM-NS1000 노트북 쿨링 받침노트북 쿨링 받침</div>
+                                                                                <div class="price">17,900</div>
+                                                                            </a>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li class="swiper-slide">
+                                                                        <div class="item">
+                                                                            <a href="">
+                                                                                <div class="thumb"><img src="../../resources/images/@product-thumb.jpg" alt="" onload="setDirection(this)"></div>
+                                                                                <div class="name">잘만ZM-NS1000 노트북 쿨링 받침노트북 쿨링 받침</div>
+                                                                                <div class="price">17,900</div>
+                                                                            </a>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li class="swiper-slide">
+                                                                        <div class="item">
+                                                                            <a href="">
+                                                                                <div class="thumb"><img src="../../resources/images/@product-thumb.jpg" alt="" onload="setDirection(this)"></div>
+                                                                                <div class="name">잘만ZM-NS1000 노트북 쿨링 받침노트북 쿨링 받침</div>
+                                                                                <div class="price">17,900</div>
+                                                                            </a>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li class="swiper-slide">
+                                                                        <div class="item">
+                                                                            <a href="">
+                                                                                <div class="thumb"><img src="../../resources/images/@product-thumb.jpg" alt="" onload="setDirection(this)"></div>
+                                                                                <div class="name">잘만ZM-NS1000 노트북 쿨링 받침노트북 쿨링 받침</div>
+                                                                                <div class="price">17,900</div>
+                                                                            </a>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li class="swiper-slide">
+                                                                        <div class="item">
+                                                                            <a href="">
+                                                                                <div class="thumb"><img src="../../resources/images/@product-thumb.jpg" alt="" onload="setDirection(this)"></div>
+                                                                                <div class="name">잘만ZM-NS1000 노트북 쿨링 받침노트북 쿨링 받침</div>
+                                                                                <div class="price">17,900</div>
+                                                                            </a>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li class="swiper-slide">
+                                                                        <div class="item">
+                                                                            <a href="">
+                                                                                <div class="thumb"><img src="../../resources/images/@product-thumb.jpg" onload="setDirection(this)" alt=""></div>
+                                                                                <div class="name">잘만ZM-NS1000 노트북 쿨링 받침노트북 쿨링 받침</div>
+                                                                                <div class="price">17,900</div>
+                                                                            </a>
+                                                                        </div>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="swiper-button-prev"></div>
+                                                            <div class="swiper-button-next"></div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="cursor-pointer">
+                                                        <div class="num">2.</div>
+                                                        <div class="item">갤럭대한민국 1번가</div>
+                                                        <div class="rank"><i class="icon-decrease"></i> <span class="text-danger">1</span></div>
+                                                    </li>
+                                                    <li class="cursor-pointer">
+                                                        <div class="num">3.</div>
+                                                        <div class="item">블루스카이쇼핑</div>
+                                                        <div class="rank">new</div>
+                                                    </li>
+                                                    <li class="cursor-pointer">
+                                                        <div class="num">4.</div>
+                                                        <div class="item">조기몰</div>
+                                                        <div class="rank">new</div>
+                                                    </li>
+                                                    <li class="cursor-pointer">
+                                                        <div class="num">5.</div>
+                                                        <div class="item">클릭컨텐츠</div>
+                                                        <div class="rank">new</div>
+                                                    </li>
+                                                    <li class="cursor-pointer">
+                                                        <div class="num">6.</div>
+                                                        <div class="item">브랜디홈</div>
+                                                        <div class="rank">new</div>
+                                                    </li>
+                                                </ol>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-4">
+                                <div class="col-12 col-lg-4">
                                     <div class="card">
                                         <div class="card-header">
                                             <div class="card-title">기기</div>
                                             <div class="card-desc">클릭량 기준 활용 기기 비중</div>
                                         </div>
                                         <div class="card-body">
-                                            <div class="chart">
-                                                <div class="chart-donut-wrap">
-                                                    <div id="chart-donut1"></div>
-                                                    <div class="name">남성 <i class="text-default">ㅣ</i> <span class="text-primary">여성</span></div>
-                                                    <div class="num-left">24%</div>
-                                                    <div class="num-right">76%</div>
+                                            <div class="main-chart">
+                                                <div id="chart-donut1" class="text-center" style="transform: translateX(-5px);"></div>
+                                                <div class="legend">
+                                                    <span><i style="background:#34d52e"></i>모바일 (64.2%)</span>
+                                                    <span><i style="background:#d2dae0"></i>PC (26.8%)</span>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-4">
+                                <div class="col-12 col-lg-4">
                                     <div class="card">
                                         <div class="card-header">
                                             <div class="card-title">성별</div>
                                             <div class="card-desc">클릭량 기준 활용 성별 비중</div>
                                         </div>
                                         <div class="card-body">
-                                            <div class="chart">
-                                                <div class="chart-donut-wrap">
-                                                    <div id="chart-donut2"></div>
-                                                    <div class="name">남성 <i class="text-default">ㅣ</i> <span class="text-primary">여성</span></div>
-                                                    <div class="num-left">24%</div>
-                                                    <div class="num-right">76%</div>
+                                            <div class="main-chart">
+                                                <div id="chart-donut2" class="text-center" style="transform: translateX(-5px);"></div>
+                                                <div class="legend">
+                                                    <span><i style="background:#597ef7"></i>남 (64.2%)</span>
+                                                    <span><i style="background:#ff7875"></i>여 (26.8%)</span>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-4">
+                                <div class="col-12 col-lg-4">
                                     <div class="card">
                                         <div class="card-header">
                                             <div class="card-title">성별</div>
@@ -403,11 +712,11 @@
                                         <div class="card-body">
                                             <div class="progress-wrap">
                                                 <div class="progress-panda-vertical">
-                                                    <div class="progress-panda-bar" data-percent="20"></div>
+                                                    <div class="progress-panda-bar" data-percent="20" style="height: 20%"></div>
                                                     <div class="progress-panda-title">10대</div>
                                                 </div>
                                                 <div class="progress-panda-vertical">
-                                                    <div class="progress-panda-bar" data-percent="80"></div>
+                                                    <div class="progress-panda-bar" data-percent="80" style="height: 80%"></div>
                                                     <div class="progress-panda-title">20대</div>
                                                 </div>
                                                 <div class="progress-panda-vertical">
@@ -477,57 +786,80 @@
                 $('#welcome').removeClass('show');
             },4000);
 
-            topRankSlider();
+            topRankSliderPc();
+
+            //모바일 탭 누를때 스와이퍼 실행
+            $('.sticky-tab a').on('click',function(){
+                setTimeout(function(){
+                    topRankSliderMobile();
+                },100);
+            })
+
+
+            $('.keyword-rank li').on('click',function(){
+                $(this).siblings().removeClass('selected');
+                $(this).addClass('selected');
+            });
         });
 
-        function topRankSlider(){
-            rankwiper = new Swiper('.top-rank-swiper .swiper-container', {
+        function topRankSliderPc(){
+            rankSwiperPc = new Swiper('#pc-swiper', {
                 slidesPerView: 'auto',
                 freeMode: true,
                 mousewheel: true,
-                slidesOffsetBefore: 15,
-                slidesOffsetAfter: 15,
+                slidesOffsetBefore: 0,
+                slidesOffsetAfter: 0,
+                spaceBetween: 20,
+                observer: true,
+                observeParents: true,
+                observeSlideChildren: true,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            });
+        }
+        function topRankSliderMobile(){
+            rankSwiperMobile = new Swiper('#mobile-swiper', {
+                slidesPerView: 'auto',
+                freeMode: true,
+                mousewheel: true,
+                slidesOffsetBefore: 24,
+                slidesOffsetAfter: 24,
                 spaceBetween: 18,
                 observer: true,
                 observeParents: true,
                 observeSlideChildren: true,
-                breakpoints: {
-                    992: {
-                        slidesOffsetBefore: 0,
-                        slidesOffsetAfter: 0,
-                        spaceBetween: 25,
-                    },
-                }
             });
         }
 
         var options1 = {
             'dataset':{
-                title: 'Web accessibility status',
-                values:[25, 3],
+                title: '기기',
+                values:[64.2, 26.8],
                 colorset: ['#34d52e', '#d2dae0'],
-                fields: ['여성', '남성'],
+                fields: ['모바일', 'PC'],
             },
-            'donut_width' : 40,
-            'core_circle_radius':50,
+            'donut_width' : 50,
+            'core_circle_radius':30,
             'chartDiv': 'chart-donut1',
             'chartType': 'donut',
-            'chartSize': {width:280, height:200}
+            'chartSize': {width:215, height:190}
         };
 	    Nwagon.chart(options1);
 
         var options2 = {
             'dataset':{
-                title: 'Web accessibility status',
+                title: '성별',
                 values:[25, 3],
-                colorset: ['#34d52e', '#d2dae0'],
+                colorset: ['#597ef7', '#ff7875'],
                 fields: ['여성', '남성'],
             },
-            'donut_width' : 40,
-            'core_circle_radius':50,
+            'donut_width' : 50,
+            'core_circle_radius':30,
             'chartDiv': 'chart-donut2',
             'chartType': 'donut',
-            'chartSize': {width:280, height:200}
+            'chartSize': {width:215, height:190}
         };
 	    Nwagon.chart(options2);
     </script>
