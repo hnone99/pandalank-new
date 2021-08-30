@@ -11,6 +11,8 @@
     color:$danger;
 }
 
+.max-width-none{max-width: none !important;}
+
 @keyframes loading {
     0% {visibility: visible;}
     21% {visibility: visible;}
