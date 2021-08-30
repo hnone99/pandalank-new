@@ -783,6 +783,73 @@
         </div>
     </div>
 
+    <!-- modal : 모바일 카테고리 선택 layer -->
+    <div class="modal modal-full" tabindex="-1" role="dialog" id="modal-category">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="input-area-mobile">
+                        <div class="category-dropdown-wrap row">
+                            <div class="col-12 col-lg">
+                                <div class="dropdown max-width-none">
+                                    <div class="dropdown-value" style="min-width:140px">생활/건강</div>
+                                    <div class="dropdown-box">
+                                        <div class="dropdown-list">
+                                            <div><a href="javascript:;">여가/생활편의</a></div>
+                                            <div><a href="javascript:;">디지털/가전</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg">
+                                <div class="dropdown max-width-none">
+                                    <div class="dropdown-value" style="min-width:140px">생활/건강</div>
+                                    <div class="dropdown-box">
+                                        <div class="dropdown-list">
+                                            <div><a href="javascript:;">여가/생활편의</a></div>
+                                            <div><a href="javascript:;">디지털/가전</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg">
+                                <div class="dropdown max-width-none">
+                                    <div class="dropdown-value" style="min-width:140px">생활/건강</div>
+                                    <div class="dropdown-box">
+                                        <div class="dropdown-list">
+                                            <div><a href="javascript:;">여가/생활편의</a></div>
+                                            <div><a href="javascript:;">디지털/가전</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg">
+                                <div class="dropdown max-width-none">
+                                    <div class="dropdown-value" style="min-width:140px">생활/건강</div>
+                                    <div class="dropdown-box">
+                                        <div class="dropdown-list">
+                                            <div><a href="javascript:;">여가/생활편의</a></div>
+                                            <div><a href="javascript:;">디지털/가전</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btn-analysis">
+                            <button type="button" class="btn btn-lg btn-block btn-primary" id="btn-analysis-mobile">분석하기</button>
+                        </div>
+                        <div class="dim"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- 환영합니다 -->
     <div id="welcome">
         <div class="welcome">
@@ -810,10 +877,18 @@
                 },100);
             })
 
-
             $('.keyword-rank li').on('click',function(){
                 $(this).siblings().removeClass('selected');
                 $(this).addClass('selected');
+            });
+
+             //모바일에서 카테고리 선택시 layer 오픈
+             $('.main-inquiry .dropdown-value').on('click',function(e){
+                if (!window.matchMedia('(min-width:992px)').matches) {
+                    e.preventDefault();
+                    e.stopImmediatePropagation(); //기존 동작 취소 후 모달 띄움
+                    $('#modal-category').modal('show');
+                }
             });
         });
 
