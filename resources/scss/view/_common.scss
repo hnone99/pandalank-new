@@ -1691,3 +1691,15 @@ body.body-about{
     select.ui-datepicker-year{width: auto;border: 0;}
     select.ui-datepicker-month{margin-left: 12px;}
 }
+
+.tracking-summary{
+    border-top: 2px solid #000;border-bottom: 2px solid #000;
+    > .row{padding: 15px 0;}
+    .thumb{
+        width: 100px;height: 100px;margin-right: 26px;
+        img{border-radius: 5px;}
+    }
+    span{font-size: 14px;display: block;}
+    strong{font-size: 18px;font-weight: 700;display: block;}
+    .keyword-area{border-top: 1px solid $border-color;}
+}
