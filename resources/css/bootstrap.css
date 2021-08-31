@@ -1911,7 +1911,7 @@ input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="butto
 
 .card-link + .card-link { margin-left: 1.25rem; }
 
-.card-header { padding: 0.75rem 1.25rem; margin-bottom: 0; background-color: #fff; border-bottom: 1px solid rgba(0, 0, 0, 0.125); }
+.card-header { padding: 0.75rem 1.25rem; margin-bottom: 0; background-color: #fff; border-bottom: 1px solid rgba(0, 0, 0, 0.125); border-radius: 8px 8px 0 0; }
 
 .card-header:first-child { border-radius: -1px -1px 0 0; }
 

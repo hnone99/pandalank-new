@@ -175,7 +175,7 @@
     }
     .row + .row{margin-top: 20px;}
     [class^=col]{min-width: 0;}
-    .card{border-radius: 10px;overflow: hidden;height: 100%;box-shadow: 0 0 20px 0 rgba(0,0,0,0.1);border: 0;}
+    .card{border-radius: 10px;height: 100%;box-shadow: 0 0 20px 0 rgba(0,0,0,0.1);border: 0;}
     .card-header{padding: 20px 40px;border-bottom: 0;}
     .card-title{font-size: 20px;font-weight: 700;line-height: 1;margin-bottom: 6px;}
     .card-desc{font-size: 14px;color: $gray;}

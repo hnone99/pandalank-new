@@ -312,8 +312,9 @@
 }
 
 .pop-over{
-    width: 312px;padding: 24px;background: #fff;border-radius: 10px;box-shadow: 0 10px 30px 0 #dee8ef;white-space: normal;letter-spacing: -0.9px;line-height: 1.6;position: absolute;left: 34px;top: 0;z-index: 1;opacity: 0;visibility:hidden;transition: all .15s;
+    width: 312px;padding: 24px;background: #fff;border-radius: 10px;box-shadow: 0 10px 30px 0 #dee8ef;white-space: normal;letter-spacing: -0.9px;line-height: 1.6;position: absolute;left: 34px;top: 0;z-index: 2;opacity: 0;visibility:hidden;transition: all .15s;
     .pop-over-head{font-weight: 700;font-size: 18px;margin-bottom: 15px;}
+    .pop-over-body{font-size: 14px;}
     &.hover{opacity: 1;visibility: visible;}
 }
 @include media-breakpoint-down(md) {

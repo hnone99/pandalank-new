@@ -482,9 +482,11 @@ html.is-scrolled .btn-top { right: 24px; }
 @media (max-width: 991.98px) { .icon-info { width: 18px; height: 18px; }
   .th-icon-info { margin-top: 0; } }
 
-.pop-over { width: 312px; padding: 24px; background: #fff; border-radius: 10px; box-shadow: 0 10px 30px 0 #dee8ef; white-space: normal; letter-spacing: -0.9px; line-height: 1.6; position: absolute; left: 34px; top: 0; z-index: 1; opacity: 0; visibility: hidden; transition: all .15s; }
+.pop-over { width: 312px; padding: 24px; background: #fff; border-radius: 10px; box-shadow: 0 10px 30px 0 #dee8ef; white-space: normal; letter-spacing: -0.9px; line-height: 1.6; position: absolute; left: 34px; top: 0; z-index: 2; opacity: 0; visibility: hidden; transition: all .15s; }
 
 .pop-over .pop-over-head { font-weight: 700; font-size: 18px; margin-bottom: 15px; }
+
+.pop-over .pop-over-body { font-size: 14px; }
 
 .pop-over.hover { opacity: 1; visibility: visible; }
 
@@ -1787,7 +1789,7 @@ body.body-about #container-block::before { content: ''; width: 100%; height: 680
 
 .main-cards [class^=col] { min-width: 0; }
 
-.main-cards .card { border-radius: 10px; overflow: hidden; height: 100%; box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1); border: 0; }
+.main-cards .card { border-radius: 10px; height: 100%; box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1); border: 0; }
 
 .main-cards .card-header { padding: 20px 40px; border-bottom: 0; }
 
