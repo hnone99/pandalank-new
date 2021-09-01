@@ -297,7 +297,7 @@
                                         <input type="checkbox" id="chk4">
                                         <label for="chk4" class="btn btn-sm btn-outline-default">무드등</label>
                                     </div>
-                                    <button type="button" class="btn btn-sm btn-primary btn-round"><i class="icon-plus mr-2"></i>키워드 추가/편집</button>
+                                    <button type="button" class="btn btn-sm btn-primary btn-round" data-toggle="modal" data-target="#modal-keyword-edit"><i class="icon-plus mr-2"></i>키워드 추가/편집</button>
                                 </div>
                             </div>
                         </div>
@@ -785,18 +785,110 @@
     </div>
 
     <!-- modal : 키워드 추가/편집 -->
-    <div class="modal modal-full" tabindex="-1" role="dialog" id="modal-keyword-edit">
+    <div class="modal modal-full modal-keyword-edit" tabindex="-1" role="dialog" id="modal-keyword-edit">
         <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content">
                 <div class="modal-header">
                     <div class="modal-title">
                         키워드 추가/편집
+                        <p class="modal-title-desc">원하는 키워드를 직접 추가하거나 추출된 키워드에서 선택할 수 있어요.</p>
                     </div>
+
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
+                    <div class="keyword-edit">
+                        <div class="keyword-input">
+                            <div class="row row-16">
+                                <div class="col-12 col-md">
+                                    <input type="text" class="form-control form-control-sm" placeholder="키워드를 콤마(,)로 구분하여 최대 50개까지 입력">
+                                </div>
+                                <div class="col-12 col-md-auto">
+                                    <button type="button" class="btn btn-sm btn-primary btn-round"><i class="icon-plus mr-2"></i>키워드 추가</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sub-title">키워드 목록</div>
+                        <div class="keyword-list">
+                            <span class="keyword-item">
+                                깔창 <button aria-label="키워드 삭제"><i class="icon-delete"></i></button>
+                            </span>
+                            <span class="keyword-item">
+                                쿠션 <button type="button" aria-label="키워드 삭제"><i class="icon-delete"></i></button>
+                            </span>
+                            <span class="keyword-item">
+                                군인깔창 <button type="button" aria-label="키워드 삭제"><i class="icon-delete"></i></button>
+                            </span>
+                            <span class="keyword-item">
+                                아미코 리버티스텝 <button aria-label="키워드 삭제"><i class="icon-delete"></i></button>
+                            </span>
+                            <span class="keyword-item">
+                                쿠션 <button type="button" aria-label="키워드 삭제"><i class="icon-delete"></i></button>
+                            </span>
+                            <span class="keyword-item">
+                                아치 <button type="button" aria-label="키워드 삭제"><i class="icon-delete"></i></button>
+                            </span>
+                            <span class="keyword-item">
+                                깔창 <button aria-label="키워드 삭제"><i class="icon-delete"></i></button>
+                            </span>
+                            <span class="keyword-item">
+                                쿠션 <button type="button" aria-label="키워드 삭제"><i class="icon-delete"></i></button>
+                            </span>
+                            <span class="keyword-item">
+                                아치 <button type="button" aria-label="키워드 삭제"><i class="icon-delete"></i></button>
+                            </span>
+                        </div>
+
+                        <div class="sub-title">추출된 키워드</div>
+                        <table class="table table-keyword-list">
+                            <tbody>
+                                <tr>
+                                    <th>상품별 키워드</th>
+                                    <td>
+                                        <div class="custom-control custom-checkbox custom-control-inline custom-control-square">
+                                            <input type="checkbox" class="custom-control-input" id="customChk1">
+                                            <label class="custom-control-label" for="customChk1">리버티스텝</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox custom-control-inline custom-control-square">
+                                            <input type="checkbox" class="custom-control-input" id="customChk2">
+                                            <label class="custom-control-label" for="customChk2">좀비깔창</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox custom-control-inline custom-control-square">
+                                            <input type="checkbox" class="custom-control-input" id="customChk1">
+                                            <label class="custom-control-label" for="customChk1">리버티스텝</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox custom-control-inline custom-control-square">
+                                            <input type="checkbox" class="custom-control-input" id="customChk2">
+                                            <label class="custom-control-label" for="customChk2">좀비깔창</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox custom-control-inline custom-control-square">
+                                            <input type="checkbox" class="custom-control-input" id="customChk1">
+                                            <label class="custom-control-label" for="customChk1">리버티스텝</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox custom-control-inline custom-control-square">
+                                            <input type="checkbox" class="custom-control-input" id="customChk2">
+                                            <label class="custom-control-label" for="customChk2">아미코 리버티스텝</label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>태그 키워드</th>
+                                    <td>
+                                        <div class="custom-control custom-checkbox custom-control-inline custom-control-square">
+                                            <input type="checkbox" class="custom-control-input" id="customChk1">
+                                            <label class="custom-control-label" for="customChk1">리버티스텝</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox custom-control-inline custom-control-square">
+                                            <input type="checkbox" class="custom-control-input" id="customChk2">
+                                            <label class="custom-control-label" for="customChk2">좀비깔창</label>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
@@ -810,6 +902,10 @@
 
             $('.tracking-result tbody tr').on('click',function(){
                 $(this).next('.collapsed-row').toggle();
+            });
+
+            $('.keyword-item button').on('click', function(){
+                $(this).closest('.keyword-item').remove();
             });
 
             var datatable = $('#datatable').DataTable({

@@ -63,7 +63,7 @@
             <button type="button" class="btn btn-sm btn-outline-gray">엑셀다운로드</button>
             <button type="button" class="btn btn-sm btn-outline-default">엑셀다운로드</button>
             <button type="button" class="btn btn-sm btn-flat btn-outline-default text-gray">추적</button>
-            <button type="button" class="btn btn-primary btn-round">키워드 추가/편집</button>
+            <button type="button" class="btn btn-sm btn-primary btn-round" data-toggle="modal" data-target="#modal-keyword-edit"><i class="icon-plus mr-2"></i>키워드 추가/편집</button>
             <button class="btn btn-primary btn-modal-title-aside"><i class="icon-search-white"></i> 검색</button>
             <a href="#pop-over-keyword" class="th-icon-info" data-toggle="pop-over" data-target-mobile="#modal-keyword">
                 <i class="icon-info"><span class="sr-only">물음표 아이콘</span></i>
@@ -89,6 +89,30 @@
                 </div>
                 <!-- //툴팁 PC용 키워드란? -->
             </a>
+        </section>
+
+        <section>
+            <div class="d-flex align-items-center flex-wrap">
+                <div class="keyword-checkbox">
+                    <input type="checkbox" id="chk1" checked="">
+                    <label for="chk1" class="btn btn-sm btn-outline-default">인테리어</label>
+                </div>
+                <div class="keyword-checkbox">
+                    <input type="checkbox" id="chk2">
+                    <label for="chk2" class="btn btn-sm btn-outline-default">데코</label>
+                </div>
+            </div>
+            <div class="keyword-list">
+                <span class="keyword-item">
+                    깔창 <button aria-label="키워드 삭제"><i class="icon-delete"></i></button>
+                </span>
+                <span class="keyword-item">
+                    쿠션 <button type="button" aria-label="키워드 삭제"><i class="icon-delete"></i></button>
+                </span>
+                <span class="keyword-item">
+                    군인깔창 <button type="button" aria-label="키워드 삭제"><i class="icon-delete"></i></button>
+                </span>
+            </div>
         </section>
 
         <section>

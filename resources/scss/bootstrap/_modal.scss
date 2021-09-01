@@ -173,6 +173,10 @@
   font-weight: 700;
 }
 
+.modal-title-desc{
+  font-size: 14px;color: $gray;font-weight: 400;margin-top: 8px;word-break: keep-all;
+}
+
 // Modal body
 // Where all modal content resides (sibling of .modal-header and .modal-footer)
 .modal-body {
