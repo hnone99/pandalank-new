@@ -39,10 +39,10 @@ $blue:       #5786f3 !default;
 $indigo:     #682dd2 !default;
 $purple:     #9966cc !default;
 $pink:       #e154ff !default;
-$red:        #e96b69 !default;
+$red:        #ff5649 !default;
 $orange:     #fd7e14 !default;
-$yellow:     #ffb007 !default;
-$green:      #34D52E !default;
+$yellow:     #ffce0a !default;
+$green:      #34d52e !default;
 $teal:       #20c997 !default;
 $cyan:       #17a2b8 !default;
 $peach:   #ffdcd2 !default;
@@ -105,7 +105,7 @@ $theme-colors: map-merge(
 $theme-color-interval:      8% !default;
 
 // The yiq lightness value that determines when the lightness of color changes from "dark" to "light". Acceptable values are between 0 and 255.
-$yiq-contrasted-threshold:  190 !default;
+$yiq-contrasted-threshold:  160 !default;
 
 // Customize the light and dark text colors for use in our YIQ color contrast function.
 $yiq-text-dark:             $black !default;

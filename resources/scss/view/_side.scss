@@ -11,14 +11,19 @@
     .util{
         margin-top: 75px;
         > ul > li{
+            text-align: center;
             & + li{margin-top: 22px;}
             > a{
-                color: $gray;transform: skew(-0.001deg);
-                display: flex;align-items: center;
-                i{
-                    width: 32px;height: 32px;border-radius: 50%;overflow: hidden;margin-right: 10px;
+                color: $gray;font-weight: 700;
+                &.mypage{
+                    i{
+                        display: block;width: 58px;height: 58px;border-radius: 50%;overflow: hidden;margin: 0 auto;
+                        img{width: 100%;height: 100%;object-fit: cover;}
+                    }
+                    span{font-weight: 700;color: #fff;margin-top: 10px;display: block;}
                 }
             }
+
         }
     }
 }
@@ -36,7 +41,6 @@
             }
             > li > div{
                 color: $gray;font-size: 13px;margin-bottom: 10px;
-                &::before{content: '';display: block;width: 10px;height: 1px;background: #646464;margin-bottom: 5px;}
             }
             > li:not(.active) > a:hover{
                 color: #D2DAE0;
@@ -52,9 +56,9 @@
             }
         }
         > ul ul{
-            margin-top: -8px;
+            margin-top: -8px;margin-left: 10px;
             > li{
-                > a{display: block;font-size: 14px;color: #fff;line-height: 2.2;-webkit-font-smoothing: auto;}
+                > a{display: block;font-size: 15px;color: #fff;line-height: 2.2;-webkit-font-smoothing: auto;}
             }
             > li:not(.active) > a:hover{
                 color: #D2DAE0;
