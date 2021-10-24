@@ -108,19 +108,27 @@
                                         <button type="submit" class="btn btn-submit ml-2" data-toggle="modal" data-target="#modal-nick-change">변경</button>
                                     </div>
                                     <div class="col-auto">
+                                        <div class="text-gray text-16px">pandarank@gmail.com</div>
+                                    </div>
+                                </div>
+                                <div class="row justify-content-between align-items-center m-t-20">
+                                    <div class="col-auto">
                                         <dl>
-                                            <dt>총 게시글</dt>
-                                            <dd><a href="">7</a>개</dd>
-                                            <dt>댓글 수</dt>
-                                            <dd><a href="">7</a>개</dd>
-                                            <dt>출석 수 </dt>
-                                            <dd>25회</dd>
-                                            <dt class="d-none d-lg-inline">가입일</dt>
-                                            <dd class="d-none d-lg-inline">2019.10.11</dd>
+                                            <dt>판다멤버십</dt>
+                                            <dd>BASIC <a href="" class="text-gray text-underline text-14px ml-1">등급 업그레이드하기</a></dd>
                                         </dl>
                                     </div>
                                     <div class="col-auto">
-                                        pandarank@gmail.com
+                                        <dl>
+                                            <dt>멤버십 기간</dt>
+                                            <dd>YYYY-MM-DD ~ YYYY-MM-DD</dd>
+                                        </dl>
+                                    </div>
+                                    <div class="col-auto">
+                                        <dl>
+                                            <dt>다음 결제일</dt>
+                                            <dd>YYYY-MM-DD</dd>
+                                        </dl>
                                     </div>
                                 </div>
                             </div>
@@ -128,12 +136,13 @@
                                 <div class="col-auto">
                                     <div class="tab tab-text">
                                         <ul role="tablist" class="nav">
-                                            <li class="active"><a href="#t1" role="tab" data-toggle="tab" aria-selected="true"><span>구매내역</span></a></li>
+                                            <li class="active"><a href="#t1" role="tab" data-toggle="tab" aria-selected="true"><span>멤버십 혜택</span></a></li>
                                             <li><a href="#t2" role="tab" data-toggle="tab" aria-selected="false"><span>나의 활동</span></a></li>
                                         </ul>
                                     </div>
                                 </div>
                                 <div class="col-auto">
+                                    <a href="mypage_modify.html" class="text-gray text-underline text-14px d-none d-lg-inline-block m-r-10">결제변경</a>
                                     <a href="#modal-leave" class="text-gray text-underline text-14px d-none d-lg-inline-block" data-toggle="modal" data-role="button">탈퇴하기</a>
                                     <!-- 모바일용 메뉴 더보기 -->
                                     <div class="dropdown ellipsis d-lg-none">
@@ -141,6 +150,7 @@
                                         <div class="dropdown-box">
                                             <div class="dropdown-list">
                                                 <div><a href="javascript:;">로그아웃</a></div>
+                                                <div><a href="mypage_modify.html">결제변경</a></div>
                                                 <div><a href="#modal-leave" data-toggle="modal" data-role="button">탈퇴하기</a></div>
                                             </div>
                                         </div>
@@ -150,62 +160,22 @@
                         </div>
                         <div class="tab-content">
                             <div role="tabpanel" class="tab-pane fade active show" id="t1">
-                                <div class="board">
-                                    <div class="board-top">
-                                        <div class="col-auto">
-                                            <div class="sort">
-                                                <strong class="board-name">경쟁력 분석 상세리포트 구매 내역</strong>
-                                            </div>
-                                        </div>
+                                <div class="my-membership-info">
+                                    <div class="grade">
+                                        <strong>BASIC</strong>
+                                        <span>멤버십 이용중</span>
                                     </div>
-                                    <div class="board-list">
+                                    <div class="benefit">
                                         <ul>
-                                            <li class="board-item justify-content-center">
-                                                <div class="empty">구매 내역이 없습니다</div>
-                                            </li>
-                                            <li class="board-item my-purchase">
-                                                <div class="cate d-none d-lg-block">가전제품</div>
-                                                <div class="subject">
-                                                    <a href=""><span>노래방마이크 / 4,000원</span></a>
-                                                </div>
-                                                <div class="date">20.03.24</div>
-                                                <div class="down d-none d-lg-block"><a href=""><i class="icon-download"></i></a></div>
-                                            </li>
-                                            <li class="board-item my-purchase">
-                                                <div class="cate">블루베리</div>
-                                                <div class="subject">
-                                                    <a href=""><span>냉동블루베리1kg / 12,000원</span></a>
-                                                </div>
-                                                <div class="date">20.03.24</div>
-                                                <div class="down"><a href=""><i class="icon-download"></i></a></div>
-                                            </li>
+                                            <li>혜택4</li>
+                                            <li>혜택3</li>
+                                            <li>혜택2</li>
+                                            <li>혜택1</li>
                                         </ul>
                                     </div>
-                                    <p class="table-text">*최대 10개까지 보관되며 엑셀다운은 pc에서만 가능합니다</p>
-                                </div>
-                                <div class="board">
-                                    <div class="board-top">
-                                        <div class="col-auto">
-                                            <div class="sort">
-                                                <strong class="board-name">내 쇼핑몰 분석 구독 내역</strong>
-                                            </div>
-                                        </div>
+                                    <div>
+                                        <a href="" class="btn btn-primary btn-block text-dark"><b>OPEN SALE!</b> 최대 55% 할인받고 멤버십 업그레이드</a>
                                     </div>
-                                    <div class="board-list">
-                                        <ul>
-                                            <li class="board-item justify-content-center">
-                                                <div class="empty">구독 내역이 없습니다</div>
-                                            </li>
-                                            <li class="board-item my-purchase">
-                                                <div class="cate">인테리어소품</div>
-                                                <div class="subject">
-                                                    <a href=""><span>코제트</span></a>
-                                                </div>
-                                                <div class="period">20.03.24 - 20.04.24</div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <p class="table-text">*00.00.00일까지 무료로 구독하실 수 있습니다</p>
                                 </div>
                             </div>
                             <div role="tabpanel" class="tab-pane fade" id="t2">

@@ -82,10 +82,11 @@
         }
         .util{
             margin-top: 50px;
-            > ul > li{
-                & + li{margin-top: 18px;}
-                > a{
-                    color: $gray;
+            > ul{
+                > li{
+                    > a.mypage{
+                        span{color: #000;}
+                    }
                 }
             }
         }

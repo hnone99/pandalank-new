@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-Compatible" content="IE=edge">
+    <title>PANDA RANK</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="icon" href="../../resources/images/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="../../resources/images/favicon-128.png" sizes="128x128">
+    <link rel="stylesheet" href="../../resources/css/bootstrap.css">
+    <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/OverlayScrollbars/css/OverlayScrollbars.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/datatables/css/dataTables.bootstrap4.css">
+    <link rel="stylesheet" href="../../resources/css/style.css">
+    <!-- jquery -->
+    <script src="../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- jquery ui -->
+    <script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- bootstrap -->
+    <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- DataTables -->
+    <script src="../../resources/plugins/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="../../resources/plugins/datatables/js/dataTables.bootstrap4.js"></script>
+    <!-- Swiper -->
+    <script src="../../resources/plugins/swiper/js/swiper.min.js"></script>
+    <!-- ui 관련 -->
+    <script src="../../resources/js/ui.js"></script>
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="side-block">
+            <div id="side">
+                <div class="logo">
+                    <h1><a href="../dashboard/main-type-1.html"><span class="sr-only">PANDA RANK LOGO</span></a></h1>
+                </div>
+                <div class="side-group">
+                    <div class="gnb">
+                        <nav>
+                            <ul>
+                                <li>
+                                    <a href="../dashboard/main-type-1.html"><span>홈</span></a>
+                                </li>
+                                <li>
+                                    <div>키워드</div>
+                                    <ul>
+                                        <li><a href="../product/product.html">키워드 찾기</a></li>
+                                    </ul>
+                                </li>
+                                 <li>
+                                    <div>상품</div>
+                                    <ul>
+                                        <li><a href="../analysis/analysis.html"><span>상품 분석</span></a></li>
+                                        <li><a href="../analysis/realtime.html">실시간 순위 확인</a></li>
+                                        <li><a href="../product/diagnosis.html">상품 진단</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <div>쇼핑몰</div>
+                                    <ul>
+                                        <li><a href="../mymall/mymall.html"><span>쇼핑몰 분석</span></a></li>
+                                        <li><a href="../analysis/tracking.html">상품 순위 추적</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <div>커뮤니티</div>
+                                    <ul>
+                                        <li><a href="../community/free.html"><span>커뮤니티 게시판</span></a></li>
+                                        <li><a href="#none"><span>서비스 구독</span></a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="util">
+                        <ul>
+                            <li><a href="../mypage/mypage.html" class="mypage"><i class="profile"><img src="../../resources/images/@profile.png" alt="판다랭크"></i><span>판다랭크</span></a></li>
+                            <li><a href="../join/index.html" class="btn-join"><span>로그인/회원가입</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="back">
+                    <button type="button" onclick="javascript:window.history.back()"><i class="icon-back"></i><span class="sr-only">뒤로</span></button>
+                </div>
+            </div>
+        </div>
+        <div id="container-block">
+            <div id="container">
+                <div id="content">
+                    <div class="container-fluid">
+                        <!-- 컨텐츠 시작 -->
+
+                        <div class="title-area">
+                            <h2>
+                                <strong>MY PAGE</strong>
+                                <span class="bg-none">마이페이지 / </span><span>결제변경</span>
+                            </h2>
+                        </div>
+                        <div class="sub-title-lg-area mt-5">
+                            <h2 class="sub-title-lg">등록 정보</h2>
+                        </div>
+                        <div class="membership-payment-info">
+                            <dl>
+                                <dt>상품</dt>
+                                <dd>
+                                    <span>판다멤버십 BASIC</span>
+                                    <button type="button" class="btn btn-submit font-weight-bold">업그레이드</button>
+                                </dd>
+                                <dt>성함</dt>
+                                <dd>김판다</dd>
+                                <dt>연락처</dt>
+                                <dd>
+                                    <span>010-1234-5678</span>
+                                    <button type="button" class="btn btn-submit font-weight-bold">연락처 변경</button>
+                                </dd>
+                                <dt>멤버십 기간</dt>
+                                <dd>
+                                    <span class="d-block d-md-inline">YYYY-MM-DD ~ YYYY-MM-DD</span>
+                                    <button type="button" class="btn btn-submit font-weight-bold" data-target="#modal-auto-stop" data-toggle="modal">자동연장 중단</button>
+                                    <!-- <button type="button" class="btn btn-submit font-weight-bold disabled">중단 신청 완료</button> -->
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="sub-title-lg-area mt-6">
+                            <h2 class="sub-title-lg">결제 정보</h2>
+                        </div>
+                        <div class="membership-payment-info">
+                            <dl>
+                                <dt>결제방식</dt>
+                                <dd>
+                                    <span class="d-block d-md-inline">일반 / 카드사명 ####-****-****-####</span>
+                                    <button type="button" class="btn btn-submit font-weight-bold">결제방식 변경</button>
+                                </dd>
+                                <dt>최초 결제일</dt>
+                                <dd>YYYY-MM-DD</dd>
+                                <dt>다음 결제일</dt>
+                                <dd>YYYY-MM-DD</dd>
+                            </dl>
+                        </div>
+                        <div class="text-right m-t-20">
+                            <button type="button" class="btn btn-primary text-dark">확인</button>
+                        </div>
+
+                        <!-- 컨텐츠 끝 -->
+                    </div>
+                </div>
+            </div>
+            <div id="footer">
+                <div class="btn-top">
+                    <a href="javascript:;"><span class="sr-only">TOP으로 이동</span></a>
+                </div>
+                <div class="dim"></div>
+            </div>
+        </div>
+        <div id="alarm-block">
+            <div class="btn-alarm new"> <!-- 새 알람 있을때 .new 추가 -->
+                <a href="javascript:;"><span class="sr-only">알람</span></a>
+            </div>
+            <div class="alarm">
+                <ul>
+                    <li>
+                        <div class="type">공지</div>
+                        <a href="javascript:;" class="text-truncate">판다랭크가 오픈했습니다. 그랜드 런칭을 했습니다.</a>
+                        <button class="close"><span class="sr-only">삭제</span></button>
+                    </li>
+                    <li>
+                        <div class="type">댓글</div>
+                        <a href="javascript:;" class="text-truncate"><span class="text-primary">꼬물이</span> 오늘 처음으로 억대 매출을 어쩌고저쩌고</a>
+                        <button class="close"><span class="sr-only">삭제</span></button>
+                    </li>
+                    <li>
+                        <div class="type">공지</div>
+                        <a href="javascript:;" class="text-truncate">판다랭크가 오픈했습니다. 그랜드 런칭을 했습니다.</a>
+                        <button class="close"><span class="sr-only">삭제</span></button>
+                    </li>
+                    <li>
+                        <div class="type">댓글</div>
+                        <a href="javascript:;" class="text-truncate"><span class="text-primary">꼬물이</span> 오늘 처음으로 억대 매출을 어쩌고저쩌고</a>
+                        <button class="close"><span class="sr-only">삭제</span></button>
+                    </li>
+                    <li>
+                        <div class="type">공지</div>
+                        <a href="javascript:;" class="text-truncate">판다랭크가 오픈했습니다. 그랜드 런칭을 했습니다.</a>
+                        <button class="close"><span class="sr-only">삭제</span></button>
+                    </li>
+                    <li>
+                        <div class="type">댓글</div>
+                        <a href="javascript:;" class="text-truncate"><span class="text-primary">꼬물이</span> 오늘 처음으로 억대 매출을 어쩌고저쩌고</a>
+                        <button class="close"><span class="sr-only">삭제</span></button>
+                    </li>
+                    <li>
+                        <div class="type">공지</div>
+                        <a href="javascript:;" class="text-truncate">판다랭크가 오픈했습니다. 그랜드 런칭을 했습니다.</a>
+                        <button class="close"><span class="sr-only">삭제</span></button>
+                    </li>
+                    <li>
+                        <div class="type">댓글</div>
+                        <a href="javascript:;" class="text-truncate"><span class="text-primary">꼬물이</span> 오늘 처음으로 억대 매출을 어쩌고저쩌고</a>
+                        <button class="close"><span class="sr-only">삭제</span></button>
+                    </li>
+                    <li>
+                        <div class="type">공지</div>
+                        <a href="javascript:;" class="text-truncate">판다랭크가 오픈했습니다. 그랜드 런칭을 했습니다.</a>
+                        <button class="close"><span class="sr-only">삭제</span></button>
+                    </li>
+                    <li>
+                        <div class="type">댓글</div>
+                        <a href="javascript:;" class="text-truncate"><span class="text-primary">꼬물이</span> 오늘 처음으로 억대 매출을 어쩌고저쩌고</a>
+                        <button class="close"><span class="sr-only">삭제</span></button>
+                    </li>
+                    <li>
+                        <div class="type">공지</div>
+                        <a href="javascript:;" class="text-truncate">판다랭크가 오픈했습니다. 그랜드 런칭을 했습니다.</a>
+                        <button class="close"><span class="sr-only">삭제</span></button>
+                    </li>
+                    <li>
+                        <div class="type">댓글</div>
+                        <a href="javascript:;" class="text-truncate"><span class="text-primary">꼬물이</span> 오늘 처음으로 억대 매출을 어쩌고저쩌고</a>
+                        <button class="close"><span class="sr-only">삭제</span></button>
+                    </li>
+                    <!-- 알람 없을때 -->
+                    <li>
+                        <div class="data-empty">
+                            <span class="img"></span>
+                            <p>도착한 알람이 없어요</p>
+                        </div>
+                    </li>
+                    <!-- //알람 없을때 -->
+                </ul>
+                <div class="go">
+                    <a href="../mypage/alarmcenter.html">알람센터 가기</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal : 자동연장 중단하기 -->
+    <div class="modal" tabindex="-1" role="dialog" data-backdrop="static" id="modal-auto-stop">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <!-- ver 1 -->
+                    <div class="auto-stop">
+                        <p>
+                            판다 멤버십을 해지하면 등록하신 <strong>상품데이터(상품 진단, 순위 추적, 스토어 분석 등)가</strong> <strong class="text-danger">모두 초기화</strong>됩니다. <br><br>
+
+                            그래도 자동연장을 중단하시겠습니까?
+                        </p>
+                        <div class="my-choice">
+                            <div class="m-b-15">
+                                <button type="button" class="btn btn-primary text-dark font-weight-bold">자동연장 중단하기</button>
+                            </div>
+                            <a href="javascript:;" role="button" data-dismiss="modal">자동연장 유지하기</a>
+                        </div>
+                    </div>
+                    <!-- ver 2 -->
+                    <!-- <div class="auto-stop">
+                        <p>
+                            <strong>현재 이용 중인 [Basic 멤버십] 혜택을 <br>포기하시겠어요? 😢</strong> <br><br>
+                            <small class="text-danger">*멤버십 해지 시 등록된 상품데이터가 초기화 됩니다.</small>
+                        </p>
+                        <div class="my-choice">
+                            <div class="m-b-15">
+                                <button type="button" class="btn btn-primary text-dark font-weight-bold" data-dismiss="modal" aria-label="Close">판다멤버십 혜택 유지하기</button>
+                            </div>
+                            <div>
+                                <button type="button" class="btn btn-light">판다멤버십 혜택 포기하기</button>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal : 자동연장 중단 완료 -->
+    <div class="modal" tabindex="-1" role="dialog" data-backdrop="static" id="modal-auto-stop-ok">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-title">자동연장 중단</div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="auto-stop">
+                        <p>
+                            멤버십 자동 연장이 중단되었습니다. <br>
+                            현재 멤버십은 <strong>YYYY-MM-DD까지 유지</strong>됩니다. <br><br>
+
+                            다시 멤버십 등록을 원하시면 <br>
+                            커뮤니티 게시판 &gt; 질문 탭에서 문의 바랍니다.
+                        </p>
+                        <div class="text-center m-t-20">
+                            <button type="button" class="btn btn-primary text-dark" data-dismiss="modal">확인</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $('.my-choice .btn-primary').on('click',function(ellipsis){
+                $('#modal-auto-stop').modal('hide');
+            });
+            $('#modal-auto-stop').on('hidden.bs.modal', function (event) {
+                $('#modal-auto-stop-ok').modal('show')
+            })
+        });
+    </script>
+</body>
+</html>

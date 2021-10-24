@@ -201,13 +201,13 @@ input[type="button"] {
 }
 
 .btn-submit{
-  border: 0;background: rgba(52, 213, 46, 0.1);color: $primary;padding: 8px 16px;border-radius: 10px;line-height: 1;
+  border: 0;background: rgba(52, 213, 46, 0.1);color: $primary-old;padding: 8px 16px;border-radius: 10px;line-height: 1;
   &:focus{
       background: rgba(52, 213, 46, 0.1);
       box-shadow: 0 0 0 0.2rem rgba(52, 213, 46, 0.5);
   }
   &:hover{
-    color: $primary;
+    color: $primary-old;
   }
 }
 

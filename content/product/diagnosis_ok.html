@@ -129,22 +129,21 @@
                 <div class="history show-delete d-none d-lg-block">
                     <ul>
                         <li>
-                            <a href="javascript:;">Led 램프</a>
+                            <a href="javascript:;" class="text-underline text-black">Led 램프</a>
                             <button class="close"><span class="sr-only">삭제</span></button>
                         </li>
                         <li>
-                            <a href="javascript:;">최대 5개만</a>
+                            <a href="javascript:;" class="text-underline text-black">플랫화이트샵</a>
                             <button class="close"><span class="sr-only">삭제</span></button>
                         </li>
                         <li>
-                            <a href="javascript:;">저장합니다</a>
-                            <button class="close"><span class="sr-only">삭제</span></button>
-                        </li>
-                        <li>
-                            <a href="javascript:;">저장합니다</a>
+                            <a href="javascript:;" class="text-underline text-black">데일리라이프</a>
                             <button class="close"><span class="sr-only">삭제</span></button>
                         </li>
                     </ul>
+                    <div class="add-max">
+                        <a href="javascript:;" class="text-underline text-success">상품 등록을 더 하고 싶다면? 최대 100개!</a>
+                    </div>
                 </div>
             </div>
             <div class="btn-collapse"><a href="javascript:;"><span class="sr-only">검색영역 접기</span></a></div>
@@ -252,13 +251,12 @@
                                     <div class="tit">무드등 LED 수유등 수면등 미니조명 인테리어조명</div>
                                     <div class="price">13,500원</div>
                                     <div class="cate">가구/인테리어 > 인테리어 소품 > 조명 > 인테리어 조명</div>
-                                    <button type="button" class="btn btn-primary font-weight-bold" id="btn-diagnosis">이 상품 진단하기</button>
                                     <button type="button" class="btn btn-primary font-weight-bold" disabled>다시 진단하기</button>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="diagnosis start"> <!-- 진단하기 버튼 누르면 .start 삭제 -->
+                        <div class="diagnosis">
                             <div class="before">
                                 <img src="../../resources/images/img-new-panda.svg" alt="">
                                 <p>등록하신 상품을 진단해보세요.</p>
@@ -274,12 +272,12 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="diagnosis-comprehensive" data-level="2"> <!-- 1~5 -->
+                            <div class="diagnosis-comprehensive" data-level="4"> <!-- 1~5 -->
                                 <div class="row row-0">
                                     <div class="col-12 col-lg-4">
                                         <div class="result-message">
                                             이 상품의 진단 결과는 <br>
-                                            <strong>양호</strong> 입니다.
+                                            <strong>위험</strong> 입니다.
                                         </div>
                                     </div>
                                     <div class="col-12 col-lg-4">
@@ -375,7 +373,15 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="diagnosis-advice">
+                            <div class="diagnosis-advice start">
+                                <div class="before">
+                                    <img src="../../resources/images/img-new-panda.svg" alt="">
+                                    <p>
+                                        더 자세한 검토 사항을 제공받기 위해 <strong>판다멤버십</strong>을 이용해보세요. <br>
+                                        내 상품을 진단받고 더 잘 팔기 위해 스스로 개선할 수 있습니다.
+                                    </p>
+                                    <button type="button" class="btn btn-lg btn-primary btn-block"><b>OPEN SALE!</b> 최대 55% 할인받고 멤버십 이용하기</button>
+                                </div>
                                 <div class="card border-left-primary-old">
                                     <div class="tit">
                                         <i class="icon-t"></i><span>키워드 점수</span>
@@ -750,24 +756,6 @@
         </div>
     </div>
 
-    <!-- modal : loading -->
-    <div class="modal fade" tabindex="-1" role="dialog" id="modal-diagnosis-loading" data-backdrop="static">
-        <div class="modal-dialog modal-md modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <div class="diagnosis-loading">
-                        <img src="../../resources/images/img-new-panda.svg" alt="">
-                        <p>데이터 수집 중 …</p>
-                        <p>키워드 분석 중 …</p>
-                        <p>상품등록 분석 중 …</p>
-                        <p>판매요소 분석 중 …</p>
-                        <p>진단완료 !</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <!-- modal : 5개까지 등록 -->
     <div class="modal fade" tabindex="-1" role="dialog" id="modal-item-max" data-backdrop="static">
         <div class="modal-dialog modal-md modal-dialog-centered">
@@ -812,29 +800,11 @@
     <script src="../../resources/plugins/nwagon/Nwagon.js"></script>
     <script>
         $(document).ready(function(){
-            $('#modal-item-max').modal('show');
-
-            //진단하기 process example
-            $('#btn-start').on('click',function(e){
-                e.preventDefault();
-                $('#modal-diagnosis-loading').modal('show');
-                setTimeout(function(){
-                    $('#modal-diagnosis-loading').modal('hide');
-                    $('.diagnosis').removeClass('start');
-                }, 2000)
-            });
-
-            //다시 진단 10분 안내
-            $('#btn-diagnosis').on('click',function(e){
-                e.preventDefault();
-                $('#modal-diagnosis-again').modal('show');
-            });
-
             var options = {
                 'dataset':{
                     title: '종합진단평가',
                     values:[25, 3],
-                    colorset: ['#96e827', '#edf0f7'],
+                    colorset: ['#ff8549', '#edf0f7'],
                     fields: ['177', '300'],
                 },
                 'donut_width' : 9,
