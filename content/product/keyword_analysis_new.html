@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-Compatible" content="IE=edge">
+    <title>PANDA RANK</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="icon" href="../../resources/images/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="../../resources/images/favicon-128.png" sizes="128x128">
+    <link rel="stylesheet" href="../../resources/css/bootstrap.css">
+    <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/OverlayScrollbars/css/OverlayScrollbars.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/datatables/css/dataTables.bootstrap4.css">
+    <link rel="stylesheet" href="../../resources/css/style.css">
+    <!-- jquery -->
+    <script src="../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- jquery ui -->
+    <script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- bootstrap -->
+    <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- DataTables -->
+    <script src="../../resources/plugins/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="../../resources/plugins/datatables/js/dataTables.bootstrap4.js"></script>
+    <script src="../../resources/plugins/datatables/js/dataTables.fixedColumns.min.js"></script>
+    <script src="../../resources/plugins/datatables/js/dataTables.fixedHeader.min.js"></script>
+
+    <!-- chartjs -->
+    <script src="../../resources/plugins/chartjs/Chart.min.js"></script>
+
+    <!-- Swiper -->
+    <script src="../../resources/plugins/swiper/js/swiper.min.js"></script>
+    <!-- ui 관련 -->
+    <script src="../../resources/js/ui.js"></script>
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="side-block">
+            <div id="side">
+                <div class="logo">
+                    <h1><a href="../dashboard/main-type-1.html"><span class="sr-only">PANDA RANK LOGO</span></a></h1>
+                </div>
+                <div class="gnb" id="gnb-mobile">
+                    <nav class="swiper-container">
+                        <ul class="swiper-wrapper">
+                            <li class="swiper-slide"><a href="../dashboard/main-type-1.html"><span>홈</span></a></li>
+                            <li class="swiper-slide active"><a href="../product/product.html"><span>키워드 찾기</span></a></li>
+                            <li class="swiper-slide"><a href="../analysis/analysis.html"><span>경쟁력 분석</span></a></li>
+                            <li class="swiper-slide"><a href="../ai/ai.html"><span>AI 판매 예측</span></a></li>
+                            <li class="swiper-slide"><a href="../mymall/mymall.html"><span>내 쇼핑몰 분석</span></a></li>
+                            <li class="swiper-slide"><a href="../community/free.html"><span>커뮤니티</span></a></li>
+                            <li class="swiper-slide"><a href="../board/notice.html"><span>공지</span></a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="side-group">
+                    <div class="gnb">
+                        <nav>
+                            <ul>
+                                <li>
+                                    <a href="../dashboard/main-type-1.html"><span>홈</span></a>
+                                </li>
+                                <li>
+                                    <div>키워드</div>
+                                    <ul>
+                                        <li><a href="../product/product.html">키워드 찾기</a></li>
+                                        <li class="active"><a href="../product/keyword_analysis.html">키워드 분석</a></li>
+                                    </ul>
+                                </li>
+                                 <li>
+                                    <div>상품</div>
+                                    <ul>
+                                        <li><a href="../analysis/analysis.html"><span>상품 분석</span></a></li>
+                                        <li><a href="../analysis/realtime.html">실시간 순위 확인</a></li>
+                                        <li><a href="../product/diagnosis.html">상품 진단</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <div>쇼핑몰</div>
+                                    <ul>
+                                        <li><a href="../mymall/mymall.html"><span>쇼핑몰 분석</span></a></li>
+                                        <li><a href="../analysis/tracking.html">상품 순위 추적</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <div>커뮤니티</div>
+                                    <ul>
+                                        <li><a href="../community/free.html"><span>커뮤니티 게시판</span></a></li>
+                                        <li><a href="#none"><span>서비스 구독</span></a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="util">
+                        <ul>
+                            <li><a href="../mypage/mypage.html" class="mypage"><i class="profile"><img src="../../resources/images/@profile.png" alt="판다랭크"></i><span>판다랭크</span></a></li>
+                            <li><a href="../join/index.html" class="btn-join"><span>로그인/회원가입</span></a></li>
+                            <li><a href="../board/notice.html"><span>고객센터</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="hamburger">
+                    <button type="button" class="btn-menu"><i class="icon-hamburger"></i><span class="sr-only">모바일 메뉴</span></button>
+                </div>
+                <div class="right-menu">
+                    <a href="../mypage/alarmcenter.html" class="btn-bell"><i class="icon-bell"></i><span class="sr-only">모바일 알림</span></a>
+                    <button type="button" class="btn-history"><i class="icon-star"></i><span class="sr-only">모바일 히스토리</span></button>
+                </div>
+            </div>
+        </div>
+        <!-- 상단고정형 배너-->
+        <div class="banner-wrap">
+            <div class="fixed-banner">
+                <div class="container">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <p><strong>판다 멤버십 OPEN SALE!</strong> 최대 55% 할인받고 혜택을 누려보세요.</p>
+                        <div class="d-flex align-items-center">
+                            <a href="">멤버십 신청하러 가기 &gt;</a>
+                            <i class="new-panda"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="center-block">
+            <div id="center">
+                <div class="title-area">
+                    <h2>
+                        <strong>KEYWORD DETAIL</strong>
+                        <span>키워드 분석</span>
+                    </h2>
+                </div>
+                <div class="input-area my">
+                    <div class="form-control-wrapper">
+                        <input type="text" class="form-control form-control-panda" placeholder="키워드" id="inputKeyword">
+                        <button type="button" class="btn btn-submit">엔터</button>
+                    </div>
+                </div>
+                <div class="history show-delete d-none d-lg-block">
+                    <ul>
+                        <li>
+                            <a href="javascript:;">Led 램프</a>
+                            <button class="close"><span class="sr-only">삭제</span></button>
+                        </li>
+                        <li>
+                            <a href="javascript:;">최대 5개만</a>
+                            <button class="close"><span class="sr-only">삭제</span></button>
+                        </li>
+                        <li>
+                            <a href="javascript:;">저장합니다</a>
+                            <button class="close"><span class="sr-only">삭제</span></button>
+                        </li>
+                        <li>
+                            <a href="javascript:;">저장합니다</a>
+                            <button class="close"><span class="sr-only">삭제</span></button>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="quick-banner d-none d-lg-block">
+                    <a href="">
+                        <div>
+                            <p>어서와, 판다랭크는 처음이지?</p>
+                            <strong>키워드 분석 활용팁</strong>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="btn-collapse"><a href="javascript:;"><span class="sr-only">검색영역 접기</span></a></div>
+            <div class="btn-right-collapse">
+                <a href="javascript:;" class="disabled"><span>검색기록</span></a>
+            </div>
+            <div id="alarm-block">
+                <div class="btn-alarm new"> <!-- 새 알람 있을때 .new 추가 -->
+                    <a href="javascript:;"><span class="sr-only">알람</span></a>
+                </div>
+                <div class="alarm">
+                    <ul>
+                        <li>
+                            <div class="type">공지</div>
+                            <a href="javascript:;" class="text-truncate">판다랭크가 오픈했습니다. 그랜드 런칭을 했습니다.</a>
+                            <button class="close"><span class="sr-only">삭제</span></button>
+                        </li>
+                        <li>
+                            <div class="type">댓글</div>
+                            <a href="javascript:;" class="text-truncate"><span class="text-primary">꼬물이</span> 오늘 처음으로 억대 매출을 어쩌고저쩌고</a>
+                            <button class="close"><span class="sr-only">삭제</span></button>
+                        </li>
+                        <li>
+                            <div class="type">공지</div>
+                            <a href="javascript:;" class="text-truncate">판다랭크가 오픈했습니다. 그랜드 런칭을 했습니다.</a>
+                            <button class="close"><span class="sr-only">삭제</span></button>
+                        </li>
+                        <li>
+                            <div class="type">댓글</div>
+                            <a href="javascript:;" class="text-truncate"><span class="text-primary">꼬물이</span> 오늘 처음으로 억대 매출을 어쩌고저쩌고</a>
+                            <button class="close"><span class="sr-only">삭제</span></button>
+                        </li>
+                        <li>
+                            <div class="type">공지</div>
+                            <a href="javascript:;" class="text-truncate">판다랭크가 오픈했습니다. 그랜드 런칭을 했습니다.</a>
+                            <button class="close"><span class="sr-only">삭제</span></button>
+                        </li>
+                        <li>
+                            <div class="type">댓글</div>
+                            <a href="javascript:;" class="text-truncate"><span class="text-primary">꼬물이</span> 오늘 처음으로 억대 매출을 어쩌고저쩌고</a>
+                            <button class="close"><span class="sr-only">삭제</span></button>
+                        </li>
+                        <li>
+                            <div class="type">공지</div>
+                            <a href="javascript:;" class="text-truncate">판다랭크가 오픈했습니다. 그랜드 런칭을 했습니다.</a>
+                            <button class="close"><span class="sr-only">삭제</span></button>
+                        </li>
+                        <li>
+                            <div class="type">댓글</div>
+                            <a href="javascript:;" class="text-truncate"><span class="text-primary">꼬물이</span> 오늘 처음으로 억대 매출을 어쩌고저쩌고</a>
+                            <button class="close"><span class="sr-only">삭제</span></button>
+                        </li>
+                        <li>
+                            <div class="type">공지</div>
+                            <a href="javascript:;" class="text-truncate">판다랭크가 오픈했습니다. 그랜드 런칭을 했습니다.</a>
+                            <button class="close"><span class="sr-only">삭제</span></button>
+                        </li>
+                        <li>
+                            <div class="type">댓글</div>
+                            <a href="javascript:;" class="text-truncate"><span class="text-primary">꼬물이</span> 오늘 처음으로 억대 매출을 어쩌고저쩌고</a>
+                            <button class="close"><span class="sr-only">삭제</span></button>
+                        </li>
+                        <li>
+                            <div class="type">공지</div>
+                            <a href="javascript:;" class="text-truncate">판다랭크가 오픈했습니다. 그랜드 런칭을 했습니다.</a>
+                            <button class="close"><span class="sr-only">삭제</span></button>
+                        </li>
+                        <li>
+                            <div class="type">댓글</div>
+                            <a href="javascript:;" class="text-truncate"><span class="text-primary">꼬물이</span> 오늘 처음으로 억대 매출을 어쩌고저쩌고</a>
+                            <button class="close"><span class="sr-only">삭제</span></button>
+                        </li>
+                        <!-- 알람 없을때 -->
+                        <li>
+                            <div class="data-empty">
+                                <span class="img"></span>
+                                <p>도착한 알람이 없어요</p>
+                            </div>
+                        </li>
+                        <!-- //알람 없을때 -->
+                    </ul>
+                    <div class="go">
+                        <a href="../mypage/alarmcenter.html">알람센터 가기</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="container-block">
+            <div id="container">
+                <div id="content">
+                    <div class="container-fluid">
+
+                        <!-- 컨텐츠 시작 -->
+                        <div class="tab-new">
+                            <ul role="tablist" class="nav">
+                              <li><a href="#tab1" role="tab" data-toggle="tab" aria-selected="true"><span>종합분석</span></a></li>
+                              <li><a href="#tab2" role="tab" data-toggle="tab" aria-selected="false"><span>연관 키워드</span></a></li>
+                              <li><a href="#tab3" role="tab" data-toggle="tab" aria-selected="false" class="active"><span>상품목록</span></a></li>
+                          </ul>
+                        </div>
+                        <div class="tab-content">
+                          <div role="tabpanel" class="tab-pane fade" id="tab1">
+                            1
+                          </div>
+                          <div role="tabpanel" class="tab-pane fade" id="tab2">
+                            2
+                          </div>
+                          <div role="tabpanel" class="tab-pane fade active show" id="tab3">
+                            <!-- 지금 바로 판매 가능한 상품 타이틀 영역 :
+                                  현재 쓰이고 있는 컴포넌트가 있는것 같아서 추가 안했습니다 -->
+                            <div class="d-flex justify-content-between align-items-center m-b-30">
+                              <div class="category-buttons">
+                                <button type="button" class="active">위탁판매 상품</button>
+                                <button type="button">사입판매 상품</button>
+                              </div>
+                              <div class="dropdown ellipsis d-lg-none">
+                                <a href="javascript:;" class="dropdown-value"><i class="icon-ellipsis"></i><span class="sr-only">모바일 정렬 순서</span></a>
+                                <div class="dropdown-box">
+                                    <div class="dropdown-list">
+                                      <div><a href="#none" class="active">신규공급사순</a></div>
+                                      <div><a href="#none">최근등록순</a></div>
+                                      <div><a href="#none">인기상품순</a></div>
+                                      <div><a href="#none">낮은가격순</a></div>
+                                      <div><a href="#none">높은가격순</a></div>
+                                      <div><a href="#none">적은판매단위순</a></div>
+                                      <div><a href="#none">많은판매단위순</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="item-sort m-b-30 d-none d-lg-flex">
+                              <a href="#none">신규공급사순</a>
+                              <a href="#none">최근등록순</a>
+                              <a href="#none">인기상품순</a>
+                              <a href="#none">낮은가격순</a>
+                              <a href="#none">높은가격순</a>
+                              <a href="#none">적은판매단위순</a>
+                              <a href="#none">많은판매단위순</a>
+                            </div>
+                            <div class="item-gallery">
+                              <ul>
+                                <li class="item">
+                                  <a href="#none">
+                                    <div class="thumb">
+                                      <img src="../../resources/images/@product-thumb.jpg" alt="">
+                                    </div>
+                                    <div class="title">키워드 관련 상품명</div>
+                                    <div class="price">
+                                      <strong>17,000</strong><span>원</span>
+                                    </div>
+                                    <div class="stock">
+                                      <span class="mr-1">재고수량</span> 999개
+                                    </div>
+                                    <div class="fee">
+                                      <span class="mr-1">배송비</span> 2500원~
+                                    </div>
+                                  </a>
+                                </li>
+                                <li class="item">
+                                  <a href="#none">
+                                    <div class="thumb">
+                                      <img src="../../resources/images/@product-thumb.jpg" alt="">
+                                    </div>
+                                    <div class="title">키워드 관련 상품명</div>
+                                    <div class="price">
+                                      <strong>17,000</strong><span>원</span>
+                                    </div>
+                                    <div class="stock">
+                                      <span class="mr-1">재고수량</span> 999개
+                                    </div>
+                                    <div class="fee">
+                                      <span class="mr-1">배송비</span> 2500원~
+                                    </div>
+                                  </a>
+                                </li>
+                                <li class="item">
+                                  <a href="#none">
+                                    <div class="thumb">
+                                      <img src="../../resources/images/@product-thumb.jpg" alt="">
+                                    </div>
+                                    <div class="title">키워드 관련 상품명</div>
+                                    <div class="price">
+                                      <strong>17,000</strong><span>원</span>
+                                    </div>
+                                    <div class="stock">
+                                      <span class="mr-1">재고수량</span> 999개
+                                    </div>
+                                    <div class="fee">
+                                      <span class="mr-1">배송비</span> 2500원~
+                                    </div>
+                                  </a>
+                                </li>
+                                <li class="item">
+                                  <a href="#none">
+                                    <div class="thumb">
+                                      <img src="../../resources/images/@product-thumb.jpg" alt="">
+                                    </div>
+                                    <div class="title">키워드 관련 상품명</div>
+                                    <div class="price">
+                                      <strong>17,000</strong><span>원</span>
+                                    </div>
+                                    <div class="stock">
+                                      <span class="mr-1">재고수량</span> 999개
+                                    </div>
+                                    <div class="fee">
+                                      <span class="mr-1">배송비</span> 2500원~
+                                    </div>
+                                  </a>
+                                </li>
+                                <li class="item">
+                                  <a href="#none">
+                                    <div class="thumb">
+                                      <img src="../../resources/images/@product-thumb.jpg" alt="">
+                                    </div>
+                                    <div class="title">키워드 관련 상품명</div>
+                                    <div class="price">
+                                      <strong>17,000</strong><span>원</span>
+                                    </div>
+                                    <div class="stock">
+                                      <span class="mr-1">재고수량</span> 999개
+                                    </div>
+                                    <div class="fee">
+                                      <span class="mr-1">배송비</span> 2500원~
+                                    </div>
+                                  </a>
+                                </li>
+                                <li class="item">
+                                  <a href="#none">
+                                    <div class="thumb">
+                                      <img src="../../resources/images/@product-thumb.jpg" alt="">
+                                    </div>
+                                    <div class="title">키워드 관련 상품명</div>
+                                    <div class="price">
+                                      <strong>17,000</strong><span>원</span>
+                                    </div>
+                                    <div class="stock">
+                                      <span class="mr-1">재고수량</span> 999개
+                                    </div>
+                                    <div class="fee">
+                                      <span class="mr-1">배송비</span> 2500원~
+                                    </div>
+                                  </a>
+                                </li>
+                                <li class="item">
+                                  <a href="#none">
+                                    <div class="thumb">
+                                      <img src="../../resources/images/@product-thumb.jpg" alt="">
+                                    </div>
+                                    <div class="title">키워드 관련 상품명</div>
+                                    <div class="price">
+                                      <strong>17,000</strong><span>원</span>
+                                    </div>
+                                    <div class="stock">
+                                      <span class="mr-1">재고수량</span> 999개
+                                    </div>
+                                    <div class="fee">
+                                      <span class="mr-1">배송비</span> 2500원~
+                                    </div>
+                                  </a>
+                                </li>
+                                <li class="item">
+                                  <a href="#none">
+                                    <div class="thumb">
+                                      <img src="../../resources/images/@product-thumb.jpg" alt="">
+                                    </div>
+                                    <div class="title">키워드 관련 상품명</div>
+                                    <div class="price">
+                                      <strong>17,000</strong><span>원</span>
+                                    </div>
+                                    <div class="stock">
+                                      <span class="mr-1">재고수량</span> 999개
+                                    </div>
+                                    <div class="fee">
+                                      <span class="mr-1">배송비</span> 2500원~
+                                    </div>
+                                  </a>
+                                </li>
+                                <li class="item">
+                                  <a href="#none">
+                                    <div class="thumb">
+                                      <img src="../../resources/images/@product-thumb.jpg" alt="">
+                                    </div>
+                                    <div class="title">키워드 관련 상품명</div>
+                                    <div class="price">
+                                      <strong>17,000</strong><span>원</span>
+                                    </div>
+                                    <div class="stock">
+                                      <span class="mr-1">재고수량</span> 999개
+                                    </div>
+                                    <div class="fee">
+                                      <span class="mr-1">배송비</span> 2500원~
+                                    </div>
+                                  </a>
+                                </li>
+                                <li class="item">
+                                  <a href="#none">
+                                    <div class="thumb">
+                                      <img src="../../resources/images/@product-thumb.jpg" alt="">
+                                    </div>
+                                    <div class="title">키워드 관련 상품명</div>
+                                    <div class="price">
+                                      <strong>17,000</strong><span>원</span>
+                                    </div>
+                                    <div class="stock">
+                                      <span class="mr-1">재고수량</span> 999개
+                                    </div>
+                                    <div class="fee">
+                                      <span class="mr-1">배송비</span> 2500원~
+                                    </div>
+                                  </a>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- 컨텐츠 끝 -->
+
+                    </div>
+                </div>
+            </div>
+            <div id="footer">
+                <div class="btn-top">
+                    <a href="javascript:;"><span class="sr-only">TOP으로 이동</span></a>
+                </div>
+                <div class="dim"></div>
+            </div>
+        </div>
+        <div id="right-block">
+            <div id="right">
+                <div class="title-area">
+                    <h2>
+                        <strong>HISTORY</strong>
+                        <span>검색 히스토리</span>
+                    </h2>
+                </div>
+                <div class="tab-area">
+                    <div class="tab" data-position="1"> <!-- 활성화 된 탭의 index 표기 -->
+                        <ul role="tablist" class="nav">
+                            <li class="active"><a href="#right-t1" role="tab" data-toggle="tab" aria-selected="true"><span>촤근검색</span></a></li>
+                            <li><a href="#right-t2" role="tab" data-toggle="tab" aria-selected="false"><span>즐겨찾기</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane fade active show" id="right-t1">
+                        <div class="all-del">
+                            <a href="#modal-all-delete" data-toggle="modal" data-role="button">전체삭제</a>
+                        </div>
+                        <div class="history">
+                            <ul>
+                                <li>
+                                    <div class="favorite">
+                                        <input type="checkbox" id="f1">
+                                        <label for="f1"></label>
+                                    </div>
+                                    <a href="javascript:;">집돌이마이크 / 13500</a>
+                                    <button class="close"><span class="sr-only">삭제</span></button>
+                                </li>
+                                <li>
+                                    <div class="favorite">
+                                        <input type="checkbox" id="f2">
+                                        <label for="f2"></label>
+                                    </div>
+                                    <a href="javascript:;">디지털/가전 &gt; 카메라/캠코더용품 &gt; 카메라캠코더관련용품 &gt; 카메라/캠코더용마이크</a>
+                                    <button class="close"><span class="sr-only">삭제</span></button>
+                                </li>
+                                <li>
+                                    <div class="favorite">
+                                        <input type="checkbox" id="f3">
+                                        <label for="f3"></label>
+                                    </div>
+                                    <a href="javascript:;">여름철 별미 열무김치 2kg  / 12900</a>
+                                    <button class="close"><span class="sr-only">삭제</span></button>
+                                </li>
+                                <li>
+                                    <div class="favorite">
+                                        <input type="checkbox" id="f4">
+                                        <label for="f4"></label>
+                                    </div>
+                                    <a href="javascript:;">금치 전라도 열무김치 1kg 맛있는 김치주문별미 반찬 / 10,500</a>
+                                    <button class="close"><span class="sr-only">삭제</span></button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="right-t2">
+                        <div class="all-del">
+                            <a href="#modal-all-delete" data-toggle="modal" data-role="button">전체삭제</a>
+                        </div>
+                        <div class="history">
+                            <ul>
+                                <li>
+                                    <div class="favorite">
+                                        <input type="checkbox" id="f1">
+                                        <label for="f1"></label>
+                                    </div>
+                                    <a href="javascript:;">집돌이마이크 / 13500</a>
+                                    <button class="close"><span class="sr-only">삭제</span></button>
+                                </li>
+                                <li>
+                                    <div class="favorite">
+                                        <input type="checkbox" id="f2">
+                                        <label for="f2"></label>
+                                    </div>
+                                    <a href="javascript:;">디지털/가전 &gt; 카메라/캠코더용품 &gt; 카메라캠코더관련용품 &gt; 카메라/캠코더용마이크</a>
+                                    <button class="close"><span class="sr-only">삭제</span></button>
+                                </li>
+                                <li>
+                                    <div class="favorite">
+                                        <input type="checkbox" id="f3">
+                                        <label for="f3"></label>
+                                    </div>
+                                    <a href="javascript:;">여름철 별미 열무김치 2kg  / 12900</a>
+                                    <button class="close"><span class="sr-only">삭제</span></button>
+                                </li>
+                                <li>
+                                    <div class="favorite">
+                                        <input type="checkbox" id="f4">
+                                        <label for="f4"></label>
+                                    </div>
+                                    <a href="javascript:;">금치 전라도 열무김치 1kg 맛있는 김치주문별미 반찬 / 10,500</a>
+                                    <button class="close"><span class="sr-only">삭제</span></button>
+                                </li>
+                                <li>
+                                    <div class="favorite">
+                                        <input type="checkbox" id="f1">
+                                        <label for="f1"></label>
+                                    </div>
+                                    <a href="javascript:;">집돌이마이크 / 13500</a>
+                                    <button class="close"><span class="sr-only">삭제</span></button>
+                                </li>
+                                <li>
+                                    <div class="favorite">
+                                        <input type="checkbox" id="f2">
+                                        <label for="f2"></label>
+                                    </div>
+                                    <a href="javascript:;">디지털/가전 &gt; 카메라/캠코더용품 &gt; 카메라캠코더관련용품 &gt; 카메라/캠코더용마이크</a>
+                                    <button class="close"><span class="sr-only">삭제</span></button>
+                                </li>
+                                <li>
+                                    <div class="favorite">
+                                        <input type="checkbox" id="f3">
+                                        <label for="f3"></label>
+                                    </div>
+                                    <a href="javascript:;">여름철 별미 열무김치 2kg  / 12900</a>
+                                    <button class="close"><span class="sr-only">삭제</span></button>
+                                </li>
+                                <li>
+                                    <div class="favorite">
+                                        <input type="checkbox" id="f4">
+                                        <label for="f4"></label>
+                                    </div>
+                                    <a href="javascript:;">금치 전라도 열무김치 1kg 맛있는 김치주문별미 반찬 / 10,500</a>
+                                    <button class="close"><span class="sr-only">삭제</span></button>
+                                </li>
+                                <li>
+                                    <div class="favorite">
+                                        <input type="checkbox" id="f1">
+                                        <label for="f1"></label>
+                                    </div>
+                                    <a href="javascript:;">집돌이마이크 / 13500</a>
+                                    <button class="close"><span class="sr-only">삭제</span></button>
+                                </li>
+                                <li>
+                                    <div class="favorite">
+                                        <input type="checkbox" id="f2">
+                                        <label for="f2"></label>
+                                    </div>
+                                    <a href="javascript:;">디지털/가전 &gt; 카메라/캠코더용품 &gt; 카메라캠코더관련용품 &gt; 카메라/캠코더용마이크</a>
+                                    <button class="close"><span class="sr-only">삭제</span></button>
+                                </li>
+                                <li>
+                                    <div class="favorite">
+                                        <input type="checkbox" id="f3">
+                                        <label for="f3"></label>
+                                    </div>
+                                    <a href="javascript:;">여름철 별미 열무김치 2kg  / 12900</a>
+                                    <button class="close"><span class="sr-only">삭제</span></button>
+                                </li>
+                                <li>
+                                    <div class="favorite">
+                                        <input type="checkbox" id="f4">
+                                        <label for="f4"></label>
+                                    </div>
+                                    <a href="javascript:;">금치 전라도 열무김치 1kg 맛있는 김치주문별미 반찬 / 10,500</a>
+                                    <button class="close"><span class="sr-only">삭제</span></button>
+                                </li>
+                                <li>
+                                    <div class="favorite">
+                                        <input type="checkbox" id="f1">
+                                        <label for="f1"></label>
+                                    </div>
+                                    <a href="javascript:;">집돌이마이크 / 13500</a>
+                                    <button class="close"><span class="sr-only">삭제</span></button>
+                                </li>
+                                <li>
+                                    <div class="favorite">
+                                        <input type="checkbox" id="f2">
+                                        <label for="f2"></label>
+                                    </div>
+                                    <a href="javascript:;">디지털/가전 &gt; 카메라/캠코더용품 &gt; 카메라캠코더관련용품 &gt; 카메라/캠코더용마이크</a>
+                                    <button class="close"><span class="sr-only">삭제</span></button>
+                                </li>
+                                <li>
+                                    <div class="favorite">
+                                        <input type="checkbox" id="f3">
+                                        <label for="f3"></label>
+                                    </div>
+                                    <a href="javascript:;">여름철 별미 열무김치 2kg  / 12900</a>
+                                    <button class="close"><span class="sr-only">삭제</span></button>
+                                </li>
+                                <li>
+                                    <div class="favorite">
+                                        <input type="checkbox" id="f4">
+                                        <label for="f4"></label>
+                                    </div>
+                                    <a href="javascript:;">금치 전라도 열무김치 1kg 맛있는 김치주문별미 반찬 / 10,500</a>
+                                    <button class="close"><span class="sr-only">삭제</span></button>
+                                </li>
+                                <li>
+                                    <div class="favorite">
+                                        <input type="checkbox" id="f1">
+                                        <label for="f1"></label>
+                                    </div>
+                                    <a href="javascript:;">집돌이마이크 / 13500</a>
+                                    <button class="close"><span class="sr-only">삭제</span></button>
+                                </li>
+                                <li>
+                                    <div class="favorite">
+                                        <input type="checkbox" id="f2">
+                                        <label for="f2"></label>
+                                    </div>
+                                    <a href="javascript:;">디지털/가전 &gt; 카메라/캠코더용품 &gt; 카메라캠코더관련용품 &gt; 카메라/캠코더용마이크</a>
+                                    <button class="close"><span class="sr-only">삭제</span></button>
+                                </li>
+                                <li>
+                                    <div class="favorite">
+                                        <input type="checkbox" id="f3">
+                                        <label for="f3"></label>
+                                    </div>
+                                    <a href="javascript:;">여름철 별미 열무김치 2kg  / 12900</a>
+                                    <button class="close"><span class="sr-only">삭제</span></button>
+                                </li>
+                                <li>
+                                    <div class="favorite">
+                                        <input type="checkbox" id="f4">
+                                        <label for="f4"></label>
+                                    </div>
+                                    <a href="javascript:;">금치 전라도 열무김치 1kg 맛있는 김치주문별미 반찬 / 10,500</a>
+                                    <button class="close"><span class="sr-only">삭제</span></button>
+                                </li>
+                                <li>
+                                    <div class="favorite">
+                                        <input type="checkbox" id="f1">
+                                        <label for="f1"></label>
+                                    </div>
+                                    <a href="javascript:;">집돌이마이크 / 13500</a>
+                                    <button class="close"><span class="sr-only">삭제</span></button>
+                                </li>
+                                <li>
+                                    <div class="favorite">
+                                        <input type="checkbox" id="f2">
+                                        <label for="f2"></label>
+                                    </div>
+                                    <a href="javascript:;">디지털/가전 &gt; 카메라/캠코더용품 &gt; 카메라캠코더관련용품 &gt; 카메라/캠코더용마이크</a>
+                                    <button class="close"><span class="sr-only">삭제</span></button>
+                                </li>
+                                <li>
+                                    <div class="favorite">
+                                        <input type="checkbox" id="f3">
+                                        <label for="f3"></label>
+                                    </div>
+                                    <a href="javascript:;">여름철 별미 열무김치 2kg  / 12900</a>
+                                    <button class="close"><span class="sr-only">삭제</span></button>
+                                </li>
+                                <li>
+                                    <div class="favorite">
+                                        <input type="checkbox" id="f4">
+                                        <label for="f4"></label>
+                                    </div>
+                                    <a href="javascript:;">금치 전라도 열무김치 1kg 맛있는 김치주문별미 반찬 / 10,500</a>
+                                    <button class="close"><span class="sr-only">삭제</span></button>
+                                </li>
+                                <li>
+                                    <div class="favorite">
+                                        <input type="checkbox" id="f1">
+                                        <label for="f1"></label>
+                                    </div>
+                                    <a href="javascript:;">집돌이마이크 / 13500</a>
+                                    <button class="close"><span class="sr-only">삭제</span></button>
+                                </li>
+                                <li>
+                                    <div class="favorite">
+                                        <input type="checkbox" id="f2">
+                                        <label for="f2"></label>
+                                    </div>
+                                    <a href="javascript:;">디지털/가전 &gt; 카메라/캠코더용품 &gt; 카메라캠코더관련용품 &gt; 카메라/캠코더용마이크</a>
+                                    <button class="close"><span class="sr-only">삭제</span></button>
+                                </li>
+                                <li>
+                                    <div class="favorite">
+                                        <input type="checkbox" id="f3">
+                                        <label for="f3"></label>
+                                    </div>
+                                    <a href="javascript:;">여름철 별미 열무김치 2kg  / 12900</a>
+                                    <button class="close"><span class="sr-only">삭제</span></button>
+                                </li>
+                                <li>
+                                    <div class="favorite">
+                                        <input type="checkbox" id="f4">
+                                        <label for="f4"></label>
+                                    </div>
+                                    <a href="javascript:;">금치 전라도 열무김치 1kg 맛있는 김치주문별미 반찬 / 10,500</a>
+                                    <button class="close"><span class="sr-only">삭제</span></button>
+                                </li>
+                                <li>
+                                    <div class="favorite">
+                                        <input type="checkbox" id="f1">
+                                        <label for="f1"></label>
+                                    </div>
+                                    <a href="javascript:;">집돌이마이크 / 13500</a>
+                                    <button class="close"><span class="sr-only">삭제</span></button>
+                                </li>
+                                <li>
+                                    <div class="favorite">
+                                        <input type="checkbox" id="f2">
+                                        <label for="f2"></label>
+                                    </div>
+                                    <a href="javascript:;">디지털/가전 &gt; 카메라/캠코더용품 &gt; 카메라캠코더관련용품 &gt; 카메라/캠코더용마이크</a>
+                                    <button class="close"><span class="sr-only">삭제</span></button>
+                                </li>
+                                <li>
+                                    <div class="favorite">
+                                        <input type="checkbox" id="f3">
+                                        <label for="f3"></label>
+                                    </div>
+                                    <a href="javascript:;">여름철 별미 열무김치 2kg  / 12900</a>
+                                    <button class="close"><span class="sr-only">삭제</span></button>
+                                </li>
+                                <li>
+                                    <div class="favorite">
+                                        <input type="checkbox" id="f4">
+                                        <label for="f4"></label>
+                                    </div>
+                                    <a href="javascript:;">금치 전라도 열무김치 1kg 맛있는 김치주문별미 반찬 / 10,500</a>
+                                    <button class="close"><span class="sr-only">삭제</span></button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="d-md-none">
+                <button type="button" class="close-history"><span class="sr-only">히스토리 닫기</span></button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    </script>
+</body>
+</html>
